@@ -1,0 +1,55 @@
+{
+  "app_id": "hy_tool_nt",
+  "project_name": "南通市海门华远工具厂",
+  "gates": {
+    "clean": {
+      "status": "confirmed",
+      "at": "2026-08-05T09:44:00Z",
+      "by": "operator"
+    },
+    "diagnose": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "write_social": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "publish": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    }
+  },
+  "missing": [
+    {
+      "code": "chat_logs",
+      "severity": "recommend",
+      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+    },
+    {
+      "code": "secrets_stripped",
+      "severity": "recommend",
+      "message": "收集表中的平台密码已剥离，未写入 knowledge；请使用本地 secrets 管理。 password_stripped:百家号,password_stripped:知乎,password_stripped:抖音,password_stripped:头条号,password_stripped:搜狐号"
+    },
+    {
+      "code": "legal_id_ignored",
+      "severity": "optional",
+      "message": "已忽略法人身份证等文件 1 个（不入库、不进文章）。"
+    }
+  ],
+  "quota": {
+    "articles_generated": 0,
+    "articles_published": 0,
+    "diagnose_questions": 0,
+    "targets": {
+      "articles_year": 1500,
+      "social_year": 750,
+      "diagnose_questions": 500
+    }
+  },
+  "updated_at": "2026-08-05T09:44:00Z",
+  "clean_ready": true
+}

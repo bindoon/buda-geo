@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "dir": "南通市海门华远工具厂",
+      "app_id": "hy_tool_nt",
+      "aliases": ["华远", "华远工具厂", "海门华远", "南通华远", "华洋"],
+      "notes": "标杆样例 #1"
+    },
+    {
+      "dir": "晶铭服饰",
+      "app_id": "jm_apparel_cx",
+      "aliases": ["晶铭", "晶铭服饰"]
+    },
+    {
+      "dir": "朗威晶电",
+      "app_id": "lw_storage_sz",
+      "aliases": ["朗威", "朗威晶电"]
+    },
+    {
+      "dir": "河北仁丹药业有限公司",
+      "app_id": "rd_pharma_hb",
+      "aliases": ["仁丹", "仁丹药业"]
+    },
+    {
+      "dir": "蠡县晨源针织有限公司",
+      "app_id": "cy_knit_lx",
+      "aliases": ["晨源", "晨源针织"]
+    }
+  ]
+}

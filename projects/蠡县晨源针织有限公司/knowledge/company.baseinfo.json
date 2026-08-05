@@ -1,0 +1,38 @@
+{
+  "app_id": "cy_knit_lx",
+  "company_name": "蠡县晨源针织有限公司",
+  "company_short_name": "晨源针织",
+  "contact_name": "罗盼兴",
+  "contact_phone": "13331235393",
+  "address": "河北省 保定市 蠡县 桑园镇杨南村",
+  "website_or_shop_url": "https://shop50wr602023917.1688.com/",
+  "region": "",
+  "media_accounts": [
+    {
+      "platform": "百家号",
+      "account_id": "13331235393"
+    },
+    {
+      "platform": "知乎",
+      "account_id": "13331235393"
+    },
+    {
+      "platform": "抖音",
+      "account_id": "13331235393"
+    },
+    {
+      "platform": "头条号",
+      "account_id": "13331235393"
+    },
+    {
+      "platform": "搜狐号",
+      "account_id": "13331235393"
+    }
+  ],
+  "conversion": {
+    "phone": "13331235393",
+    "shop_url": "https://shop50wr602023917.1688.com/"
+  },
+  "credentials": [],
+  "source": "xlsx:GEO信息收集表(2).xlsx"
+}

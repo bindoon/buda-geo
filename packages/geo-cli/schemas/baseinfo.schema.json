@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-baseinfo",
+  "type": "object",
+  "required": ["app_id", "company_name"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "company_name": { "type": "string", "minLength": 1 },
+    "company_short_name": { "type": "string" },
+    "contact_name": { "type": "string" },
+    "contact_phone": { "type": "string" },
+    "address": { "type": "string" },
+    "website_or_shop_url": { "type": "string" },
+    "region": { "type": "string" },
+    "media_accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["platform"],
+        "properties": {
+          "platform": { "type": "string" },
+          "account_id": { "type": "string" }
+        },
+        "not": { "required": ["password"] }
+      }
+    },
+    "conversion": { "type": "object" },
+    "credentials": { "type": "array" }
+  },
+  "additionalProperties": true
+}

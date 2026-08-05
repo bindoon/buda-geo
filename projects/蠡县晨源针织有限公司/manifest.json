@@ -1,0 +1,45 @@
+{
+  "app_id": "cy_knit_lx",
+  "project_name": "蠡县晨源针织有限公司",
+  "gates": {
+    "clean": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "diagnose": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "write_social": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "publish": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    }
+  },
+  "missing": [
+    {
+      "code": "chat_logs",
+      "severity": "recommend",
+      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+    }
+  ],
+  "quota": {
+    "articles_generated": 0,
+    "articles_published": 0,
+    "diagnose_questions": 0,
+    "targets": {
+      "articles_year": 1500,
+      "social_year": 750,
+      "diagnose_questions": 500
+    }
+  },
+  "updated_at": "2026-08-05T09:05:59Z",
+  "clean_ready": true
+}

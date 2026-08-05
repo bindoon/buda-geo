@@ -1,0 +1,34 @@
+{
+  "app_id": "rd_pharma_hb",
+  "company_name": "河北仁丹药业有限公司",
+  "company_short_name": "仁丹药业",
+  "contact_name": "李保伟",
+  "contact_phone": "18031783888",
+  "address": "河北省沧州市献县经济开发区昌盛路东",
+  "website_or_shop_url": "https://shop088094o9k43e4.1688.com/",
+  "region": "",
+  "media_accounts": [
+    {
+      "platform": "百家号",
+      "account_id": "账号：仁丹药业"
+    },
+    {
+      "platform": "知乎",
+      "account_id": "账号：仁丹药业 18931718258"
+    },
+    {
+      "platform": "抖音",
+      "account_id": "抖音号：43408359115"
+    },
+    {
+      "platform": "头条号",
+      "account_id": "账号：仁丹药业 18931718258"
+    }
+  ],
+  "conversion": {
+    "phone": "18031783888",
+    "shop_url": "https://shop088094o9k43e4.1688.com/"
+  },
+  "credentials": [],
+  "source": "xlsx:GEO信息收集表(1).xlsx"
+}

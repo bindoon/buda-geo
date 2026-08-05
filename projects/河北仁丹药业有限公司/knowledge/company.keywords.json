@@ -1,0 +1,24 @@
+{
+  "app_id": "rd_pharma_hb",
+  "brand": {
+    "terms": [
+      "仁丹药业"
+    ],
+    "questions": [
+      "仁丹药业厂家靠谱吗",
+      "仁丹药业是源头工厂吗"
+    ]
+  },
+  "search": {
+    "terms": [],
+    "expanded": [],
+    "questions": []
+  },
+  "qa": {
+    "questions": []
+  },
+  "intent": {
+    "questions": []
+  },
+  "source": ""
+}

@@ -1,0 +1,34 @@
+{
+  "app_id": "lw_storage_sz",
+  "company_name": "深圳朗威晶电科技有限公司",
+  "company_short_name": "深圳朗威晶电科技有限公司",
+  "contact_name": "林小姐",
+  "contact_phone": "18002543986",
+  "address": "广东省深圳市龙华区民治街道上芬社区概念孵化空间2栋3楼",
+  "website_or_shop_url": "https://shop277490y893269.1688.com/?spm=a26352.15231885.offerlist.1.2d942e8030EPvl",
+  "region": "",
+  "media_accounts": [
+    {
+      "platform": "百家号",
+      "account_id": "18002543986,LWJDkj54646742"
+    },
+    {
+      "platform": "知乎",
+      "account_id": "18002543986,LWJDkj546467426."
+    },
+    {
+      "platform": "抖音",
+      "account_id": "18002543986,LWJDkj546467426."
+    },
+    {
+      "platform": "头条号",
+      "account_id": "18002543986,LWJDkj546467426."
+    }
+  ],
+  "conversion": {
+    "phone": "18002543986",
+    "shop_url": "https://shop277490y893269.1688.com/?spm=a26352.15231885.offerlist.1.2d942e8030EPvl"
+  },
+  "credentials": [],
+  "source": "xlsx:朗威晶电GEO信息收集表.xlsx"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-profile",
+  "type": "object",
+  "required": ["app_id", "intro"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "intro": { "type": "string" },
+    "products_services": { "type": "string" },
+    "advantages": { "type": "string" },
+    "trust": { "type": "string" },
+    "pain_points": { "type": "array" },
+    "source": { "type": "string" }
+  },
+  "additionalProperties": true
+}

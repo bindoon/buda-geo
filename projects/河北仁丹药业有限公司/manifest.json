@@ -1,0 +1,60 @@
+{
+  "app_id": "rd_pharma_hb",
+  "project_name": "河北仁丹药业有限公司",
+  "gates": {
+    "clean": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "diagnose": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "write_social": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "publish": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    }
+  },
+  "missing": [
+    {
+      "code": "keywords_empty",
+      "severity": "recommend",
+      "message": "未解析到关键词/问题库；可从知识库正文补词或提供词表 xlsx。"
+    },
+    {
+      "code": "chat_logs",
+      "severity": "recommend",
+      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+    },
+    {
+      "code": "secrets_stripped",
+      "severity": "recommend",
+      "message": "收集表中的平台密码已剥离，未写入 knowledge；请使用本地 secrets 管理。 password_stripped:百家号,password_stripped:抖音"
+    },
+    {
+      "code": "legal_id_ignored",
+      "severity": "optional",
+      "message": "已忽略法人身份证等文件 1 个（不入库、不进文章）。"
+    }
+  ],
+  "quota": {
+    "articles_generated": 0,
+    "articles_published": 0,
+    "diagnose_questions": 0,
+    "targets": {
+      "articles_year": 1500,
+      "social_year": 750,
+      "diagnose_questions": 500
+    }
+  },
+  "updated_at": "2026-08-05T09:05:58Z",
+  "clean_ready": true
+}

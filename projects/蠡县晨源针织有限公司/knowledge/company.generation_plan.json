@@ -1,0 +1,65 @@
+{
+  "app_id": "cy_knit_lx",
+  "tasks": [
+    {
+      "task_id": "t_search_01",
+      "keyword_group_id": "kg_无缝螺纹袖口",
+      "channels": [
+        "social",
+        "media"
+      ],
+      "use_knowledge": true,
+      "limit": 20,
+      "produced_count": 0,
+      "prompt_template_id": "eeat_intro_advantage_faq"
+    },
+    {
+      "task_id": "t_search_02",
+      "keyword_group_id": "kg_罗纹袖口",
+      "channels": [
+        "social",
+        "media"
+      ],
+      "use_knowledge": true,
+      "limit": 20,
+      "produced_count": 0,
+      "prompt_template_id": "eeat_intro_advantage_faq"
+    },
+    {
+      "task_id": "t_search_03",
+      "keyword_group_id": "kg_圆筒螺纹袖口",
+      "channels": [
+        "social",
+        "media"
+      ],
+      "use_knowledge": true,
+      "limit": 20,
+      "produced_count": 0,
+      "prompt_template_id": "eeat_intro_advantage_faq"
+    },
+    {
+      "task_id": "t_search_04",
+      "keyword_group_id": "kg_防护服螺纹袖口",
+      "channels": [
+        "social",
+        "media"
+      ],
+      "use_knowledge": true,
+      "limit": 20,
+      "produced_count": 0,
+      "prompt_template_id": "eeat_intro_advantage_faq"
+    },
+    {
+      "task_id": "t_search_05",
+      "keyword_group_id": "kg_校服螺纹袖口",
+      "channels": [
+        "social",
+        "media"
+      ],
+      "use_knowledge": true,
+      "limit": 20,
+      "produced_count": 0,
+      "prompt_template_id": "eeat_intro_advantage_faq"
+    }
+  ]
+}

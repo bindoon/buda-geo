@@ -1,0 +1,50 @@
+{
+  "app_id": "jm_apparel_cx",
+  "project_name": "晶铭服饰",
+  "gates": {
+    "clean": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "diagnose": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "write_social": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    },
+    "publish": {
+      "status": "pending",
+      "at": null,
+      "by": null
+    }
+  },
+  "missing": [
+    {
+      "code": "chat_pdf_duplicate",
+      "severity": "optional",
+      "message": "已提供客服 txt + PDF；FAQ 主提炼自 txt。PDF 体积大，作备份即可，无需重复解析。"
+    },
+    {
+      "code": "sku_bucket_coarse",
+      "severity": "optional",
+      "message": "产品图按文件夹归为「儿童芭蕾 tutu 裙」一大类；若需按单款拆 SKU，可在 inputs 按款名分文件夹后重跑 clean。"
+    }
+  ],
+  "quota": {
+    "articles_generated": 0,
+    "articles_published": 0,
+    "diagnose_questions": 0,
+    "targets": {
+      "articles_year": 1500,
+      "social_year": 750,
+      "diagnose_questions": 500
+    }
+  },
+  "updated_at": "2026-08-05T11:17:12Z",
+  "clean_ready": true
+}

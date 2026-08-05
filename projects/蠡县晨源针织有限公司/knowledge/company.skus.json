@@ -1,0 +1,121 @@
+{
+  "app_id": "cy_knit_lx",
+  "items": [
+    {
+      "sku_id": "sku_领口",
+      "name": "领口",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/领口/O1CN01ALZ1am1EGRTWBQQds_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_罗纹袖口",
+      "name": "罗纹袖口",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/罗纹袖口/O1CN010MXOtl1EGR8a8hK82_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01C2hLUz1EGR8a2pyub_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01DNY1px1EGR8azZpdC_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01DPetW71EGRSMojTpe_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01N2T7tf1EGRTbibHHo_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01T91nCq1EGRMp24Wbh_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01UyLr1T1EGR8S85RM0_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01VurmU61EGRSHyqo92_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01vwueio1EGRSN1iveE_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01ximHGq1EGR8agoaTb_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/罗纹袖口/O1CN01yMyzFo1EGRTbhxJdh_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_身份证信息及产品图片",
+      "name": "身份证信息及产品图片",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/身份证信息及产品图片/599559e0eb36207062d7cac9a2cc8a6c.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/身份证信息及产品图片/b2a8d2c23ab3fa8781eb44e3f2ce7d86.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/身份证信息及产品图片/bacca2fe28e7052a3a170d6d21b58e97.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_校服罗文袖口",
+      "name": "校服罗文袖口",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/校服罗文袖口/O1CN01vrJwzK1EGR8S5mVsK_!!2215349380324-0-cib.jpg",
+          "role": "main",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

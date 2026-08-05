@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-generation-plan",
+  "type": "object",
+  "required": ["app_id", "tasks"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["task_id", "use_knowledge", "limit", "produced_count"],
+        "properties": {
+          "task_id": { "type": "string" },
+          "keyword_group_id": { "type": "string" },
+          "channels": { "type": "array" },
+          "use_knowledge": { "type": "boolean" },
+          "limit": { "type": "integer", "minimum": 0 },
+          "produced_count": { "type": "integer", "minimum": 0 },
+          "prompt_template_id": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

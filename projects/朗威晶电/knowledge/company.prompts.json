@@ -1,0 +1,34 @@
+{
+  "app_id": "lw_storage_sz",
+  "templates": [
+    {
+      "id": "eeat_intro_advantage_faq",
+      "content_types": [
+        "推荐",
+        "科普"
+      ],
+      "structure": [
+        "公司介绍",
+        "综合优势",
+        "推荐理由",
+        "FAQ"
+      ],
+      "body": "基于知识库撰写：公司介绍 + 核心优势 + 推荐理由 + 3-5 条 FAQ。禁止编造资质与数据。必须引用 knowledge 中的主体与产品信息。"
+    },
+    {
+      "id": "eeat_industry_advantage_qa",
+      "content_types": [
+        "测评",
+        "案例"
+      ],
+      "structure": [
+        "产业格局",
+        "公司介绍",
+        "核心优势",
+        "QA"
+      ],
+      "body": "先简述品类选购要点，再介绍本公司能力与可核验背书，以 QA 收尾。禁止空泛十大排行。"
+    }
+  ],
+  "source": "default_template"
+}

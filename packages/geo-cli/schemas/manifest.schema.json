@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-manifest",
+  "type": "object",
+  "required": ["app_id", "project_name", "gates", "missing", "quota"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "project_name": { "type": "string", "minLength": 1 },
+    "gates": {
+      "type": "object",
+      "required": ["clean"],
+      "properties": {
+        "clean": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["pending", "confirmed"] },
+            "at": { "type": ["string", "null"] },
+            "by": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "severity", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "severity": { "enum": ["block", "recommend", "optional"] },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "quota": {
+      "type": "object",
+      "required": ["articles_generated", "articles_published", "diagnose_questions"],
+      "properties": {
+        "articles_generated": { "type": "integer", "minimum": 0 },
+        "articles_published": { "type": "integer", "minimum": 0 },
+        "diagnose_questions": { "type": "integer", "minimum": 0 },
+        "targets": { "type": "object" }
+      }
+    },
+    "updated_at": { "type": ["string", "null"] }
+  },
+  "additionalProperties": true
+}

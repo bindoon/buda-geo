@@ -1,0 +1,190 @@
+{
+  "app_id": "hy_tool_nt",
+  "items": [
+    {
+      "sku_id": "sku_大蒜剪",
+      "name": "大蒜剪",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/大蒜剪/01大蒜剪.jpg",
+          "role": "main",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_电动修枝剪",
+      "name": "电动修枝剪",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/电动修枝剪/25开口修枝剪01款.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/25开口修枝剪03款.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/25开口修枝剪04款.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/25开口修枝剪牧田插脚05款.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/30开口修枝剪01款.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/30开口修枝剪04款.jpg",
+          "role": "detail",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/40开口修枝剪01款.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/电动修枝剪/40开口修枝剪04款.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_甘蔗剪",
+      "name": "甘蔗剪",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/甘蔗剪/01甘蔗剪.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/甘蔗剪/04甘蔗剪.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_剪刀拉力机",
+      "name": "剪刀拉力机",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/剪刀拉力机/剪刀拉力机.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_水管剪",
+      "name": "水管剪",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/水管剪/01水管剪.jpg",
+          "role": "main",
+          "url": null
+        },
+        {
+          "path": "assets/images/水管剪/04水管剪.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_整机套装",
+      "name": "整机套装",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/整机套装/25 30整套.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_注塑箱",
+      "name": "注塑箱",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/注塑箱/04注塑箱.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_a7ef0e9bdc4a8a9da113a7e6fea6",
+      "name": "a7ef0e9bdc4a8a9da113a7e6fea6",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/a7ef0e9bdc4a8a9da113a7e6fea6/5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_a9ea193505772f99fe6d003546c45e77",
+      "name": "a9ea193505772f99fe6d003546c45e77",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/a9ea193505772f99fe6d003546c45e77/a9ea193505772f99fe6d003546c45e77.jpg",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_b281-8926-4b2d-8ed8-2305172f021c",
+      "name": "b281-8926-4b2d-8ed8-2305172f021c",
+      "category": "",
+      "selling_points": [],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/b281-8926-4b2d-8ed8-2305172f021c/6846b281-8926-4b2d-8ed8-2305172f021c.png",
+          "role": "detail",
+          "url": null
+        }
+      ]
+    }
+  ]
+}

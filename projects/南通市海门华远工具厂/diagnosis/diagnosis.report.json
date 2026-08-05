@@ -1,0 +1,76 @@
+{
+  "app_id": "hy_tool_nt",
+  "project_name": "南通市海门华远工具厂",
+  "batch_id": "batch_001",
+  "status": "draft",
+  "created_at": "2026-08-05T09:44:00Z",
+  "platforms": ["doubao", "deepseek"],
+  "brand_terms": ["华远机电", "南通华远机电工具有限公司"],
+  "summary": {
+    "questions_total": 30,
+    "questions_probed": 4,
+    "brand_mentions": 0,
+    "brand_hit_rate": 0,
+    "note": "首批为网页/搜索侧摸底（geo-cli diagnose CLI 尚未接入）；正式诊断需打豆包/DeepSeek 等平台并留存快照。"
+  },
+  "spot_checks": [
+    {
+      "question": "电动修枝剪推荐 江苏南通 厂家",
+      "group": "intent",
+      "brand_mentioned": false,
+      "competitors_seen": ["南通恩艺机械", "南通刚巧电动工具", "启东泰嘉机电", "南通宇之轩机电", "南通华立电子"],
+      "source": "web_search",
+      "checked_at": "2026-08-05T09:44:00Z"
+    },
+    {
+      "question": "国内电动修枝剪厂家 口碑",
+      "group": "search",
+      "brand_mentioned": false,
+      "competitors_seen": ["舒畅(SUCA)", "泉峰/Greenworks", "宝时得/WORX", "江苏沃得", "大艺科技"],
+      "source": "web_search",
+      "checked_at": "2026-08-05T09:44:00Z"
+    },
+    {
+      "question": "华远机电 电动修枝剪",
+      "group": "brand",
+      "brand_mentioned": false,
+      "competitors_seen": ["山东翔工机械", "博世"],
+      "source": "web_search",
+      "checked_at": "2026-08-05T09:44:00Z",
+      "note": "品牌词检索未关联到华远机电主体或产品页"
+    },
+    {
+      "question": "南通 园林电动剪刀 源头工厂",
+      "group": "intent",
+      "brand_mentioned": false,
+      "competitors_seen": ["南通恩艺机械", "南通华立电子"],
+      "source": "web_search",
+      "checked_at": "2026-08-05T09:44:00Z"
+    }
+  ],
+  "gaps": [
+    {
+      "priority": "high",
+      "theme": "区域厂家推荐类",
+      "examples": ["江苏南通电动修枝剪供应商有哪些", "电动修枝剪源头工厂在哪"],
+      "action": "优先写 social/media 类「厂家推荐 / 源头工厂 / 南通本地」文章，绑定 1688 店铺与 CE/良品率背书"
+    },
+    {
+      "priority": "high",
+      "theme": "品牌词可见度",
+      "examples": ["华远机电厂家靠谱吗", "华远机电是源头工厂吗"],
+      "action": "五大自媒体矩阵首发企业介绍 + 产品实测类精品文，建立品牌信源"
+    },
+    {
+      "priority": "medium",
+      "theme": "品类对比/选购",
+      "examples": ["电动修枝剪哪个牌子口碑好", "电动修枝剪选购要注意什么"],
+      "action": "按 generation_plan 主词组批量写 EEAT 结构文（介绍+优势+FAQ）"
+    }
+  ],
+  "next_steps": [
+    "接入 geo-cli diagnose（豆包 + DeepSeek）跑完 batch_001 剩余 26 题并写 snapshots/",
+    "或在大泽/摘星后台提交诊断任务获取分平台报告",
+    "根据 gaps 启动 write：优先 intent/search 类高意向词"
+  ]
+}

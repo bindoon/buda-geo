@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-skus",
+  "type": "object",
+  "required": ["app_id", "items"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sku_id", "name", "images"],
+        "properties": {
+          "sku_id": { "type": "string" },
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "selling_points": { "type": "array" },
+          "copy_brief": {},
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["path"],
+              "properties": {
+                "path": { "type": "string" },
+                "role": { "type": "string" },
+                "url": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

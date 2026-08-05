@@ -1,0 +1,51 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+.cursor/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+**/.secrets.env
+**/*.pem
+**/credentials.json
+
+# Office lock / temp
+~$*
+*.tmp
+
+# Node / Python
+node_modules/
+dist/
+build/
+.coverage
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Logs & caches
+*.log
+.npm/
+.cache/
+.playwright-cli/
+
+# Optional local dumps (keep docs 摸底 markdown; ignore bulky raw if re-generated)
+# Uncomment if raw snapshots should stay local-only:
+# docs/各GEO平台资料/平台摸底/*-raw/
+# docs/各GEO平台资料/平台摸底/*-raw-clean/
+
+projects/**/inputs
+projects/**/assets
+openspec
+docs/**/*.pptx
+docs/**/*.pdf
+docs/**/平台摸底/**/*-raw/
+docs/**/平台摸底/**/*-raw-clean/

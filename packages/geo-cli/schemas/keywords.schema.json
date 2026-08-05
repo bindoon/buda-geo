@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-keywords",
+  "type": "object",
+  "required": ["app_id", "brand", "search", "qa", "intent"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "brand": { "type": "object" },
+    "search": { "type": "object" },
+    "qa": { "type": "object" },
+    "intent": { "type": "object" },
+    "source": { "type": "string" }
+  },
+  "additionalProperties": true
+}

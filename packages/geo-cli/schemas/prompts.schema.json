@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-prompts",
+  "type": "object",
+  "required": ["app_id", "templates"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string" },
+          "content_types": { "type": "array" },
+          "structure": { "type": "array" },
+          "body": { "type": "string" }
+        }
+      }
+    },
+    "source": { "type": "string" }
+  },
+  "additionalProperties": true
+}

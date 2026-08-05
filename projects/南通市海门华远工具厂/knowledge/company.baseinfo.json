@@ -1,0 +1,38 @@
+{
+  "app_id": "hy_tool_nt",
+  "company_name": "南通华远机电工具有限公司",
+  "company_short_name": "华远机电",
+  "contact_name": "李俊毅",
+  "contact_phone": "18012877709/15190925134",
+  "address": "江苏省南通市启东市吕四港镇海晏村1-5号",
+  "website_or_shop_url": "https://shop7u0279007v644.1688.com/?spm=a261y.7663282.shopNavigation.2.2f154cc5ZbDQWn&offerId=1060004309124&td_page_id=PC-GYP-2026",
+  "region": "",
+  "media_accounts": [
+    {
+      "platform": "百家号",
+      "account_id": "手机号码：18944355321"
+    },
+    {
+      "platform": "知乎",
+      "account_id": "ID:cpw59 手机号码：18944355321"
+    },
+    {
+      "platform": "抖音",
+      "account_id": "账号：23149534444 手机号码：18944355321"
+    },
+    {
+      "platform": "头条号",
+      "account_id": "ID:1872025716116487 手机号码：18944355321"
+    },
+    {
+      "platform": "搜狐号",
+      "account_id": "手机号码：18944355321"
+    }
+  ],
+  "conversion": {
+    "phone": "18012877709/15190925134",
+    "shop_url": "https://shop7u0279007v644.1688.com/?spm=a261y.7663282.shopNavigation.2.2f154cc5ZbDQWn&offerId=1060004309124&td_page_id=PC-GYP-2026"
+  },
+  "credentials": [],
+  "source": "xlsx:华远GEO信息收集表.xlsx"
+}

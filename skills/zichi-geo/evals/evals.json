@@ -1,0 +1,20 @@
+{
+  "skill_name": "zichi-geo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我清洗一下华远的 GEO 知识库",
+      "expected_output": "按 operator-report.md 输出：结论、inputs 原件未动、knowledge/assets 位置、产品/词数人话摘要、建议补项、请用户确认；正文无 app_id/block 等术语"
+    },
+    {
+      "id": 2,
+      "prompt": "新客户刚把资料放进 projects 了，帮我 onboard 并跑 clean",
+      "expected_output": "检查 registry.json 是否有条目，无则指导登记；inventory 分类 inputs；clean + validate"
+    },
+    {
+      "id": 3,
+      "prompt": "GEO validate 一下，看看 missing",
+      "expected_output": "projects list 让用户选或根据上下文 resolve，再 validate 并人话解释 block/recommend"
+    }
+  ]
+}
