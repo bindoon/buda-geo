@@ -9,8 +9,8 @@
 | `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：inventory / clean / validate / confirm-clean |
 | `skills/` | Agent Skill（`zichi-geo` 等）；**`.cursor/skills/zichi-geo` → 软链到此** |
 | `projects/{项目名}/` | 按客户拆分；`inputs/` 原始资料；`knowledge/` 等为清洗产物 |
-| `openspec/` | 规格驱动变更（进行中：`clean-projects-to-knowledge-schema`） |
-| `docs/` | 方案、竞品资料、方法论 |
+| `openspec/` | 研发期规格驱动变更；不属于最终运行交付 |
+| `docs/` | 研发方案、竞品资料、方法论；不属于最终运行依赖 |
 | `AGENTS.md` | Agent 防错约定（密钥/身份证/通道等） |
 
 ## 文档索引
@@ -33,7 +33,7 @@
 - [`openspec/changes/clean-projects-to-knowledge-schema/`](./openspec/changes/clean-projects-to-knowledge-schema/) — 华远深洗 → 标准知识库 Schema（proposal/design/specs/tasks）
 - [`openspec/changes/rebuild-enterprise-fact-cleaning/`](./openspec/changes/rebuild-enterprise-fact-cleaning/) — 企业事实层重建：来源/证据追踪、语义复核、确认快照与多项目复用
 - [`openspec/changes/add-baseline-geo-diagnosis/`](./openspec/changes/add-baseline-geo-diagnosis/) — 已确认事实 → 小规模种子题 → 多平台基线诊断与缺口
-- [`openspec/changes/add-customer-question-scenarios/`](./openspec/changes/add-customer-question-scenarios/) — 已确认诊断 → 平台无关的客户问题/购买场景 → 三平台派生导出
+- [`openspec/changes/add-customer-question-scenarios/`](./openspec/changes/add-customer-question-scenarios/) — 已确认诊断 → 紫驰自己的客户问题/购买场景；竞品仅作方法覆盖参考
 
 ## geo-cli 快速开始
 
@@ -58,6 +58,8 @@ geo-cli projects list
 ```
 
 再对返回的 `path` 跑 clean / validate。新客户：建 `projects/{dir}/inputs/` 并在 `projects/registry.json` 登记。
+
+最终对外交付面仅为 `packages/geo-cli`、`skills/zichi-geo` 与项目目录契约；竞品研究、OpenSpec 和研发文档不进入用户运行流程。
 
 ## 执行分期（摘要）
 

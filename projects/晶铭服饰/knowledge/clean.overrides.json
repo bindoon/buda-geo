@@ -2,9 +2,66 @@
   "app_id": "jm_apparel_cx",
   "assets": [
     {
-      "source_path": "曹县晶铭服饰有限公司 信息/**",
+      "source_path": "曹县晶铭服饰有限公司 信息/0692535a5a0d81e6c960d66ab6125167.png",
+      "action": "company",
+      "reason": "图片展示缝纫设备与成品库存，作为工厂环境资产；不据此推导产能数字。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/1e3ad889d80c22271ec7b6f7d0a602aa.jpg",
       "action": "ignore",
-      "reason": "哈希命名的混合企业资料尚未逐张确认，默认不派生。"
+      "reason": "法人身份证照片；不复制、不 OCR、不写入知识库或文章。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/581f1cd242eeae969c16ecec209fa9c7.png",
+      "action": "company",
+      "reason": "图片展示服装缝制作业，作为生产环境资产；不自动证明质量或产能。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/90b11ef98588423417302c8c66f59047.png",
+      "action": "company",
+      "reason": "图片展示服装生产车间，作为企业环境资产。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/9945ac5ef4159084cdf7e6aab6f61712.jpg",
+      "action": "evidence",
+      "evidence_type": "trademark_registration_certificate",
+      "supports_fields": [
+        "company_name"
+      ],
+      "disclosure_level": "restricted",
+      "reason": "商标注册证中列明注册人为曹县晶铭服饰有限公司；仅窄关联企业主体，不证明产品性能。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/9bc85bcaf81b5fd69b99178a05084089.png",
+      "action": "company",
+      "reason": "图片展示服装生产车间与人员作业，作为企业环境资产。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/9d9bf13be78b3b75a359533087177989.png",
+      "action": "product",
+      "product_name": "儿童芭蕾tutu裙",
+      "reason": "图片为儿童芭蕾舞 TUTU 裙成品，与同名产品资料一致。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/9e9b542e255267672a5c8fa679bc758e.png",
+      "action": "company",
+      "reason": "图片展示厂房外观，作为企业环境资产。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/a889ebdaf9a20fe56d731a1752e7c6aa.png",
+      "action": "company",
+      "reason": "企业宣传图包含厂房外观，作为企业素材保留；图中文字不自动转为事实。"
+    },
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/e87aee611900335001b9928ef35e958e.jpg",
+      "action": "evidence",
+      "evidence_type": "business_license",
+      "supports_fields": [
+        "company_name",
+        "address"
+      ],
+      "disclosure_level": "restricted",
+      "reason": "营业执照仅支持企业名称与登记住所；不用于证明产品、产能或服务承诺。"
     }
   ],
   "products": [
@@ -13,24 +70,26 @@
       "category": "儿童舞蹈服饰",
       "is_main": true,
       "source_paths": [
-        "儿童芭蕾 tutu 裙/**"
+        "儿童芭蕾 tutu 裙/**",
+        "曹县晶铭服饰有限公司 信息/9d9bf13be78b3b75a359533087177989.png"
       ],
       "selling_points": [
         "多层高密度网纱并配置定型硬衬",
-        "覆盖100至160尺码",
-        "支持一件起混批和舞蹈机构定制"
+        "网纱边缘锁边，内衬采用全棉透气里衬",
+        "覆盖100至160尺码"
       ],
       "attributes": {
         "size_range": "100-160",
-        "main_material": "锦纶冰丝与多层网纱",
-        "applicable_age": "3-14岁"
+        "main_material": "锦纶冰丝、多层网纱与全棉里衬",
+        "applicable_age": "3-14岁",
+        "application_scenarios": "日常练功、考级、舞台汇演、舞蹈比赛"
       },
       "capabilities": [
         "生产供应",
-        "印LOGO与配色定制",
-        "裙摆层数与尺码定制"
+        "支持一件起混批与小批量试单",
+        "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
       ],
-      "reason": "知识库将儿童芭蕾舞TUTU裙列为核心产品，图片集中在同名目录。"
+      "reason": "知识库将儿童芭蕾舞 TUTU 裙列为核心产品，37 张产品图集中在同名目录及企业资料目录；颜色和款式作为同一商业产品的变体，不按图片拆成多个 SKU。"
     }
   ],
   "fact_resolutions": [
@@ -38,7 +97,7 @@
       "subject": "company",
       "field": "company_short_name",
       "value": "晶铭服饰",
-      "reason": "信息表中的值是一句经营描述，不是企业简称；沿用已有人审业务简称。"
+      "reason": "信息表的“公司简称”填写为经营描述，不是简称；从企业全称规范化为待确认简称“晶铭服饰”。"
     }
   ]
 }

@@ -30,9 +30,19 @@
 - **客户名单**在 `projects/registry.json`，用 `geo-cli projects list` / `resolve`；**不要**写进 Skill 正文。
 - Skill 应调用 `geo-cli`，不要在对话里手搓校验规则。
 
+## 研发对标 vs 最终交付
+
+- `docs/各GEO平台资料/`、演示账号和竞品术语仅供**开发阶段研究**；不是运行时输入、输出格式或集成目标。
+- ❌ 不要在发布用 Skill、CLI、Schema、客户产物中出现大泽/摘星/掌心/荟信专用路由或导出适配器，也不要向竞品提交客户数据。
+- ✅ 把对标结论抽象成紫驰自己的通用事实、诊断、场景、内容和发布方法；研发说明写在 `docs/`、OpenSpec 或本文件。
+- 最终运行交付面只有 `packages/geo-cli`、`skills/zichi-geo` 和 `projects/{项目名}/` 目录契约；`docs/`、`openspec/`、竞品资料不应成为运行时依赖。
+- SaaS 首期只同步展示本地产物；把清洗/诊断/场景/内容能力迁到 SaaS 属后续独立阶段，禁止提前维护两套生产逻辑。
+
 ## 进行中的 OpenSpec
 
-- 当前 change：`openspec/changes/clean-projects-to-knowledge-schema/`（先华远深洗再复用）。
+- 企业事实清洗：`openspec/changes/rebuild-enterprise-fact-cleaning/`。
+- 基线诊断：`openspec/changes/add-baseline-geo-diagnosis/`。
+- 客户问题与购买场景：`openspec/changes/add-customer-question-scenarios/`。
 
 
 

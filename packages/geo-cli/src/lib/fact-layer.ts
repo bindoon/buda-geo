@@ -295,18 +295,76 @@ export async function buildFactLayer(args: {
 
   for (const resolution of factResolutions ?? []) {
     if (resolution.subject !== "company") continue;
-    const selected = facts.find(
+    let selected = facts.find(
       (fact) =>
         fact.subject_id === companySubject &&
         fact.field === resolution.field &&
         JSON.stringify(fact.value) === JSON.stringify(resolution.value),
     );
+    const fieldCandidates = facts.filter(
+      (fact) => fact.subject_id === companySubject && fact.field === resolution.field,
+    );
+    if (!selected) {
+      const sourceRefs = [...new Set(fieldCandidates.flatMap((fact) => fact.source_refs))];
+      selected = addFact(
+        facts,
+        companySubject,
+        resolution.field,
+        resolution.value,
+        sourceRefs.length ? sourceRefs : baseRefs,
+        "operator",
+        fieldCandidates[0]?.disclosure_level ?? "public",
+        0.8,
+      ) ?? undefined;
+    }
     if (!selected) continue;
+    if (selected.derivation === "legacy") {
+      selected.derivation = "operator";
+      selected.confidence = 0.8;
+      selected.source_refs = [
+        ...new Set(
+          fieldCandidates
+            .filter(
+              (fact) =>
+                fact.fact_id !== selected!.fact_id && fact.derivation !== "legacy",
+            )
+            .flatMap((fact) => fact.source_refs),
+        ),
+      ];
+      if (selected.source_refs.length === 0) selected.source_refs = baseRefs;
+    }
     if (resolution.field in baseinfo && resolution.field !== "app_id") {
       (baseinfo as unknown as Record<string, unknown>)[resolution.field] = resolution.value;
       baseFactRefs[resolution.field] = [selected.fact_id];
     }
-    for (const conflict of conflicts.filter((item) => item.field === resolution.field)) {
+    const fieldConflicts = conflicts.filter((item) => item.field === resolution.field);
+    if (
+      fieldConflicts.length === 0 &&
+      fieldCandidates.some((fact) => fact.fact_id !== selected!.fact_id)
+    ) {
+      conflicts.push({
+        conflict_id: stableId(
+          "conflict",
+          companySubject,
+          resolution.field,
+          ...fieldCandidates.map((fact) => fact.value),
+          resolution.value,
+        ),
+        subject_id: companySubject,
+        field: resolution.field,
+        candidate_fact_ids: [
+          ...fieldCandidates.map((fact) => fact.fact_id),
+          selected.fact_id,
+        ],
+        severity: "block",
+        status: "resolved",
+        resolution: resolution.reason,
+      });
+    }
+    for (const conflict of fieldConflicts) {
+      if (!conflict.candidate_fact_ids.includes(selected.fact_id)) {
+        conflict.candidate_fact_ids.push(selected.fact_id);
+      }
       conflict.status = "resolved";
       conflict.resolution = resolution.reason;
     }

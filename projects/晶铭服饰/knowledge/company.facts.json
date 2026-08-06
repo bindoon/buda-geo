@@ -1,8 +1,8 @@
 {
   "app_id": "jm_apparel_cx",
-  "generated_at": "2026-08-06T09:32:44Z",
+  "generated_at": "2026-08-06T10:23:33Z",
   "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-  "facts_hash": "53c4b45896c61945ba6b7638b71e0ffca58583cff96a0b6c032ea5d9c6e57dda",
+  "facts_hash": "bc94bcf1696e6114d8f74fd69c771580da390bdd80c9a2af284a91cee4a71901",
   "subjects": [
     {
       "subject_id": "sub_company_0e74341ab7180b08",
@@ -66,7 +66,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "review_status": "candidate"
     },
@@ -429,6 +430,96 @@
         "src_b0f07a365cfc86a9"
       ],
       "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_12e6fd575db1f312",
+      "type": "asset",
+      "name": "0692535a5a0d81e6c960d66ab6125167.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_f09ee2c97394e3f0"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_6ca1a7305e9d37ac",
+      "type": "asset",
+      "name": "581f1cd242eeae969c16ecec209fa9c7.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_a3ceaf6aae503388"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_866fd47d3c93db13",
+      "type": "asset",
+      "name": "90b11ef98588423417302c8c66f59047.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_88fee5a3ad2e12af"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_2eb9d5d48bba5e27",
+      "type": "asset",
+      "name": "9945ac5ef4159084cdf7e6aab6f61712.jpg",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_563e8cd299115df3"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_32f898ab58c707d9",
+      "type": "asset",
+      "name": "9bc85bcaf81b5fd69b99178a05084089.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_caa34d044c336a51"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_8be4cab9dda4dcb5",
+      "type": "asset",
+      "name": "9d9bf13be78b3b75a359533087177989.png",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_beef4b26df8344bf"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_964da934c04014f5",
+      "type": "asset",
+      "name": "9e9b542e255267672a5c8fa679bc758e.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_6458ca3f42d13c65"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_c6d79954a101ed6f",
+      "type": "asset",
+      "name": "a889ebdaf9a20fe56d731a1752e7c6aa.png",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_b5019cc2e5621211"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_868dc1de6c5421b9",
+      "type": "asset",
+      "name": "e87aee611900335001b9928ef35e958e.jpg",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_344ed17d55e83650"
+      ],
+      "review_status": "candidate"
     }
   ],
   "facts": [
@@ -702,7 +793,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "extracted",
       "confidence": 0.98,
@@ -751,7 +843,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -759,13 +852,13 @@
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_379be848d93efdee",
+      "fact_id": "fact_609e6e5cbb03db6f",
       "subject_id": "sub_product_78f8dc1314a78919",
       "field": "selling_points",
       "value": [
         "多层高密度网纱并配置定型硬衬",
-        "覆盖100至160尺码",
-        "支持一件起混批和舞蹈机构定制"
+        "网纱边缘锁边，内衬采用全棉透气里衬",
+        "覆盖100至160尺码"
       ],
       "unit": null,
       "source_refs": [
@@ -804,7 +897,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -812,13 +906,14 @@
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_38d3648a6f0eeb60",
+      "fact_id": "fact_1277a7ca911a72df",
       "subject_id": "sub_product_78f8dc1314a78919",
       "field": "attributes",
       "value": {
         "size_range": "100-160",
-        "main_material": "锦纶冰丝与多层网纱",
-        "applicable_age": "3-14岁"
+        "main_material": "锦纶冰丝、多层网纱与全棉里衬",
+        "applicable_age": "3-14岁",
+        "application_scenarios": "日常练功、考级、舞台汇演、舞蹈比赛"
       },
       "unit": null,
       "source_refs": [
@@ -857,7 +952,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -865,13 +961,13 @@
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_5010f2bcf29d1f38",
+      "fact_id": "fact_c8d5cc0c8dda17b0",
       "subject_id": "sub_product_78f8dc1314a78919",
       "field": "capabilities",
       "value": [
         "生产供应",
-        "印LOGO与配色定制",
-        "裙摆层数与尺码定制"
+        "支持一件起混批与小批量试单",
+        "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
       ],
       "unit": null,
       "source_refs": [
@@ -910,7 +1006,8 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -959,10 +1056,25 @@
         "src_98a6388bc8caee59",
         "src_2fc932276a84576a",
         "src_0fe3f6d48bec27dd",
-        "src_b0f07a365cfc86a9"
+        "src_b0f07a365cfc86a9",
+        "src_beef4b26df8344bf"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_44f9ff6c4fad64a9",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "company_short_name",
+      "value": "晶铭服饰",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "operator",
+      "confidence": 0.8,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -1469,7 +1581,146 @@
       "confidence": 0.95,
       "review_status": "candidate",
       "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b5e367de29f97276",
+      "subject_id": "sub_asset_12e6fd575db1f312",
+      "field": "path",
+      "value": "assets/images/_company/0692535a5a0d81e6c960d66ab6125167.png",
+      "unit": null,
+      "source_refs": [
+        "src_f09ee2c97394e3f0"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_35e72ba91e52f13a",
+      "subject_id": "sub_asset_6ca1a7305e9d37ac",
+      "field": "path",
+      "value": "assets/images/_company/581f1cd242eeae969c16ecec209fa9c7.png",
+      "unit": null,
+      "source_refs": [
+        "src_a3ceaf6aae503388"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f09a8e4e4bfbc082",
+      "subject_id": "sub_asset_866fd47d3c93db13",
+      "field": "path",
+      "value": "assets/images/_company/90b11ef98588423417302c8c66f59047.png",
+      "unit": null,
+      "source_refs": [
+        "src_88fee5a3ad2e12af"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6a219580518df56f",
+      "subject_id": "sub_asset_2eb9d5d48bba5e27",
+      "field": "path",
+      "value": "assets/images/_trust/9945ac5ef4159084cdf7e6aab6f61712.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_563e8cd299115df3"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_c20eaa2ff39ccb88",
+      "subject_id": "sub_asset_32f898ab58c707d9",
+      "field": "path",
+      "value": "assets/images/_company/9bc85bcaf81b5fd69b99178a05084089.png",
+      "unit": null,
+      "source_refs": [
+        "src_caa34d044c336a51"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_07b2ab39d18f21fc",
+      "subject_id": "sub_asset_8be4cab9dda4dcb5",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/9d9bf13be78b3b75a359533087177989.png",
+      "unit": null,
+      "source_refs": [
+        "src_beef4b26df8344bf"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0517f0749d5f8392",
+      "subject_id": "sub_asset_964da934c04014f5",
+      "field": "path",
+      "value": "assets/images/_company/9e9b542e255267672a5c8fa679bc758e.png",
+      "unit": null,
+      "source_refs": [
+        "src_6458ca3f42d13c65"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_adb5492602d31962",
+      "subject_id": "sub_asset_c6d79954a101ed6f",
+      "field": "path",
+      "value": "assets/images/_company/a889ebdaf9a20fe56d731a1752e7c6aa.png",
+      "unit": null,
+      "source_refs": [
+        "src_b5019cc2e5621211"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3d2d4050956bc677",
+      "subject_id": "sub_asset_868dc1de6c5421b9",
+      "field": "path",
+      "value": "assets/images/_trust/e87aee611900335001b9928ef35e958e.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_344ed17d55e83650"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
     }
   ],
-  "conflicts": []
+  "conflicts": [
+    {
+      "conflict_id": "conflict_d50f88856fcc1b01",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "company_short_name",
+      "candidate_fact_ids": [
+        "fact_006357fb08a27dce",
+        "fact_44f9ff6c4fad64a9"
+      ],
+      "severity": "block",
+      "status": "resolved",
+      "resolution": "信息表的“公司简称”填写为经营描述，不是简称；从企业全称规范化为待确认简称“晶铭服饰”。"
+    }
+  ]
 }

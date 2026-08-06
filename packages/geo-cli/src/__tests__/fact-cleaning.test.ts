@@ -201,3 +201,50 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   assert(sourceIndex.sources.every((source) => /^[0-9a-f]{64}$/.test(source.hash)));
   assert.equal((await readFile(path.join(inputs, "企业信息收集表.xlsx"))).equals(xlsxBuffer), true);
 });
+
+test("project fact resolution may normalize a value missing from raw candidates", async () => {
+  const projectRoot = await mkdtemp(path.join(os.tmpdir(), "geo-normalized-resolution-"));
+  const inputs = path.join(projectRoot, "inputs");
+  const knowledge = path.join(projectRoot, "knowledge");
+  await mkdir(inputs, { recursive: true });
+  await writeJson(path.join(knowledge, "clean.overrides.json"), {
+    app_id: "app_resolution",
+    assets: [],
+    products: [],
+    fact_resolutions: [{
+      subject: "company",
+      field: "company_short_name",
+      value: "规范简称",
+      reason: "原表误填经营描述，由 Skill 根据企业全称规范化，等待人工确认",
+    }],
+  });
+
+  const workbook = XLSX.utils.book_new();
+  const sheet = XLSX.utils.aoa_to_sheet([
+    ["公司名称", "规范简称有限公司", "公司简称", "经营多年，专注测试产品的厂家"],
+    ["公司官网", "https://example.com"],
+  ]);
+  XLSX.utils.book_append_sheet(workbook, sheet, "Sheet1");
+  await writeFile(
+    path.join(inputs, "企业信息收集表.xlsx"),
+    XLSX.write(workbook, { type: "buffer", bookType: "xlsx" }),
+  );
+
+  const first = await cleanProject(projectRoot, "app_resolution");
+  const baseinfo = await readJson<Record<string, unknown>>(path.join(knowledge, "company.baseinfo.json"));
+  assert.equal(baseinfo.company_short_name, "规范简称");
+  const facts = await readJson<FactLedger>(path.join(knowledge, "company.facts.json"));
+  assert(facts.facts.some((fact) =>
+    fact.field === "company_short_name" &&
+    fact.value === "规范简称" &&
+    fact.derivation === "operator" &&
+    fact.review_status === "candidate"
+  ));
+  assert(facts.conflicts.some((conflict) =>
+    conflict.field === "company_short_name" &&
+    conflict.status === "resolved" &&
+    conflict.resolution === "原表误填经营描述，由 Skill 根据企业全称规范化，等待人工确认"
+  ));
+  const second = await cleanProject(projectRoot, "app_resolution");
+  assert.equal(second.facts_hash, first.facts_hash);
+});

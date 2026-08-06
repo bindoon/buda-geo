@@ -66,7 +66,7 @@ packages/geo-cli/
   dist/             # npm run build
 ```
 
-不修改 `inputs/`。CLI 不含客户名或具体 SKU；产品归桶、证据范围与冲突选择由 Skill/运营写入项目级 `knowledge/clean.overrides.json`，CLI 再确定性执行。配图先复制到 `assets/images/`，OSS 在 publish 阶段再处理。
+不修改 `inputs/`。CLI 不含客户名或具体 SKU；产品归桶、证据范围、冲突选择和明显错填字段的规范值由 Skill/运营写入项目级 `knowledge/clean.overrides.json`，CLI 再确定性执行。规范值作为待确认的 `operator` 事实保留，原始候选不会被删除。配图先复制到 `assets/images/`，OSS 在 publish 阶段再处理。
 
 `clean` 的边界是“可追溯的企业事实”。关键词、需求场景、受众画像、FAQ、prompts、诊断题和 generation plan 必须在企业事实确认后的对应阶段生成；旧文件可迁移保留，但 clean 不创建或刷新。
 

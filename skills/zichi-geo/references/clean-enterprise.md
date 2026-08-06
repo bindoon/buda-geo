@@ -81,6 +81,8 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 4. 联系方式只能用于名片、转化出口或文末经批准 CTA，不能当企业介绍。
 5. 汇报时使用“企业名片”和“企业介绍”，不要只说 A/B 或“画像”。
 
+若原表把经营描述、广告语等明显错填到字段中，可在 `fact_resolutions` 写入规范值和理由。规范值会记为待确认的 `operator` 事实，原始值与已解决冲突仍保留；这不是确认，必须继续停在人工复核闸门。
+
 `pain_points` 没有可靠来源时可保留 `[]`。profile 字段允许缺失，但错桶或联系方式泄漏必须修复。
 
 #### 证据关联方法
@@ -112,7 +114,7 @@ geo-cli status --project {PROJECT}
 
 ### 5. Confirm：必须由人确认
 
-按 `operator-report.md` 输出复核报告并停住。只有用户明确确认企业事实后运行：
+按 `operator-report.md` 输出复核报告并停住。报告必须把企业名片、企业介绍五个分区、每个产品、每条证据、所有推断/规范化值、冲突和空缺逐项列出；不能只写“已拆分”“已生成 JSON”或“校验通过”。只有用户明确确认企业事实后运行：
 
 ```bash
 geo-cli confirm-clean --project {PROJECT}

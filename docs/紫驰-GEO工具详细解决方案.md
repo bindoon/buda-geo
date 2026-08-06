@@ -76,6 +76,8 @@ geo/
 
 **原则**：Skill 不做 HTTP 细节；发布/诊断密钥不进 JSON；`inputs/` 保持原样，清洗产物只写 `knowledge/`、`assets/` 等下游目录。
 
+**最终运行交付边界**：对外实际运行只依赖 `packages/geo-cli`、`skills/zichi-geo` 和 `projects/{项目名}/` 目录契约。`docs/`、`openspec/`、竞品研究资料与演示账号属于研发仓库，不是客户运行时依赖，也不应出现在最终用户的流程或界面中。
+
 ---
 
 ## 2. 项目扫描结论（通用部分）
@@ -121,7 +123,7 @@ geo/
 
 地区向问题（「江苏南通…」「广东深圳…」「河北保定…」）进 **意图/地区定向**，不默认写进全国主词。
 
-> 这些列描述的是客户交来的原始词表，不等于 clean 的输出。clean 的职责止于建立可信企业事实；诊断完成后，再结合事实、诊断缺口和用户意图生成平台无关的需求场景/关键词。三平台术语只在导出时映射，不反向污染事实层。
+> 这些列描述的是客户交来的原始词表，不等于 clean 的输出。clean 的职责止于建立可信企业事实；诊断完成后，再结合事实、诊断缺口和用户意图生成紫驰自己的需求场景/关键词。大泽、摘星、掌心/荟信只用于对标方法，不是导出或数据提交目标。
 
 ### 2.5 信息收集表字段（A 模块最小集）
 
@@ -198,7 +200,7 @@ projects/{项目名}/
     company.skus.json          # 经 Skill 语义归桶后的产品/产品族；CLI 不写死客户 SKU
     company.facts.json         # 主体、事实、来源引用、推断方式、置信度、冲突
     company.evidence.json      # 证据台账及 evidence→fact 关联
-    clean.overrides.json       # 项目级人工规则：资产归类、产品归桶、冲突解决
+    clean.overrides.json       # 项目级 Skill 规则：资产归类、产品归桶、冲突选择/字段规范化
     snapshots/                 # 已确认事实快照；不可被 re-clean 覆盖
     # keywords / FAQ / prompts / generation_plan 属下游阶段，clean 不创建或刷新
   assets/images/
@@ -219,6 +221,8 @@ projects/{项目名}/
   manifest.json                # gates + missing 分级 + 1500 篇三类信源进度
 ```
 
+`clean.overrides.json` 的事实决议既可在多个原始候选中选择，也可修正明显填错字段的值（例如把写进“公司简称”的经营描述规范为简称）。规范值必须保留为 `operator` 候选，同时保留原始候选与已解决冲突记录；只有人工确认后才进入不可变快照，重复 clean 不得改变事实哈希。
+
 `app_id` 建议：拼音/英文短码，如 `hy_tool_nt`、`lw_storage_sz`，写入每个 JSON 根字段与 `manifest.json`。
 
 **稿件 `status`（学摘星状态机，契约先定）**：`draft` → `pending_review` → `approved` → `queued` → `published` | `failed`。自媒体（`social`）必须到 `approved` 才可 publish。
@@ -234,7 +238,6 @@ projects/{项目名}/
 | 只有 `inputs/` 或说「清洗」 | `clean` | clean-enterprise + schema | 来源索引 + 企业事实/证据 + 兼容视图 + 缺失清单 |
 | 企业事实已确认，「诊断」 | `diagnose` | `diagnose-baseline.md` | `diagnosis/*` |
 | 诊断已确认，「整理关键词/场景」 | `scenarios` | `build-demand-scenarios.md` | `strategy/*` |
-| 「导出大泽/摘星/掌心格式」 | `platform-export` | `export-platform-views.md` | 平台派生视图 |
 | 「选题 / FAQ / Prompt / 计划」 | `plan` | `plan-content.md` | 内容计划版本 |
 | 「写文章 / 批量」 | `generate` | `generate-articles.md` | `articles/*` 草稿 |
 | 「审稿 / 批准」 | `review` | `review-articles.md` | approved 稿件 |
@@ -313,7 +316,7 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 | 1 | Schema + 华远手写/半自动样例 JSON + `validate` | 样例过校验 | 2–3 天 |
 | 2 | `SKILL.md` 路由 + `clean-enterprise.md` | 华远 inputs → knowledge 可确认 | 3–5 天 |
 | 3 | `diagnose-baseline.md` + diagnose CLI | 小批量种子题、逐题证据与基线报告 | 2–4 天 |
-| 4 | `build-demand-scenarios.md` + 三平台派生导出 | 场景库确认，平台导出可追溯 | 3–5 天 |
+| 4 | `build-demand-scenarios.md` + 竞品案例覆盖测试 | 紫驰场景库确认，且不依赖竞品格式 | 3–5 天 |
 | 5 | 内容规划 + 生成 + 审稿 references | social/media/b2b 各出合规样稿 | 3–5 天 |
 | 6 | `publish-articles.md` + publish CLI | 至少 1 个自媒体真发通；媒体/B2B 回执格式统一 | 2–4 天 |
 | 7 | 多客户复跑（验证通用流程） | Part A 验收 | 2–3 天 |
@@ -339,7 +342,13 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 geo-cli sync push --project <path> [--dry-run]
 ```
 
-Skill 增加 `sync` 分支与 `references/sync-saas.md`。本地仍是主生产；云不做清洗重算。
+Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
+
+1. **阶段一：本地生产，SaaS 展示。** 本地是权威数据源，云端只读展示同步结果，不重算清洗、诊断、场景或内容。
+2. **阶段二：云端协作增强。** 可增加复核、批注、任务查看等轻量能力，本地仍负责生产。
+3. **阶段三：按能力选择性迁移。** 产品成熟后，再分别评估把清洗、诊断、场景或内容能力搬到 SaaS；每项迁移单独立项，不预先维护两套实现。
+
+竞品平台只是研发对标资料，不参与这条同步链路。
 
 ### 5.3 同步节奏（待与紫驰确认后写死）
 

@@ -27,18 +27,18 @@
     {
       "code": "sensitive_inputs_reviewed",
       "severity": "optional",
-      "message": "当前隔离 10 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
+      "message": "当前隔离 1 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
     }
   ],
   "clean_pipeline": {
     "stage": "review",
     "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-    "facts_hash": "53c4b45896c61945ba6b7638b71e0ffca58583cff96a0b6c032ea5d9c6e57dda",
+    "facts_hash": "bc94bcf1696e6114d8f74fd69c771580da390bdd80c9a2af284a91cee4a71901",
     "changed_since_confirmation": true,
     "previous_snapshot_id": null
   },
   "clean_ready": false,
   "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-06T09:32:44Z"
+  "updated_at": "2026-08-06T10:23:33Z"
 }
