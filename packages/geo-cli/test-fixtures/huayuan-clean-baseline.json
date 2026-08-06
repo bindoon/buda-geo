@@ -1,0 +1,30 @@
+{
+  "project": "projects/南通市海门华远工具厂",
+  "captured_at": "2026-08-06",
+  "input_file_count_excluding_ds_store": 31,
+  "sorted_sha256_manifest_hash": "0103359f55633e65548c6cc5b900bd22ecd2d7fe51098be0491acbefc9248357",
+  "key_input_hashes": {
+    "华远GEO信息收集表.xlsx": "32f85cd27ab39baa8314bc123e68dfabb3ccd82a4de422501e1f2e62a29d124c",
+    "华远知识库.docx": "af28acbdf8934277e3c06d58f8a1342244dcce7bb13cf284c401e880a0ef317f",
+    "关键词问题库.xlsx": "6c03bfaae278619d6edd1b3d43382a55d6d2be67d165716f15eba1a3b117d540",
+    "b法人身份证正面.jpg": "fb83e9301a31e7b863933e5a0bf0cab81c94b1d48a761aeedc623077ac3598bd"
+  },
+  "known_defects": {
+    "sku_count": 10,
+    "hash_like_skus": [
+      "a7ef0e9bdc4a8a9da113a7e6fea6",
+      "a9ea193505772f99fe6d003546c45e77",
+      "b281-8926-4b2d-8ed8-2305172f021c"
+    ],
+    "empty_category_count": 10,
+    "empty_selling_points_count": 10,
+    "trust_section_empty": true,
+    "pain_points_empty": true,
+    "advantages_contains_trust_and_pain_sections": true,
+    "legacy_strategy_files": [
+      "company.keywords.json",
+      "company.prompts.json",
+      "company.generation_plan.json"
+    ]
+  }
+}

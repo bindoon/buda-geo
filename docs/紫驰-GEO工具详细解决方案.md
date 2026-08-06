@@ -307,7 +307,7 @@ geo-cli status    --project <path>           # gates + 配额进度（已生成/
 | 3 | `diagnose.md` + `diagnose` CLI | 小批量题出报告 | 2–4 天 |
 | 4 | `write-rules.md`，social/media/b2b 各出样稿 | 运营认三类信源质量下限 | 3–5 天 |
 | 5 | `publish-geo-api.md` + `publish` CLI | 至少 1 个自媒体真发通；媒体/B2B 回执格式统一 | 2–4 天 |
-| 6 | 华远串跑 + 朗威复跑（验证通用清洗） | Part A 验收 | 2–3 天 |
+| 6 | 晶铭服饰 + 朗威复跑（验证通用清洗） | Part A 验收 | 2–3 天 |
 
 ---
 

@@ -25,7 +25,9 @@
 
 ## 装填顺序
 
-A baseinfo → B profile → C skus/assets → D keywords（可与 A 并行）→ E faq 空壳 → F prompts 默认模板 → generation_plan（可按主词生成 draft tasks，`use_knowledge: true`）→ manifest。
+A **baseinfo（名片）** → B **profile（介绍文案，四段拆开）** → C skus/assets → D keywords → E faq（有客服则 Skill 提炼，勿长期空壳）→ F prompts → generation_plan → manifest。
+
+**baseinfo ≠ profile**：详见 `baseinfo-vs-profile.md`。电话/链接只进 A；介绍/优势/背书进 B。CLI 粗拆后 Skill 必须精修。
 
 ## 缺省文案（chat_logs）
 

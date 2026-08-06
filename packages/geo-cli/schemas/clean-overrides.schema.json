@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-clean-overrides",
+  "type": "object",
+  "required": ["app_id", "assets"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_path", "action"],
+        "properties": {
+          "source_path": { "type": "string" },
+          "action": { "enum": ["product", "company", "evidence", "ignore"] },
+          "product_name": { "type": "string" },
+          "evidence_type": { "type": "string" },
+          "disclosure_level": { "enum": ["public", "restricted", "internal"] },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

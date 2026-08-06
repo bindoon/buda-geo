@@ -12,7 +12,7 @@ import {
 import { parseInfoForm, parseKeywords } from "./parse.js";
 import type { BaseInfo, KeywordsJson } from "./parse.js";
 import { syncImagesAndSkus } from "./skus.js";
-import { writeJson } from "./util.js";
+import { readJson, writeJson } from "./util.js";
 
 export interface CleanResult {
   app_id: string;
@@ -90,7 +90,16 @@ export async function cleanProject(
     const kbPath = path.join(projectRoot, "inputs", kbPaths[0]);
     const text = await docxPlainText(kbPath);
     const sections = splitProfileSections(text);
-    profile = { ...profile, ...sections, source: `docx:${path.basename(kbPath)}` };
+    // baseinfo = 名片；profile = 介绍文案。分段结果已尽量剥离联系方式。
+    profile = {
+      app_id: appId,
+      intro: sections.intro,
+      products_services: sections.products_services,
+      advantages: sections.advantages,
+      trust: sections.trust,
+      pain_points: sections.pain_points,
+      source: `docx:${path.basename(kbPath)}`,
+    };
     const m = text.match(/优化关键词[：:]\s*([^\n]+)/);
     if (m && !keywords.search.terms.length) {
       keywords.search.terms = m[1]
@@ -130,7 +139,21 @@ export async function cleanProject(
     }
   }
 
-  const faq = defaultFaq(appId);
+  // Preserve Skill-filled FAQ (e.g. from_chat) across re-clean.
+  let faq = defaultFaq(appId);
+  try {
+    const prev = (await readJson(
+      path.join(knowledge, "company.faq.json"),
+    )) as { status?: string; items?: unknown[] };
+    if (
+      prev?.items?.length &&
+      (prev.status === "from_chat" || prev.status === "draft_from_profile")
+    ) {
+      faq = prev as typeof faq;
+    }
+  } catch {
+    /* first clean */
+  }
   const prompts = defaultPrompts(appId);
   const plan = defaultPlan(appId);
 

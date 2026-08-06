@@ -10,7 +10,7 @@
       ],
       "use_knowledge": true,
       "limit": 20,
-      "produced_count": 0,
+      "produced_count": 1,
       "prompt_template_id": "eeat_intro_advantage_faq"
     },
     {
@@ -22,7 +22,7 @@
       ],
       "use_knowledge": true,
       "limit": 20,
-      "produced_count": 0,
+      "produced_count": 1,
       "prompt_template_id": "eeat_intro_advantage_faq"
     },
     {
@@ -34,7 +34,7 @@
       ],
       "use_knowledge": true,
       "limit": 20,
-      "produced_count": 0,
+      "produced_count": 1,
       "prompt_template_id": "eeat_intro_advantage_faq"
     },
     {

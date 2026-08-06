@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-source-index",
+  "type": "object",
+  "required": ["app_id", "generated_at", "inputs_hash", "sources"],
+  "properties": {
+    "app_id": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string" },
+    "inputs_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "scope", "path", "name", "kind", "hash", "size", "parse_status", "ignored", "ignored_reason"],
+        "properties": {
+          "source_id": { "type": "string", "minLength": 1 },
+          "scope": { "enum": ["input", "legacy_projection"] },
+          "path": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "minLength": 1 },
+          "hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "size": { "type": "integer", "minimum": 0 },
+          "parse_status": { "enum": ["discovered", "extractable", "indexed_only", "ignored"] },
+          "ignored": { "type": "boolean" },
+          "ignored_reason": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

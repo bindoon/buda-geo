@@ -18,6 +18,7 @@
 ## 清洗 / Schema
 
 - 允许字段缺失，但必须写入 `manifest.missing`，并带 `block` | `recommend` | `optional`。
+- **`company.baseinfo.json` = 名片**（电话/地址/店铺/账号）；**`company.profile.json` = 介绍文案**（intro/产品服务/优势/背书）。二者不要混；画像里不要再写联系方式。
 - 无客服记录 → `recommend`（`chat_logs`），**不阻断** clean 确认。
 - 配图先本地 `path`（`assets/images/...`）；`url`/OSS 仅在发文需要 CDN 时再做。
 - `app_id` 必须在各 `company.*.json` 与 `manifest.json` 一致。
@@ -37,6 +38,8 @@
 
 
 
+数据部分：
 河北仁丹药业有限公司  才合作不久 没有啥询盘记录。 
-
 南通市海门华远工具厂  也同样没有
+
+建议用：晶铭服饰 作为样板。

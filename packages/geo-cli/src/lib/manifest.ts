@@ -38,7 +38,12 @@ export async function ensureAppId(
 
 export function buildMissing(
   baseinfo: BaseInfo,
-  profile: { intro?: string },
+  profile: {
+    intro?: string;
+    products_services?: string;
+    advantages?: string;
+    trust?: string;
+  },
   keywords: KeywordsJson,
   hasChat: boolean,
 ): MissingItem[] {
@@ -63,6 +68,27 @@ export function buildMissing(
       code: "profile_intro_short",
       severity: "block",
       message: `公司介绍过短（${intro.length} 字），请补充知识库画像至 ≥100 字。`,
+    });
+  }
+  // Profile should be narrative; contact fields live in baseinfo.
+  const blob = `${profile.intro ?? ""}\n${profile.products_services ?? ""}\n${profile.advantages ?? ""}\n${profile.trust ?? ""}`;
+  if (
+    /联系人|联系我们|电话[：:]|https?:\/\/|1688\.com/.test(blob) &&
+    (baseinfo.contact_phone || baseinfo.website_or_shop_url)
+  ) {
+    missing.push({
+      code: "profile_contact_leak",
+      severity: "recommend",
+      message:
+        "画像(profile)里仍含电话/链接/联系人；请删掉，统一只留在 baseinfo（名片）。",
+    });
+  }
+  if (!(profile.advantages ?? "").trim() || !(profile.trust ?? "").trim()) {
+    missing.push({
+      code: "profile_sections_thin",
+      severity: "recommend",
+      message:
+        "画像未拆全：advantages（优势）或 trust（信任背书）为空。请按标题拆段，勿把整篇 Word 塞进 intro/products_services。",
     });
   }
   const terms = keywords.search?.terms ?? [];

@@ -36,14 +36,17 @@ venv/
 .npm/
 .cache/
 .playwright-cli/
+.codex
 
 # Optional local dumps (keep docs 摸底 markdown; ignore bulky raw if re-generated)
 # Uncomment if raw snapshots should stay local-only:
 # docs/各GEO平台资料/平台摸底/*-raw/
 # docs/各GEO平台资料/平台摸底/*-raw-clean/
 
-projects/**/inputs
-projects/**/assets
+projects/*/inputs
+projects/*/assets
+projects/*/articles
+
 openspec
 docs/**/*.pptx
 docs/**/*.pdf

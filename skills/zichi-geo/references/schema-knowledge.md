@@ -22,13 +22,15 @@ manifest.json
 
 ---
 
-## A · `company.baseinfo.json`
+## A · `company.baseinfo.json`（名片）
+
+硬数据：谁、怎么联系、发到哪。**不写长介绍。**
 
 | 字段 | 必填 | 说明 |
 |------|------|------|
 | `app_id` | ✓ | 租户短码 |
 | `company_name` | ✓ block | 全称 |
-| `company_short_name` | | 简称 |
+| `company_short_name` | | **品牌简称**（如「晶铭服饰」），不要填广告长句 |
 | `contact_name` | | 联系人 |
 | `contact_phone` | | 电话 |
 | `address` | | 地址 |
@@ -38,16 +40,20 @@ manifest.json
 | `conversion` | | CTA：`phone` / `shop_url` / `notes` |
 | `credentials[]` | | `{type, path}`；**不含 legal_id** |
 
-## B · `company.profile.json`
+## B · `company.profile.json`（介绍文案）
+
+叙事内容，供写文引用。**禁止**再堆电话/链接（见 `baseinfo-vs-profile.md`）。
 
 | 字段 | 说明 |
 |------|------|
-| `intro` | 公司介绍（过短 → block） |
-| `products_services` | 产品服务 |
-| `advantages` | 核心优势 |
-| `trust` | 信任背书 |
-| `pain_points[]` | 可选 |
-| `source` | 如 `docx:华远知识库.docx` |
+| `intro` | 公司是谁、体量；建议 150–400 字（过短 → block） |
+| `products_services` | 品类与服务政策（起批/定制/发货/售后） |
+| `advantages` | 差异化优势（勿留空把全文塞进 intro） |
+| `trust` | 资质、口碑、案例 |
+| `pain_points[]` | 客户/行业痛点短句 |
+| `source` | 如 `docx:…知识库.docx` |
+
+缺失提示：`profile_sections_thin`（优势/背书空）、`profile_contact_leak`（画像里漏出联系方式）。
 
 建议 `intro` 清洗后 ≥ 100 字，否则 `missing` severity=`block` code=`profile_intro_short`。
 
