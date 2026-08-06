@@ -1,0 +1,1466 @@
+{
+  "app_id": "hy_tool_nt",
+  "generated_at": "2026-08-06T08:57:21Z",
+  "inputs_hash": "21df339349db403753c37e5fc511becc112985e566e5374311cfe84e27b54141",
+  "facts_hash": "bab8538ff81c06eecc431c2c44a45828af8219b8afd2a1f0a45d185ba69946d8",
+  "subjects": [
+    {
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "type": "company",
+      "name": "南通华远机电工具有限公司",
+      "parent_subject_id": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c",
+        "src_75b8fef35ae1629f"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_brand_f81b63e9b10a3359",
+      "type": "brand",
+      "name": "华远机电",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "type": "product",
+      "name": "大蒜剪",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "type": "product",
+      "name": "电动修枝剪",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "type": "product",
+      "name": "电动修枝剪整机套装",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "type": "product",
+      "name": "甘蔗剪",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "type": "product",
+      "name": "水管剪",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "type": "product",
+      "name": "注塑箱",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_5a83bb05d604cab1",
+      "type": "asset",
+      "name": "5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_2c3a60ddfe427e4f"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_84501b925c517a4c",
+      "type": "asset",
+      "name": "a9ea193505772f99fe6d003546c45e77.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_2f05c54564c63680"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_8360ce48be50a089",
+      "type": "asset",
+      "name": "01大蒜剪.jpg",
+      "parent_subject_id": "sub_product_3ec37f31fd9d78ac",
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_595738d66a0d6c48",
+      "type": "asset",
+      "name": "01水管剪.jpg",
+      "parent_subject_id": "sub_product_9e8f2278c929b80e",
+      "source_refs": [
+        "src_25966e9064c31d5c"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_2683665bc7677198",
+      "type": "asset",
+      "name": "01甘蔗剪.jpg",
+      "parent_subject_id": "sub_product_9fc8baddfc803b15",
+      "source_refs": [
+        "src_4f777a8a181ce0bc"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_8f2f0dfbc67327ff",
+      "type": "asset",
+      "name": "04水管剪.jpg",
+      "parent_subject_id": "sub_product_9e8f2278c929b80e",
+      "source_refs": [
+        "src_0331a49f30e997c3"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_7f678ba5ed277630",
+      "type": "asset",
+      "name": "04注塑箱.jpg",
+      "parent_subject_id": "sub_product_4201a3181f03f7b0",
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_3f05c8b57101f19a",
+      "type": "asset",
+      "name": "04甘蔗剪.jpg",
+      "parent_subject_id": "sub_product_9fc8baddfc803b15",
+      "source_refs": [
+        "src_ca2227da3af0f085"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_7291b0266a833339",
+      "type": "asset",
+      "name": "25 30整套.jpg",
+      "parent_subject_id": "sub_product_3f66d7efc1a00da8",
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_3af838c3941cda04",
+      "type": "asset",
+      "name": "25开口修枝剪01款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_28b0c63092f54edc"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_a67b3eccb28f1644",
+      "type": "asset",
+      "name": "25开口修枝剪03款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_8f5fc4ad3d3eefec"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_bb6d7dd0fb0f7e82",
+      "type": "asset",
+      "name": "25开口修枝剪04款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_1162eec1d13fb7d8"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_fc80b796d7772c8c",
+      "type": "asset",
+      "name": "25开口修枝剪牧田插脚05款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_92249ee8f919880b"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_bbc6ec41d43fa790",
+      "type": "asset",
+      "name": "30开口修枝剪01款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_2cd2b61ff8f1f07b"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_9aa435887daee276",
+      "type": "asset",
+      "name": "30开口修枝剪04款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_5e0629a80d107c8a"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_87241e88ed93e441",
+      "type": "asset",
+      "name": "40开口修枝剪01款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_86d247bc5b85b6c9"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_0079ad1bcf56abc4",
+      "type": "asset",
+      "name": "40开口修枝剪04款.jpg",
+      "parent_subject_id": "sub_product_c7aca15097184dc3",
+      "source_refs": [
+        "src_b71421c665bdfa97"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_f4e40e5b6f28da49",
+      "type": "asset",
+      "name": "剪刀拉力机.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_b2007dfd8b9f1c8b"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_a52ce838b3b139a1",
+      "type": "asset",
+      "name": "大门_proc.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_a91f540f076214fe"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_6be15154e1f5a9c0",
+      "type": "asset",
+      "name": "整机组装.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_4201cb2695435b39"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_fb8cf99399cbf5cd",
+      "type": "asset",
+      "name": "模具注塑车间.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_aaa64c45db74a8fa"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_32f5509bf0514e1c",
+      "type": "asset",
+      "name": "注塑物料仓库.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_e9876a08eff7679f"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_92c44abfa39f8ca6",
+      "type": "asset",
+      "name": "电机测功机.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_5a672e72b875b4fa"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_f67607aa30ef2cd2",
+      "type": "asset",
+      "name": "电机物料仓库.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_d09c44efe72d8ee4"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_a0f61b2550317752",
+      "type": "asset",
+      "name": "电机车间.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_b3aaa31307bfc823"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_asset_e026946625542403",
+      "type": "asset",
+      "name": "铝壳加工车间.jpg",
+      "parent_subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "source_refs": [
+        "src_690a9175ae5b3323"
+      ],
+      "review_status": "confirmed"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact_dbaed7e848f13fd7",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "company_name",
+      "value": "南通华远机电工具有限公司",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_5cfd47c63ffa93da",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "company_short_name",
+      "value": "华远机电",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ae211ad13fc5a758",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "contact_name",
+      "value": "李俊毅",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_685544e70d140678",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "contact_phone",
+      "value": "18012877709/15190925134",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_ba0c0fb455faf742",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "address",
+      "value": "江苏省南通市启东市吕四港镇海晏村1-5号",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_fb12b68a2208c75a",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "website_or_shop_url",
+      "value": "https://shop7u0279007v644.1688.com/?spm=a261y.7663282.shopNavigation.2.2f154cc5ZbDQWn&offerId=1060004309124&td_page_id=PC-GYP-2026",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f6f503445c80d581",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "media_accounts",
+      "value": [
+        {
+          "platform": "百家号",
+          "account_id": "手机号码：18944355321"
+        },
+        {
+          "platform": "知乎",
+          "account_id": "ID:cpw59 手机号码：18944355321"
+        },
+        {
+          "platform": "抖音",
+          "account_id": "账号：23149534444 手机号码：18944355321"
+        },
+        {
+          "platform": "头条号",
+          "account_id": "ID:1872025716116487 手机号码：18944355321"
+        },
+        {
+          "platform": "搜狐号",
+          "account_id": "手机号码：18944355321"
+        }
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_cdb31b8dd5341c51",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "conversion",
+      "value": {
+        "phone": "18012877709/15190925134",
+        "shop_url": "https://shop7u0279007v644.1688.com/?spm=a261y.7663282.shopNavigation.2.2f154cc5ZbDQWn&offerId=1060004309124&td_page_id=PC-GYP-2026"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_c87aa85635282d0a",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "intro",
+      "value": "南通华远机电工具有限公司（简称华远机电），2017 年成立，深耕园林电动工具行业，是拥有核心电机技术的专业制造商，而非简单的组装厂。公司厂房占地面积 1500 平米，拥有专业的自主研发、生产、销售、运营以及售后团队，配置全自动绕线机、浸漆设备、CNC 加工中心、压铸机、整机寿命测试台、高精度检测设备、注塑机、精益流水线等精良生产设备。公司整机良品率高达 97.5% 以上，日供量充足，可及时交付紧急订单；售前售后问题一小时内响应，整机质保一年。公司既拥有自有品牌，持有商标、外观专利及 CE 认证，同时为多家海外公司提供贴牌服务，全国范围内分布有百余位经销商。",
+      "unit": null,
+      "source_refs": [
+        "src_75b8fef35ae1629f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_37ea180e5f3fc567",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "products_services",
+      "value": "公司主营园林电动工具系列产品，核心产品为园林电动剪刀（含电动修枝剪、电动剪刀、高枝剪、水管剪等），同时覆盖无刷电机、塑料件等配套产品，延伸品类包括大蒜剪、甘蔗剪、导轨剪、鸡骨剪等多类型剪切工具。\n配套服务\n定制服务：支持 OEM/ODM 定制，可实现产品外观、颜色深度定制，起订量低至五百台；\n贴牌服务：可为海外客户提供贴牌生产服务；\n售后保障：提供整机一年质保服务，售前售后问题一小时内响应，由专人对接处理。",
+      "unit": null,
+      "source_refs": [
+        "src_75b8fef35ae1629f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_8abce5bcdca3b978",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "advantages",
+      "value": "合规资质优势：园林电动剪刀全系通过 CE 认证，符合欧美环保标准，可有效规避贸易风险；\n技术与品控优势：核心部件安全预留 30%，可实现堵转不烧机、过载不冒烟；每台产品出厂前均经过高强度暴力测试，杜绝带病出厂，整机良品率高达 97.5% 以上；\n续航与操作优势：单块电池充满电可连续工作 3-4 小时，配备带电量显示功能，无惧用电焦虑；整机轻便，女性及老年用户均能轻松驾驭，实现高效省力作业；\n产品性能优势：刀片采用 SK5 高碳钢，高频修剪不卷刃、不断裂，面对坚硬枝条可轻松过剪且切口平整；可搭配加长杆，实现高空安全作业；配备 25、30、40 多种开口规格，支持两档开口调节，适配牧田、嘉航、四串等多种插脚类型；\n品类与定制优势：除核心园林电动剪刀外，还覆盖大蒜剪、甘蔗剪、水管剪、导轨剪、鸡骨剪等多品类产品；支持 OEM/ODM 深度定制，产品外观、颜色可按需定制，起订量低至五百台。",
+      "unit": null,
+      "source_refs": [
+        "src_75b8fef35ae1629f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_81441f9dbb786536",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "trust",
+      "value": "CE 认证。 除此以外，企业持有的商标、外观专利，97.5% 以上的整机良品率，1 小时内响应的售前售后体系，一年整机质保承诺，覆盖全国的百余位经销商网络，以及核心电机技术的自主研发能力，均为企业合作与产品品质的信任支撑。",
+      "unit": null,
+      "source_refs": [
+        "src_75b8fef35ae1629f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3a919d0513a35fa1",
+      "subject_id": "sub_company_0c2d08bf92cd9ae2",
+      "field": "pain_points",
+      "value": [
+        "多场景作业适配痛点：针对家庭园艺、大型果园等不同场景的作业需求，产品机身轻便、操作简单，续航持久且带电量显示，解决用电焦虑问题",
+        "高空作业安全痛点：加配加长杆可实现高空安全作业，完美避开高处枝条剪不到、攀爬作业不安全的风险",
+        "作业适配性痛点：配备 25、30、40 多种开口规格，支持两档开口调节，可适配不同粗细的坚硬枝条，实现切口平整，不伤枝、不累手",
+        "性价比与品质痛点：与市面上同类产品相比，性价比更高 —— 同等价格下，产品性能更稳定、剪切力更大",
+        "同等性能下，价格更实惠，售后保障更细致",
+        "采购与合作痛点：公司为拥有自主核心电机技术的源头制造商，非简单组装厂，可提供贴牌、OEM/ODM 定制服务，产品外观、颜色可深度定制，全系产品通过 CE 认证，可规避外贸风险",
+        "起订量低至五百台，良品率高，订单交付及时，售前售后问题均可在一小时内由专人响应，为供应商客户提供更省心、专业的服务。"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_75b8fef35ae1629f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0ec9ed33e02b5a87",
+      "subject_id": "sub_brand_f81b63e9b10a3359",
+      "field": "name",
+      "value": "华远机电",
+      "unit": null,
+      "source_refs": [
+        "src_92c8dbeb50daab1c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3d6127f1c69e7f44",
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "field": "name",
+      "value": "大蒜剪",
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_21ccf5a705f56118",
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "field": "category",
+      "value": "农业剪切工具",
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e685e8f146cdd0a5",
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "field": "attributes",
+      "value": {},
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a4e9cf67248c7ca1",
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "field": "capabilities",
+      "value": [
+        "生产供应"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6fe379028760f340",
+      "subject_id": "sub_product_3ec37f31fd9d78ac",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_60365d0c5ad26ce2",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "name",
+      "value": "电动修枝剪",
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1c84f599b845b90f",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "category",
+      "value": "园林电动剪切工具",
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_bb2290e9d8b0247b",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "selling_points",
+      "value": [
+        "刀片采用SK5高碳钢",
+        "单块电池充满后可连续工作3至4小时",
+        "提供25、30、40多种开口规格并支持两档调节"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b824050720989a8e",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "attributes",
+      "value": {
+        "blade_material": "SK5高碳钢",
+        "runtime": "3-4小时",
+        "opening_specs": "25/30/40",
+        "warranty": "整机一年"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6a41962ad3d14aa7",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "capabilities",
+      "value": [
+        "生产供应",
+        "OEM/ODM定制",
+        "贴牌生产"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_2814f7bb6b852a24",
+      "subject_id": "sub_product_c7aca15097184dc3",
+      "field": "is_main",
+      "value": true,
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_812fbcd5af53166e",
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "field": "name",
+      "value": "电动修枝剪整机套装",
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_99ee4ad3a64e4fd1",
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "field": "category",
+      "value": "工具套装",
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c78191a5c2174d25",
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "field": "attributes",
+      "value": {
+        "compatible_opening_specs": "25/30"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b6be843e709d6be2",
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "field": "capabilities",
+      "value": [
+        "成套供应"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_392ae9fea57ab81e",
+      "subject_id": "sub_product_3f66d7efc1a00da8",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_689e546784ded036",
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "field": "name",
+      "value": "甘蔗剪",
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1e391f362299f83a",
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "field": "category",
+      "value": "农业剪切工具",
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d2670f9bb9df017b",
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "field": "attributes",
+      "value": {},
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_382dab3fd6a2fd31",
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "field": "capabilities",
+      "value": [
+        "生产供应"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0ba3cfcba04e5f44",
+      "subject_id": "sub_product_9fc8baddfc803b15",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_80bf1a49282e2b19",
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "field": "name",
+      "value": "水管剪",
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_dbc2f89ccd67acb1",
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "field": "category",
+      "value": "管材剪切工具",
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3c0082c056162b42",
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "field": "attributes",
+      "value": {
+        "product_type": "水管剪"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_dc04469b6c676719",
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "field": "capabilities",
+      "value": [
+        "生产供应"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_70686ab6884fbc46",
+      "subject_id": "sub_product_9e8f2278c929b80e",
+      "field": "is_main",
+      "value": true,
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_bcfc53480f4cca47",
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "field": "name",
+      "value": "注塑箱",
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1be0c1a75b2caca8",
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "field": "category",
+      "value": "工具配件",
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_9e8f782de73756db",
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "field": "attributes",
+      "value": {},
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_73a408adb59aa017",
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "field": "capabilities",
+      "value": [
+        "注塑加工"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c11b4e30c4e0db45",
+      "subject_id": "sub_product_4201a3181f03f7b0",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_103063b319d923c5",
+      "subject_id": "sub_asset_5a83bb05d604cab1",
+      "field": "path",
+      "value": "assets/images/_trust/5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_2c3a60ddfe427e4f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_c6da281bdb0f28aa",
+      "subject_id": "sub_asset_84501b925c517a4c",
+      "field": "path",
+      "value": "assets/images/_trust/a9ea193505772f99fe6d003546c45e77.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_2f05c54564c63680"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_482035d4da4a5f36",
+      "subject_id": "sub_asset_8360ce48be50a089",
+      "field": "path",
+      "value": "assets/images/大蒜剪/01大蒜剪.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_5fb7ca1a0c21b220",
+      "subject_id": "sub_asset_595738d66a0d6c48",
+      "field": "path",
+      "value": "assets/images/水管剪/01水管剪.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_25966e9064c31d5c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d3118523b8535935",
+      "subject_id": "sub_asset_2683665bc7677198",
+      "field": "path",
+      "value": "assets/images/甘蔗剪/01甘蔗剪.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_4f777a8a181ce0bc"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a253adb48ac9a344",
+      "subject_id": "sub_asset_8f2f0dfbc67327ff",
+      "field": "path",
+      "value": "assets/images/水管剪/04水管剪.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0331a49f30e997c3"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_54f1889f867c0fb5",
+      "subject_id": "sub_asset_7f678ba5ed277630",
+      "field": "path",
+      "value": "assets/images/注塑箱/04注塑箱.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_338b39e432989e66",
+      "subject_id": "sub_asset_3f05c8b57101f19a",
+      "field": "path",
+      "value": "assets/images/甘蔗剪/04甘蔗剪.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_ca2227da3af0f085"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_bf219b2d24565d60",
+      "subject_id": "sub_asset_7291b0266a833339",
+      "field": "path",
+      "value": "assets/images/电动修枝剪整机套装/25 30整套.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_34d91eca810ff490",
+      "subject_id": "sub_asset_3af838c3941cda04",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/25开口修枝剪01款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_28b0c63092f54edc"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_81232dd8b8a8b838",
+      "subject_id": "sub_asset_a67b3eccb28f1644",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/25开口修枝剪03款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_8f5fc4ad3d3eefec"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_4acfb2c8f81866cc",
+      "subject_id": "sub_asset_bb6d7dd0fb0f7e82",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/25开口修枝剪04款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_1162eec1d13fb7d8"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_149fa6d1f069a18f",
+      "subject_id": "sub_asset_fc80b796d7772c8c",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/25开口修枝剪牧田插脚05款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_92249ee8f919880b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6f8c03bd5a977295",
+      "subject_id": "sub_asset_bbc6ec41d43fa790",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/30开口修枝剪01款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_2cd2b61ff8f1f07b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_762678b03f1ba4d6",
+      "subject_id": "sub_asset_9aa435887daee276",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/30开口修枝剪04款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_5e0629a80d107c8a"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_df49d1a84274621b",
+      "subject_id": "sub_asset_87241e88ed93e441",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/40开口修枝剪01款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_86d247bc5b85b6c9"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_db30c3f031e82836",
+      "subject_id": "sub_asset_0079ad1bcf56abc4",
+      "field": "path",
+      "value": "assets/images/电动修枝剪/40开口修枝剪04款.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b71421c665bdfa97"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c11dd7801486c591",
+      "subject_id": "sub_asset_f4e40e5b6f28da49",
+      "field": "path",
+      "value": "assets/images/_company/剪刀拉力机.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b2007dfd8b9f1c8b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_26ed125df5eed5ed",
+      "subject_id": "sub_asset_a52ce838b3b139a1",
+      "field": "path",
+      "value": "assets/images/_company/大门_proc.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_a91f540f076214fe"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_083614026d0524bc",
+      "subject_id": "sub_asset_6be15154e1f5a9c0",
+      "field": "path",
+      "value": "assets/images/_company/整机组装.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_4201cb2695435b39"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3f86c17d1aba42db",
+      "subject_id": "sub_asset_fb8cf99399cbf5cd",
+      "field": "path",
+      "value": "assets/images/_company/模具注塑车间.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_aaa64c45db74a8fa"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3f61738e4e218a5f",
+      "subject_id": "sub_asset_32f5509bf0514e1c",
+      "field": "path",
+      "value": "assets/images/_company/注塑物料仓库.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_e9876a08eff7679f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_fced2db5641116ad",
+      "subject_id": "sub_asset_92c44abfa39f8ca6",
+      "field": "path",
+      "value": "assets/images/_company/电机测功机.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_5a672e72b875b4fa"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_2480c7c013396d71",
+      "subject_id": "sub_asset_f67607aa30ef2cd2",
+      "field": "path",
+      "value": "assets/images/_company/电机物料仓库.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_d09c44efe72d8ee4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c7002b9342438afd",
+      "subject_id": "sub_asset_a0f61b2550317752",
+      "field": "path",
+      "value": "assets/images/_company/电机车间.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b3aaa31307bfc823"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_fde9d26619b56bf3",
+      "subject_id": "sub_asset_e026946625542403",
+      "field": "path",
+      "value": "assets/images/_company/铝壳加工车间.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_690a9175ae5b3323"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    }
+  ],
+  "conflicts": []
+}

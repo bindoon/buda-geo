@@ -1,32 +1,8 @@
-import path from "node:path";
 import { readdir } from "node:fs/promises";
+import path from "node:path";
 import { LEGAL_ID_RE } from "./constants.js";
-import type { AssetOverride, SourceIndex } from "./fact-model.js";
+import type { CleanOverrides, ProductOverride, SourceIndex } from "./fact-model.js";
 import { copyIfMissing, relToProject } from "./util.js";
-
-function isCompanyImage(name: string): boolean {
-  return /大门|车间|仓库|组装|模具|电机|厂房|办公|公司|拉力机|测功机|流水线|设备/.test(name);
-}
-
-function isOpaqueImage(name: string): boolean {
-  return /^[0-9a-f-]{16,}\.(?:jpe?g|png|webp)$/i.test(name);
-}
-
-function skuNameFromFilename(name: string): string {
-  let stem = path.basename(name, path.extname(name));
-  stem = stem.replace(/^\d+\s*/, "");
-  stem = stem.replace(/0[1-9]$/, "");
-  stem = stem.replace(/(01|03|04|05)款$/, "");
-  stem = stem.replace(/款$/, "");
-  stem = stem.trim().replace(/^[_-]+|[_-]+$/g, "");
-  if (stem.includes("修枝剪")) return "电动修枝剪";
-  if (stem.includes("水管剪")) return "水管剪";
-  if (stem.includes("大蒜剪")) return "大蒜剪";
-  if (stem.includes("甘蔗剪")) return "甘蔗剪";
-  if (stem.includes("注塑箱")) return "注塑箱";
-  if (stem.includes("整套") || stem.includes("整机")) return "整机套装";
-  return stem || "未命名";
-}
 
 export interface SkuImage {
   path: string;
@@ -52,10 +28,9 @@ export interface SkuItem {
 async function walkImages(dir: string): Promise<string[]> {
   const out: string[] = [];
   async function walk(current: string) {
-    const entries = await readdir(current, { withFileTypes: true });
-    for (const e of entries) {
-      const full = path.join(current, e.name);
-      if (e.isDirectory()) await walk(full);
+    for (const entry of await readdir(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) await walk(full);
       else out.push(full);
     }
   }
@@ -63,13 +38,26 @@ async function walkImages(dir: string): Promise<string[]> {
   return out;
 }
 
+function normalizeSourcePath(value: string): string {
+  return value.replace(/^inputs\//, "").split(path.sep).join("/");
+}
+
+export function sourcePathMatches(sourcePath: string, pattern: string): boolean {
+  const source = normalizeSourcePath(sourcePath);
+  const normalizedPattern = normalizeSourcePath(pattern);
+  if (normalizedPattern.endsWith("/**")) {
+    const prefix = normalizedPattern.slice(0, -3).replace(/\/$/, "");
+    return source === prefix || source.startsWith(`${prefix}/`);
+  }
+  return source === normalizedPattern;
+}
+
 export async function syncImagesAndSkus(
   projectRoot: string,
   appId: string,
   sourceIndex: SourceIndex,
-  overrides: AssetOverride[] = [],
+  overrides: CleanOverrides,
   previousItems: SkuItem[] = [],
-  profileText = "",
 ): Promise<{ app_id: string; items: SkuItem[] }> {
   const inputs = path.join(projectRoot, "inputs");
   const assets = path.join(projectRoot, "assets", "images");
@@ -79,156 +67,83 @@ export async function syncImagesAndSkus(
   await mkdir(companyDir, { recursive: true });
   await mkdir(trustDir, { recursive: true });
 
-  const skuMap = new Map<string, SkuImage[]>();
-  const imageExts = new Set([".jpg", ".jpeg", ".png", ".webp"]);
   const sourceByPath = new Map(
-    sourceIndex.sources.map((source) => [source.path.replace(/^inputs\//, ""), source]),
+    sourceIndex.sources.map((source) => [normalizeSourcePath(source.path), source]),
   );
-  const overrideByPath = new Map(
-    overrides.map((override) => [override.source_path.replace(/^inputs\//, ""), override]),
-  );
+  const assetForSource = (sourcePath: string) =>
+    overrides.assets.find((override) => sourcePathMatches(sourcePath, override.source_path));
+  const productForSource = (sourcePath: string): ProductOverride | undefined =>
+    overrides.products.find((product) =>
+      product.source_paths.some((pattern) => sourcePathMatches(sourcePath, pattern)),
+    );
+  const productByName = new Map(overrides.products.map((product) => [product.name, product]));
   const previousByName = new Map(previousItems.map((item) => [item.name, item]));
+  const skuMap = new Map<string, SkuImage[]>();
+  const usedDestinations = new Set<string>();
+  const imageExts = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 
-  const allImages = await walkImages(inputs);
-  for (const abs of allImages.sort()) {
-    const ext = path.extname(abs).toLowerCase();
-    if (!imageExts.has(ext)) continue;
-    const name = path.basename(abs);
-    if (name.startsWith("~$") || name === ".DS_Store") continue;
-    if (LEGAL_ID_RE.test(name)) continue;
-    const relInput = path.relative(inputs, abs).split(path.sep).join("/");
+  for (const absolute of (await walkImages(inputs)).sort()) {
+    if (!imageExts.has(path.extname(absolute).toLowerCase())) continue;
+    const name = path.basename(absolute);
+    if (name.startsWith("~$") || name === ".DS_Store" || LEGAL_ID_RE.test(name)) continue;
+    const relInput = path.relative(inputs, absolute).split(path.sep).join("/");
     const source = sourceByPath.get(relInput);
     if (!source) continue;
-    const override = overrideByPath.get(relInput);
-    if (override?.action === "ignore" || source.ignored && !override) continue;
+    const assetOverride = assetForSource(relInput);
+    const productOverride = productForSource(relInput);
+    if (assetOverride?.action === "ignore") continue;
+    if (source.ignored && !assetOverride && !productOverride) continue;
 
-    if (override?.action === "company") {
-      await copyIfMissing(abs, path.join(companyDir, name));
+    if (assetOverride?.action === "company") {
+      await copyIfMissing(absolute, path.join(companyDir, name));
       continue;
     }
-    if (override?.action === "evidence") {
-      await copyIfMissing(abs, path.join(trustDir, name));
+    if (assetOverride?.action === "evidence") {
+      await copyIfMissing(absolute, path.join(trustDir, name));
       continue;
     }
+    // An unreviewed image remains only in the source index. CLI must not turn a
+    // filename or folder into a business product without a Skill/operator decision.
+    if (!productOverride && assetOverride?.action !== "product") continue;
 
-    if (isCompanyImage(name)) {
-      const dest = path.join(companyDir, name);
-      await copyIfMissing(abs, dest);
-      continue;
+    const productName =
+      productOverride?.name ??
+      assetOverride?.product_name;
+    if (!productName) continue;
+    let destination = path.join(assets, productName, name);
+    const destinationKey = destination.toLowerCase();
+    if (usedDestinations.has(destinationKey)) {
+      destination = path.join(assets, productName, `${source.source_id}_${name}`);
     }
-    if (/营业执照|执照/.test(name)) {
-      const dest = path.join(trustDir, name);
-      await copyIfMissing(abs, dest);
-      continue;
-    }
-    // Opaque root images can contain licenses, platform forms, or personal IDs.
-    // They require a project-local override before any derived copy is made.
-    if (isOpaqueImage(name) && !override) continue;
-
-    const parent = path.basename(path.dirname(abs));
-    let sku: string;
-    if (override?.action === "product" && override.product_name) {
-      sku = override.product_name;
-    } else
-    if (
-      ["inputs", "华远GEO信息", "图片", "产品图片", "整理图片"].includes(parent) ||
-      parent.startsWith("华远")
-    ) {
-      sku = skuNameFromFilename(name);
-    } else if (/^[0-9a-f-]{16,}$/i.test(parent)) {
-      sku = skuNameFromFilename(name);
-    } else {
-      sku = parent.trim();
-      if (sku.length > 40) sku = skuNameFromFilename(name);
-    }
-
-    const destDir = path.join(assets, sku);
-    await mkdir(destDir, { recursive: true });
-    const dest = path.join(destDir, name);
-    await copyIfMissing(abs, dest);
-    const role = /主图|01/.test(name) ? "main" : "detail";
-    const img: SkuImage = {
-      path: relToProject(projectRoot, dest),
-      role,
+    usedDestinations.add(destination.toLowerCase());
+    await copyIfMissing(absolute, destination);
+    const image: SkuImage = {
+      path: relToProject(projectRoot, destination),
+      role: /主图|(?:^|[^0-9])01(?:[^0-9]|$)/.test(name) ? "main" : "detail",
       url: null,
       source_ref: source.source_id,
     };
-    if (!skuMap.has(sku)) skuMap.set(sku, []);
-    skuMap.get(sku)!.push(img);
+    skuMap.set(productName, [...(skuMap.get(productName) ?? []), image]);
   }
 
-  const items: SkuItem[] = [...skuMap.entries()]
-    .sort(([a], [b]) => a.localeCompare(b, "zh-CN"))
-    .map(([name, images]) => {
+  const items = [...skuMap.entries()]
+    .sort(([left], [right]) => left.localeCompare(right, "zh-CN"))
+    .map(([name, images]): SkuItem => {
+      const semantic = productByName.get(name);
       const previous = previousByName.get(name);
-      const category = categoryForProduct(name, previous?.category ?? "");
-      const extracted = substanceForProduct(name, profileText);
-      const isMain = productMentioned(name, profileText) && !/套装|注塑箱|配件/.test(name);
       return {
         sku_id: previous?.sku_id ?? `sku_${name}`,
         name,
-        category,
-        selling_points:
-          previous?.selling_points?.length ? previous.selling_points : extracted.sellingPoints,
-        attributes: { ...(previous?.attributes ?? {}), ...extracted.attributes },
-        capabilities:
-          previous?.capabilities?.length ? previous.capabilities : extracted.capabilities,
-        is_main: previous?.is_main ?? isMain,
+        category: semantic?.category ?? previous?.category ?? "",
+        selling_points: semantic?.selling_points ?? previous?.selling_points ?? [],
+        attributes: semantic?.attributes ?? previous?.attributes ?? {},
+        capabilities: semantic?.capabilities ?? previous?.capabilities ?? [],
+        is_main: semantic?.is_main ?? previous?.is_main ?? false,
         source_refs: [...new Set(images.map((image) => image.source_ref))],
         fact_refs: previous?.fact_refs ?? [],
         copy_brief: previous?.copy_brief ?? null,
         images,
       };
     });
-
   return { app_id: appId, items };
-}
-
-function categoryForProduct(name: string, previous: string): string {
-  if (previous) return previous;
-  if (/修枝剪|电动剪刀|高枝剪/.test(name)) return "园林电动剪切工具";
-  if (/水管剪/.test(name)) return "管材剪切工具";
-  if (/大蒜剪|甘蔗剪/.test(name)) return "农业剪切工具";
-  if (/注塑箱|套装/.test(name)) return "工具配件与套装";
-  return "";
-}
-
-function productMentioned(name: string, text: string): boolean {
-  if (!text) return false;
-  if (text.includes(name)) return true;
-  return name === "电动修枝剪" && /园林电动剪刀|修枝剪/.test(text);
-}
-
-function substanceForProduct(
-  name: string,
-  text: string,
-): {
-  sellingPoints: string[];
-  attributes: Record<string, string | number | boolean>;
-  capabilities: string[];
-} {
-  const sellingPoints: string[] = [];
-  const attributes: Record<string, string | number | boolean> = {};
-  const capabilities: string[] = [];
-  if (productMentioned(name, text)) capabilities.push("生产供应");
-  if (/修枝剪/.test(name)) {
-    if (/SK5/.test(text)) {
-      attributes.blade_material = "SK5高碳钢";
-      sellingPoints.push("SK5高碳钢刀片");
-    }
-    if (/3\s*[-—–至]\s*4\s*小时/.test(text)) {
-      attributes.runtime = "3-4小时";
-      sellingPoints.push("单块电池约可连续工作3-4小时");
-    }
-    if (/25[、,，\s]+30[、,，\s]+40/.test(text)) {
-      attributes.opening_specs = "25/30/40";
-      sellingPoints.push("提供25、30、40多种开口规格");
-    }
-    if (/OEM|ODM|定制/i.test(text)) capabilities.push("OEM/ODM定制");
-  }
-  return {
-    sellingPoints: [...new Set(sellingPoints)],
-    attributes,
-    capabilities: [...new Set(capabilities)],
-  };
 }

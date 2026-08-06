@@ -3,9 +3,9 @@
   "project_name": "朗威晶电",
   "gates": {
     "clean": {
-      "status": "pending",
+      "status": "review_required",
       "at": null,
-      "by": null
+      "fact_snapshot_id": null
     },
     "diagnose": {
       "status": "pending",
@@ -25,21 +25,20 @@
   },
   "missing": [
     {
-      "code": "chat_logs",
-      "severity": "recommend",
-      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+      "code": "sensitive_inputs_reviewed",
+      "severity": "optional",
+      "message": "当前隔离 2 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
     }
   ],
-  "quota": {
-    "articles_generated": 0,
-    "articles_published": 0,
-    "diagnose_questions": 0,
-    "targets": {
-      "articles_year": 1500,
-      "social_year": 750,
-      "diagnose_questions": 500
-    }
+  "clean_pipeline": {
+    "stage": "review",
+    "inputs_hash": "7ce16a243f497fe8396a0bbb677b7af1f53c6c90048894f2acc8ddf6260b9396",
+    "facts_hash": "8679aaa6ca6e851b14e1ab22e22d6d60b257a43958d8dad7d151b6f2f66c59f8",
+    "changed_since_confirmation": true,
+    "previous_snapshot_id": null
   },
-  "updated_at": "2026-08-05T09:05:57Z",
-  "clean_ready": true
+  "clean_ready": false,
+  "review_ready": true,
+  "legacy_downstream_artifacts": [],
+  "updated_at": "2026-08-06T09:32:46Z"
 }

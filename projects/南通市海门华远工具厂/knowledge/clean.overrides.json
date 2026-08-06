@@ -1,0 +1,186 @@
+{
+  "app_id": "hy_tool_nt",
+  "assets": [
+    {
+      "source_path": "5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
+      "action": "evidence",
+      "evidence_type": "business_license",
+      "supports_fields": [
+        "company_name",
+        "address"
+      ],
+      "disclosure_level": "restricted",
+      "reason": "运营人工识别为营业执照；仅作企业主体证据，不作为产品图。"
+    },
+    {
+      "source_path": "a9ea193505772f99fe6d003546c45e77.jpg",
+      "action": "evidence",
+      "evidence_type": "platform_application_form",
+      "supports_fields": [
+        "company_name"
+      ],
+      "disclosure_level": "restricted",
+      "reason": "运营人工识别为平台企业账号申请资料；不可发布。"
+    },
+    {
+      "source_path": "6846b281-8926-4b2d-8ed8-2305172f021c.png",
+      "action": "ignore",
+      "reason": "图片包含手持法人身份证，禁止复制、OCR 或写入知识库。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/剪刀拉力机.jpg",
+      "action": "company",
+      "reason": "运营识别为检测设备。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/大门_proc.jpg",
+      "action": "company",
+      "reason": "运营识别为企业环境。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/整机组装.jpg",
+      "action": "company",
+      "reason": "运营识别为生产能力图片。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/模具注塑车间.jpg",
+      "action": "company",
+      "reason": "运营识别为生产能力图片。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/注塑物料仓库.jpg",
+      "action": "company",
+      "reason": "运营识别为仓储能力图片。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/电机测功机.jpg",
+      "action": "company",
+      "reason": "运营识别为检测设备。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/电机物料仓库.jpg",
+      "action": "company",
+      "reason": "运营识别为仓储能力图片。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/电机车间.jpg",
+      "action": "company",
+      "reason": "运营识别为生产能力图片。"
+    },
+    {
+      "source_path": "华远GEO信息/华远GEO信息/铝壳加工车间.jpg",
+      "action": "company",
+      "reason": "运营识别为生产能力图片。"
+    }
+  ],
+  "products": [
+    {
+      "name": "电动修枝剪",
+      "category": "园林电动剪切工具",
+      "is_main": true,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/25开口修枝剪01款.jpg",
+        "华远GEO信息/华远GEO信息/25开口修枝剪03款.jpg",
+        "华远GEO信息/华远GEO信息/25开口修枝剪04款.jpg",
+        "华远GEO信息/华远GEO信息/25开口修枝剪牧田插脚05款.jpg",
+        "华远GEO信息/华远GEO信息/30开口修枝剪01款.jpg",
+        "华远GEO信息/华远GEO信息/30开口修枝剪04款.jpg",
+        "华远GEO信息/华远GEO信息/40开口修枝剪01款.jpg",
+        "华远GEO信息/华远GEO信息/40开口修枝剪04款.jpg"
+      ],
+      "selling_points": [
+        "刀片采用SK5高碳钢",
+        "单块电池充满后可连续工作3至4小时",
+        "提供25、30、40多种开口规格并支持两档调节"
+      ],
+      "attributes": {
+        "blade_material": "SK5高碳钢",
+        "runtime": "3-4小时",
+        "opening_specs": "25/30/40",
+        "warranty": "整机一年"
+      },
+      "capabilities": [
+        "生产供应",
+        "OEM/ODM定制",
+        "贴牌生产"
+      ],
+      "reason": "由知识库正文与产品图片联合归类，全部为待人工确认候选。"
+    },
+    {
+      "name": "水管剪",
+      "category": "管材剪切工具",
+      "is_main": true,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/01水管剪.jpg",
+        "华远GEO信息/华远GEO信息/04水管剪.jpg"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "product_type": "水管剪"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库列为核心剪切工具之一；具体性能参数未提供。"
+    },
+    {
+      "name": "大蒜剪",
+      "category": "农业剪切工具",
+      "is_main": false,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/01大蒜剪.jpg"
+      ],
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库正文列为延伸品类。"
+    },
+    {
+      "name": "甘蔗剪",
+      "category": "农业剪切工具",
+      "is_main": false,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/01甘蔗剪.jpg",
+        "华远GEO信息/华远GEO信息/04甘蔗剪.jpg"
+      ],
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库正文列为延伸品类。"
+    },
+    {
+      "name": "注塑箱",
+      "category": "工具配件",
+      "is_main": false,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/04注塑箱.jpg"
+      ],
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "注塑加工"
+      ],
+      "reason": "图片与工厂注塑能力共同支持，具体规格未提供。"
+    },
+    {
+      "name": "电动修枝剪整机套装",
+      "category": "工具套装",
+      "is_main": false,
+      "source_paths": [
+        "华远GEO信息/华远GEO信息/25 30整套.jpg"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "compatible_opening_specs": "25/30"
+      },
+      "capabilities": [
+        "成套供应"
+      ],
+      "reason": "由图片文件名归为候选套装，待人工确认。"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+import assert from "node:assert/strict";
+import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import test from "node:test";
+import JSZip from "jszip";
+import * as XLSX from "xlsx";
+import { cleanProject } from "../lib/clean.js";
+import { confirmClean } from "../lib/confirm.js";
+import { digestObject, stableId, type EvidenceLedger, type FactLedger, type SourceIndex } from "../lib/fact-model.js";
+import { inventory } from "../lib/inventory.js";
+import { semanticFindings } from "../lib/quality.js";
+import type { SkuItem } from "../lib/skus.js";
+import { readJson, writeJson } from "../lib/util.js";
+import { validateProject } from "../lib/validate.js";
+
+test("stable IDs and hashes ignore object key order", () => {
+  assert.equal(digestObject({ a: 1, b: 2 }), digestObject({ b: 2, a: 1 }));
+  assert.equal(stableId("fact", "subject", "field", "value"), stableId("fact", "subject", "field", "value"));
+});
+
+test("semantic checks reject hash products, empty main products and unresolved conflicts", () => {
+  const sourceIndex: SourceIndex = {
+    app_id: "app_test",
+    generated_at: "2026-01-01T00:00:00Z",
+    inputs_hash: "a".repeat(64),
+    sources: [],
+  };
+  const sku: SkuItem = {
+    sku_id: "sku_aabbccddeeff0011",
+    name: "aabbccddeeff0011",
+    category: "",
+    selling_points: [],
+    attributes: {},
+    capabilities: [],
+    is_main: true,
+    source_refs: [],
+    fact_refs: [],
+    copy_brief: null,
+    images: [],
+  };
+  const facts: FactLedger = {
+    app_id: "app_test",
+    generated_at: "2026-01-01T00:00:00Z",
+    inputs_hash: sourceIndex.inputs_hash,
+    facts_hash: "b".repeat(64),
+    subjects: [],
+    facts: [],
+    conflicts: [{
+      conflict_id: "conflict_1",
+      subject_id: "company_1",
+      field: "company_name",
+      candidate_fact_ids: ["fact_1", "fact_2"],
+      severity: "block",
+      status: "unresolved",
+      resolution: null,
+    }],
+  };
+  const evidence: EvidenceLedger = { app_id: "app_test", generated_at: "2026-01-01T00:00:00Z", items: [] };
+  const findings = semanticFindings({
+    profile: {
+      app_id: "app_test",
+      intro: "介绍",
+      products_services: "产品",
+      advantages: "用户痛点：内容；信任背书：内容",
+      trust: "",
+      pain_points: [],
+      source: "docx:test.docx",
+    },
+    skus: [sku],
+    facts,
+    evidence,
+    sourceIndex,
+  });
+  const codes = findings.map((item) => item.code);
+  assert(codes.some((code) => code.startsWith("product_hash_name:")));
+  assert(codes.some((code) => code.startsWith("main_product_substance:")));
+  assert(codes.includes("profile_trust_misbucket"));
+  assert(codes.includes("profile_pain_points_misbucket"));
+  assert(codes.some((code) => code.startsWith("unresolved_conflict:")));
+});
+
+test("clean, validate, confirm and re-clean preserve inputs and confirmation semantics", async () => {
+  const projectRoot = await mkdtemp(path.join(os.tmpdir(), "geo-fact-cleaning-"));
+  const inputs = path.join(projectRoot, "inputs");
+  const knowledge = path.join(projectRoot, "knowledge");
+  await mkdir(inputs, { recursive: true });
+  await writeJson(path.join(knowledge, "clean.overrides.json"), {
+    app_id: "app_test",
+    assets: [],
+    products: [{
+      name: "测试产品",
+      category: "测试品类",
+      is_main: true,
+      source_paths: ["产品图/**"],
+      selling_points: ["来源明确的测试卖点"],
+      attributes: { material: "测试材料" },
+      capabilities: ["生产供应"],
+      reason: "测试规则",
+    }],
+    fact_resolutions: [{
+      subject: "company",
+      field: "company_short_name",
+      value: "测试制造",
+      reason: "以本次企业信息收集表为准",
+    }],
+  });
+  await writeJson(path.join(knowledge, "company.baseinfo.json"), {
+    app_id: "app_test",
+    company_name: "测试制造有限公司",
+    company_short_name: "旧测试简称",
+    contact_name: "",
+    contact_phone: "",
+    address: "",
+    website_or_shop_url: "",
+    region: "",
+    media_accounts: [],
+    conversion: {},
+    credentials: [],
+  });
+
+  const workbook = XLSX.utils.book_new();
+  const sheet = XLSX.utils.aoa_to_sheet([
+    ["公司名称", "测试制造有限公司", "公司简称", "测试制造"],
+    ["联系人", "测试联系人", "联系方式", "13800138000"],
+    ["公司地址", "测试地址"],
+    ["公司官网", "https://example.com"],
+    ["百家号", "账号：test 密码：never-store-this"],
+  ]);
+  XLSX.utils.book_append_sheet(workbook, sheet, "Sheet1");
+  const xlsxBuffer = XLSX.write(workbook, { type: "buffer", bookType: "xlsx" });
+  await writeFile(path.join(inputs, "企业信息收集表.xlsx"), xlsxBuffer);
+
+  const zip = new JSZip();
+  const paragraphs = [
+    "一、公司介绍",
+    `测试制造有限公司是一家用于自动化测试的制造企业。${"具备稳定生产与质量管理能力。".repeat(12)}`,
+    "二、产品服务",
+    "主营测试产品，提供生产供应服务。",
+    "三、产品特点",
+    "测试产品采用测试材料，来源明确。",
+    "四、信任背书",
+    "企业资料由测试原件支持。",
+    "五、用户痛点",
+    "客户需要来源明确且可追溯的产品资料。",
+  ];
+  zip.file(
+    "word/document.xml",
+    `<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${paragraphs.map((paragraph) => `<w:p><w:r><w:t>${paragraph}</w:t></w:r></w:p>`).join("")}</w:body></w:document>`,
+  );
+  await writeFile(path.join(inputs, "企业知识库.docx"), await zip.generateAsync({ type: "nodebuffer" }));
+  const imagePath = path.join(inputs, "产品图", "测试产品.jpg");
+  await mkdir(path.dirname(imagePath), { recursive: true });
+  await writeFile(imagePath, Buffer.from("fake-image-v1"));
+
+  const inputInventoryBefore = await inventory(projectRoot);
+  const first = await cleanProject(projectRoot, "app_test");
+  assert.equal(first.review_ready, true);
+  assert.equal(first.clean_ready, false);
+  assert(!JSON.stringify(await readJson(path.join(knowledge, "company.baseinfo.json"))).includes("never-store-this"));
+  const beforeConfirmation = await validateProject(projectRoot, true);
+  assert.equal(beforeConfirmation.ok, true, beforeConfirmation.errors.join("\n"));
+  assert.equal(beforeConfirmation.structural.length, 0);
+  const resolvedFacts = await readJson<FactLedger>(path.join(knowledge, "company.facts.json"));
+  assert(resolvedFacts.conflicts.some((conflict) =>
+    conflict.field === "company_short_name" &&
+    conflict.status === "resolved" &&
+    conflict.resolution === "以本次企业信息收集表为准"
+  ));
+
+  const confirmation = await confirmClean(projectRoot);
+  const snapshot = await readJson<Record<string, unknown>>(path.join(projectRoot, confirmation.snapshot_path));
+  assert.equal("confirmed_by" in snapshot, false);
+  const manifestAfterConfirmation = await readJson<Record<string, any>>(path.join(projectRoot, "manifest.json"));
+  assert.equal(manifestAfterConfirmation.gates.clean.status, "confirmed");
+  assert.equal("by" in manifestAfterConfirmation.gates.clean, false);
+
+  const unchanged = await cleanProject(projectRoot, "app_test");
+  assert.equal(unchanged.clean_status, "confirmed");
+  assert.equal(unchanged.facts_hash, first.facts_hash);
+  const inputInventoryAfter = await inventory(projectRoot);
+  assert.equal(inputInventoryAfter.inputs_hash, inputInventoryBefore.inputs_hash);
+
+  const factsPath = path.join(knowledge, "company.facts.json");
+  const damagedFacts = await readJson<FactLedger>(factsPath);
+  damagedFacts.facts[0]!.source_refs = ["src_missing"];
+  await writeJson(factsPath, damagedFacts);
+  const broken = await validateProject(projectRoot, true);
+  assert.equal(broken.ok, false);
+  assert(broken.referential.some((item) => item.code.startsWith("fact_source:")));
+
+  await cleanProject(projectRoot, "app_test");
+  await writeFile(imagePath, Buffer.from("fake-image-v2"));
+  const changed = await cleanProject(projectRoot, "app_test");
+  assert.equal(changed.clean_status, "review_required");
+  const changedManifest = await readJson<Record<string, any>>(path.join(projectRoot, "manifest.json"));
+  assert.equal(changedManifest.clean_pipeline.previous_snapshot_id, confirmation.fact_snapshot_id);
+  assert.equal(changedManifest.clean_pipeline.changed_since_confirmation, true);
+
+  const sourceIndex = await readJson<SourceIndex>(path.join(knowledge, "source-index.json"));
+  assert(sourceIndex.sources.every((source) => /^[0-9a-f]{64}$/.test(source.hash)));
+  assert.equal((await readFile(path.join(inputs, "企业信息收集表.xlsx"))).equals(xlsxBuffer), true);
+});

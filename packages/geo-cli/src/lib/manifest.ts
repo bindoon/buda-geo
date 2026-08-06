@@ -1,9 +1,9 @@
 import path from "node:path";
-import { DEFAULT_PROMPTS } from "./constants.js";
 import { appIdForDir } from "./registry.js";
 import { readJson } from "./util.js";
 import type { BaseInfo } from "./parse.js";
-import type { KeywordsJson } from "./parse.js";
+import type { FindingRecord } from "./fact-model.js";
+import type { SkuItem } from "./skus.js";
 import { utcNow } from "./util.js";
 
 export interface MissingItem {
@@ -44,8 +44,9 @@ export function buildMissing(
     advantages?: string;
     trust?: string;
   },
-  keywords: KeywordsJson,
+  skus: SkuItem[],
   hasChat: boolean,
+  findings: FindingRecord[] = [],
 ): MissingItem[] {
   const missing: MissingItem[] = [];
   if (!baseinfo.company_name) {
@@ -91,36 +92,20 @@ export function buildMissing(
         "画像未拆全：advantages（优势）或 trust（信任背书）为空。请按标题拆段，勿把整篇 Word 塞进 intro/products_services。",
     });
   }
-  const terms = keywords.search?.terms ?? [];
-  const qs = keywords.qa?.questions ?? [];
-  if (!terms.length && !qs.length) {
-    missing.push({
-      code: "keywords_empty",
-      severity: "recommend",
-      message: "未解析到关键词/问题库；可从知识库正文补词或提供词表 xlsx。",
-    });
-  }
+  if (!skus.length) missing.push({ code: "products_empty", severity: "block", message: "未识别到产品主体。" });
   if (!hasChat) {
     missing.push({
       code: "chat_logs",
       severity: "recommend",
-      message:
-        "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。",
+      message: "未提供客服/询盘记录；不阻断企业事实确认，后续可用于丰富客户问法。",
     });
   }
+  for (const finding of findings) {
+    if (!missing.some((item) => item.code === finding.code)) {
+      missing.push({ code: finding.code, severity: finding.severity, message: finding.message });
+    }
+  }
   return missing;
-}
-
-export function defaultFaq(appId: string) {
-  return { app_id: appId, items: [], status: "empty" };
-}
-
-export function defaultPrompts(appId: string) {
-  return { app_id: appId, templates: DEFAULT_PROMPTS, source: "default_template" };
-}
-
-export function defaultPlan(appId: string) {
-  return { app_id: appId, tasks: [] as unknown[] };
 }
 
 export function defaultManifest(
@@ -132,22 +117,22 @@ export function defaultManifest(
     app_id: appId,
     project_name: path.basename(projectRoot),
     gates: {
-      clean: { status: "pending", at: null, by: null },
+      clean: { status: "review_required", at: null, fact_snapshot_id: null },
       diagnose: { status: "pending", at: null, by: null },
       write_social: { status: "pending", at: null, by: null },
       publish: { status: "pending", at: null, by: null },
     },
     missing,
-    quota: {
-      articles_generated: 0,
-      articles_published: 0,
-      diagnose_questions: 0,
-      targets: {
-        articles_year: 1500,
-        social_year: 750,
-        diagnose_questions: 500,
-      },
+    clean_pipeline: {
+      stage: "review",
+      inputs_hash: null,
+      facts_hash: null,
+      changed_since_confirmation: true,
+      previous_snapshot_id: null,
     },
+    clean_ready: false,
+    review_ready: false,
+    legacy_downstream_artifacts: [],
     updated_at: utcNow(),
   };
 }

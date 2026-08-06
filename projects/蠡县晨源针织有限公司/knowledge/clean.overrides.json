@@ -1,0 +1,61 @@
+{
+  "app_id": "cy_knit_lx",
+  "assets": [],
+  "products": [
+    {
+      "name": "无缝罗纹袖口",
+      "category": "针织罗纹辅料",
+      "is_main": true,
+      "source_paths": [
+        "身份证信息及产品图片/罗纹袖口/**"
+      ],
+      "selling_points": [
+        "一体无缝圆筒织造",
+        "支持弹力、克重和非标尺寸定制",
+        "覆盖防护服、羽绒服和工装等应用"
+      ],
+      "attributes": {
+        "material": "涤氨混纺纱线",
+        "structure": "无缝圆筒"
+      },
+      "capabilities": [
+        "现货批发",
+        "来样定制",
+        "快速打样"
+      ],
+      "reason": "知识库列为核心产品，同名目录包含主要产品图片。"
+    },
+    {
+      "name": "校服罗纹袖口",
+      "category": "针织罗纹辅料",
+      "is_main": false,
+      "source_paths": [
+        "身份证信息及产品图片/校服罗文袖口/**"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "application": "校服袖口"
+      },
+      "capabilities": [
+        "来样定制"
+      ],
+      "reason": "原始目录明确标注校服罗纹袖口。"
+    },
+    {
+      "name": "针织罗纹领口",
+      "category": "针织罗纹辅料",
+      "is_main": false,
+      "source_paths": [
+        "身份证信息及产品图片/领口/**"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "application": "服装领口"
+      },
+      "capabilities": [
+        "来样定制"
+      ],
+      "reason": "原始目录明确标注领口产品。"
+    }
+  ]
+}

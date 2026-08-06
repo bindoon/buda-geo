@@ -9,22 +9,28 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["sku_id", "name", "images"],
+          "required": ["sku_id", "name", "category", "selling_points", "attributes", "capabilities", "is_main", "source_refs", "fact_refs", "images"],
         "properties": {
           "sku_id": { "type": "string" },
           "name": { "type": "string" },
           "category": { "type": "string" },
           "selling_points": { "type": "array" },
+          "attributes": { "type": "object" },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "is_main": { "type": "boolean" },
+          "source_refs": { "type": "array", "items": { "type": "string" } },
+          "fact_refs": { "type": "array", "items": { "type": "string" } },
           "copy_brief": {},
           "images": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["path"],
+              "required": ["path", "source_ref"],
               "properties": {
                 "path": { "type": "string" },
                 "role": { "type": "string" },
                 "url": {}
+                ,"source_ref": { "type": "string" }
               }
             }
           }

@@ -30,5 +30,31 @@
     "shop_url": "https://shop277490y893269.1688.com/?spm=a26352.15231885.offerlist.1.2d942e8030EPvl"
   },
   "credentials": [],
-  "source": "xlsx:朗威晶电GEO信息收集表.xlsx"
+  "source": "xlsx:朗威晶电GEO信息收集表.xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_4092e78dfc314bf6"
+    ],
+    "company_short_name": [
+      "fact_ce275239842cf35f"
+    ],
+    "contact_name": [
+      "fact_26a2ae48f94cba4a"
+    ],
+    "contact_phone": [
+      "fact_738165b0f4e188a4"
+    ],
+    "address": [
+      "fact_d271e0cc65b961b1"
+    ],
+    "website_or_shop_url": [
+      "fact_49b8c0a3583be126"
+    ],
+    "media_accounts": [
+      "fact_0f8959ea216b6e94"
+    ],
+    "conversion": [
+      "fact_c53403cfba987c09"
+    ]
+  }
 }

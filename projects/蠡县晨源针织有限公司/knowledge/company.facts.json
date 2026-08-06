@@ -1,0 +1,916 @@
+{
+  "app_id": "cy_knit_lx",
+  "generated_at": "2026-08-06T09:32:44Z",
+  "inputs_hash": "51756e83aa46529367ae5ee52ebf3b8de02f944117f51ac3d11aaa200d925d80",
+  "facts_hash": "72983066129a595e24d7471425b6c8b0a36961aed8a671ec7511a90ee7c67449",
+  "subjects": [
+    {
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "type": "company",
+      "name": "蠡县晨源针织有限公司",
+      "parent_subject_id": null,
+      "source_refs": [
+        "src_79482a57f92a93f4",
+        "src_00f582365f79e94c"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_brand_be96ca39e6b1fffd",
+      "type": "brand",
+      "name": "晨源针织",
+      "parent_subject_id": "sub_company_8f5ce373003f5068",
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "type": "product",
+      "name": "无缝罗纹袖口",
+      "parent_subject_id": "sub_company_8f5ce373003f5068",
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_product_2d8a62127725728a",
+      "type": "product",
+      "name": "校服罗纹袖口",
+      "parent_subject_id": "sub_company_8f5ce373003f5068",
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "type": "product",
+      "name": "针织罗纹领口",
+      "parent_subject_id": "sub_company_8f5ce373003f5068",
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_6f368ab681be0e9d",
+      "type": "asset",
+      "name": "O1CN01vrJwzK1EGR8S5mVsK_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_2d8a62127725728a",
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_9fff40d950abcc87",
+      "type": "asset",
+      "name": "O1CN010MXOtl1EGR8a8hK82_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_82ab54ee1385c8c3"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_739b30d275157fc5",
+      "type": "asset",
+      "name": "O1CN01C2hLUz1EGR8a2pyub_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_5d18e58180fe6016"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_fe3f833f88f1d0be",
+      "type": "asset",
+      "name": "O1CN01DNY1px1EGR8azZpdC_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_55fe874953142ba7"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_79bcd7185a9c635b",
+      "type": "asset",
+      "name": "O1CN01DPetW71EGRSMojTpe_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_0c560cf7d541f457"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_ed477206dde64357",
+      "type": "asset",
+      "name": "O1CN01N2T7tf1EGRTbibHHo_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_226e0036fcda1287"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_d895489d22e0183f",
+      "type": "asset",
+      "name": "O1CN01T91nCq1EGRMp24Wbh_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_47872b7410eb6583"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_a509219cf697abff",
+      "type": "asset",
+      "name": "O1CN01UyLr1T1EGR8S85RM0_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_0c4eeced96005307"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_5e9c27040728f5fb",
+      "type": "asset",
+      "name": "O1CN01VurmU61EGRSHyqo92_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_426ed50db3e31387"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_9ab6fdd4d232776e",
+      "type": "asset",
+      "name": "O1CN01vwueio1EGRSN1iveE_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_c8d684932eec76d2"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_551bc00ded7ca58d",
+      "type": "asset",
+      "name": "O1CN01ximHGq1EGR8agoaTb_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_48953795c0700b03"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_f08f726071abceee",
+      "type": "asset",
+      "name": "O1CN01yMyzFo1EGRTbhxJdh_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
+      "source_refs": [
+        "src_d431f76cfc9e0c29"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_ee439f5bf14b2aea",
+      "type": "asset",
+      "name": "O1CN01ALZ1am1EGRTWBQQds_!!2215349380324-0-cib.jpg",
+      "parent_subject_id": "sub_product_e2218da750b67e1e",
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "review_status": "candidate"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact_4e762a3bebe1cad9",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "company_name",
+      "value": "蠡县晨源针织有限公司",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_dcf55b71314d8bb4",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "company_short_name",
+      "value": "晨源针织",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f0f6a280d929518f",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "contact_name",
+      "value": "罗盼兴",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_3f8eab4bf5d63af8",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "contact_phone",
+      "value": "13331235393",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_9e730fb0bb98ccc5",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "address",
+      "value": "河北省 保定市 蠡县 桑园镇杨南村",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_170b57776e1eeec9",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "website_or_shop_url",
+      "value": "https://shop50wr602023917.1688.com/",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_9f8ffe8830d595c1",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "media_accounts",
+      "value": [
+        {
+          "platform": "百家号",
+          "account_id": "13331235393"
+        },
+        {
+          "platform": "知乎",
+          "account_id": "13331235393"
+        },
+        {
+          "platform": "抖音",
+          "account_id": "13331235393"
+        },
+        {
+          "platform": "头条号",
+          "account_id": "13331235393"
+        },
+        {
+          "platform": "搜狐号",
+          "account_id": "13331235393"
+        }
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_f367ba40a51c293b",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "conversion",
+      "value": {
+        "phone": "13331235393",
+        "shop_url": "https://shop50wr602023917.1688.com/"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_f224e7b581c105ea",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "intro",
+      "value": "蠡县晨源针织有限公司，是河北蠡县源头无缝螺纹袖口生产厂家，拥有 1000㎡自有厂区，团队人数 30 人，配置裁剪机 12 台、高速袖口机 50 台、普通袖口机 70 台等百余台无缝圆机设备，专业生产防护服袖口、羽绒服圆筒罗纹、工装罗口、裤脚下摆、罩衣袖口、手套袖口。 公司深耕针织罗纹辅料领域多年，日产数万件成品，现货充足，支持来样定制；搭建了自有生产、质检、跟单全流程团队，严格把控产品弹力与尺寸；依托北方产业带优势，产品性价比突出。已服务众多防护服企业、服装工厂、辅料批发商，大小订单均可承接，交期稳定，售后完善，支持实地验厂、索样洽谈合作。 公司已在 1688 认证实力商家工厂。",
+      "unit": null,
+      "source_refs": [
+        "src_00f582365f79e94c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ec81542b636516bc",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "products_services",
+      "value": "核心生产产品\n主打无缝螺纹袖口、圆筒罗纹袖口、防护服罗纹袖口、领口、校服罗文袖口、手套袖口，同时覆盖羽绒服圆筒罗纹、工装罗口、裤脚下摆、罩衣袖口等全品类针织罗纹辅料。\n核心服务类型\n现货批发：主流规格产品长期备有充足现货，现货订单可快速发货\n来样定制：支持非标尺寸、弹力、克重、款式的定制生产，兼顾小批量试单与大批量集采需求\n全流程配套：提供快速打样、专人跟单服务，可匹配服装厂流水线缝制的标准化生产需求\n\n一体无缝圆筒工艺：圆机整体织造成型，无拼接缝、无硬棱，表面平整顺滑，不会摩擦刺激皮肤；收口密封性更好，防风防尘。\n弹力均匀、持久回弹：采用涤氨混纺纱线，松紧力度适中；反复拉伸不易松弛、不发飘，长期使用不易变大、变形。\n定型稳定，尺寸统一：成品高温预定型处理，缩水率可控；同批次尺寸误差小，适配服装厂标准化缝制，减少返工。\n布面整洁，瑕疵率低：选用全新原料织造，结点少、无油污，不易起毛起球；常规黑、灰色上色均匀，不易发白掉色。\n款式规格丰富：多种周长、高度、克重可选，支持标准现货尺寸，也可定制非标大小、松紧度。\n二、核心竞争优势\n工艺优势：无缝结构对比有缝罗纹，舒适度、密闭性更强，尤其适配防护类服饰的核心需求。\n成本优势：北方产业带自产自销，省去多层中间商环节，大批量采购价格竞争力突出，适配降本型订单需求。\n供货优势：自有上百台圆机设备，日产数万只成品；主流规格长期现货储备，急单可快速发货，大单交期有稳定保障。\n灵活适配优势：现货批发 + 来样定制双模式并行，小批量试单、大批量集采均可承接；可根据客户需求调整弹力、克重等核心参数。\n品控保障：成品逐批抽检外观、尺寸、弹力；大货严格按照确认样品生产，出现品质问题可及时协调售后方案。\n三、产品应用场景\n防护服饰领域：一次性 / 可重复使用防护服、隔离衣、医护工装弹力袖口，实现袖口收紧、阻隔防护。\n秋冬服装领域：羽绒服、棉服、冲锋衣无缝袖口、下摆、裤脚收口，实现防风锁温。\n劳保工装领域：工装外套、防尘服、机修工作服、罩衣罗纹收口，耐磨实用。\n针织成衣配套：休闲外套、童装、针织服饰圆筒领口、罗纹裤脚等辅料配件。\n四、品牌故事\n蠡县晨源针织有限公司是扎根河北蠡县的针织罗纹辅料源头生产企业，依托北方针织产业带的集群优势，始终聚焦无缝螺纹袖口等针织辅料的生产与优化，从自有厂区搭建、全流程织造设备配置，到生产、质检、跟单团队的完整搭建，始终以服装产业链的实际需求为核心，深耕无缝针织工艺的优化与产品品质的稳定把控，逐步形成了自产自销、现货批发 + 来样定制并行的成熟经营模式，服务于全国范围内的防护服企业、服装工厂、辅料批发商等各类客户，在针织罗纹辅料赛道积累了稳定的客户口碑与扎实的行业生产经验。",
+      "unit": null,
+      "source_refs": [
+        "src_00f582365f79e94c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_7882b51e32c319e2",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "advantages",
+      "value": "三、产品优势",
+      "unit": null,
+      "source_refs": [
+        "src_00f582365f79e94c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_06af6298a62c6790",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "trust",
+      "value": "平台资质：认证 1688 实力商家工厂，平台官方资质认证，经营资质有保障\n生产实力：1000㎡自有厂房与全套织造设备，全流程自产自销，支持客户实地验厂\n行业经验：多年针织罗纹辅料织造经验，深耕无缝螺纹袖口核心品类，规模化产能可保障大单、急单稳定交付\n品控体系：标准化品控流程，执行封样生产制度，多层质检环节，严格把控产品尺寸、弹力与成品瑕疵率\n客户认可：长期服务防护服、羽绒服、劳保工厂与各地辅料贸易商，拥有大量稳定合作的长期客户\n售后保障：完善的售后体系，支持快速打样、专人全程跟单，品质问题可高效协调处理",
+      "unit": null,
+      "source_refs": [
+        "src_00f582365f79e94c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_7a866bccab6b0fd5",
+      "subject_id": "sub_company_8f5ce373003f5068",
+      "field": "pain_points",
+      "value": [
+        "普通有缝罗纹存在拼接棱，磨皮肤，防护服密闭效果差",
+        "袖口弹力差，拉伸后难以回弹，久穿松垮变大",
+        "同批次尺寸参差不齐、缩水不稳定，服装厂缝制返工多",
+        "劣质原料结点多、有油污，容易起毛、掉色泛白",
+        "中间商层层加价，难以找到源头工厂，采购成本高",
+        "旺季产能紧张，交期拖延，急单缺少现货补货",
+        "样品品质很好，大货偷工减料，货不对版",
+        "非标尺寸难定制，厂家起订门槛高，售后响应拖沓"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_00f582365f79e94c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_040644377aa6ab1a",
+      "subject_id": "sub_brand_be96ca39e6b1fffd",
+      "field": "name",
+      "value": "晨源针织",
+      "unit": null,
+      "source_refs": [
+        "src_79482a57f92a93f4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6d8d0ecc17e1a994",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "name",
+      "value": "无缝罗纹袖口",
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c8366b725b2eb5cd",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "category",
+      "value": "针织罗纹辅料",
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_34ee5cdca243a6b6",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "selling_points",
+      "value": [
+        "一体无缝圆筒织造",
+        "支持弹力、克重和非标尺寸定制",
+        "覆盖防护服、羽绒服和工装等应用"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_65dae06a4549750e",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "attributes",
+      "value": {
+        "material": "涤氨混纺纱线",
+        "structure": "无缝圆筒"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_91b60186aadee1f7",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "capabilities",
+      "value": [
+        "现货批发",
+        "来样定制",
+        "快速打样"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a8e627fcea0cb739",
+      "subject_id": "sub_product_fcc550b332b3b2a2",
+      "field": "is_main",
+      "value": true,
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3",
+        "src_5d18e58180fe6016",
+        "src_55fe874953142ba7",
+        "src_0c560cf7d541f457",
+        "src_226e0036fcda1287",
+        "src_47872b7410eb6583",
+        "src_0c4eeced96005307",
+        "src_426ed50db3e31387",
+        "src_c8d684932eec76d2",
+        "src_48953795c0700b03",
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_44bede537be0adb5",
+      "subject_id": "sub_product_2d8a62127725728a",
+      "field": "name",
+      "value": "校服罗纹袖口",
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_972359ebdfdbf75d",
+      "subject_id": "sub_product_2d8a62127725728a",
+      "field": "category",
+      "value": "针织罗纹辅料",
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_569431e8344cea58",
+      "subject_id": "sub_product_2d8a62127725728a",
+      "field": "attributes",
+      "value": {
+        "application": "校服袖口"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_4c0b611a0266bd77",
+      "subject_id": "sub_product_2d8a62127725728a",
+      "field": "capabilities",
+      "value": [
+        "来样定制"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_cb383c1e1f0f3b1e",
+      "subject_id": "sub_product_2d8a62127725728a",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a0c43598670eac84",
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "field": "name",
+      "value": "针织罗纹领口",
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f06417735eef512b",
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "field": "category",
+      "value": "针织罗纹辅料",
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_8898182f16d4a53a",
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "field": "attributes",
+      "value": {
+        "application": "服装领口"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_18ccae7455a8763f",
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "field": "capabilities",
+      "value": [
+        "来样定制"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3bb7bae7b80c7316",
+      "subject_id": "sub_product_e2218da750b67e1e",
+      "field": "is_main",
+      "value": false,
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d13ed7bd0483d990",
+      "subject_id": "sub_asset_6f368ab681be0e9d",
+      "field": "path",
+      "value": "assets/images/校服罗纹袖口/O1CN01vrJwzK1EGR8S5mVsK_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_cad101380db7d924"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e6ff726cf3472a09",
+      "subject_id": "sub_asset_9fff40d950abcc87",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN010MXOtl1EGR8a8hK82_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_82ab54ee1385c8c3"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_77a50cbcbfb92f14",
+      "subject_id": "sub_asset_739b30d275157fc5",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01C2hLUz1EGR8a2pyub_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_5d18e58180fe6016"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_fa6e41cdee921e18",
+      "subject_id": "sub_asset_fe3f833f88f1d0be",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01DNY1px1EGR8azZpdC_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_55fe874953142ba7"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_4c1fc7eb4c038b8f",
+      "subject_id": "sub_asset_79bcd7185a9c635b",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01DPetW71EGRSMojTpe_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0c560cf7d541f457"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e4b43b1752a29a0d",
+      "subject_id": "sub_asset_ed477206dde64357",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01N2T7tf1EGRTbibHHo_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_226e0036fcda1287"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1ef636b02ab33bc9",
+      "subject_id": "sub_asset_d895489d22e0183f",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01T91nCq1EGRMp24Wbh_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_47872b7410eb6583"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f8a8b47fa6ed60d1",
+      "subject_id": "sub_asset_a509219cf697abff",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01UyLr1T1EGR8S85RM0_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0c4eeced96005307"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_27003af9abfe4156",
+      "subject_id": "sub_asset_5e9c27040728f5fb",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01VurmU61EGRSHyqo92_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_426ed50db3e31387"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_37e4288944390bc2",
+      "subject_id": "sub_asset_9ab6fdd4d232776e",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01vwueio1EGRSN1iveE_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_c8d684932eec76d2"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6242fff15fc48445",
+      "subject_id": "sub_asset_551bc00ded7ca58d",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01ximHGq1EGR8agoaTb_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_48953795c0700b03"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e1728b56bd7697bf",
+      "subject_id": "sub_asset_f08f726071abceee",
+      "field": "path",
+      "value": "assets/images/无缝罗纹袖口/O1CN01yMyzFo1EGRTbhxJdh_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_d431f76cfc9e0c29"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ed9b4a4b297bd08f",
+      "subject_id": "sub_asset_ee439f5bf14b2aea",
+      "field": "path",
+      "value": "assets/images/针织罗纹领口/O1CN01ALZ1am1EGRTWBQQds_!!2215349380324-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_92deff62f67fadd6"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    }
+  ],
+  "conflicts": []
+}

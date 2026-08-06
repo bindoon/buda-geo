@@ -1,0 +1,41 @@
+{
+  "app_id": "hy_tool_nt",
+  "generated_at": "2026-08-06T08:57:21Z",
+  "items": [
+    {
+      "evidence_id": "evidence_9061ea197b5fc5d3",
+      "type": "business_license",
+      "subject_refs": [
+        "sub_company_0c2d08bf92cd9ae2"
+      ],
+      "source_ref": "src_2c3a60ddfe427e4f",
+      "path": "assets/images/_trust/5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
+      "supports_fact_ids": [
+        "fact_dbaed7e848f13fd7",
+        "fact_ba0c0fb455faf742"
+      ],
+      "disclosure_level": "restricted",
+      "review_status": "confirmed",
+      "valid_from": null,
+      "valid_until": null,
+      "notes": "运营人工识别为营业执照；仅作企业主体证据，不作为产品图。"
+    },
+    {
+      "evidence_id": "evidence_adc730cb2e5dcb99",
+      "type": "platform_application_form",
+      "subject_refs": [
+        "sub_company_0c2d08bf92cd9ae2"
+      ],
+      "source_ref": "src_2f05c54564c63680",
+      "path": "assets/images/_trust/a9ea193505772f99fe6d003546c45e77.jpg",
+      "supports_fact_ids": [
+        "fact_dbaed7e848f13fd7"
+      ],
+      "disclosure_level": "restricted",
+      "review_status": "confirmed",
+      "valid_from": null,
+      "valid_until": null,
+      "notes": "运营人工识别为平台企业账号申请资料；不可发布。"
+    }
+  ]
+}

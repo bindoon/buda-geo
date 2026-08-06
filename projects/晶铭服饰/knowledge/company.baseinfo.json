@@ -1,7 +1,7 @@
 {
   "app_id": "jm_apparel_cx",
   "company_name": "曹县晶铭服饰有限公司",
-  "company_short_name": "晶铭服饰",
+  "company_short_name": "公司经营12年时间 专门生产儿童舞蹈服的厂家",
   "contact_name": "葛柱龙",
   "contact_phone": "15965827526",
   "address": "山东菏泽曹县安蔡楼镇王楼村190号",
@@ -34,5 +34,31 @@
     "shop_url": "https://jm15965827526.1688.com/"
   },
   "credentials": [],
-  "source": "xlsx:曹县晶铭服饰有限公司 GEO信息收集表.xlsx"
+  "source": "xlsx:曹县晶铭服饰有限公司 GEO信息收集表.xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_5f89ef81b622ade7"
+    ],
+    "company_short_name": [
+      "fact_006357fb08a27dce"
+    ],
+    "contact_name": [
+      "fact_e103adc30a84b062"
+    ],
+    "contact_phone": [
+      "fact_de3a12149aaecafd"
+    ],
+    "address": [
+      "fact_f74062502b5e9cc5"
+    ],
+    "website_or_shop_url": [
+      "fact_08520825844492af"
+    ],
+    "media_accounts": [
+      "fact_6173bb78eaeb7092"
+    ],
+    "conversion": [
+      "fact_e8ca7c6e4a7777d8"
+    ]
+  }
 }

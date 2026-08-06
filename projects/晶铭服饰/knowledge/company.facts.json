@@ -1,0 +1,1475 @@
+{
+  "app_id": "jm_apparel_cx",
+  "generated_at": "2026-08-06T09:32:44Z",
+  "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
+  "facts_hash": "53c4b45896c61945ba6b7638b71e0ffca58583cff96a0b6c032ea5d9c6e57dda",
+  "subjects": [
+    {
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "type": "company",
+      "name": "曹县晶铭服饰有限公司",
+      "parent_subject_id": null,
+      "source_refs": [
+        "src_413e749433702a1b",
+        "src_fd3cfa703ba98a56"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_brand_20c690fc91d64070",
+      "type": "brand",
+      "name": "晶铭服饰",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "type": "product",
+      "name": "儿童芭蕾tutu裙",
+      "parent_subject_id": "sub_company_0e74341ab7180b08",
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_6f457d16e7b489e5",
+      "type": "asset",
+      "name": "20765187034_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_41a9616538ec1bbb"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_bb11b3eb111e598b",
+      "type": "asset",
+      "name": "20765295730_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_c3db39c515abebe5"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_46324e8ccf16acff",
+      "type": "asset",
+      "name": "20923211393_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_3b387a8f53138acf"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_42a48e9fa0b4bdfd",
+      "type": "asset",
+      "name": "21223626989_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_2537eb19908c5282"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7b99cc306766e0d2",
+      "type": "asset",
+      "name": "21675954885_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_4df7b2358c7f0511"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_94d3d0428d7d8ac1",
+      "type": "asset",
+      "name": "21676197381_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_8db898a1525b626b"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_c6bb78cad74c0a7c",
+      "type": "asset",
+      "name": "21676236068_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_f15065b006aedea9"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_49e8ed852074e49d",
+      "type": "asset",
+      "name": "21815365172_39621472.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_3fcf2bd5401900a9"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7fee8ee08a8cd503",
+      "type": "asset",
+      "name": "O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_609d6daf671a5d0a"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_4d992156363dfe8e",
+      "type": "asset",
+      "name": "O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_a6aaa24446070a91"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_3720401a90f4afd3",
+      "type": "asset",
+      "name": "O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_41d52ef0289d866d"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_047058c7302a3866",
+      "type": "asset",
+      "name": "O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_c449e4686e65f52f"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7c065a69ebf8c2e4",
+      "type": "asset",
+      "name": "O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_17c9b608eaa943a4"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_db9ff6e1ae2a3019",
+      "type": "asset",
+      "name": "O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_8733ffffb8d7d55b"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7bdcf6e20f92cd00",
+      "type": "asset",
+      "name": "O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_b140d25508eae3c5"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_d33208eddf113584",
+      "type": "asset",
+      "name": "O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_0b24979404673686"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_2f9971d88f8373d0",
+      "type": "asset",
+      "name": "O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_1766764d07dc7037"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_48f58fba232d27a5",
+      "type": "asset",
+      "name": "O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_e40b83cc87804b6b"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_3b41f795adb889d8",
+      "type": "asset",
+      "name": "O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_0a7eb23f21cee275"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_264617488221dc8b",
+      "type": "asset",
+      "name": "O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_b27b96df86f18e2b"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_1d537338cc3a705f",
+      "type": "asset",
+      "name": "O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_64b3f55e608e944e"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_1dbd510d7ed880dd",
+      "type": "asset",
+      "name": "O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_c9ecdbf15dab0872"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_95e002983b15c522",
+      "type": "asset",
+      "name": "O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_cff4f11f0996fe83"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7807bfc2f457520c",
+      "type": "asset",
+      "name": "O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_75aa785b8802e78e"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_ee65efaa98363640",
+      "type": "asset",
+      "name": "O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_92799fd2d83a25de"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7e7ce097f8c6f924",
+      "type": "asset",
+      "name": "O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_9888dc595551f2a4"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_069ea2524fbee9d1",
+      "type": "asset",
+      "name": "O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_891ced7df5310956"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_50aa0bc294aa5e84",
+      "type": "asset",
+      "name": "O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_ba4206cd347962f5"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_aacb5c19a180374e",
+      "type": "asset",
+      "name": "O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_03d2b213417f4ca5"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_852a9374fa220e67",
+      "type": "asset",
+      "name": "O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_6ce4d7e638026ca6"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_9e31b22eb029599c",
+      "type": "asset",
+      "name": "O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_110fa2ff4c1e4286"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_7441c4335398bf53",
+      "type": "asset",
+      "name": "O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_10413d14048856f7"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_4fdfc9376fe1c76d",
+      "type": "asset",
+      "name": "O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_98a6388bc8caee59"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_4a77aafc48f45494",
+      "type": "asset",
+      "name": "O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_2fc932276a84576a"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_c4bf8d811fd891f1",
+      "type": "asset",
+      "name": "O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_0fe3f6d48bec27dd"
+      ],
+      "review_status": "candidate"
+    },
+    {
+      "subject_id": "sub_asset_f1bf0b5606797fa4",
+      "type": "asset",
+      "name": "O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
+      "parent_subject_id": "sub_product_78f8dc1314a78919",
+      "source_refs": [
+        "src_b0f07a365cfc86a9"
+      ],
+      "review_status": "candidate"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact_5f89ef81b622ade7",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "company_name",
+      "value": "曹县晶铭服饰有限公司",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_006357fb08a27dce",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "company_short_name",
+      "value": "公司经营12年时间 专门生产儿童舞蹈服的厂家",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e103adc30a84b062",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "contact_name",
+      "value": "葛柱龙",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_de3a12149aaecafd",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "contact_phone",
+      "value": "15965827526",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_f74062502b5e9cc5",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "address",
+      "value": "山东菏泽曹县安蔡楼镇王楼村190号",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_08520825844492af",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "website_or_shop_url",
+      "value": "https://jm15965827526.1688.com/",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6173bb78eaeb7092",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "media_accounts",
+      "value": [
+        {
+          "platform": "百家号",
+          "account_id": "15965827526"
+        },
+        {
+          "platform": "知乎",
+          "account_id": "15965827526"
+        },
+        {
+          "platform": "抖音",
+          "account_id": "15965827526"
+        },
+        {
+          "platform": "头条号",
+          "account_id": "15965827526"
+        },
+        {
+          "platform": "搜狐号",
+          "account_id": "15965827526"
+        }
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_e8ca7c6e4a7777d8",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "conversion",
+      "value": {
+        "phone": "15965827526",
+        "shop_url": "https://jm15965827526.1688.com/"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_092eb38867127d1c",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "intro",
+      "value": "曹县晶铭服饰有限公司成立于2014年，坐落于山东菏泽曹县安蔡楼镇王楼村，是深耕儿童表演服饰研发、设计、生产、供货一体化的专业科技型服装企业，十余年专注儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服全品类生产。\n一、硬核工厂硬实力\n生产规模体量：自有标准化生产厂房1500㎡，完整裁床、缝纫、锁边、定型、包装全独立车间；在职专业生产员工35人，全套自动化缝纫、刺绣、网纱定型设备40台，可承接大批量订单稳定排产，全年年销售额稳定800万元，现货库存常备上万件，爆款单品月销可达8000+件，供货产能充足不缺货。\n专业研发设计团队：配备5名资深舞蹈服饰设计师，紧跟国内舞蹈机构需求、海外跨境流行趋势，每月上新3-5款新款芭蕾裙，覆盖考级简约款、重工舞台比赛款、童话剧目演出款；可独立完成版型改版、配色定制、机构logo印花打样，3天快速出样品，按需匹配客户差异化需求。\n品控质检体系：每一件舞蹈服历经面料检测、车缝初检、刺绣定型复检、成品完整质检四道工序，面料全部采用A类母婴级标准，无荧光剂、无刺激染料，网纱、刺绣、肩带细节全部人工排查，杜绝扎肤、脱钻、断线等质量问题。\n二、\n\n曹县晶铭服饰有限公司自2014年建厂以来，十余年专注儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服全品类生产。公司从山东菏泽曹县起步，凭借源头工厂的硬实力和对产品工艺的不断钻研，逐步建立起从研发设计到生产供货的一体化体系。通过自研网纱定型缝制、高温固色刺绣、儿童人体工学版型等核心工艺，公司持续为市场提供高品质的儿童舞蹈服饰。经过多年发展，晶铭服饰已从一家地方服装厂成长为深耕内销与跨境双渠道的供货型企业，累计与100余家国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作。公司始终坚持以靠谱品质、灵活政策和完善服务，收获全国采购商的长期复购信赖，在行业内积累了良好的口碑。",
+      "unit": null,
+      "source_refs": [
+        "src_fd3cfa703ba98a56"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_cce4233532041ac9",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "products_services",
+      "value": "公司专注于儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服的全品类生产，并为B端采购客户提供灵活拿货政策（支持1件起混批、小批量试单，拿货量越大阶梯批发价，长期合作客户可享专属订货优惠）、定制一站式服务（支持定制舞蹈机构班服印LOGO、修改裙摆层数、专属配色打版、成人加大码定制、全套配饰配套打包）、极速物流发货（现货订单48小时内揽收出库，大批量多包裹采用子母件同步发货）和完善售后保障体系（破损、少件、面料瑕疵无条件赔付补发，滞销常规款支持同价位调换，专属业务一对一跟进订单）。",
+      "unit": null,
+      "source_refs": [
+        "src_fd3cfa703ba98a56"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_8153466b46e84102",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "advantages",
+      "value": "灵活拿货政策：支持1件起混批、小批量试单，培训机构、电商卖家、外贸商家均可适配；拿货量越大阶梯批发价，长期合作客户可享专属订货优惠。\n定制一站式服务：支持定制舞蹈机构班服印LOGO、修改裙摆层数、专属配色打版、成人加大码定制、全套配饰（头花、手花、舞蹈袜）配套打包，省去客户二次采购成本。\n极速物流发货：现货订单48小时内揽收出库，大批量多包裹采用子母件同步发货，国内主流快递稳定合作，保障舞蹈班汇演、赛事档期不延误。\n完善售后保障体系\n工厂承诺破损、少件、面料瑕疵无条件赔付补发，收货发现任何质量问题，无需复杂流程，拍照核实即安排补发/退换；滞销常规款支持同价位调换，降低客户囤货经营风险；专属业务一对一跟进订单，售前版型咨询、售中进度跟踪、售后问题快速响应。\n长期稳定合作案例\n深耕内销+跨境双渠道，累计与100+国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作，合作客户覆盖全国各省市艺术培训机构、淘宝/拼多多/抖音零售商家、亚马逊、Temu跨境出口商家；多款芭蕾tutu裙常年作为舞蹈班统一班服、少儿赛事指定演出服装，凭借靠谱品质收获全国采购商长期复购信赖。\n\n1688\n\n面料特点：上身主体采用高弹亲肤锦纶冰丝面料，透气速干，不闷汗，练舞长时间贴身不磨皮肤；高弹力拉伸不变形，胖瘦儿童都贴合身形。裙摆TUTU网纱为多层高密度软网纱，内置定型硬衬，裙摆自然蓬挺不塌陷，不用额外撑裙；网纱边缘锁边处理，不扎腿、不勾丝、不掉纱。内衬为全棉透气里衬，防走光，无荧光剂、无刺鼻染料，母婴级安全面料，儿童贴身穿无刺激。装饰辅料采用烫金刺绣、手工立体花朵、珍珠水钻，采用高温固色工艺，水洗不脱金、不掉钻。\n工艺特点：一体式立体剪裁，V领显瘦、小飞袖遮拜拜肉，肩带可调节，适配3-14岁不同身高儿童。重工手工缝制，每一层网纱分层独立车缝，裙摆支撑力强，转圈跳舞不散乱。加固车线，腰头、肩带、刺绣位置双线锁缝，高强度拉扯不易断线，反复穿洗耐用。环保印染，活性染料上色，多色可选（白、粉、紫、蓝），水洗无褪色、无异味，通过婴幼儿服饰安全检测。\n版型细节特点：分码全覆盖，100-160全尺码，幼儿小班到大龄考级儿童一站式配齐。可调节隐形肩带，不滑落，跳舞大幅度动作不走光。低腰舒适版型，不勒肚子，下腰、劈叉、跳跃无束缚。可拆卸装饰花朵/头花，一物多用，日常练习、舞台演出两种穿法。\n\n源头自产工厂，无中间商差价，支持混批、小批量拿货（1件起批），库存充足常年现货，爆款月销8000+稳定供货。支持定制服务：印机构logo、改裙摆层数、定制专属配色、定做成人加大码，打样周期短3天出样。极速发货：48小时揽收发货，现货订单当天出库，大件多包裹子母件发货，物流稳定，不耽误培训机构演出档期。售后保障：残次破损包补发，滞销款可调换，长期合作机构客户提供账期、阶梯拿货价政策。\n\n（对比市场普通舞蹈裙）：定型升级，同行单层软纱易塌，本店多层加硬衬TUTU裙，上台拍照出片，舞台视觉效果高级。安全升级，全线面料A类儿童服饰标准，无尖锐水钻、无硬质毛刺，舞蹈课大幅度动作不划伤孩子。性价比优势，重工刺绣款批发价70-108区间，同等工艺线下培训机构拿货价低30%，利润空间充足。款式更新快，每月上新跨境风新款，童话剧目款、考级简约款、公主演出款全覆盖，紧跟舞蹈机构流行趋势。配套一站式，下单赠送配套袜裤、头花、手花，培训机构采购不用额外搭配配饰，省心省力。\n\n（采购商家好卖货）：受众广，兼顾日常练功、考级、舞台汇演、比赛四大需求，一年四季持续走单，淡旺季差距小。颜值适配短视频带货，蓬蓬纱裙拍照、拍视频出片，抖音、小红书、线下舞蹈班引流卖货自带流量。多渠道适配，支持跨境外贸、线下舞蹈培训机构、母婴店、电商淘宝拼多多卖家、幼儿园采购全渠道分销。\n产品应用场景（采购客户使用渠道+适用场合）：\n线下培训机构采购（核心B端客户）：少儿芭蕾培训班日常练功服（简约款tutu裙，舒适耐穿，长期上课统一班服）；舞蹈考级专用（纯色简约刺绣款，符合考级服装规范，不浮夸扣分）；年度汇报演出、六一儿童节舞台汇演（重工水钻花朵款，上镜华丽，集体舞蹈统一着装）；芭蕾剧目表演（小天鹅、睡美人、胡桃夹子童话主题剧目定制款，配套头饰全套道具）。\n赛事/比赛场景：少儿芭蕾舞大赛、全国舞蹈特长生竞赛、艺术特长生测评，高质感刺绣裙提升舞台观感，适合独舞、群舞参赛。\n零售终端零售渠道：母婴实体店、儿童服饰店（零售卖给家长，生日拍照、儿童写真、生日派对公主穿搭）；电商卖家（淘宝/拼多多/抖音）（零售单件发货，宝妈自用拍照、兴趣班穿搭）；跨境外贸（出口欧美东南亚儿童舞蹈市场，海外舞蹈工作室、亚马逊跨境供货）。\n其他商用场景：幼儿园文艺晚会、儿童摄影写真馆、少儿艺术活动、商场儿童舞台活动租赁服装、亲子芭蕾活动穿搭。",
+      "unit": null,
+      "source_refs": [
+        "src_fd3cfa703ba98a56"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ec45d3991f8bc947",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "trust",
+      "value": "工艺技术：自研网纱定型缝制、高温固色刺绣、儿童人体工学版型三大核心工艺，自有全套生产设备自主加工，工艺不外包。\n行业协会与合作背书：100+线下舞蹈培训机构、国内外贸企业长期稳定合作，赛事汇演指定服装供货厂家。\n\n佐证：店铺4.9高分，爆款累计万笔成交，65%客户复购；采购商一致认可发货时效、定制服务、赔付售后政策，无售后纠纷记录。\n工厂硬实力背书：2014年建厂，1500㎡标准化厂房，稳定年产供货能力，支持客户实地验厂看货、现场打样。\n\n公司深耕内销与跨境双渠道，累计与100余家国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作。合作客户覆盖全国各省市艺术培训机构、淘宝/拼多多/抖音零售商家，以及亚马逊、Temu等跨境出口商家。多款芭蕾tutu裙常年作为舞蹈班统一班服、少儿赛事指定演出服装，凭借靠谱品质收获全国采购商长期复购信赖。",
+      "unit": null,
+      "source_refs": [
+        "src_fd3cfa703ba98a56"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c1ef85092220d8b2",
+      "subject_id": "sub_company_0e74341ab7180b08",
+      "field": "pain_points",
+      "value": [
+        "C端家长：劣质面料刺激儿童肌肤、版型束缚舞蹈动作、做工易损坏需重复购买、场景单一配套不全、零售售后推诿耽误演出。",
+        "B端采购商：款式更新滞后、小批量定制门槛高、工厂供货延期断货、破损残次无赔付售后、无配套一站式拿货政策。",
+        "市场低价内卷，劣质通货冲击优质产品",
+        "上游供应链不稳定，旺季断料、生产周期不可控",
+        "工艺研发薄弱，版型款式同质化严重",
+        "产销信息脱节，工厂滞销、采购商难找靠谱货源",
+        "行业配套服务缺失，定制、物流、售后体系不完善。"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_fd3cfa703ba98a56"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_389c30b0c87f0141",
+      "subject_id": "sub_brand_20c690fc91d64070",
+      "field": "name",
+      "value": "晶铭服饰",
+      "unit": null,
+      "source_refs": [
+        "src_413e749433702a1b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_8671c5bfb63fb61d",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "name",
+      "value": "儿童芭蕾tutu裙",
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.98,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_71ca91fe0f9a05d7",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "category",
+      "value": "儿童舞蹈服饰",
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_379be848d93efdee",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "selling_points",
+      "value": [
+        "多层高密度网纱并配置定型硬衬",
+        "覆盖100至160尺码",
+        "支持一件起混批和舞蹈机构定制"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_38d3648a6f0eeb60",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "attributes",
+      "value": {
+        "size_range": "100-160",
+        "main_material": "锦纶冰丝与多层网纱",
+        "applicable_age": "3-14岁"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_5010f2bcf29d1f38",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "capabilities",
+      "value": [
+        "生产供应",
+        "印LOGO与配色定制",
+        "裙摆层数与尺码定制"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_90fe608ee01e9517",
+      "subject_id": "sub_product_78f8dc1314a78919",
+      "field": "is_main",
+      "value": true,
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_58e39784e7d0be74",
+      "subject_id": "sub_asset_6f457d16e7b489e5",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/20765187034_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_41a9616538ec1bbb"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d276c854a8e1b13f",
+      "subject_id": "sub_asset_bb11b3eb111e598b",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/20765295730_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_c3db39c515abebe5"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_083fac0d6802038d",
+      "subject_id": "sub_asset_46324e8ccf16acff",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/20923211393_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_3b387a8f53138acf"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_eb22ed22a7da9161",
+      "subject_id": "sub_asset_42a48e9fa0b4bdfd",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/21223626989_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_2537eb19908c5282"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ed3c9ed2feb7a308",
+      "subject_id": "sub_asset_7b99cc306766e0d2",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/21675954885_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_4df7b2358c7f0511"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_88a81912a1accbb5",
+      "subject_id": "sub_asset_94d3d0428d7d8ac1",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/21676197381_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_8db898a1525b626b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6e04c95ec878ce05",
+      "subject_id": "sub_asset_c6bb78cad74c0a7c",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/21676236068_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_f15065b006aedea9"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_fbeaed88cb9de016",
+      "subject_id": "sub_asset_49e8ed852074e49d",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/21815365172_39621472.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_3fcf2bd5401900a9"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d6e0ffcf10c13f94",
+      "subject_id": "sub_asset_7fee8ee08a8cd503",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_609d6daf671a5d0a"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b1c1812811edadf3",
+      "subject_id": "sub_asset_4d992156363dfe8e",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_a6aaa24446070a91"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_7af56876a3550042",
+      "subject_id": "sub_asset_3720401a90f4afd3",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_41d52ef0289d866d"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c38d7986ec965ec5",
+      "subject_id": "sub_asset_047058c7302a3866",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_c449e4686e65f52f"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1704a05cf56c86b5",
+      "subject_id": "sub_asset_7c065a69ebf8c2e4",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_17c9b608eaa943a4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6372c9fbb936e050",
+      "subject_id": "sub_asset_db9ff6e1ae2a3019",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_8733ffffb8d7d55b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_79ecb7d80ecb95dd",
+      "subject_id": "sub_asset_7bdcf6e20f92cd00",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b140d25508eae3c5"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_c3cbd1bf085265cf",
+      "subject_id": "sub_asset_d33208eddf113584",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0b24979404673686"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_9821571a0b24fc52",
+      "subject_id": "sub_asset_2f9971d88f8373d0",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_1766764d07dc7037"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_ef42493f097c3701",
+      "subject_id": "sub_asset_48f58fba232d27a5",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_e40b83cc87804b6b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1f6c12a11c0c21d0",
+      "subject_id": "sub_asset_3b41f795adb889d8",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0a7eb23f21cee275"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0d2723b0dfc94c83",
+      "subject_id": "sub_asset_264617488221dc8b",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b27b96df86f18e2b"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d3bb50c0978f821e",
+      "subject_id": "sub_asset_1d537338cc3a705f",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_64b3f55e608e944e"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b0aa8b8736e29ee7",
+      "subject_id": "sub_asset_1dbd510d7ed880dd",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_c9ecdbf15dab0872"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_292cc1a6c53b581e",
+      "subject_id": "sub_asset_95e002983b15c522",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_cff4f11f0996fe83"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d71e3edb0b61b254",
+      "subject_id": "sub_asset_7807bfc2f457520c",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_75aa785b8802e78e"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_1f51513d3f750e78",
+      "subject_id": "sub_asset_ee65efaa98363640",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_92799fd2d83a25de"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_82e55f7b45c3143e",
+      "subject_id": "sub_asset_7e7ce097f8c6f924",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_9888dc595551f2a4"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_5771486deb25bf8f",
+      "subject_id": "sub_asset_069ea2524fbee9d1",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_891ced7df5310956"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_080818be5fa6e473",
+      "subject_id": "sub_asset_50aa0bc294aa5e84",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_ba4206cd347962f5"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_f1d68846ba4fe881",
+      "subject_id": "sub_asset_aacb5c19a180374e",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_03d2b213417f4ca5"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_218036ea44b5d316",
+      "subject_id": "sub_asset_852a9374fa220e67",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_6ce4d7e638026ca6"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_e24f5dc380c612af",
+      "subject_id": "sub_asset_9e31b22eb029599c",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_110fa2ff4c1e4286"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a6ccd81d111a7a13",
+      "subject_id": "sub_asset_7441c4335398bf53",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_10413d14048856f7"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_a8421e2501586508",
+      "subject_id": "sub_asset_4fdfc9376fe1c76d",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_98a6388bc8caee59"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_aa66c0e665ef35df",
+      "subject_id": "sub_asset_4a77aafc48f45494",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_2fc932276a84576a"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_907e15ec743a06b1",
+      "subject_id": "sub_asset_c4bf8d811fd891f1",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_0fe3f6d48bec27dd"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_8a026ea26cd9f988",
+      "subject_id": "sub_asset_f1bf0b5606797fa4",
+      "field": "path",
+      "value": "assets/images/儿童芭蕾tutu裙/O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
+      "unit": null,
+      "source_refs": [
+        "src_b0f07a365cfc86a9"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "candidate",
+      "disclosure_level": "public"
+    }
+  ],
+  "conflicts": []
+}

@@ -2,250 +2,288 @@
   "app_id": "jm_apparel_cx",
   "items": [
     {
-      "sku_id": "sku_曹县晶铭服饰有限公司 信息",
-      "name": "曹县晶铭服饰有限公司 信息",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/0692535a5a0d81e6c960d66ab6125167.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/1e3ad889d80c22271ec7b6f7d0a602aa.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/581f1cd242eeae969c16ecec209fa9c7.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/90b11ef98588423417302c8c66f59047.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/9945ac5ef4159084cdf7e6aab6f61712.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/9bc85bcaf81b5fd69b99178a05084089.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/9d9bf13be78b3b75a359533087177989.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/9e9b542e255267672a5c8fa679bc758e.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/a889ebdaf9a20fe56d731a1752e7c6aa.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/曹县晶铭服饰有限公司 信息/e87aee611900335001b9928ef35e958e.jpg",
-          "role": "main",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_儿童芭蕾 tutu 裙",
-      "name": "儿童芭蕾 tutu 裙",
-      "category": "",
-      "selling_points": [],
+      "sku_id": "sku_儿童芭蕾tutu裙",
+      "name": "儿童芭蕾tutu裙",
+      "category": "儿童舞蹈服饰",
+      "selling_points": [
+        "多层高密度网纱并配置定型硬衬",
+        "覆盖100至160尺码",
+        "支持一件起混批和舞蹈机构定制"
+      ],
+      "attributes": {
+        "size_range": "100-160",
+        "main_material": "锦纶冰丝与多层网纱",
+        "applicable_age": "3-14岁"
+      },
+      "capabilities": [
+        "生产供应",
+        "印LOGO与配色定制",
+        "裙摆层数与尺码定制"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_41a9616538ec1bbb",
+        "src_c3db39c515abebe5",
+        "src_3b387a8f53138acf",
+        "src_2537eb19908c5282",
+        "src_4df7b2358c7f0511",
+        "src_8db898a1525b626b",
+        "src_f15065b006aedea9",
+        "src_3fcf2bd5401900a9",
+        "src_609d6daf671a5d0a",
+        "src_a6aaa24446070a91",
+        "src_41d52ef0289d866d",
+        "src_c449e4686e65f52f",
+        "src_17c9b608eaa943a4",
+        "src_8733ffffb8d7d55b",
+        "src_b140d25508eae3c5",
+        "src_0b24979404673686",
+        "src_1766764d07dc7037",
+        "src_e40b83cc87804b6b",
+        "src_0a7eb23f21cee275",
+        "src_b27b96df86f18e2b",
+        "src_64b3f55e608e944e",
+        "src_c9ecdbf15dab0872",
+        "src_cff4f11f0996fe83",
+        "src_75aa785b8802e78e",
+        "src_92799fd2d83a25de",
+        "src_9888dc595551f2a4",
+        "src_891ced7df5310956",
+        "src_ba4206cd347962f5",
+        "src_03d2b213417f4ca5",
+        "src_6ce4d7e638026ca6",
+        "src_110fa2ff4c1e4286",
+        "src_10413d14048856f7",
+        "src_98a6388bc8caee59",
+        "src_2fc932276a84576a",
+        "src_0fe3f6d48bec27dd",
+        "src_b0f07a365cfc86a9"
+      ],
+      "fact_refs": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_379be848d93efdee",
+        "fact_38d3648a6f0eeb60",
+        "fact_5010f2bcf29d1f38",
+        "fact_90fe608ee01e9517"
+      ],
       "copy_brief": "非抖音文章指令\n#请根据以下要求，为我创作一篇自媒体热门文章：\n##文章类型：自媒体文章\n一、核心关键词\n儿童芭蕾tutu裙（或根据内容延伸为“儿童芭蕾舞裙/儿童tutu裙/专业练功tutu裙/演出tutu裙/练功服tutu裙”等。）\n二、文章类型（当单次要求生成多篇文章时，严禁围绕同一类型或同一写作视角重复输出）\n行业干货、采购避坑科普、选型对比、采购清单、多品类对比（如硬纱与软纱tutu裙的差异，通俗说明）、标准解读（用通俗语言解读面料、内衬、腰围松紧、裙长等指标，避免复杂术语）、场景穿搭指南、场景选购方案、穿着与调整指南、清洗与保养技巧、审美搭配、性价比分析类等（11种类型可任选其一，确保每次风格差异化）\n三、内容核心规范\n1、围绕儿童芭蕾tutu裙展开，自然植入相关关键词及选购、面料扎人、内衬透气性、腰围勒痕、洗涤变形等痛点问题，语言通俗，无难懂术语，适配儿童舞蹈学员家长、舞蹈机构采购、舞台演出筹备等人群阅读。\n2、贴合真实练功房、舞台表演、考级、舞蹈比赛等使用场景，聚焦选购痛点，数据、案例、面料特性、工艺细节真实可查，不虚构夸大，标准通俗说明。\n3、采用分点论述（可加小标题），重点突出，方便快速抓取核心信息。\n4、逻辑连贯，无冗余、无关内容，贴合自媒体阅读节奏。\n5、内容需贴合儿童日常练功、舞台表演、考级比赛、舞蹈机构统一采购等真实应用场景，涉及面料透气性、内衬亲肤度、腰围松紧舒适度、裙摆层数、清洗耐用性等指标通俗说明，不深入复杂细节；\n6、关键词植入需自然流畅，不堆砌、不生硬，符合文章阅读逻辑。\n7、可适当结合使用场景差异（如日常练功侧重透气耐洗款，舞台表演侧重蓬松挺括款，夏季选用轻薄透气面料，冬季可搭配打底穿着）、tutu裙打理技巧（泛化表述，如轻柔手洗、平铺晾晒、避免悬挂变形等），增强内容实用性；\n8、语言以通俗为主，兼顾基础常识，少用复杂专业词汇，确保舞蹈生家长、机构采购、舞台编导等非专业人士都能看懂，适配自媒体广泛传播需求。\n##限制\n1、不得添加网址、电话、具体企业联系方式、价格等违规信息；\n2、禁止出现AI生成、AI分析类话术与语句，直接输出文章正文；\n3、不得输出与文章内容无关的信息，包括字数说明、提示词分析、创作背景等；\n4、单篇字数控制在500-800字，无需标注字数；\n5、所有面料特性、工艺细节、耐用表现、环保标准描述必须真实，不得虚构或夸大；\n6、不得使用&quot;最、第一、首选、专供、指定&quot;等违反广告法的极限词；\n7、涉及面料或舒适度相关描述时不要体现具体数值，可以泛表述。\n8、文章内不要有表格形式\n非抖音标题指令\n##爆款自媒体文章标题生成提示词你是一名深耕母婴亲子及少儿艺术培训领域的资深自媒体标题操盘手，精通百度/今日头条/知乎等推荐机制。你的任务是围绕“儿童芭蕾tutu裙”创作高点击、高转化的文章标题。\n##标题要求：1、类型严格对应： 标题类型必须与文章内容的写作类型（如选购干货、避坑指南、场景穿搭、产品评测、保养技巧等）保持高度一致，严禁题文不符。2、严格控制字数： 20-25字，不多不少。3、关键词策略：核心词： 必须自然植入“儿童芭蕾tutu裙”，或根据内容延伸为“儿童芭蕾舞裙/儿童tutu裙/专业练功tutu裙/演出tutu裙/练功服tutu裙”等。流量词： 可根据需要叠加“考级/汇演/比赛/日常练功/培训班推荐”等场景词，或“硬纱/软纱/棉质内衬/松紧腰头/亮片钉珠/网纱层数”等工艺细节词，以及“如何选/怎么洗/尺码对照/品牌对比”等高搜索意图词。\n4、拒绝标题党： 标题需贴合真实育儿场景，拒绝浮夸震惊体，但要直击痛点（如纱质扎皮肤、腰头勒痕、掉亮片、洗后变形、长短不合适、转圈时裙摆不蓬、腋下磨红印等）。5、结构多样化： 优先采用：提问式（引发好奇）、盘点式（干货满满）、避坑式、指南式（实用工具）、对比式（清晰决策）。确保生成的多个标题在结构上不重复，避免千篇一律。6、语言风格： 专业且接地气，符合宝妈群体、少儿舞蹈学员家长、幼儿园节目负责人、舞蹈班采购老师等人的搜索与阅读习惯，自带搜索流量属性。7、去AI化处理： 语义通顺有节奏感，无冗余废话，严禁出现“AI生成”、“分析如下”等机器语言。\n输出格式： 仅需输出标题文字，不要出现分析过程及其他任何废话。\n抖音文章指令\n#请根据以下要求，为我创作一篇自媒体热门文章：\n##文章类型：自媒体文章\n一、核心关键词\n儿童芭蕾tutu裙（可自然延伸：儿童舞蹈裙、芭蕾舞表演服、舞蹈裙定制、少儿芭蕾、舞蹈服装面料、演出服选购、练功裙等，表述尽量通俗）\n二、内容类型（当单次要求生成多篇图文时，严禁围绕同一类型或同一写作视角重复输出）\n选购避坑科普（围绕面料、版型、舒适度、耐用性等维度，用家长视角讲清楚怎么挑到不踩雷的tutu裙）",
       "images": [
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/20765187034_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/20765187034_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_41a9616538ec1bbb"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/20765295730_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/20765295730_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_c3db39c515abebe5"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/20923211393_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/20923211393_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_3b387a8f53138acf"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/21223626989_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/21223626989_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_2537eb19908c5282"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/21675954885_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/21675954885_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_4df7b2358c7f0511"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/21676197381_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/21676197381_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_8db898a1525b626b"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/21676236068_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/21676236068_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_f15065b006aedea9"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/21815365172_39621472.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/21815365172_39621472.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_3fcf2bd5401900a9"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_609d6daf671a5d0a"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a6aaa24446070a91"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_41d52ef0289d866d"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_c449e4686e65f52f"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_17c9b608eaa943a4"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
-          "role": "main",
-          "url": null
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8733ffffb8d7d55b"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_b140d25508eae3c5"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_0b24979404673686"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_1766764d07dc7037"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_e40b83cc87804b6b"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_0a7eb23f21cee275"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_b27b96df86f18e2b"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_64b3f55e608e944e"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_c9ecdbf15dab0872"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_cff4f11f0996fe83"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_75aa785b8802e78e"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_92799fd2d83a25de"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_9888dc595551f2a4"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_891ced7df5310956"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_ba4206cd347962f5"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_03d2b213417f4ca5"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_6ce4d7e638026ca6"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_110fa2ff4c1e4286"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_10413d14048856f7"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_98a6388bc8caee59"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_2fc932276a84576a"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_0fe3f6d48bec27dd"
         },
         {
-          "path": "assets/images/儿童芭蕾 tutu 裙/O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
+          "path": "assets/images/儿童芭蕾tutu裙/O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_b0f07a365cfc86a9"
         }
       ]
     }

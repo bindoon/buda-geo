@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-fact-snapshot",
+  "type": "object",
+  "required": ["schema_version", "fact_snapshot_id", "app_id", "confirmed_at", "inputs_hash", "facts_hash", "source_index", "facts", "evidence"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "fact_snapshot_id": { "type": "string", "minLength": 1 },
+    "app_id": { "type": "string", "minLength": 1 },
+    "confirmed_at": { "type": "string" },
+    "inputs_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "facts_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "source_index": { "type": "object" },
+    "facts": { "type": "object" },
+    "evidence": { "type": "object" }
+  },
+  "additionalProperties": false
+}

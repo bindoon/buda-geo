@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "geo-clean-overrides",
   "type": "object",
-  "required": ["app_id", "assets"],
+  "required": ["app_id", "assets", "products"],
   "properties": {
     "app_id": { "type": "string", "minLength": 1 },
     "assets": {
@@ -15,8 +15,41 @@
           "action": { "enum": ["product", "company", "evidence", "ignore"] },
           "product_name": { "type": "string" },
           "evidence_type": { "type": "string" },
+          "supports_fields": { "type": "array", "items": { "type": "string" } },
           "disclosure_level": { "enum": ["public", "restricted", "internal"] },
           "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "is_main", "source_paths", "selling_points", "attributes", "capabilities"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "category": { "type": "string" },
+          "is_main": { "type": "boolean" },
+          "source_paths": { "type": "array", "items": { "type": "string" } },
+          "selling_points": { "type": "array", "items": { "type": "string" } },
+          "attributes": { "type": "object" },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "fact_resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subject", "field", "value", "reason"],
+        "properties": {
+          "subject": { "const": "company" },
+          "field": { "type": "string", "minLength": 1 },
+          "value": {},
+          "reason": { "type": "string", "minLength": 1 }
         },
         "additionalProperties": false
       }

@@ -37,14 +37,11 @@ AI 向客户推荐品牌时，引用的是它抓到的外部信息。因此年�
 ```text
 法人证/执照 ──实名──▶ 五大自媒体账号（social 信源）
                               │
-资料包 ──clean──▶ 知识库 A–F ──write──▶ 1500 篇/年（高质量）
-                              │
-                              ├── social  自媒体矩阵（长期运营沉淀）
-                              ├── media   付费官媒软文（权威域）
-                              └── b2b     高权重 B2B 投喂
-                                              │
-                                              ▼
-                                    diagnose 复测「AI 是否引用你」
+资料包 ──clean──▶ 企业事实层 ──人工复核/确认──▶ diagnose ──▶ 场景/关键词 ──▶ write
+                      │                                                   │
+                      ├── source index / facts / evidence                 ├── social
+                      └── baseinfo / profile / products                   ├── media
+                                                                          └── b2b
 ```
 
 合同量级默认可对齐：**约 1500 篇/年** 覆盖上述三类（自媒体 / 官媒 / B2B 的篇数配比与紫驰合同约定，记入 `manifest.quota.targets`）；另约 **500 问诊断** 作可见度验收。自有 GEO 官网（`site`）为 Part B 增强信源，不替代上述三类投放。
@@ -61,7 +58,7 @@ geo/
 ├── projects/                  # 按客户/项目隔离（唯一工作区）
 │   └── {项目名}/
 │       ├── inputs/            # 原始文件（只读约定，不改客户原件）
-│       ├── knowledge/         # 清洗后 JSON（A–F）
+│       ├── knowledge/         # 清洗后的来源索引、企业事实、证据与兼容视图
 │       ├── assets/            # 规范化配图（从 inputs 归类拷贝/软链）
 │       ├── diagnosis/         # 诊断结果与快照
 │       ├── articles/          # 生成稿件 + 队列
@@ -74,7 +71,7 @@ geo/
 | 层 | 路径 | 职责 | 谁调用 |
 |----|------|------|--------|
 | Skill | `skills/zichi-geo/` | 触发词、路由、人工闸门、写什么文件 | Cursor Agent |
-| CLI | `packages/geo-cli` | `diagnose` / `publish` / `validate` /（可选）`generate batch` | Skill 明确写命令行；人也可直接跑 |
+| CLI | `packages/geo-cli` | 确定性 inventory / 表解析 / clean / validate / confirm-clean | Skill 明确写命令行；人也可直接跑 |
 | 项目数据 | `projects/{名}/` | 单客户全生命周期文件 | 两边共用，以 `app_id` 标识 |
 
 **原则**：Skill 不做 HTTP 细节；发布/诊断密钥不进 JSON；`inputs/` 保持原样，清洗产物只写 `knowledge/`、`assets/` 等下游目录。
@@ -91,7 +88,7 @@ geo/
 |----------|----------|------------------|
 | **GEO 信息收集表 `.xlsx`** | 5/5（表名略异，Sheet 均为「公司信息」） | A 基础信息 + A5 媒体账号 |
 | **企业知识库 `.docx`** | 5/5（已有大泽/运营侧成稿） | B 画像（介绍/产品/优势/背书） |
-| **关键词 / 问题库 `.xlsx`** | 4/5（仁丹缺独立词表，词在知识库正文里） | D 场景词（主词/拓展/问题） |
+| **关键词 / 问题库 `.xlsx`** | 4/5（仁丹缺独立词表，词在知识库正文里） | clean 只索引原件；确认企业事实后，作为诊断/场景词阶段的候选输入 |
 | **证照与人像图** | 5/5（身份证、营业执照散落或独立文件夹） | 执照可进信任桶；**法人身份证仅用于五大自媒体企业实名**，工具清洗忽略（不进知识库/文章） |
 
 ### 2.2 高频但形态不统一的输入
@@ -114,7 +111,7 @@ geo/
 5. **四、信任背书**（部分合并在介绍里）
 6. （可选）FAQ / 售后 / 定制说明
 
-### 2.4 关键词表的稳定列（可当 D 模块模板）
+### 2.4 原始关键词表的稳定列（供下游场景阶段使用）
 
 | 列 | 含义 | 映射 |
 |----|------|------|
@@ -123,6 +120,8 @@ geo/
 | 问题 | 用户问 AI 的完整问句 | `qa`（含厂家/推荐/靠谱/定制等意图） |
 
 地区向问题（「江苏南通…」「广东深圳…」「河北保定…」）进 **意图/地区定向**，不默认写进全国主词。
+
+> 这些列描述的是客户交来的原始词表，不等于 clean 的输出。clean 的职责止于建立可信企业事实；诊断完成后，再结合事实、诊断缺口和用户意图生成平台无关的需求场景/关键词。三平台术语只在导出时映射，不反向污染事实层。
 
 ### 2.5 信息收集表字段（A 模块最小集）
 
@@ -193,13 +192,15 @@ geo/
 projects/{项目名}/
   inputs/                      # 原样保留（只读）
   knowledge/
-    company.baseinfo.json      # A（含可选 conversion 触点/CTA）
-    company.profile.json       # B
-    company.skus.json          # C；图片用本地 path，url 可选（publish 时填）
-    company.keywords.json      # D  brand|search|qa|intent
-    company.faq.json           # E
-    company.prompts.json       # F：文类 × EEAT 结构模板（多套，非单条）
-    company.generation_plan.json  # 任务列表：词包、limit、use_knowledge、配额计数
+    source-index.json          # 每个 inputs 原件的类型、哈希、解析状态、忽略原因
+    company.baseinfo.json      # 企业名片：地址、联系方式、店铺/账号；不放介绍文案
+    company.profile.json       # 企业介绍：产品服务、优势、背书、痛点；不放联系方式
+    company.skus.json          # 经 Skill 语义归桶后的产品/产品族；CLI 不写死客户 SKU
+    company.facts.json         # 主体、事实、来源引用、推断方式、置信度、冲突
+    company.evidence.json      # 证据台账及 evidence→fact 关联
+    clean.overrides.json       # 项目级人工规则：资产归类、产品归桶、冲突解决
+    snapshots/                 # 已确认事实快照；不可被 re-clean 覆盖
+    # keywords / FAQ / prompts / generation_plan 属下游阶段，clean 不创建或刷新
   assets/images/
     _company/                  # 厂房/团队/门头
     _trust/                    # 证书/背书（不含法人身份证）
@@ -230,24 +231,29 @@ projects/{项目名}/
 
 | 输入/状态 | 分支 | 加载 | 产出 |
 |-----------|------|------|------|
-| 只有 `inputs/` 或说「清洗」 | `clean` | clean-enterprise + schema | `knowledge/*` + 缺失清单 |
-| 知识库已确认，「诊断」 | `diagnose` | diagnose.md | `diagnosis/*` |
-| 「写文章 / 批量」 | `write` | write-rules.md | `articles/*` |
-| 「发布」 | `publish` | publish-geo-api.md | `publish/receipts*` |
-| 「同步上云」 | `sync` | Part B 再实现 | — |
+| 只有 `inputs/` 或说「清洗」 | `clean` | clean-enterprise + schema | 来源索引 + 企业事实/证据 + 兼容视图 + 缺失清单 |
+| 企业事实已确认，「诊断」 | `diagnose` | `diagnose-baseline.md` | `diagnosis/*` |
+| 诊断已确认，「整理关键词/场景」 | `scenarios` | `build-demand-scenarios.md` | `strategy/*` |
+| 「导出大泽/摘星/掌心格式」 | `platform-export` | `export-platform-views.md` | 平台派生视图 |
+| 「选题 / FAQ / Prompt / 计划」 | `plan` | `plan-content.md` | 内容计划版本 |
+| 「写文章 / 批量」 | `generate` | `generate-articles.md` | `articles/*` 草稿 |
+| 「审稿 / 批准」 | `review` | `review-articles.md` | approved 稿件 |
+| 「发布」 | `publish` | `publish-articles.md` | `publish/receipts*` |
+| 「复测 / 优化下一轮」 | `measure` | `measure-and-iterate.md` | 新诊断缺口/迭代计划 |
+| 「同步上云」 | `sync` | `sync-saas.md` | Part B 同步回执 |
 
-闸门：clean / diagnose / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。
+闸门：clean / diagnose / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。clean 的确认只记录时间与 `fact_snapshot_id`，当前不维护“确认人”字段。
 
 ### 4.4 `clean`：从杂乱 inputs 到统一 JSON
 
-**识别器（按文件类型，不按客户名写死）**：
+**分工与识别器（按文件类型，不按客户名写死）**：
 
 | 检测规则 | 动作 |
 |----------|------|
 | 文件名含 `信息收集表` 或 Sheet「公司信息」 | 解析 → baseinfo；账号密码 → secrets 提示 |
 | 文件名含 `知识库` 的 docx | 按「一/二/三/四」章节 → profile |
-| 文件名含 `关键词` / `问题库` | 列映射 → keywords |
-| 目录名含 `产品` / `图片` / 品类名 / `主图-` 文件 | 归入 assets + sku 草稿 |
+| 文件名含 `关键词` / `问题库` | 只写入 source index，留给确认后的场景/关键词阶段使用 |
+| 产品图、公司图、证据图 | CLI 只做 inventory；Skill 阅读语义后写项目级 `clean.overrides.json`，再由 CLI 确定性归档 |
 | `指令/*.docx` | 挂到对应 SKU `copy_brief` |
 | 营业执照等资质图 | 可进 `assets/_trust` 或 A4 路径索引 |
 | 法人身份证 | **忽略入库**：仅支撑运营在五大自媒体做企业实名；inventory 标 `ignored: legal_id`，不复制、不进 JSON/文章 |
@@ -256,19 +262,20 @@ projects/{项目名}/
 
 | 级别 | 含义 | 示例 |
 |------|------|------|
-| `block` | 未解决则不能 `gates.clean=confirmed` | 公司名、有效 1688/官网、画像过短 |
-| `recommend` | 可确认清洗，写入 `manifest.missing` | **客服/询盘记录**（有则优化 E/F）、信任背书图 |
+| `block` | 未解决则不能 `gates.clean=confirmed` | 公司名、有效 1688/官网、企业介绍过短 |
+| `recommend` | 可确认清洗，写入 `manifest.missing` | **客服/询盘记录**（后续可丰富客户问法）、信任背书图 |
 | `optional` | 仅记录 | 视频素材 |
 
-**验收**：`geo-cli validate --project ...` 通过；无未解决 `block`；`recommend` 可保留并带人话 `message`。
+执行顺序固定为 `inventory → extract → normalize → review → confirm`。**验收**：`geo-cli validate --project ...` 通过；无未解决 `block`；`recommend` 可保留并带人话 `message`；人工复核后运行 `confirm-clean` 生成不可变快照。输入或事实哈希变化时自动退回 `review_required`，不得覆盖旧快照。
 
 ### 4.5 `packages/geo-cli` 最小命令面（Part A）
 
 ```text
-geo-cli validate  --project <path>           # Schema + block/recommend + 本地图 path 存在性
-geo-cli diagnose  --project <path> --platforms doubao,deepseek [--limit N]
-geo-cli publish   --project <path> --channel social|media|b2b [--dry-run]
-geo-cli status    --project <path>           # gates + 配额进度（已生成/已发布/诊断题量）
+geo-cli inventory     --project <path>       # 全量原件分类、逐文件哈希、ignored reason
+geo-cli clean         --project <path>       # 只生成企业事实层；不生成关键词、FAQ、prompt、写作计划
+geo-cli validate      --project <path>       # structure / reference / semantic / security
+geo-cli confirm-clean --project <path>       # 无 block 时生成 confirmed fact snapshot
+geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 ```
 
 实现要点：
@@ -276,7 +283,8 @@ geo-cli status    --project <path>           # gates + 配额进度（已生成/
 - 诊断：首期可接第三方 GEO 诊断 API 或半自动；**出参固定为分平台命中 + snapshots 凭证路径**（对齐大泽「查询带截图」）。
 - 发布：封装聚合发文 API；无 API 平台半自动仍写同一 `receipts`（幂等键：`article_id + platform`）；若目标渠道强制 CDN，再在 publish 前上传 OSS 并回写 `url`。
 - 密钥：仅环境变量 / `.secrets.env`（gitignore）；不进知识库。
-- 写作任务（学大泽）：`generation_plan.tasks[]` 含 `keyword_group_id`、`limit`、`use_knowledge`（默认 true）、`produced_count`。
+- 诊断、场景/关键词、FAQ、prompt 与写作任务必须消费已确认的 `fact_snapshot_id`；它们由各自阶段生成，不能塞回 clean。
+- 写作任务（学大泽）：下游 `generation_plan.tasks[]` 含 `keyword_group_id`、`limit`、`use_knowledge`（默认 true）、`produced_count`。
 
 ### 4.6 `write` / `publish`：三大权威信源 + 任务绑定
 
@@ -288,11 +296,11 @@ geo-cli status    --project <path>           # gates + 配额进度（已生成/
 | ② 付费官媒软文 | `media` | `articles/media/` | 权威新闻网等（付费供稿） | 适配大模型收录/EEAT；可抽检 | SKU/企业实图优先 |
 | ③ B2B 平台投喂 | `b2b` | `articles/b2b/` | 高权重 B2B / 行业站 | 吃工厂与 SKU 画像；API 未齐可半自动 | 同上 |
 
-每篇生成必须绑定：`keyword_ids`（或词组）、`use_knowledge: true`、`task_id`、`channel`、初始 `status: draft`。禁止脱离知识库空写。
+每篇生成必须绑定：`scenario/question IDs`、`fact_snapshot_id`、`task_id`、`channel`、初始 `status: draft`。禁止脱离已确认事实与场景空写。
 
 **提示词**：`company.prompts.json` 按 **文类 × 结构模板** 存放（EEAT 多套：如「介绍+优势+推荐+FAQ」）；官媒稿另可加「产业格局+第三方表述」模板，避免软文口吻过硬广告。
 
-**合规**：`write-rules.md` 内建统一禁写/弱化清单（对齐大泽违规行业与绝对化用语）；仁丹等敏感客户强制走弱化策略。
+**合规**：`generate-articles.md` 与 `review-articles.md` 分别约束草稿生成和人工批准；敏感行业必须检查疗效承诺、绝对化用语和证据范围。
 
 **转化**：baseinfo 保留 1688/电话/询盘等 CTA，三类信源共用，避免每篇临时编联系方式。
 
@@ -304,10 +312,11 @@ geo-cli status    --project <path>           # gates + 配额进度（已生成/
 |----|------|----------|--------------|
 | 1 | Schema + 华远手写/半自动样例 JSON + `validate` | 样例过校验 | 2–3 天 |
 | 2 | `SKILL.md` 路由 + `clean-enterprise.md` | 华远 inputs → knowledge 可确认 | 3–5 天 |
-| 3 | `diagnose.md` + `diagnose` CLI | 小批量题出报告 | 2–4 天 |
-| 4 | `write-rules.md`，social/media/b2b 各出样稿 | 运营认三类信源质量下限 | 3–5 天 |
-| 5 | `publish-geo-api.md` + `publish` CLI | 至少 1 个自媒体真发通；媒体/B2B 回执格式统一 | 2–4 天 |
-| 6 | 晶铭服饰 + 朗威复跑（验证通用清洗） | Part A 验收 | 2–3 天 |
+| 3 | `diagnose-baseline.md` + diagnose CLI | 小批量种子题、逐题证据与基线报告 | 2–4 天 |
+| 4 | `build-demand-scenarios.md` + 三平台派生导出 | 场景库确认，平台导出可追溯 | 3–5 天 |
+| 5 | 内容规划 + 生成 + 审稿 references | social/media/b2b 各出合规样稿 | 3–5 天 |
+| 6 | `publish-articles.md` + publish CLI | 至少 1 个自媒体真发通；媒体/B2B 回执格式统一 | 2–4 天 |
+| 7 | 多客户复跑（验证通用流程） | Part A 验收 | 2–3 天 |
 
 ---
 
@@ -345,7 +354,7 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。本地仍是主生产�
 
 | 报价模块 | 本方案落点 | 阶段 |
 |----------|------------|------|
-| 1 Schema A–F | `schema-knowledge.md` + `knowledge/*.json` | Part A |
+| 1 企业事实 Schema | `schema-knowledge.md` + `knowledge/{source-index,facts,evidence,baseinfo,profile,skus}` | Part A |
 | 2 清洗 Agent | Skill `clean` +（可选）CLI 辅助解析 | Part A |
 | 3 诊断 | Skill `diagnose` + `geo-cli diagnose` | Part A |
 | 4–5 写文 | Skill `write` + 规则；批量可后挂 CLI | Part A |
@@ -427,17 +436,25 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。本地仍是主生产�
 {
   "app_id": "hy_tool_nt",
   "project_name": "南通市海门华远工具厂",
+  "clean_pipeline": {
+    "stage": "confirmed",
+    "inputs_hash": "<sha256>",
+    "facts_hash": "<sha256>",
+    "changed_since_confirmation": false,
+    "previous_snapshot_id": "fact_snapshot_..."
+  },
   "gates": {
-    "clean": { "status": "pending|confirmed", "at": null, "by": null },
-    "diagnose": { "status": "pending|confirmed", "at": null, "by": null },
-    "write_social": { "status": "pending|confirmed", "at": null, "by": null },
-    "publish": { "status": "pending|confirmed", "at": null, "by": null }
+    "clean": {
+      "status": "pending|review_required|confirmed",
+      "at": null,
+      "fact_snapshot_id": null
+    }
   },
   "missing": [
     {
       "code": "chat_logs",
       "severity": "recommend",
-      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+      "message": "未提供客服/询盘记录；不阻断企业事实确认，后续可用于丰富客户问法。"
     },
     {
       "code": "social_realname",
@@ -445,6 +462,8 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。本地仍是主生产�
       "message": "请确认五大自媒体（百家号/搜狐/头条/抖音图文/知乎）已完成企业实名；法人身份证仅用于平台认证，不入库。"
     }
   ],
+  "review_ready": true,
+  "clean_ready": false,
   "quota": {
     "articles_generated": 0,
     "articles_published": 0,
@@ -464,7 +483,8 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。本地仍是主生产�
 ## 附录 B · 与现有 `projects` 的迁移约定
 
 - 不移动客户已有 `inputs/` 文件。  
-- 新建空的 `knowledge/`、`assets/`、`diagnosis/`、`articles/`、`publish/`、`manifest.json`。  
+- 不覆盖原件；由 clean 创建或更新来源索引、企业事实/证据、兼容视图和 `manifest.json`，下游目录按阶段建立。
+- 旧的 `company.keywords.json`、FAQ、prompts、generation plan 可以暂存用于迁移对照，但 clean 不再创建或刷新。
 - 根目录空的 `inputs/`（仓库级）可废弃或仅作临时投放区；正式流程以 `projects/{名}/inputs` 为准。
 
 ## 附录 C · `generation_plan` 任务与稿件元数据（契约预留）

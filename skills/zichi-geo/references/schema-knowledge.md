@@ -1,163 +1,85 @@
-# 知识库 Schema（A–F）
+# 企业事实 Schema
 
-> 单项目根：`projects/{项目名}/`。所有 JSON 根字段含 `app_id`。  
-> 配图先本地 `path`；`url` 可选（publish/CDN 时再填）。法人身份证：**忽略，不入库**。
+单项目根：`projects/{项目名}/`。所有 JSON 的 `app_id` 必须一致。机器约束以 `packages/geo-cli/schemas/` 为准。
 
-## 目录
+## 权威层与业务视图
 
-```
+```text
 knowledge/
-  company.baseinfo.json
-  company.profile.json
-  company.skus.json
-  company.keywords.json
-  company.faq.json
-  company.prompts.json
-  company.generation_plan.json
-assets/images/{_company|_trust|{sku_or_category}}/
+  source-index.json          # 原始文件索引与哈希
+  company.facts.json         # 主体、事实、冲突
+  company.evidence.json      # 证据及支持范围
+  clean.overrides.json       # Skill/运营的项目级语义决策
+  company.baseinfo.json      # 名片视图
+  company.profile.json       # 介绍文案视图
+  company.skus.json          # 产品视图
+  snapshots/{id}.json        # 人工确认后生成的不可变事实快照
+assets/images/{_company|_trust|产品名}/
 manifest.json
 ```
 
-机器校验：`packages/geo-cli/schemas/*.schema.json`（由 `geo-cli validate` 加载）
+source / facts / evidence 是事实权威层；baseinfo / profile / skus 是便于人和下游使用的投影视图。keywords、FAQ、prompts、generation_plan 等旧文件不是 clean 的输出或确认依据。
 
----
+## `source-index.json`
 
-## A · `company.baseinfo.json`（名片）
+每个 input 记录：`source_id`、`path`、`kind`、`hash`、`size`、`parse_status`、`ignored`、`ignored_reason`。稳定 ID 按相对路径生成；`inputs_hash` 只由输入路径与内容哈希决定。
 
-硬数据：谁、怎么联系、发到哪。**不写长介绍。**
+身份证必须 `ignored`。不透明命名图片默认 ignored，只有项目 override 明确分类后才可派生。
 
-| 字段 | 必填 | 说明 |
-|------|------|------|
-| `app_id` | ✓ | 租户短码 |
-| `company_name` | ✓ block | 全称 |
-| `company_short_name` | | **品牌简称**（如「晶铭服饰」），不要填广告长句 |
-| `contact_name` | | 联系人 |
-| `contact_phone` | | 电话 |
-| `address` | | 地址 |
-| `website_or_shop_url` | ✓ block（与官网二选一有值即可） | 1688/官网 |
-| `region` | | 推广地区备注 |
-| `media_accounts[]` | | `{platform, account_id}` **无 password** |
-| `conversion` | | CTA：`phone` / `shop_url` / `notes` |
-| `credentials[]` | | `{type, path}`；**不含 legal_id** |
+## `company.facts.json`
 
-## B · `company.profile.json`（介绍文案）
+### subject
 
-叙事内容，供写文引用。**禁止**再堆电话/链接（见 `baseinfo-vs-profile.md`）。
+`subject_id`、`type`、`name`、`parent_subject_id`、`source_refs`、`review_status`。
 
-| 字段 | 说明 |
-|------|------|
-| `intro` | 公司是谁、体量；建议 150–400 字（过短 → block） |
-| `products_services` | 品类与服务政策（起批/定制/发货/售后） |
-| `advantages` | 差异化优势（勿留空把全文塞进 intro） |
-| `trust` | 资质、口碑、案例 |
-| `pain_points[]` | 客户/行业痛点短句 |
-| `source` | 如 `docx:…知识库.docx` |
+主体类型包括 company、brand、product、product_family、capability、service、evidence、asset。
 
-缺失提示：`profile_sections_thin`（优势/背书空）、`profile_contact_leak`（画像里漏出联系方式）。
+### fact
 
-建议 `intro` 清洗后 ≥ 100 字，否则 `missing` severity=`block` code=`profile_intro_short`。
+| 字段 | 含义 |
+|---|---|
+| `fact_id` | 由主体、字段和值生成的稳定 ID |
+| `subject_id` / `field` / `value` | 谁的什么事实及其值 |
+| `source_refs` | 支持该候选的原始来源 |
+| `derivation` | `extracted` / `inferred` / `operator` / `legacy` |
+| `confidence` | 0–1，仅辅助复核 |
+| `review_status` | `candidate` / `confirmed` / `rejected` / `needs_clarification` |
+| `disclosure_level` | `public` / `restricted` / `internal` |
 
-## C · `company.skus.json`
+同字段多来源不同值进入 `conflicts[]`，保留所有候选，不静默覆盖。
 
-```json
-{
-  "app_id": "...",
-  "items": [
-    {
-      "sku_id": "sku_水管剪",
-      "name": "水管剪",
-      "category": "园林工具",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [{ "path": "assets/images/水管剪/01水管剪.jpg", "role": "main", "url": null }]
-    }
-  ]
-}
-```
+## `company.evidence.json`
 
-validate：每个 `images[].path` 相对项目根必须存在；**不要求** `url`。
+证据记录 `source_ref`、关联主体、派生 `path`、`supports_fact_ids`、披露级别、有效期和复核状态。
 
-## D · `company.keywords.json`
+证据只支持它明确证明的事实。证据文件存在不等于其中所有可能相关的公司表述都被证实。
 
-```json
-{
-  "app_id": "...",
-  "brand": { "terms": [], "questions": [] },
-  "search": { "terms": [], "expanded": [], "questions": [] },
-  "qa": { "questions": [] },
-  "intent": { "questions": [] },
-  "source": "xlsx:关键词问题库.xlsx"
-}
-```
+## 三个业务视图
 
-地区向问法进 `intent`。条目可带 `source`。
+### baseinfo：名片
 
-## E · `company.faq.json`
+公司名、简称、联系人、电话、地址、官网/店铺、媒体账号、转化联系方式。密码字段禁止；联系方式不要再写入 profile。
 
-```json
-{ "app_id": "...", "items": [], "status": "draft_from_profile|empty|from_chat" }
-```
+### profile：介绍文案
 
-无客服记录时可为 `items: []`，manifest `recommend` `chat_logs`。
+`intro`、`products_services`、`advantages`、`trust`、`pain_points[]`、`source`、`fact_refs`。必须按语义拆桶；关键词行、联系电话和网址不是介绍正文。
 
-## F · `company.prompts.json`
+### skus：产品
 
-多套模板，非单条：
+每个产品至少包含：`sku_id`、人类可读 `name`、`category`、`is_main`、`attributes`、`capabilities`、`selling_points`、`source_refs`、`fact_refs`、本地 `images[].path`。
 
-```json
-{
-  "app_id": "...",
-  "templates": [
-    {
-      "id": "eeat_intro_advantage_faq",
-      "content_types": ["推荐", "科普"],
-      "structure": ["公司介绍", "综合优势", "推荐理由", "FAQ"],
-      "body": "..."
-    }
-  ],
-  "source": "default_template"
-}
-```
+主产品只有图片而无分类和实质字段时必须 block。
 
-## `company.generation_plan.json`
+## `clean.overrides.json`
 
-```json
-{
-  "app_id": "...",
-  "tasks": [
-    {
-      "task_id": "t_demo",
-      "keyword_group_id": "kg_xxx",
-      "channels": ["social", "media"],
-      "use_knowledge": true,
-      "limit": 20,
-      "produced_count": 0,
-      "prompt_template_id": "eeat_intro_advantage_faq"
-    }
-  ]
-}
-```
+`assets[]` 记录单图的 product/company/evidence/ignore 决策；`products[]` 记录产品归并、主产品、分类、属性、能力、卖点与来源图片。它是 Skill 的项目级语义输出，不得复制到通用 CLI 代码。
 
-clean 允许 `tasks: []`。
+## `manifest.json` 与确认快照
 
-## `manifest.json`
+- `gates.clean.status`: `review_required` 或 `confirmed`。
+- `clean_pipeline`: `inputs_hash`、`facts_hash`、是否发生变化、上一个快照。
+- `review_ready`: 无 block，可以提交人审。
+- `clean_ready`: 已由人确认且存在 `fact_snapshot_id`。
+- `missing[]`: `block` / `recommend` / `optional`。
 
-见主方案附录 A：`gates`、`missing[]`（`code`/`severity`/`message`）、`quota`。
-
-### missing 分级
-
-| severity | 含义 |
-|----------|------|
-| `block` | 不能 `gates.clean=confirmed` |
-| `recommend` | 可确认，必须提示（如 `chat_logs`） |
-| `optional` | 仅记录 |
-
-### 法人身份证
-
-inventory 标记 `ignored: legal_id`；不复制到 assets；不进 credentials。
-
-## 预留（write/publish，本阶段只文档化）
-
-- 稿件 `status`：`draft | pending_review | approved | queued | published | failed`
-- `channel`：`social | media | b2b | site`
-- 队列字段：`article_id`、`task_id`、`channel`、`status`、`keyword_ids`、`paths`
+无客服记录为 recommend。只有 `confirm-clean` 可生成 snapshot 并将 clean 置为 confirmed。

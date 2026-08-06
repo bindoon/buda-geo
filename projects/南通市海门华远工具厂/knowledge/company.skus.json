@@ -4,185 +4,259 @@
     {
       "sku_id": "sku_大蒜剪",
       "name": "大蒜剪",
-      "category": "",
+      "category": "农业剪切工具",
       "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_cd551b743e538a11"
+      ],
+      "fact_refs": [
+        "fact_3d6127f1c69e7f44",
+        "fact_21ccf5a705f56118",
+        "fact_e685e8f146cdd0a5",
+        "fact_a4e9cf67248c7ca1",
+        "fact_6fe379028760f340"
+      ],
       "copy_brief": null,
       "images": [
         {
           "path": "assets/images/大蒜剪/01大蒜剪.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_cd551b743e538a11"
         }
       ]
     },
     {
       "sku_id": "sku_电动修枝剪",
       "name": "电动修枝剪",
-      "category": "",
-      "selling_points": [],
+      "category": "园林电动剪切工具",
+      "selling_points": [
+        "刀片采用SK5高碳钢",
+        "单块电池充满后可连续工作3至4小时",
+        "提供25、30、40多种开口规格并支持两档调节"
+      ],
+      "attributes": {
+        "blade_material": "SK5高碳钢",
+        "runtime": "3-4小时",
+        "opening_specs": "25/30/40",
+        "warranty": "整机一年"
+      },
+      "capabilities": [
+        "生产供应",
+        "OEM/ODM定制",
+        "贴牌生产"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_28b0c63092f54edc",
+        "src_8f5fc4ad3d3eefec",
+        "src_1162eec1d13fb7d8",
+        "src_92249ee8f919880b",
+        "src_2cd2b61ff8f1f07b",
+        "src_5e0629a80d107c8a",
+        "src_86d247bc5b85b6c9",
+        "src_b71421c665bdfa97"
+      ],
+      "fact_refs": [
+        "fact_60365d0c5ad26ce2",
+        "fact_1c84f599b845b90f",
+        "fact_bb2290e9d8b0247b",
+        "fact_b824050720989a8e",
+        "fact_6a41962ad3d14aa7",
+        "fact_2814f7bb6b852a24"
+      ],
       "copy_brief": null,
       "images": [
         {
           "path": "assets/images/电动修枝剪/25开口修枝剪01款.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_28b0c63092f54edc"
         },
         {
           "path": "assets/images/电动修枝剪/25开口修枝剪03款.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_8f5fc4ad3d3eefec"
         },
         {
           "path": "assets/images/电动修枝剪/25开口修枝剪04款.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_1162eec1d13fb7d8"
         },
         {
           "path": "assets/images/电动修枝剪/25开口修枝剪牧田插脚05款.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_92249ee8f919880b"
         },
         {
           "path": "assets/images/电动修枝剪/30开口修枝剪01款.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_2cd2b61ff8f1f07b"
         },
         {
           "path": "assets/images/电动修枝剪/30开口修枝剪04款.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_5e0629a80d107c8a"
         },
         {
           "path": "assets/images/电动修枝剪/40开口修枝剪01款.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_86d247bc5b85b6c9"
         },
         {
           "path": "assets/images/电动修枝剪/40开口修枝剪04款.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_b71421c665bdfa97"
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_电动修枝剪整机套装",
+      "name": "电动修枝剪整机套装",
+      "category": "工具套装",
+      "selling_points": [],
+      "attributes": {
+        "compatible_opening_specs": "25/30"
+      },
+      "capabilities": [
+        "成套供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_46ceb1b66ece3714"
+      ],
+      "fact_refs": [
+        "fact_812fbcd5af53166e",
+        "fact_99ee4ad3a64e4fd1",
+        "fact_c78191a5c2174d25",
+        "fact_b6be843e709d6be2",
+        "fact_392ae9fea57ab81e"
+      ],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/电动修枝剪整机套装/25 30整套.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_46ceb1b66ece3714"
         }
       ]
     },
     {
       "sku_id": "sku_甘蔗剪",
       "name": "甘蔗剪",
-      "category": "",
+      "category": "农业剪切工具",
       "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_4f777a8a181ce0bc",
+        "src_ca2227da3af0f085"
+      ],
+      "fact_refs": [
+        "fact_689e546784ded036",
+        "fact_1e391f362299f83a",
+        "fact_d2670f9bb9df017b",
+        "fact_382dab3fd6a2fd31",
+        "fact_0ba3cfcba04e5f44"
+      ],
       "copy_brief": null,
       "images": [
         {
           "path": "assets/images/甘蔗剪/01甘蔗剪.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_4f777a8a181ce0bc"
         },
         {
           "path": "assets/images/甘蔗剪/04甘蔗剪.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_剪刀拉力机",
-      "name": "剪刀拉力机",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/剪刀拉力机/剪刀拉力机.jpg",
-          "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_ca2227da3af0f085"
         }
       ]
     },
     {
       "sku_id": "sku_水管剪",
       "name": "水管剪",
-      "category": "",
+      "category": "管材剪切工具",
       "selling_points": [],
+      "attributes": {
+        "product_type": "水管剪"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_25966e9064c31d5c",
+        "src_0331a49f30e997c3"
+      ],
+      "fact_refs": [
+        "fact_80bf1a49282e2b19",
+        "fact_dbc2f89ccd67acb1",
+        "fact_3c0082c056162b42",
+        "fact_dc04469b6c676719",
+        "fact_70686ab6884fbc46"
+      ],
       "copy_brief": null,
       "images": [
         {
           "path": "assets/images/水管剪/01水管剪.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_25966e9064c31d5c"
         },
         {
           "path": "assets/images/水管剪/04水管剪.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_整机套装",
-      "name": "整机套装",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/整机套装/25 30整套.jpg",
-          "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_0331a49f30e997c3"
         }
       ]
     },
     {
       "sku_id": "sku_注塑箱",
       "name": "注塑箱",
-      "category": "",
+      "category": "工具配件",
       "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "注塑加工"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_77fe199a61a28c53"
+      ],
+      "fact_refs": [
+        "fact_bcfc53480f4cca47",
+        "fact_1be0c1a75b2caca8",
+        "fact_9e8f782de73756db",
+        "fact_73a408adb59aa017",
+        "fact_c11b4e30c4e0db45"
+      ],
       "copy_brief": null,
       "images": [
         {
           "path": "assets/images/注塑箱/04注塑箱.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_a7ef0e9bdc4a8a9da113a7e6fea6",
-      "name": "a7ef0e9bdc4a8a9da113a7e6fea6",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/a7ef0e9bdc4a8a9da113a7e6fea6/5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_a9ea193505772f99fe6d003546c45e77",
-      "name": "a9ea193505772f99fe6d003546c45e77",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/a9ea193505772f99fe6d003546c45e77/a9ea193505772f99fe6d003546c45e77.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_b281-8926-4b2d-8ed8-2305172f021c",
-      "name": "b281-8926-4b2d-8ed8-2305172f021c",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/b281-8926-4b2d-8ed8-2305172f021c/6846b281-8926-4b2d-8ed8-2305172f021c.png",
-          "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_77fe199a61a28c53"
         }
       ]
     }

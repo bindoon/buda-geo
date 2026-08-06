@@ -56,7 +56,10 @@ function classifyFile(rel: string, name: string, parts: string[]): ClassifiedFil
     return { ...item, ignored: true, reason: "system_or_temporary_file" };
   }
 
-  if (LEGAL_ID_RE.test(name)) {
+  if (
+    LEGAL_ID_RE.test(name) ||
+    (parts.length <= 2 && parts.slice(0, -1).some((part) => LEGAL_ID_RE.test(part)))
+  ) {
     return { ...item, kind: "legal_id", ignored: true, reason: "legal_id_skip" };
   }
   if ([".xlsx", ".xls"].includes(ext) && FORM_RE.test(name)) {
@@ -76,7 +79,7 @@ function classifyFile(rel: string, name: string, parts: string[]): ClassifiedFil
   }
   if ([".jpg", ".jpeg", ".png", ".webp", ".gif"].includes(ext)) {
     const stem = path.basename(name, ext);
-    if (parts.length === 1 && /^[0-9a-f-]{16,}$/i.test(stem)) {
+    if (parts.length <= 2 && /^[0-9a-f-]{16,}$/i.test(stem)) {
       return {
         ...item,
         kind: "unclassified_sensitive",

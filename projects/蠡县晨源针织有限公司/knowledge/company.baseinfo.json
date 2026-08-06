@@ -34,5 +34,31 @@
     "shop_url": "https://shop50wr602023917.1688.com/"
   },
   "credentials": [],
-  "source": "xlsx:GEO信息收集表(2).xlsx"
+  "source": "xlsx:GEO信息收集表(2).xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_4e762a3bebe1cad9"
+    ],
+    "company_short_name": [
+      "fact_dcf55b71314d8bb4"
+    ],
+    "contact_name": [
+      "fact_f0f6a280d929518f"
+    ],
+    "contact_phone": [
+      "fact_3f8eab4bf5d63af8"
+    ],
+    "address": [
+      "fact_9e730fb0bb98ccc5"
+    ],
+    "website_or_shop_url": [
+      "fact_170b57776e1eeec9"
+    ],
+    "media_accounts": [
+      "fact_9f8ffe8830d595c1"
+    ],
+    "conversion": [
+      "fact_f367ba40a51c293b"
+    ]
+  }
 }

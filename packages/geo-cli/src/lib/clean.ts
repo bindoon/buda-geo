@@ -1,26 +1,71 @@
+import { unlink } from "node:fs/promises";
 import path from "node:path";
 import { docxPlainText, splitProfileSections } from "./docx.js";
-import { inventory } from "./inventory.js";
 import {
-  buildMissing,
-  defaultFaq,
-  defaultManifest,
-  defaultPlan,
-  defaultPrompts,
-  ensureAppId,
-} from "./manifest.js";
-import { parseInfoForm, parseKeywords } from "./parse.js";
-import type { BaseInfo, KeywordsJson } from "./parse.js";
-import { syncImagesAndSkus } from "./skus.js";
-import { readJson, writeJson } from "./util.js";
+  addLegacyProjectionSources,
+  buildFactLayer,
+  loadCleanOverrides,
+  type BaseInfoView,
+  type PreviousCleanViews,
+  type ProfileView,
+} from "./fact-layer.js";
+import { inventory } from "./inventory.js";
+import { buildMissing, defaultManifest, ensureAppId, type MissingItem } from "./manifest.js";
+import { parseInfoForm, type BaseInfo } from "./parse.js";
+import { semanticFindings } from "./quality.js";
+import { sourcePathMatches, syncImagesAndSkus, type SkuItem } from "./skus.js";
+import { pathExists, readJson, utcNow, writeJson } from "./util.js";
 
 export interface CleanResult {
   app_id: string;
   inventory: Awaited<ReturnType<typeof inventory>>;
   warnings: string[];
-  missing: ReturnType<typeof buildMissing>;
+  missing: MissingItem[];
   sku_count: number;
+  facts_count: number;
+  evidence_count: number;
+  facts_hash: string;
+  review_ready: boolean;
   clean_ready: boolean;
+  clean_status: "review_required" | "confirmed";
+  preserved_legacy_files: string[];
+}
+
+async function readIfExists<T>(filePath: string): Promise<T | undefined> {
+  if (!(await pathExists(filePath))) return undefined;
+  return readJson<T>(filePath);
+}
+
+async function loadPrevious(projectRoot: string): Promise<PreviousCleanViews> {
+  const knowledge = path.join(projectRoot, "knowledge");
+  return {
+    baseinfo: await readIfExists<BaseInfoView>(path.join(knowledge, "company.baseinfo.json")),
+    profile: await readIfExists<ProfileView>(path.join(knowledge, "company.profile.json")),
+    skus: await readIfExists<{ app_id: string; items: SkuItem[] }>(path.join(knowledge, "company.skus.json")),
+    facts: await readIfExists(path.join(knowledge, "company.facts.json")),
+    evidence: await readIfExists(path.join(knowledge, "company.evidence.json")),
+  };
+}
+
+async function removeMisclassifiedDerivedAssets(
+  projectRoot: string,
+  previousItems: SkuItem[],
+  opaqueSourceNames: Set<string>,
+): Promise<string[]> {
+  const removed: string[] = [];
+  const assetsRoot = path.resolve(projectRoot, "assets", "images");
+  for (const item of previousItems) {
+    for (const image of item.images ?? []) {
+      if (!opaqueSourceNames.has(path.basename(image.path))) continue;
+      const absolute = path.resolve(projectRoot, image.path);
+      if (!absolute.startsWith(`${assetsRoot}${path.sep}`)) continue;
+      if (await pathExists(absolute)) {
+        await unlink(absolute);
+        removed.push(image.path);
+      }
+    }
+  }
+  return removed;
 }
 
 export async function cleanProject(
@@ -29,10 +74,45 @@ export async function cleanProject(
 ): Promise<CleanResult> {
   const appId = await ensureAppId(projectRoot, appIdArg);
   const inv = await inventory(projectRoot);
+  inv.source_index.app_id = appId;
   const knowledge = path.join(projectRoot, "knowledge");
+  const previous = await loadPrevious(projectRoot);
+  const overrides = await loadCleanOverrides(projectRoot, appId);
+  const sourceIndex = await addLegacyProjectionSources(projectRoot, inv.source_index, previous);
+  for (const source of sourceIndex.sources) {
+    if (source.scope !== "input") continue;
+    const override = overrides.assets.find((item) =>
+      sourcePathMatches(source.path, item.source_path),
+    );
+    if (!override) continue;
+    source.ignored = override.action === "ignore";
+    source.ignored_reason = override.action === "ignore"
+      ? override.reason ?? "operator_ignored"
+      : null;
+    if (override.action !== "ignore") {
+      source.parse_status = "indexed_only";
+      source.kind = override.action === "evidence"
+        ? "evidence_candidate"
+        : override.action === "company"
+          ? "company_asset"
+          : override.action === "product"
+            ? "product_image"
+            : source.kind;
+    }
+  }
+  for (const source of sourceIndex.sources) {
+    if (
+      source.scope === "input" &&
+      overrides.products.some((product) =>
+        product.source_paths.some((pattern) => sourcePathMatches(source.path, pattern)),
+      )
+    ) {
+      source.kind = "product_image";
+    }
+  }
 
   let warnings: string[] = [];
-  let baseinfo: BaseInfo = {
+  let baseinfo: BaseInfoView = {
     app_id: appId,
     company_name: "",
     company_short_name: "",
@@ -45,161 +125,164 @@ export async function cleanProject(
     conversion: {},
     credentials: [],
   };
-
-  const formPaths = inv.by_kind.info_form ?? [];
-  if (formPaths[0]) {
-    const parsed = parseInfoForm(path.join(projectRoot, "inputs", formPaths[0]), appId);
+  const formPath = inv.by_kind.info_form?.[0];
+  if (formPath) {
+    const parsed = parseInfoForm(path.join(projectRoot, "inputs", formPath), appId);
     baseinfo = parsed.baseinfo;
     warnings = parsed.warnings;
   }
 
-  let keywords: KeywordsJson = {
-    app_id: appId,
-    brand: { terms: [], questions: [] },
-    search: { terms: [], expanded: [], questions: [] },
-    qa: { questions: [] },
-    intent: { questions: [] },
-    source: "",
-  };
-
-  const kwPaths = inv.by_kind.keywords ?? [];
-  if (kwPaths[0]) {
-    keywords = parseKeywords(path.join(projectRoot, "inputs", kwPaths[0]), appId);
-  }
-
-  if (baseinfo.company_short_name) {
-    keywords.brand.terms = [baseinfo.company_short_name];
-    keywords.brand.questions = [
-      `${baseinfo.company_short_name}厂家靠谱吗`,
-      `${baseinfo.company_short_name}是源头工厂吗`,
-    ];
-  }
-
-  let profile = {
+  let profile: ProfileView = {
     app_id: appId,
     intro: "",
     products_services: "",
     advantages: "",
     trust: "",
-    pain_points: [] as string[],
+    pain_points: [],
     source: "",
   };
-
-  const kbPaths = inv.by_kind.knowledge_docx ?? [];
-  if (kbPaths[0]) {
-    const kbPath = path.join(projectRoot, "inputs", kbPaths[0]);
-    const text = await docxPlainText(kbPath);
-    const sections = splitProfileSections(text);
-    // baseinfo = 名片；profile = 介绍文案。分段结果已尽量剥离联系方式。
-    profile = {
-      app_id: appId,
-      intro: sections.intro,
-      products_services: sections.products_services,
-      advantages: sections.advantages,
-      trust: sections.trust,
-      pain_points: sections.pain_points,
-      source: `docx:${path.basename(kbPath)}`,
-    };
-    const m = text.match(/优化关键词[：:]\s*([^\n]+)/);
-    if (m && !keywords.search.terms.length) {
-      keywords.search.terms = m[1]
-        .split(/[、,，/]/)
-        .map((p) => p.trim())
-        .filter(Boolean);
-      keywords.source = keywords.source || "profile_header";
-    }
+  const kbPathRel = inv.by_kind.knowledge_docx?.[0];
+  if (kbPathRel) {
+    const kbPath = path.join(projectRoot, "inputs", kbPathRel);
+    const sections = splitProfileSections(await docxPlainText(kbPath));
+    profile = { app_id: appId, ...sections, source: `docx:${path.basename(kbPath)}` };
   }
 
-  const skus = await syncImagesAndSkus(projectRoot, appId);
+  const previousItems = previous.skus?.items ?? [];
+  const opaqueSourceNames = new Set(
+    sourceIndex.sources
+      .filter((source) => source.scope === "input" && source.kind === "unclassified_sensitive")
+      .map((source) => source.name),
+  );
+  const removedAssets = await removeMisclassifiedDerivedAssets(projectRoot, previousItems, opaqueSourceNames);
+  if (removedAssets.length) warnings.push(`removed_misclassified_assets:${removedAssets.join(",")}`);
+
+  const skus = await syncImagesAndSkus(
+    projectRoot,
+    appId,
+    sourceIndex,
+    overrides,
+    previousItems,
+  );
 
   for (const rel of inv.by_kind.instruction_docx ?? []) {
-    const ip = path.join(projectRoot, "inputs", rel);
-    const brief = (await docxPlainText(ip)).slice(0, 2000);
-    const stem = path.basename(ip, path.extname(ip));
-    let matched = false;
-    for (const item of skus.items) {
-      if (
-        stem.replace(/\s/g, "").includes(item.name.replace(/\s/g, "")) ||
-        item.name.includes(stem)
-      ) {
-        item.copy_brief = brief;
-        matched = true;
-        break;
-      }
-    }
-    if (!matched) {
-      skus.items.push({
-        sku_id: `sku_${stem}`,
-        name: stem,
-        category: "",
-        selling_points: [],
-        copy_brief: brief,
-        images: [],
-      });
-    }
+    const instructionPath = path.join(projectRoot, "inputs", rel);
+    const brief = (await docxPlainText(instructionPath)).slice(0, 2000);
+    const stem = path.basename(instructionPath, path.extname(instructionPath));
+    const matched = skus.items.find((item) =>
+      stem.replace(/\s/g, "").includes(item.name.replace(/\s/g, "")) ||
+      item.name.includes(stem),
+    );
+    if (matched) matched.copy_brief = brief;
+    else warnings.push(`instruction_without_product:${rel}`);
   }
 
-  // Preserve Skill-filled FAQ (e.g. from_chat) across re-clean.
-  let faq = defaultFaq(appId);
-  try {
-    const prev = (await readJson(
-      path.join(knowledge, "company.faq.json"),
-    )) as { status?: string; items?: unknown[] };
-    if (
-      prev?.items?.length &&
-      (prev.status === "from_chat" || prev.status === "draft_from_profile")
-    ) {
-      faq = prev as typeof faq;
-    }
-  } catch {
-    /* first clean */
-  }
-  const prompts = defaultPrompts(appId);
-  const plan = defaultPlan(appId);
+  const layer = await buildFactLayer({
+    projectRoot,
+    appId,
+    sourceIndex,
+    baseinfo,
+    profile,
+    skus,
+    overrides: overrides.assets,
+    factResolutions: overrides.fact_resolutions,
+    previous,
+  });
+  const findings = semanticFindings({
+    profile: layer.profile,
+    skus: layer.skus.items,
+    facts: layer.facts,
+    evidence: layer.evidence,
+    sourceIndex,
+  });
+  let missing = buildMissing(layer.baseinfo as BaseInfo, layer.profile, layer.skus.items, inv.has_chat_logs, findings);
+  if (warnings.some((warning) => warning.startsWith("password_stripped:"))) missing.push({
+    code: "secrets_stripped",
+    severity: "recommend",
+    message: "收集表中的平台密码已剥离，未写入 knowledge；请使用项目 .secrets.env 或环境变量。",
+  });
+  const ignoredSensitive = sourceIndex.sources.filter(
+    (item) =>
+      item.scope === "input" &&
+      item.ignored &&
+      (item.kind === "legal_id" || item.kind === "unclassified_sensitive"),
+  );
+  if (ignoredSensitive.length) missing.push({
+    code: "sensitive_inputs_reviewed",
+    severity: "optional",
+    message: `当前隔离 ${ignoredSensitive.length} 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。`,
+  });
 
-  const topTerms = keywords.search.terms.filter((t) => t && t.length <= 40).slice(0, 5);
-  for (let i = 0; i < topTerms.length; i++) {
-    const term = topTerms[i];
-    (plan.tasks as object[]).push({
-      task_id: `t_search_${String(i + 1).padStart(2, "0")}`,
-      keyword_group_id: `kg_${term}`,
-      channels: ["social", "media"],
-      use_knowledge: true,
-      limit: 20,
-      produced_count: 0,
-      prompt_template_id: "eeat_intro_advantage_faq",
-    });
+  const previousManifest = await readIfExists<Record<string, any>>(path.join(projectRoot, "manifest.json"));
+  const baseline = defaultManifest(projectRoot, appId, missing) as Record<string, any>;
+  const previousClean = previousManifest?.gates?.clean;
+  const recoverableSnapshotId =
+    previousClean?.fact_snapshot_id ??
+    previousManifest?.clean_pipeline?.previous_snapshot_id ??
+    null;
+  const recoverableSnapshot = recoverableSnapshotId
+    ? await readIfExists<{
+        fact_snapshot_id: string;
+        confirmed_at: string;
+        inputs_hash: string;
+        facts_hash: string;
+        facts: typeof layer.facts;
+        evidence: typeof layer.evidence;
+      }>(path.join(knowledge, "snapshots", `${recoverableSnapshotId}.json`))
+    : undefined;
+  const unchangedConfirmed =
+    recoverableSnapshot?.inputs_hash === sourceIndex.inputs_hash &&
+    recoverableSnapshot?.facts_hash === layer.facts.facts_hash;
+  if (unchangedConfirmed && recoverableSnapshot) {
+    layer.facts = recoverableSnapshot.facts;
+    layer.evidence = recoverableSnapshot.evidence;
   }
+  const blockCount = missing.filter((item) => item.severity === "block").length;
+  const legacyNames = [
+    "company.keywords.json",
+    "company.faq.json",
+    "company.prompts.json",
+    "company.generation_plan.json",
+  ];
+  const preservedLegacyFiles: string[] = [];
+  for (const name of legacyNames) if (await pathExists(path.join(knowledge, name))) preservedLegacyFiles.push(`knowledge/${name}`);
 
-  let missing = buildMissing(baseinfo, profile, keywords, inv.has_chat_logs);
-  if (warnings.length) {
-    missing.push({
-      code: "secrets_stripped",
-      severity: "recommend",
-      message:
-        "收集表中的平台密码已剥离，未写入 knowledge；请使用本地 secrets 管理。" +
-        (warnings.length ? ` ${warnings.slice(0, 5).join(",")}` : ""),
-    });
-  }
-  if (inv.ignored.length) {
-    missing.push({
-      code: "legal_id_ignored",
-      severity: "optional",
-      message: `已忽略法人身份证等文件 ${inv.ignored.length} 个（不入库、不进文章）。`,
-    });
-  }
+  const manifest: Record<string, any> = {
+    ...baseline,
+    ...(previousManifest ?? {}),
+    app_id: appId,
+    project_name: path.basename(projectRoot),
+    gates: {
+      ...baseline.gates,
+      ...(previousManifest?.gates ?? {}),
+      clean: unchangedConfirmed
+        ? {
+            status: "confirmed",
+            at: recoverableSnapshot!.confirmed_at,
+            fact_snapshot_id: recoverableSnapshot!.fact_snapshot_id,
+          }
+        : { status: "review_required", at: null, fact_snapshot_id: null },
+    },
+    missing,
+    clean_pipeline: {
+      stage: unchangedConfirmed ? "confirmed" : "review",
+      inputs_hash: sourceIndex.inputs_hash,
+      facts_hash: layer.facts.facts_hash,
+      changed_since_confirmation: !unchangedConfirmed,
+      previous_snapshot_id: previousClean?.fact_snapshot_id ?? null,
+    },
+    clean_ready: unchangedConfirmed,
+    review_ready: blockCount === 0,
+    legacy_downstream_artifacts: preservedLegacyFiles,
+    updated_at: utcNow(),
+  };
 
-  await writeJson(path.join(knowledge, "company.baseinfo.json"), baseinfo);
-  await writeJson(path.join(knowledge, "company.profile.json"), profile);
-  await writeJson(path.join(knowledge, "company.skus.json"), skus);
-  await writeJson(path.join(knowledge, "company.keywords.json"), keywords);
-  await writeJson(path.join(knowledge, "company.faq.json"), faq);
-  await writeJson(path.join(knowledge, "company.prompts.json"), prompts);
-  await writeJson(path.join(knowledge, "company.generation_plan.json"), plan);
-
-  const manifest = defaultManifest(projectRoot, appId, missing) as Record<string, unknown>;
-  const cleanReady = !missing.some((m) => m.severity === "block");
-  manifest.clean_ready = cleanReady;
+  await writeJson(path.join(knowledge, "source-index.json"), sourceIndex);
+  await writeJson(path.join(knowledge, "company.baseinfo.json"), layer.baseinfo);
+  await writeJson(path.join(knowledge, "company.profile.json"), layer.profile);
+  await writeJson(path.join(knowledge, "company.skus.json"), layer.skus);
+  await writeJson(path.join(knowledge, "company.facts.json"), layer.facts);
+  await writeJson(path.join(knowledge, "company.evidence.json"), layer.evidence);
   await writeJson(path.join(projectRoot, "manifest.json"), manifest);
 
   return {
@@ -207,7 +290,13 @@ export async function cleanProject(
     inventory: inv,
     warnings,
     missing,
-    sku_count: skus.items.length,
-    clean_ready: cleanReady,
+    sku_count: layer.skus.items.length,
+    facts_count: layer.facts.facts.length,
+    evidence_count: layer.evidence.items.length,
+    facts_hash: layer.facts.facts_hash,
+    review_ready: blockCount === 0,
+    clean_ready: unchangedConfirmed,
+    clean_status: unchangedConfirmed ? "confirmed" : "review_required",
+    preserved_legacy_files: preservedLegacyFiles,
   };
 }

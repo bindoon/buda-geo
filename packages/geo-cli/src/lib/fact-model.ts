@@ -113,13 +113,34 @@ export interface AssetOverride {
   action: "product" | "company" | "evidence" | "ignore";
   product_name?: string;
   evidence_type?: string;
+  supports_fields?: string[];
   disclosure_level?: DisclosureLevel;
   reason?: string;
+}
+
+export interface ProductOverride {
+  name: string;
+  category: string;
+  is_main: boolean;
+  source_paths: string[];
+  selling_points: string[];
+  attributes: Record<string, string | number | boolean>;
+  capabilities: string[];
+  reason?: string;
+}
+
+export interface FactResolution {
+  subject: "company";
+  field: string;
+  value: unknown;
+  reason: string;
 }
 
 export interface CleanOverrides {
   app_id: string;
   assets: AssetOverride[];
+  products: ProductOverride[];
+  fact_resolutions?: FactResolution[];
 }
 
 export const MANUFACTURING_COMPLETENESS_PROFILE = {

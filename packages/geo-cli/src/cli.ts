@@ -2,6 +2,7 @@
 import { Command } from "commander";
 import path from "node:path";
 import { cleanProject } from "./lib/clean.js";
+import { confirmClean } from "./lib/confirm.js";
 import { inventory } from "./lib/inventory.js";
 import { ensureAppId } from "./lib/manifest.js";
 import { parseInfoForm, parseKeywords } from "./lib/parse.js";
@@ -46,6 +47,12 @@ addProjectOpt(program.command("clean").description("run clean pipeline"))
   .option("--app-id <id>", "override app_id")
   .action(async (opts: { project: string; appId?: string }) => {
     const result = await cleanProject(resolveProject(opts.project), opts.appId);
+    console.log(JSON.stringify(result, null, 2));
+  });
+
+addProjectOpt(program.command("confirm-clean").description("confirm reviewed enterprise facts and create immutable snapshot"))
+  .action(async (opts: { project: string }) => {
+    const result = await confirmClean(resolveProject(opts.project));
     console.log(JSON.stringify(result, null, 2));
   });
 

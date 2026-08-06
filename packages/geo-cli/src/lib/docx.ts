@@ -32,13 +32,15 @@ const SECTION_LABELS: { key: keyof Omit<ProfileSections, "pain_points"> | "pain_
   { key: "intro", labels: ["公司介绍", "企业简介", "品牌故事", "关于我们"] },
   {
     key: "products_services",
-    labels: ["产品服务", "核心产品", "产品特点", "产品与服务", "主营产品"],
+    labels: ["产品服务", "核心产品", "产品与服务", "主营产品"],
   },
   {
     key: "advantages",
     labels: [
       "核心优势",
+      "产品核心优势",
       "产品优势",
+      "产品特点",
       "工厂供应链优势",
       "工厂供应链",
       "全链条服务优势",
@@ -56,11 +58,12 @@ const SECTION_LABELS: { key: keyof Omit<ProfileSections, "pain_points"> | "pain_
 
 /** Contact / CTA belong in baseinfo — strip from profile body. */
 const CONTACT_LEAK_RE =
-  /联系我们[：:]?[^\n]*|联系人[：:][^\n]*|地址[：:][^\n]*|电话[：:]?\s*\d[\d\s/-]{6,}|手机[：:]?\s*\d[\d\s/-]{6,}|(?:1688|店铺|官网)?(?:网址|链接)[：:]?\s*https?:\/\/\S+|https?:\/\/(?:shop|detail|jm)\S+/gi;
+  /联系我们[：:]?[^\n]*|联系店铺[：:]?[^\n]*|联系人[：:][^\n]*|地址[：:][^\n]*|电话[：:]?\s*\d[\d\s/-]{6,}|手机[：:]?\s*\d[\d\s/-]{6,}|优化关键词[：:][^\n]*|(?:1688|店铺|官网)?(?:网址|链接)[：:]?\s*https?:\/\/\S+|https?:\/\/(?:shop|detail|jm)\S+/gi;
 
 export function stripContactLeak(text: string): string {
   return text
     .replace(CONTACT_LEAK_RE, "")
+    .replace(/(?:^|\n)\s*公司\s*(?=\n|$)/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 }
@@ -114,14 +117,16 @@ export function splitProfileSections(text: string): ProfileSections {
   // Numbered outline: 一、公司介绍 / 二、产品服务 …
   const numbered: { key: string; pos: number }[] = [];
   const numMap: [string, RegExp][] = [
-    ["intro", /(?:^|\n)\s*[一二三四五]?[、．.]\s*(?:公司介绍|企业简介)/],
-    ["products_services", /(?:^|\n)\s*[一二三四五]?[、．.]\s*(?:产品服务|核心产品|产品与服务)/],
-    ["advantages", /(?:^|\n)\s*[一二三四五]?[、．.]\s*(?:核心优势|产品优势|服务优势|全链条服务)/],
-    ["trust", /(?:^|\n)\s*[一二三四五]?[、．.]\s*(?:信任背书|资质|客户案例)/],
+    ["intro", /(?:^|\n)\s*[一二三四五六七八九十]?[、．.]\s*(?:公司介绍|企业简介)/g],
+    ["products_services", /(?:^|\n)\s*[一二三四五六七八九十]?[、．.]\s*(?:产品服务|核心产品|产品与服务)/g],
+    ["advantages", /(?:^|\n)\s*[一二三四五六七八九十]?[、．.]\s*(?:产品核心优势|核心优势|产品优势|产品特点|服务优势|全链条服务)/g],
+    ["trust", /(?:^|\n)\s*[一二三四五六七八九十]?[、．.]\s*(?:信任背书|资质|客户案例)/g],
+    ["pain_points", /(?:^|\n)\s*[一二三四五六七八九十]?[、．.]\s*(?:用户痛点|客户痛点|行业痛点)/g],
   ];
   for (const [key, pat] of numMap) {
-    const m = t.match(pat);
-    if (m?.index != null) numbered.push({ key, pos: m.index });
+    for (const m of t.matchAll(pat)) {
+      if (m.index != null) numbered.push({ key, pos: m.index });
+    }
   }
 
   const hits = findLabelHits(t);

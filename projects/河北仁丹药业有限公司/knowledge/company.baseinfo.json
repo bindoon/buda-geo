@@ -30,5 +30,31 @@
     "shop_url": "https://shop088094o9k43e4.1688.com/"
   },
   "credentials": [],
-  "source": "xlsx:GEO信息收集表(1).xlsx"
+  "source": "xlsx:GEO信息收集表(1).xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_390ac2970acfef44"
+    ],
+    "company_short_name": [
+      "fact_06aec063a85f9112"
+    ],
+    "contact_name": [
+      "fact_c1d962ebe62b2cda"
+    ],
+    "contact_phone": [
+      "fact_c931d4b4024a4183"
+    ],
+    "address": [
+      "fact_f261d9b73b17e0fd"
+    ],
+    "website_or_shop_url": [
+      "fact_b2eb98eebd1f62be"
+    ],
+    "media_accounts": [
+      "fact_9706552e3225ab0a"
+    ],
+    "conversion": [
+      "fact_f720680c201474cb"
+    ]
+  }
 }

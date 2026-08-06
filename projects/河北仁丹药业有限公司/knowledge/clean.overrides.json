@@ -1,0 +1,154 @@
+{
+  "app_id": "rd_pharma_hb",
+  "assets": [
+    {
+      "source_path": "河北仁丹药业副本（新）.jpg",
+      "action": "evidence",
+      "evidence_type": "business_license",
+      "supports_fields": [
+        "company_name",
+        "address"
+      ],
+      "disclosure_level": "restricted",
+      "reason": "人工查看确认为营业执照副本，仅支持企业主体与注册地址。"
+    },
+    {
+      "source_path": "公司图片/**",
+      "action": "company",
+      "reason": "企业环境、车间与生产设备图片。"
+    },
+    {
+      "source_path": "信任背书(1)/信任背书/**",
+      "action": "evidence",
+      "evidence_type": "license_or_product_filing",
+      "supports_fields": [],
+      "disclosure_level": "restricted",
+      "reason": "许可证、备案和产品资料；具体支持范围待逐份人工核对。"
+    }
+  ],
+  "products": [
+    {
+      "name": "创口贴",
+      "category": "医用敷料",
+      "is_main": true,
+      "source_paths": [
+        "产品图片/弹性创口贴.jpg",
+        "产品图片/透气创口贴.png",
+        "产品图片/防水创口贴.png"
+      ],
+      "selling_points": [
+        "轻薄透气",
+        "提供弹性、透气与防水款式"
+      ],
+      "attributes": {
+        "product_forms": "弹性/透气/防水"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库列为核心主营产品，图片文件名给出三种款式。"
+    },
+    {
+      "name": "医用退热贴",
+      "category": "物理降温敷料",
+      "is_main": true,
+      "source_paths": [
+        "产品图片/退热贴/**",
+        "产品图片/医用退热贴.jpg",
+        "产品图片/医用退热贴-怪大夫.jpg"
+      ],
+      "selling_points": [
+        "物理降温",
+        "水凝胶贴敷形式"
+      ],
+      "attributes": {
+        "form": "水凝胶贴"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库列为核心主营产品，目录和文件名一致。"
+    },
+    {
+      "name": "膏药贴",
+      "category": "外用贴敷产品",
+      "is_main": true,
+      "source_paths": [
+        "产品图片/膏药贴剂/**",
+        "产品图片/追风透骨贴.jpg",
+        "产品图片/风湿痹痛贴.jpg"
+      ],
+      "selling_points": [
+        "贴敷剂型",
+        "知识库描述为膏体厚实、粘性适中"
+      ],
+      "attributes": {
+        "form": "贴敷"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "知识库列为核心主营产品，相关图片归入同一产品族。"
+    },
+    {
+      "name": "外用喷剂系列",
+      "category": "外用喷剂",
+      "is_main": false,
+      "source_paths": [
+        "产品图片/外用喷剂/**"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "form": "喷剂"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "图片按剂型集中存放，具体单品名称不足，先作为产品族候选。"
+    },
+    {
+      "name": "外用皮肤膏剂系列",
+      "category": "外用膏剂",
+      "is_main": false,
+      "source_paths": [
+        "产品图片/外用皮肤膏剂/**"
+      ],
+      "selling_points": [],
+      "attributes": {
+        "form": "膏剂"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "图片按剂型集中存放，具体单品名称不足，先作为产品族候选。"
+    },
+    {
+      "name": "颈肩腰腿痛外用产品系列",
+      "category": "外用健康产品",
+      "is_main": false,
+      "source_paths": [
+        "产品图片/颈肩腰腿痛类/**"
+      ],
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "原始图片仅按适用方向分组，具体产品身份待继续细分。"
+    },
+    {
+      "name": "其他外用健康产品",
+      "category": "外用健康产品",
+      "is_main": false,
+      "source_paths": [
+        "产品图片/**"
+      ],
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "reason": "承接未被前述规则覆盖的零散命名图片，保留为待细分产品族。"
+    }
+  ]
+}

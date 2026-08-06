@@ -2,10 +2,9 @@ export const KNOWLEDGE_FILES: Record<string, string> = {
   "company.baseinfo.json": "baseinfo.schema.json",
   "company.profile.json": "profile.schema.json",
   "company.skus.json": "skus.schema.json",
-  "company.keywords.json": "keywords.schema.json",
-  "company.faq.json": "faq.schema.json",
-  "company.prompts.json": "prompts.schema.json",
-  "company.generation_plan.json": "generation_plan.schema.json",
+  "source-index.json": "source-index.schema.json",
+  "company.facts.json": "facts.schema.json",
+  "company.evidence.json": "evidence.schema.json",
 };
 
 export const DEFAULT_PROMPTS = [

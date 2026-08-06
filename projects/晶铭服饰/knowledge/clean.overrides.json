@@ -1,0 +1,44 @@
+{
+  "app_id": "jm_apparel_cx",
+  "assets": [
+    {
+      "source_path": "曹县晶铭服饰有限公司 信息/**",
+      "action": "ignore",
+      "reason": "哈希命名的混合企业资料尚未逐张确认，默认不派生。"
+    }
+  ],
+  "products": [
+    {
+      "name": "儿童芭蕾tutu裙",
+      "category": "儿童舞蹈服饰",
+      "is_main": true,
+      "source_paths": [
+        "儿童芭蕾 tutu 裙/**"
+      ],
+      "selling_points": [
+        "多层高密度网纱并配置定型硬衬",
+        "覆盖100至160尺码",
+        "支持一件起混批和舞蹈机构定制"
+      ],
+      "attributes": {
+        "size_range": "100-160",
+        "main_material": "锦纶冰丝与多层网纱",
+        "applicable_age": "3-14岁"
+      },
+      "capabilities": [
+        "生产供应",
+        "印LOGO与配色定制",
+        "裙摆层数与尺码定制"
+      ],
+      "reason": "知识库将儿童芭蕾舞TUTU裙列为核心产品，图片集中在同名目录。"
+    }
+  ],
+  "fact_resolutions": [
+    {
+      "subject": "company",
+      "field": "company_short_name",
+      "value": "晶铭服饰",
+      "reason": "信息表中的值是一句经营描述，不是企业简称；沿用已有人审业务简称。"
+    }
+  ]
+}

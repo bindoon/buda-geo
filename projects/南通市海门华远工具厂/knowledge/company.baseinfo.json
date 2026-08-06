@@ -34,5 +34,31 @@
     "shop_url": "https://shop7u0279007v644.1688.com/?spm=a261y.7663282.shopNavigation.2.2f154cc5ZbDQWn&offerId=1060004309124&td_page_id=PC-GYP-2026"
   },
   "credentials": [],
-  "source": "xlsx:华远GEO信息收集表.xlsx"
+  "source": "xlsx:华远GEO信息收集表.xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_dbaed7e848f13fd7"
+    ],
+    "company_short_name": [
+      "fact_5cfd47c63ffa93da"
+    ],
+    "contact_name": [
+      "fact_ae211ad13fc5a758"
+    ],
+    "contact_phone": [
+      "fact_685544e70d140678"
+    ],
+    "address": [
+      "fact_ba0c0fb455faf742"
+    ],
+    "website_or_shop_url": [
+      "fact_fb12b68a2208c75a"
+    ],
+    "media_accounts": [
+      "fact_f6f503445c80d581"
+    ],
+    "conversion": [
+      "fact_cdb31b8dd5341c51"
+    ]
+  }
 }

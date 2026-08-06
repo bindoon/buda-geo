@@ -4,8 +4,8 @@
   "gates": {
     "clean": {
       "status": "confirmed",
-      "at": "2026-08-05T09:44:00Z",
-      "by": "operator"
+      "at": "2026-08-06T09:02:50Z",
+      "fact_snapshot_id": "fact_snapshot_bcbfc0deaeb2422f"
     },
     "diagnose": {
       "status": "pending",
@@ -27,19 +27,35 @@
     {
       "code": "chat_logs",
       "severity": "recommend",
-      "message": "未提供客服/询盘记录；不阻断。补充后可优化 FAQ 与 prompts/generation_plan。"
+      "message": "未提供客服/询盘记录；不阻断企业事实确认，后续可用于丰富客户问法。"
     },
     {
       "code": "secrets_stripped",
       "severity": "recommend",
-      "message": "收集表中的平台密码已剥离，未写入 knowledge；请使用本地 secrets 管理。 password_stripped:百家号,password_stripped:知乎,password_stripped:抖音,password_stripped:头条号,password_stripped:搜狐号"
+      "message": "收集表中的平台密码已剥离，未写入 knowledge；请使用项目 .secrets.env 或环境变量。"
     },
     {
-      "code": "legal_id_ignored",
+      "code": "sensitive_inputs_reviewed",
       "severity": "optional",
-      "message": "已忽略法人身份证等文件 1 个（不入库、不进文章）。"
+      "message": "当前隔离 2 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
     }
   ],
+  "clean_pipeline": {
+    "stage": "confirmed",
+    "inputs_hash": "21df339349db403753c37e5fc511becc112985e566e5374311cfe84e27b54141",
+    "facts_hash": "bab8538ff81c06eecc431c2c44a45828af8219b8afd2a1f0a45d185ba69946d8",
+    "changed_since_confirmation": false,
+    "previous_snapshot_id": "fact_snapshot_bcbfc0deaeb2422f"
+  },
+  "clean_ready": true,
+  "review_ready": true,
+  "legacy_downstream_artifacts": [
+    "knowledge/company.keywords.json",
+    "knowledge/company.faq.json",
+    "knowledge/company.prompts.json",
+    "knowledge/company.generation_plan.json"
+  ],
+  "updated_at": "2026-08-06T09:32:44Z",
   "quota": {
     "articles_generated": 0,
     "articles_published": 0,
@@ -49,7 +65,5 @@
       "social_year": 750,
       "diagnose_questions": 500
     }
-  },
-  "updated_at": "2026-08-05T09:44:00Z",
-  "clean_ready": true
+  }
 }

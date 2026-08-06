@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "geo-manifest",
   "type": "object",
-  "required": ["app_id", "project_name", "gates", "missing", "quota"],
+  "required": ["app_id", "project_name", "gates", "missing", "clean_pipeline", "clean_ready", "review_ready"],
   "properties": {
     "app_id": { "type": "string", "minLength": 1 },
     "project_name": { "type": "string", "minLength": 1 },
@@ -14,9 +14,9 @@
           "type": "object",
           "required": ["status"],
           "properties": {
-            "status": { "enum": ["pending", "confirmed"] },
+            "status": { "enum": ["pending", "review_required", "confirmed"] },
             "at": { "type": ["string", "null"] },
-            "by": { "type": ["string", "null"] }
+            "fact_snapshot_id": { "type": ["string", "null"] }
           }
         }
       }
@@ -33,16 +33,21 @@
         }
       }
     },
-    "quota": {
+    "clean_pipeline": {
       "type": "object",
-      "required": ["articles_generated", "articles_published", "diagnose_questions"],
+      "required": ["stage", "inputs_hash", "facts_hash", "changed_since_confirmation", "previous_snapshot_id"],
       "properties": {
-        "articles_generated": { "type": "integer", "minimum": 0 },
-        "articles_published": { "type": "integer", "minimum": 0 },
-        "diagnose_questions": { "type": "integer", "minimum": 0 },
-        "targets": { "type": "object" }
+        "stage": { "enum": ["inventory", "extract", "normalize", "review", "confirmed"] },
+        "inputs_hash": { "type": ["string", "null"] },
+        "facts_hash": { "type": ["string", "null"] },
+        "changed_since_confirmation": { "type": "boolean" },
+        "previous_snapshot_id": { "type": ["string", "null"] }
       }
     },
+    "clean_ready": { "type": "boolean" },
+    "review_ready": { "type": "boolean" },
+    "legacy_downstream_artifacts": { "type": "array", "items": { "type": "string" } },
+    "quota": { "type": "object" },
     "updated_at": { "type": ["string", "null"] }
   },
   "additionalProperties": true

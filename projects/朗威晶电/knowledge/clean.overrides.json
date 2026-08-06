@@ -1,0 +1,88 @@
+{
+  "app_id": "lw_storage_sz",
+  "assets": [],
+  "products": [
+    {
+      "name": "SD内存卡",
+      "category": "存储卡",
+      "is_main": true,
+      "source_paths": [
+        "图片/SD内存卡/**"
+      ],
+      "selling_points": [
+        "面向数码相机、单反和摄像设备",
+        "支持高速连拍与高清视频录制场景"
+      ],
+      "attributes": {
+        "form_factor": "SD"
+      },
+      "capabilities": [
+        "生产供应",
+        "容量与包装方案定制"
+      ],
+      "reason": "知识库主营类别与图片一级目录一致。"
+    },
+    {
+      "name": "TF内存卡",
+      "category": "存储卡",
+      "is_main": true,
+      "source_paths": [
+        "图片/TF内存卡/**"
+      ],
+      "selling_points": [
+        "适配监控、行车记录仪、平板和游戏机",
+        "面向持续循环录制场景"
+      ],
+      "attributes": {
+        "form_factor": "MicroSD/TF"
+      },
+      "capabilities": [
+        "生产供应",
+        "贴牌与批量供货"
+      ],
+      "reason": "知识库主营类别与图片一级目录一致。"
+    },
+    {
+      "name": "手机U盘",
+      "category": "移动存储设备",
+      "is_main": true,
+      "source_paths": [
+        "图片/手机u盘/**"
+      ],
+      "selling_points": [
+        "提供Type-C、Lightning和Micro-USB等接口方案",
+        "支持手机与电脑间数据传输"
+      ],
+      "attributes": {
+        "interfaces": "Type-C/Lightning/Micro-USB"
+      },
+      "capabilities": [
+        "生产供应",
+        "接口与外观方案定制"
+      ],
+      "reason": "知识库主营类别与图片一级目录一致。"
+    },
+    {
+      "name": "车载音乐U盘",
+      "category": "车载移动存储设备",
+      "is_main": true,
+      "source_paths": [
+        "图片/音乐u盘 车载U盘/**",
+        "整理图片/音乐U盘/**"
+      ],
+      "selling_points": [
+        "面向车载音乐播放场景",
+        "支持金属、迷你外观和礼盒搭配"
+      ],
+      "attributes": {
+        "application": "车载音乐播放"
+      },
+      "capabilities": [
+        "生产供应",
+        "LOGO彩印与激光雕刻",
+        "礼盒搭配与批量定制"
+      ],
+      "reason": "知识库列为主营类别，两组图片目录均为该产品的不同整理版本。"
+    }
+  ]
+}

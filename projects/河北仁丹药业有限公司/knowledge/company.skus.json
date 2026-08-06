@@ -2,1210 +2,1480 @@
   "app_id": "rd_pharma_hb",
   "items": [
     {
-      "sku_id": "sku_冰菊护瞳眼部保健贴1",
-      "name": "冰菊护瞳眼部保健贴1",
-      "category": "",
-      "selling_points": [],
+      "sku_id": "sku_创口贴",
+      "name": "创口贴",
+      "category": "医用敷料",
+      "selling_points": [
+        "轻薄透气",
+        "提供弹性、透气与防水款式"
+      ],
+      "attributes": {
+        "product_forms": "弹性/透气/防水"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_e53fcae211244029",
+        "src_434f442510bd16be",
+        "src_2cf2c953982e93c4"
+      ],
+      "fact_refs": [
+        "fact_e1507e3c56dbe818",
+        "fact_07e6d8509cd2a5ca",
+        "fact_d61453daed39c87c",
+        "fact_30db81a745830bc0",
+        "fact_a8d9ea21c79351b7",
+        "fact_09e016003119e7d2"
+      ],
       "copy_brief": null,
       "images": [
         {
-          "path": "assets/images/冰菊护瞳眼部保健贴1/冰菊护瞳眼部保健贴1.png",
+          "path": "assets/images/创口贴/弹性创口贴.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_肠胃贴",
-      "name": "肠胃贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/肠胃贴/肠胃贴.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_弹性创口贴",
-      "name": "弹性创口贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/弹性创口贴/弹性创口贴.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_防水创口贴",
-      "name": "防水创口贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/防水创口贴/防水创口贴.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_风湿痹痛贴",
-      "name": "风湿痹痛贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/风湿痹痛贴/风湿痹痛贴.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_膏药贴剂",
-      "name": "膏药贴剂",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/膏药贴剂/163515c3-d90c-4afa-89ed-5f6c6dd99358.jpg",
-          "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_e53fcae211244029"
         },
         {
-          "path": "assets/images/膏药贴剂/2015a762-0746-4ee0-8c1b-74ea57201a2f.jpg",
+          "path": "assets/images/创口贴/透气创口贴.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_434f442510bd16be"
+        },
+        {
+          "path": "assets/images/创口贴/防水创口贴.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2cf2c953982e93c4"
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_膏药贴",
+      "name": "膏药贴",
+      "category": "外用贴敷产品",
+      "selling_points": [
+        "贴敷剂型",
+        "知识库描述为膏体厚实、粘性适中"
+      ],
+      "attributes": {
+        "form": "贴敷"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_297d0aea2344248c",
+        "src_10dbc2d1288cc5ce",
+        "src_3b81ccce2af136c7",
+        "src_03b94f77fed09e6b",
+        "src_46cbd664cda4ef5d",
+        "src_5b5b6c6d1b1e151a",
+        "src_1a3026f740deffdd",
+        "src_f11e4b65e9587f3f",
+        "src_9113e012ab15f0e9",
+        "src_c75ba5ed3c598711",
+        "src_a2c4b78a86da7a94",
+        "src_4843ff3327531565",
+        "src_bfdea21d11080c5e",
+        "src_91b9716c6d69b34c"
+      ],
+      "fact_refs": [
+        "fact_0fcfa66a283f946e",
+        "fact_ba44b0eed7260579",
+        "fact_0c65499af165ea9c",
+        "fact_b561d91134263dc1",
+        "fact_0948f27b2ea7a471",
+        "fact_cc9d340d62c95b10"
+      ],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/膏药贴/163515c3-d90c-4afa-89ed-5f6c6dd99358.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_297d0aea2344248c"
+        },
+        {
+          "path": "assets/images/膏药贴/2015a762-0746-4ee0-8c1b-74ea57201a2f.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_10dbc2d1288cc5ce"
+        },
+        {
+          "path": "assets/images/膏药贴/4af08261-fc4f-4650-897b-d2c77ef68ae3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3b81ccce2af136c7"
+        },
+        {
+          "path": "assets/images/膏药贴/51a5dc23-77c6-4110-b186-c7160c8960ac.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_03b94f77fed09e6b"
+        },
+        {
+          "path": "assets/images/膏药贴/68d2512b-4d4a-4191-ac2b-cde1dd62b984.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_46cbd664cda4ef5d"
+        },
+        {
+          "path": "assets/images/膏药贴/6f517ba4-7d30-467b-9ff6-b03c5f2273a3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_5b5b6c6d1b1e151a"
+        },
+        {
+          "path": "assets/images/膏药贴/7a420582-e279-4bf4-b60f-a9366878fdcc.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1a3026f740deffdd"
+        },
+        {
+          "path": "assets/images/膏药贴/98354df6-43a5-4cf2-bcce-b580a0ea769d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f11e4b65e9587f3f"
+        },
+        {
+          "path": "assets/images/膏药贴/a520940c-d08e-42ac-8ebd-f83404e48a96.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9113e012ab15f0e9"
+        },
+        {
+          "path": "assets/images/膏药贴/ab0e4fb3-85a4-4690-a29d-baace972b067.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_c75ba5ed3c598711"
+        },
+        {
+          "path": "assets/images/膏药贴/aea6e4f1-ef59-4989-8a93-0f278a79a8da.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a2c4b78a86da7a94"
+        },
+        {
+          "path": "assets/images/膏药贴/b06950bc-f0b3-46bb-97aa-608e21df6462.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_4843ff3327531565"
+        },
+        {
+          "path": "assets/images/膏药贴/追风透骨贴.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_bfdea21d11080c5e"
+        },
+        {
+          "path": "assets/images/膏药贴/风湿痹痛贴.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_91b9716c6d69b34c"
+        }
+      ]
+    },
+    {
+      "sku_id": "sku_颈肩腰腿痛外用产品系列",
+      "name": "颈肩腰腿痛外用产品系列",
+      "category": "外用健康产品",
+      "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_71a9f23f2552d469",
+        "src_249f20d4110406fe",
+        "src_d4104f300ee3dd64",
+        "src_6cfc1874ace160ed",
+        "src_d00858a406574037",
+        "src_993a1a6080015c93",
+        "src_2c464c64890439dc",
+        "src_25df692661f28c17",
+        "src_3f3d189cf4e9f1ca",
+        "src_13c6f23b8d236a3e",
+        "src_79329d5133416cbf",
+        "src_1b524602b0e3255e",
+        "src_414e37fa4f433fa0",
+        "src_0b3e2729eb21ae04",
+        "src_b5561c381e009c9e",
+        "src_f3fdaee23eeab542",
+        "src_32f0e7c776ae8e26",
+        "src_92206145aee8fea0",
+        "src_792bee5692972240",
+        "src_108517b824b3f5c4",
+        "src_8a85dfd881d67d71",
+        "src_f59bbafbdc472b76",
+        "src_529470b1f73d3a87",
+        "src_be496bf0295ab40c",
+        "src_d549936694b3fa89",
+        "src_31c782064a45cb2f",
+        "src_0eedcb793e3340e0",
+        "src_5988af882559687c",
+        "src_1e7ec65b80abf3e9",
+        "src_451fdd715103f4ce",
+        "src_b5fba7ff2a5cd71e",
+        "src_8d154d4b51a59512",
+        "src_9b2ee5ff063e0635",
+        "src_e8ad43053f5e5960",
+        "src_9046ad9df01bba62",
+        "src_b937310af1aaa06c",
+        "src_3a701506e8c74cb0",
+        "src_ff88c0682c277d0d",
+        "src_ee646396822ecf10",
+        "src_d8bc58fb05e14fa4",
+        "src_767d0d1be39b6a28",
+        "src_2cc814f606653faf",
+        "src_3739622a1124fd46",
+        "src_2ef89af47af2ef91",
+        "src_2f41d2ae75f77921",
+        "src_1bc2af26fa200218",
+        "src_2df2bef0dced2db5",
+        "src_63474327921ff085",
+        "src_1da17dd26683aab1",
+        "src_a23e2db67cb1bed7",
+        "src_c214303c7bebff29",
+        "src_51359eecca61d89c",
+        "src_44cff6932e34702d",
+        "src_71d8791db4507c96",
+        "src_806e26f1e33fdbe9",
+        "src_36ba698295207ee7",
+        "src_1e98d848cdeaad6b",
+        "src_8c56ef73deb82595",
+        "src_efa733cab8ee1ab6",
+        "src_9eb57d65bea67fd2",
+        "src_909dc62200e07e87",
+        "src_bbd32f113509ac6a",
+        "src_2f8ec926a95145b3",
+        "src_3378e03da4833beb",
+        "src_7a455624cf04ee5c",
+        "src_b0d76dbd96b70614",
+        "src_69412e199d1583fe",
+        "src_4bc5bc5e20af377c",
+        "src_8607101dd26fcacc",
+        "src_17aae3ff33faba3c",
+        "src_e91bef391889f6e9",
+        "src_2ae263e1a6a54e22",
+        "src_536cc5b618b81116",
+        "src_3b8201e8a05a0a61",
+        "src_bcd1da5845416551",
+        "src_e35eb79f81155ed2",
+        "src_f5cae0f3fca5776d",
+        "src_f6ee3c94bbef82fd",
+        "src_924679fb5b0420e1",
+        "src_a0550269c6b8c242",
+        "src_2a61bc265feabec0",
+        "src_0879f7bb057155e3",
+        "src_6875cb2006f71ce0",
+        "src_f4dc9b42c701d402",
+        "src_7fcb05f4d58de1e1"
+      ],
+      "fact_refs": [
+        "fact_a3a8ecce44a82708",
+        "fact_4ea08e5ebfea552d",
+        "fact_970bdd1131e0190f",
+        "fact_474df976444b3c4c",
+        "fact_34d5a65199278f9b"
+      ],
+      "copy_brief": null,
+      "images": [
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/051770fd-b828-40d6-b49b-3a985578eee4.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_71a9f23f2552d469"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/07c45873-06f1-4580-9954-4742f2a61102.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_249f20d4110406fe"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/0aebd466-7541-4798-b7e4-1e3caeea5bc5.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_d4104f300ee3dd64"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/0affd7c6-14d0-4c28-ac34-c070c306d3e6.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_6cfc1874ace160ed"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/1312a9d3-fb69-4525-9809-083d647c3671.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_d00858a406574037"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/149e1ae2-a47f-411b-89e7-8d8f381943f0.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_993a1a6080015c93"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/156e5aab-96b4-4ca8-a468-80cd30e080e9.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2c464c64890439dc"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/184058f1-22f5-45a4-a3d7-1fe405823bf9.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_25df692661f28c17"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/1e12f688-fc3c-4f94-9e92-256788a46ce0.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3f3d189cf4e9f1ca"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/26a39227-f097-45aa-9a3e-f3dabd6a803a.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_13c6f23b8d236a3e"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/30752e44-81f3-447f-9473-4bebb59468cc.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_79329d5133416cbf"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/31608409-1dab-4e5d-a002-1e2de1bd39ce.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1b524602b0e3255e"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/31d8559d-ab72-4a7d-b3d7-e57c62cdd67b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_414e37fa4f433fa0"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/39bd52b2-fa76-418e-8e6c-88716d98ee8c.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_0b3e2729eb21ae04"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/3bdfc2c9-8dbd-4ac4-b598-16c103962f17.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b5561c381e009c9e"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/3f1a44d4-1bb7-4b7d-b219-3293520a0dc3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f3fdaee23eeab542"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/4187b1d4-eeef-452e-9252-6519eff44738.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_32f0e7c776ae8e26"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/48287847-e80e-408d-88c6-030fd1816d3b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_92206145aee8fea0"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/4a7b5d69-ee96-43c0-a70c-686973ad3766.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_792bee5692972240"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/4b81cb01-b5e7-4990-828f-71ad41e3185c.jpg",
           "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_108517b824b3f5c4"
         },
         {
-          "path": "assets/images/膏药贴剂/4af08261-fc4f-4650-897b-d2c77ef68ae3.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/4e968498-855e-475f-91e3-ca05e71e58b0.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_8a85dfd881d67d71"
         },
         {
-          "path": "assets/images/膏药贴剂/51a5dc23-77c6-4110-b186-c7160c8960ac.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/4f93c75f-2db0-47f8-a361-277a7dc7e1ca.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_f59bbafbdc472b76"
         },
         {
-          "path": "assets/images/膏药贴剂/68d2512b-4d4a-4191-ac2b-cde1dd62b984.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/518f36c6-afdb-408f-8f72-49823a5ebb08.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_529470b1f73d3a87"
         },
         {
-          "path": "assets/images/膏药贴剂/6f517ba4-7d30-467b-9ff6-b03c5f2273a3.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/523571d1-e2df-4fab-af9f-bd82205e70c6.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_be496bf0295ab40c"
         },
         {
-          "path": "assets/images/膏药贴剂/7a420582-e279-4bf4-b60f-a9366878fdcc.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/535808e9-66f4-4961-b020-90aaec8d4764.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_d549936694b3fa89"
         },
         {
-          "path": "assets/images/膏药贴剂/98354df6-43a5-4cf2-bcce-b580a0ea769d.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/5c065168-a83b-424a-adbb-5aa27c7c49e8.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_31c782064a45cb2f"
         },
         {
-          "path": "assets/images/膏药贴剂/a520940c-d08e-42ac-8ebd-f83404e48a96.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/5f300283-7c5f-4c9c-9508-96edfae8e9e7.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_0eedcb793e3340e0"
         },
         {
-          "path": "assets/images/膏药贴剂/ab0e4fb3-85a4-4690-a29d-baace972b067.png",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/618dcce2-1e86-478a-8096-f26cf2af4708.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_5988af882559687c"
         },
         {
-          "path": "assets/images/膏药贴剂/aea6e4f1-ef59-4989-8a93-0f278a79a8da.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/67b10e44-0e5d-4d7b-afe6-baafe7bd0edc.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_1e7ec65b80abf3e9"
         },
         {
-          "path": "assets/images/膏药贴剂/b06950bc-f0b3-46bb-97aa-608e21df6462.jpg",
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6a252633-532f-43df-bacd-97cc6097d593.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_451fdd715103f4ce"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6adad8d0-3f7c-461b-a40e-56878b6304b7.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b5fba7ff2a5cd71e"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6ba904dd-18c2-4ad6-a193-4f779055c695.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8d154d4b51a59512"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6be7bd8e-b2e3-4215-8a22-2ddd1cd19bd8.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9b2ee5ff063e0635"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6c3cf283-f39e-408e-bcaa-779dd21c24c9.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_e8ad43053f5e5960"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/6ead0b52-07d4-4025-b6a5-287be2191ff2.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9046ad9df01bba62"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/72255afe-c02c-4dcf-ad1e-624474cbc9af.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b937310af1aaa06c"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/73aa8c78-888a-4178-b099-0c8a14a771b5.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3a701506e8c74cb0"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/76a1f12e-ac4a-49ef-962f-c01afa075bc2.jpg",
+          "role": "main",
+          "url": null,
+          "source_ref": "src_ff88c0682c277d0d"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/76c35a82-a709-471f-9a21-5d111cd350d9.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_ee646396822ecf10"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/7b4fae34-338b-4f13-b70c-e1667e8236ed.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_d8bc58fb05e14fa4"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/7c4bb53a-dd3c-4031-ab32-86e99ddb80ee.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_767d0d1be39b6a28"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/7d1d6b60-6991-4b0f-adc3-0b69a120b51b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2cc814f606653faf"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/7d31e849-60e7-4c5a-978c-70a731140644.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3739622a1124fd46"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/802377b1-04ab-492e-8ab3-0220fbbaabc1.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2ef89af47af2ef91"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/81f4f5fa-82b7-486a-a75b-6b43c1d923b4.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2f41d2ae75f77921"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/82752372-713e-45b0-aa9e-6ad017cbba18.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1bc2af26fa200218"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/83312755-0f69-4883-ad9c-e8411ad03818.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2df2bef0dced2db5"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/87a4b911-c0e0-4837-84cb-1601dc06e3a7.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_63474327921ff085"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/88932b63-5d5b-4b2e-b6ed-cd0530d6de7a.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1da17dd26683aab1"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/8a196f30-cf6f-4010-a8e0-f446f8a216d8.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a23e2db67cb1bed7"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/8a6b5f09-aa8c-4c9b-9b1a-1c56e23c53d5.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_c214303c7bebff29"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/91e30947-f46d-485a-ba45-090964430893.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_51359eecca61d89c"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/9494546b-51e0-41e0-94d9-daed1255d30a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_44cff6932e34702d"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/963e4354-d663-46be-95be-23aaa7133af4.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_71d8791db4507c96"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/9dec11f9-b852-452f-a563-0144b3544753.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_806e26f1e33fdbe9"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/a776f870-fab7-4e59-be5a-54d1ec0d1d20.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_36ba698295207ee7"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/a85e9f4b-a008-4154-908c-9d5f1b9d3e76.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1e98d848cdeaad6b"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/a9f05778-356a-488f-bc68-e5d483e8af55.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8c56ef73deb82595"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/ab485f08-8d51-480b-8dae-81411bb65b00.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_efa733cab8ee1ab6"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/b251fee5-2990-429e-8dff-6b3275494bee.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9eb57d65bea67fd2"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/b2f21433-36d1-4541-b7d5-2e6ced9821fd.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_909dc62200e07e87"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/b68a13b8-7773-4b9b-937d-11b31f209e59.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_bbd32f113509ac6a"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/b7e6e97b-c943-4320-becc-886737306fe2.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2f8ec926a95145b3"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/bdc19ea0-d638-4275-b73c-580cd90bdd28.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3378e03da4833beb"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/c34533ee-3faf-4117-8b79-bc61c8dc3b49.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_7a455624cf04ee5c"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/c853c988-2e20-4eaa-8c28-7662e3164edf.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b0d76dbd96b70614"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/c8ba204f-6431-4224-9601-45762698b8fb.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_69412e199d1583fe"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/ceb28fc8-fb52-4adf-b930-bc3082aac9a3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_4bc5bc5e20af377c"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/d3607ca8-87e0-4964-827d-3aa685f844f5.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8607101dd26fcacc"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/d4e5f037-9dc8-47fe-83f7-e4f668917135.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_17aae3ff33faba3c"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/dc72d5d2-f08f-45b7-85cb-2185d7f54e5c.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_e91bef391889f6e9"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e12d22f9-0a2e-41c2-9928-d0ae068e42b8.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2ae263e1a6a54e22"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e4782c51-ca3d-4b70-a524-280cfa02636a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_536cc5b618b81116"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e5f546ba-9bb7-488b-a1d7-4d799ecc4d77.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3b8201e8a05a0a61"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e6e3e69e-6fd9-4a70-b361-73755a665e32.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_bcd1da5845416551"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e7b2e18a-5d1c-4fb2-b7e7-9ec8290ca5cf.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_e35eb79f81155ed2"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/e94179d6-3e00-4a60-b464-916e9dfc263e.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f5cae0f3fca5776d"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/ec3a7814-af39-4e51-9171-b5d009f1d566.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f6ee3c94bbef82fd"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/ec9c173d-6018-46e8-be84-b60e36ecfe86.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_924679fb5b0420e1"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/f2367a71-f823-4081-9803-6994ae34ee86.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a0550269c6b8c242"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/f49a537e-36f0-42bd-92c4-fe22baf45300.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2a61bc265feabec0"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/f671c4bc-5e80-434a-afed-f645e7a38f0a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_0879f7bb057155e3"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/f9f29e61-74a6-4d28-a96a-7eded952909a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_6875cb2006f71ce0"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/fb7e7ecd-32c1-41ef-aee2-4fe6e77d800e.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f4dc9b42c701d402"
+        },
+        {
+          "path": "assets/images/颈肩腰腿痛外用产品系列/fdf88bfc-4a2d-4a16-bf6f-8c7277bfd412.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_7fcb05f4d58de1e1"
         }
       ]
     },
     {
-      "sku_id": "sku_公司图片",
-      "name": "公司图片",
-      "category": "",
+      "sku_id": "sku_其他外用健康产品",
+      "name": "其他外用健康产品",
+      "category": "外用健康产品",
       "selling_points": [],
+      "attributes": {},
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_dd4626646ce09696",
+        "src_40cb99ab7b1b8d33",
+        "src_eb0d9bf0ac45f0e3",
+        "src_1efda202d8c3d97b",
+        "src_3e8fe1a817e382c3",
+        "src_1c6f848517647731",
+        "src_65118ab121039d8c",
+        "src_04c8b3373cd5e9e8",
+        "src_14aea75dbe7cc754",
+        "src_ffd6a662ba1c0eb0",
+        "src_8a5bd090a9e08a36"
+      ],
+      "fact_refs": [
+        "fact_56272042df2ab76c",
+        "fact_05fe8d31161dc040",
+        "fact_aa6c26209f238020",
+        "fact_4499f588e4c1f9e6",
+        "fact_9e66893b9d681f82"
+      ],
       "copy_brief": null,
       "images": [
         {
-          "path": "assets/images/公司图片/工作图.jpg",
+          "path": "assets/images/其他外用健康产品/乌蛇肤痒膏.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_dd4626646ce09696"
         },
         {
-          "path": "assets/images/公司图片/工作图1.jpg",
+          "path": "assets/images/其他外用健康产品/冰菊护瞳眼部保健贴1.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_40cb99ab7b1b8d33"
         },
         {
-          "path": "assets/images/公司图片/生产贴剂机器.jpg",
+          "path": "assets/images/其他外用健康产品/女性草本保健凝胶.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_eb0d9bf0ac45f0e3"
         },
         {
-          "path": "assets/images/公司图片/空调机房.jpg",
+          "path": "assets/images/其他外用健康产品/痔疮肛痒膏.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_1efda202d8c3d97b"
         },
         {
-          "path": "assets/images/公司图片/膏剂配料间.jpg",
+          "path": "assets/images/其他外用健康产品/皮癣肤痒霜.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_3e8fe1a817e382c3"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/肠胃贴.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1c6f848517647731"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/脚气无比膏.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_65118ab121039d8c"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/脚气水.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_04c8b3373cd5e9e8"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/脚气脚汗脚臭喷剂.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_14aea75dbe7cc754"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/脚气膏.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_ffd6a662ba1c0eb0"
+        },
+        {
+          "path": "assets/images/其他外用健康产品/追风透骨液.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8a5bd090a9e08a36"
         }
       ]
     },
     {
-      "sku_id": "sku_河北仁丹药业副本（新）",
-      "name": "河北仁丹药业副本（新）",
-      "category": "",
+      "sku_id": "sku_外用喷剂系列",
+      "name": "外用喷剂系列",
+      "category": "外用喷剂",
       "selling_points": [],
+      "attributes": {
+        "form": "喷剂"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_b7b5d43c484144dd",
+        "src_15f51728773aa0a9",
+        "src_be56963acde59af5",
+        "src_fa6a896b377b1b0e",
+        "src_0227c07ca4972485",
+        "src_d9f8dc9628e6f2f9",
+        "src_1c814d249ade1246",
+        "src_bfb9ee9204ce65d9",
+        "src_2b131feb0d3a66c8",
+        "src_356840ef5193e616",
+        "src_e6b1e0eb9cb59f1b",
+        "src_571e80b4ba0d952a",
+        "src_b2cbf3c905c6a097",
+        "src_b9f0bf5b9abdfd9f",
+        "src_fd2b272d22edb25f",
+        "src_005e90b0c6900dc4",
+        "src_2638cf8695e35d36",
+        "src_14c13e52ae994c33",
+        "src_3bbb098c159fd5ee",
+        "src_138cb0bdde74d2fc",
+        "src_62d7ab42b90b7552",
+        "src_b697c2aa6fc2cc62",
+        "src_c80db5fdca1c171f",
+        "src_df0981844c7c587e",
+        "src_93539df7811c1dec",
+        "src_632594e41e46846f",
+        "src_03184ca7bcdc2229",
+        "src_772425966a457c94",
+        "src_138db011b39f60e8",
+        "src_a4cfcf16e591b956",
+        "src_c0baf05b479b2f7a",
+        "src_8fad963e625acaee",
+        "src_48e2bc45157376fb"
+      ],
+      "fact_refs": [
+        "fact_c7494b27f36eaa3b",
+        "fact_5378bf75a38fd0ca",
+        "fact_55cce7216ebb54ac",
+        "fact_4e741282d7d1a02d",
+        "fact_8c7d973e33a1982e"
+      ],
       "copy_brief": null,
       "images": [
         {
-          "path": "assets/images/河北仁丹药业副本（新）/河北仁丹药业副本（新）.jpg",
+          "path": "assets/images/外用喷剂系列/035b7f2e-ca08-4a86-bdbe-37a6147b6a85.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_b7b5d43c484144dd"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/16c17bae-9c12-490e-bc84-5c5d3289bf11.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_15f51728773aa0a9"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/18454ae3-63e7-496f-8599-ab2a9a29bfa4.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_be56963acde59af5"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/1e598758-d43e-453e-8c29-81a734b62675.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_fa6a896b377b1b0e"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/1f608dd2-f95e-4df0-9a0c-2fbc83a90485.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_0227c07ca4972485"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/24213177-f3f1-4beb-a70f-bbdbc8da7da4.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_d9f8dc9628e6f2f9"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/33e9dfe8-101a-4fa0-a83c-35df8f8c8c59.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_1c814d249ade1246"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/3b0190ee-7efd-4a6e-b54b-6c9a7fae9d2d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_bfb9ee9204ce65d9"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/473e5be1-d59f-4b42-bed2-bdff5ab7985b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2b131feb0d3a66c8"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/4ecd7b21-b454-43bb-804d-d46d5d7c80aa.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_356840ef5193e616"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/4f17421b-1359-4e84-8a23-e77eb2da797a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_e6b1e0eb9cb59f1b"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/5951de81-5aa7-4dd7-9292-9adfba1aad1f.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_571e80b4ba0d952a"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/624df8b2-b49d-4b5a-afa7-2299859a77c7.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b2cbf3c905c6a097"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/67405605-021b-4f86-bee0-757466e0b20b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b9f0bf5b9abdfd9f"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/69e98c07-463f-40d8-b268-7cba3d63471b.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_fd2b272d22edb25f"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/6b4721c7-942f-4b78-a424-3467a8e80801.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_005e90b0c6900dc4"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/6c8ac54e-cfd2-44ad-a3d4-e88006bd91de.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_2638cf8695e35d36"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/6de825a5-e061-4419-ba01-1c46cbecbf7d.jpg",
+          "role": "main",
+          "url": null,
+          "source_ref": "src_14c13e52ae994c33"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/7450326d-bf36-48d1-a474-8c1d4c1a487d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3bbb098c159fd5ee"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/76e2d2de-a915-4517-96f5-c9bdbcf6e115.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_138cb0bdde74d2fc"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/7ade1a2d-4eca-4ced-aea7-6459dc7d1edf.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_62d7ab42b90b7552"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/7d629127-952f-4c68-8ef4-e5ff783e671d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b697c2aa6fc2cc62"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/802f4fe4-c0c6-4f92-bc9b-bd99bf603d1a.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_c80db5fdca1c171f"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/82297361-f568-4335-bf04-8ae97b46f843.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_df0981844c7c587e"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/94384489-81c4-47a1-85f7-b11cf41a0841.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_93539df7811c1dec"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/ab7881e0-f785-4081-9057-d2d99a62b17d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_632594e41e46846f"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/af83941d-e1f0-486a-85dd-84afe49914e3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_03184ca7bcdc2229"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/b2d6ece0-650c-4215-95e0-d4c9db00158c.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_772425966a457c94"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/bc800873-2989-4e04-8ee7-3529641f6291.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_138db011b39f60e8"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/cf542995-a113-46a4-abbf-95cbc708de03.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a4cfcf16e591b956"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/d5de6ecb-91e2-411a-9b40-c24deb2aedb1.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_c0baf05b479b2f7a"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/e0e82009-1d46-4db6-80c0-a946f2cfd7cb.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_8fad963e625acaee"
+        },
+        {
+          "path": "assets/images/外用喷剂系列/e8870968-145d-4b28-88d8-24a3c76c7e07.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_48e2bc45157376fb"
         }
       ]
     },
     {
-      "sku_id": "sku_脚气膏",
-      "name": "脚气膏",
-      "category": "",
+      "sku_id": "sku_外用皮肤膏剂系列",
+      "name": "外用皮肤膏剂系列",
+      "category": "外用膏剂",
       "selling_points": [],
+      "attributes": {
+        "form": "膏剂"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": false,
+      "source_refs": [
+        "src_dc71e5e72a40b019",
+        "src_1250b02c76548efc",
+        "src_9208aa587d7ce805",
+        "src_c0cdbfcb3d26fe52",
+        "src_ee4edd08e758cef2",
+        "src_16fa92153b622335",
+        "src_685fb288d166e651",
+        "src_7df219bad7c046c1",
+        "src_347286e24bbf5f5e",
+        "src_6a2ebe0fc8a3e17a",
+        "src_4ca73d0e9339b80c",
+        "src_9e8deec362b350ac",
+        "src_e659532f1981b8e9",
+        "src_b0b0401af83268b1",
+        "src_3ee87d2d5d2f45bc",
+        "src_86c448b3cec3ac29",
+        "src_4ef4a49096acf2b3",
+        "src_109aea94d3983f28",
+        "src_65e4a1e48d9bff3e",
+        "src_db7ec015f9f39765",
+        "src_44c17c61ee5c6fff",
+        "src_3b0aee2395382ed2",
+        "src_dc9248ce092b0324",
+        "src_778c04cf7783ced0",
+        "src_8b9cf15c00754149",
+        "src_73cba01e7c5997e2"
+      ],
+      "fact_refs": [
+        "fact_7f88ed64836ffc48",
+        "fact_1bb1db4552fbf013",
+        "fact_54720ca45f0e02d4",
+        "fact_205891c7a59d3fd0",
+        "fact_a9ca968fd146b3ac"
+      ],
       "copy_brief": null,
       "images": [
         {
-          "path": "assets/images/脚气膏/脚气膏.png",
+          "path": "assets/images/外用皮肤膏剂系列/0e3d4780-b217-4911-ad3d-8e3e92a5538d.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_脚气脚汗脚臭喷剂",
-      "name": "脚气脚汗脚臭喷剂",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/脚气脚汗脚臭喷剂/脚气脚汗脚臭喷剂.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_脚气水",
-      "name": "脚气水",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/脚气水/脚气水.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_脚气无比膏",
-      "name": "脚气无比膏",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/脚气无比膏/脚气无比膏.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_颈肩腰腿痛类",
-      "name": "颈肩腰腿痛类",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/颈肩腰腿痛类/051770fd-b828-40d6-b49b-3a985578eee4.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/07c45873-06f1-4580-9954-4742f2a61102.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/0aebd466-7541-4798-b7e4-1e3caeea5bc5.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/0affd7c6-14d0-4c28-ac34-c070c306d3e6.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/1312a9d3-fb69-4525-9809-083d647c3671.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/149e1ae2-a47f-411b-89e7-8d8f381943f0.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/156e5aab-96b4-4ca8-a468-80cd30e080e9.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/184058f1-22f5-45a4-a3d7-1fe405823bf9.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/1e12f688-fc3c-4f94-9e92-256788a46ce0.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/26a39227-f097-45aa-9a3e-f3dabd6a803a.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/30752e44-81f3-447f-9473-4bebb59468cc.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/31608409-1dab-4e5d-a002-1e2de1bd39ce.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/31d8559d-ab72-4a7d-b3d7-e57c62cdd67b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/39bd52b2-fa76-418e-8e6c-88716d98ee8c.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/3bdfc2c9-8dbd-4ac4-b598-16c103962f17.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/3f1a44d4-1bb7-4b7d-b219-3293520a0dc3.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/4187b1d4-eeef-452e-9252-6519eff44738.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/48287847-e80e-408d-88c6-030fd1816d3b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/4a7b5d69-ee96-43c0-a70c-686973ad3766.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/4b81cb01-b5e7-4990-828f-71ad41e3185c.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/4e968498-855e-475f-91e3-ca05e71e58b0.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/4f93c75f-2db0-47f8-a361-277a7dc7e1ca.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/518f36c6-afdb-408f-8f72-49823a5ebb08.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/523571d1-e2df-4fab-af9f-bd82205e70c6.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/535808e9-66f4-4961-b020-90aaec8d4764.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/5c065168-a83b-424a-adbb-5aa27c7c49e8.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/5f300283-7c5f-4c9c-9508-96edfae8e9e7.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/618dcce2-1e86-478a-8096-f26cf2af4708.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/67b10e44-0e5d-4d7b-afe6-baafe7bd0edc.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6a252633-532f-43df-bacd-97cc6097d593.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6adad8d0-3f7c-461b-a40e-56878b6304b7.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6ba904dd-18c2-4ad6-a193-4f779055c695.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6be7bd8e-b2e3-4215-8a22-2ddd1cd19bd8.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6c3cf283-f39e-408e-bcaa-779dd21c24c9.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/6ead0b52-07d4-4025-b6a5-287be2191ff2.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/72255afe-c02c-4dcf-ad1e-624474cbc9af.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/73aa8c78-888a-4178-b099-0c8a14a771b5.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/76a1f12e-ac4a-49ef-962f-c01afa075bc2.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/76c35a82-a709-471f-9a21-5d111cd350d9.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/7b4fae34-338b-4f13-b70c-e1667e8236ed.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/7c4bb53a-dd3c-4031-ab32-86e99ddb80ee.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/7d1d6b60-6991-4b0f-adc3-0b69a120b51b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/7d31e849-60e7-4c5a-978c-70a731140644.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/802377b1-04ab-492e-8ab3-0220fbbaabc1.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/81f4f5fa-82b7-486a-a75b-6b43c1d923b4.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/82752372-713e-45b0-aa9e-6ad017cbba18.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/83312755-0f69-4883-ad9c-e8411ad03818.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/87a4b911-c0e0-4837-84cb-1601dc06e3a7.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/88932b63-5d5b-4b2e-b6ed-cd0530d6de7a.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/8a196f30-cf6f-4010-a8e0-f446f8a216d8.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/8a6b5f09-aa8c-4c9b-9b1a-1c56e23c53d5.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/91e30947-f46d-485a-ba45-090964430893.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/9494546b-51e0-41e0-94d9-daed1255d30a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/963e4354-d663-46be-95be-23aaa7133af4.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/9dec11f9-b852-452f-a563-0144b3544753.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/a776f870-fab7-4e59-be5a-54d1ec0d1d20.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/a85e9f4b-a008-4154-908c-9d5f1b9d3e76.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/a9f05778-356a-488f-bc68-e5d483e8af55.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/ab485f08-8d51-480b-8dae-81411bb65b00.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/b251fee5-2990-429e-8dff-6b3275494bee.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/b2f21433-36d1-4541-b7d5-2e6ced9821fd.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/b68a13b8-7773-4b9b-937d-11b31f209e59.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/b7e6e97b-c943-4320-becc-886737306fe2.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/bdc19ea0-d638-4275-b73c-580cd90bdd28.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/c34533ee-3faf-4117-8b79-bc61c8dc3b49.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/c853c988-2e20-4eaa-8c28-7662e3164edf.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/c8ba204f-6431-4224-9601-45762698b8fb.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/ceb28fc8-fb52-4adf-b930-bc3082aac9a3.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/d3607ca8-87e0-4964-827d-3aa685f844f5.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/d4e5f037-9dc8-47fe-83f7-e4f668917135.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/dc72d5d2-f08f-45b7-85cb-2185d7f54e5c.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e12d22f9-0a2e-41c2-9928-d0ae068e42b8.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e4782c51-ca3d-4b70-a524-280cfa02636a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e5f546ba-9bb7-488b-a1d7-4d799ecc4d77.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e6e3e69e-6fd9-4a70-b361-73755a665e32.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e7b2e18a-5d1c-4fb2-b7e7-9ec8290ca5cf.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/e94179d6-3e00-4a60-b464-916e9dfc263e.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/ec3a7814-af39-4e51-9171-b5d009f1d566.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/ec9c173d-6018-46e8-be84-b60e36ecfe86.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/f2367a71-f823-4081-9803-6994ae34ee86.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/f49a537e-36f0-42bd-92c4-fe22baf45300.png",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/f671c4bc-5e80-434a-afed-f645e7a38f0a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/f9f29e61-74a6-4d28-a96a-7eded952909a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/fb7e7ecd-32c1-41ef-aee2-4fe6e77d800e.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/颈肩腰腿痛类/fdf88bfc-4a2d-4a16-bf6f-8c7277bfd412.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_女性草本保健凝胶",
-      "name": "女性草本保健凝胶",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/女性草本保健凝胶/女性草本保健凝胶.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_皮癣肤痒霜",
-      "name": "皮癣肤痒霜",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/皮癣肤痒霜/皮癣肤痒霜.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_透气创口贴",
-      "name": "透气创口贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/透气创口贴/透气创口贴.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_退热贴",
-      "name": "退热贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/退热贴/02fc2c68-27de-4c5a-856b-eb87efb6fcce.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/0b70d0c3-bc5a-4bcd-a59c-7cd5a064b0c0.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/2d569a40-bfdc-40e9-845f-4ccf59ab4730.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/42438e84-8a6b-45b5-bf7f-fba4a6c33015.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/54147d3e-3c1f-4dd5-a40f-732ac0b72a3a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/55299a16-005e-4627-8492-17b5447b9a48.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/5d5a408b-86a8-483c-98c1-15811459e77d.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/754925c1-f39a-47e0-9c05-c0955276a597.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/8d862c92-ccd3-439a-835f-28a05227230f.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/b8453072-ad49-43c4-8b43-22eec98ed3d3.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/退热贴/fa2ad3c8-a2c9-425d-aa0e-7a36254b034f.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_外用喷剂",
-      "name": "外用喷剂",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/外用喷剂/035b7f2e-ca08-4a86-bdbe-37a6147b6a85.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/16c17bae-9c12-490e-bc84-5c5d3289bf11.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/18454ae3-63e7-496f-8599-ab2a9a29bfa4.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/1e598758-d43e-453e-8c29-81a734b62675.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/1f608dd2-f95e-4df0-9a0c-2fbc83a90485.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/24213177-f3f1-4beb-a70f-bbdbc8da7da4.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/33e9dfe8-101a-4fa0-a83c-35df8f8c8c59.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/3b0190ee-7efd-4a6e-b54b-6c9a7fae9d2d.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/473e5be1-d59f-4b42-bed2-bdff5ab7985b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/4ecd7b21-b454-43bb-804d-d46d5d7c80aa.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/4f17421b-1359-4e84-8a23-e77eb2da797a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/5951de81-5aa7-4dd7-9292-9adfba1aad1f.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/624df8b2-b49d-4b5a-afa7-2299859a77c7.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/67405605-021b-4f86-bee0-757466e0b20b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/69e98c07-463f-40d8-b268-7cba3d63471b.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/6b4721c7-942f-4b78-a424-3467a8e80801.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/6c8ac54e-cfd2-44ad-a3d4-e88006bd91de.jpg",
-          "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_dc71e5e72a40b019"
         },
         {
-          "path": "assets/images/外用喷剂/6de825a5-e061-4419-ba01-1c46cbecbf7d.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/7450326d-bf36-48d1-a474-8c1d4c1a487d.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/76e2d2de-a915-4517-96f5-c9bdbcf6e115.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/7ade1a2d-4eca-4ced-aea7-6459dc7d1edf.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/7d629127-952f-4c68-8ef4-e5ff783e671d.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/802f4fe4-c0c6-4f92-bc9b-bd99bf603d1a.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/82297361-f568-4335-bf04-8ae97b46f843.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/94384489-81c4-47a1-85f7-b11cf41a0841.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/ab7881e0-f785-4081-9057-d2d99a62b17d.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/af83941d-e1f0-486a-85dd-84afe49914e3.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/b2d6ece0-650c-4215-95e0-d4c9db00158c.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/bc800873-2989-4e04-8ee7-3529641f6291.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/cf542995-a113-46a4-abbf-95cbc708de03.jpg",
-          "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用喷剂/d5de6ecb-91e2-411a-9b40-c24deb2aedb1.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/113ee04a-a1c1-4dea-afdb-3793b8ffe2a5.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_1250b02c76548efc"
         },
         {
-          "path": "assets/images/外用喷剂/e0e82009-1d46-4db6-80c0-a946f2cfd7cb.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/21834e66-fa4a-4094-bd43-b319cfd2d570.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_9208aa587d7ce805"
         },
-        {
-          "path": "assets/images/外用喷剂/e8870968-145d-4b28-88d8-24a3c76c7e07.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_外用皮肤膏剂",
-      "name": "外用皮肤膏剂",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
         {
-          "path": "assets/images/外用皮肤膏剂/0e3d4780-b217-4911-ad3d-8e3e92a5538d.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/235206f0-f63e-4de9-9c97-42eb52911314.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_c0cdbfcb3d26fe52"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/113ee04a-a1c1-4dea-afdb-3793b8ffe2a5.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/2624b021-d66c-4dbb-a5a5-0d99d534f426.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_ee4edd08e758cef2"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/21834e66-fa4a-4094-bd43-b319cfd2d570.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/29e9d0b2-94df-46ac-a33a-0c64476e2d6d.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_16fa92153b622335"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/235206f0-f63e-4de9-9c97-42eb52911314.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/4c82d709-5af7-48d4-999b-a633c3d8d866.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_685fb288d166e651"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/2624b021-d66c-4dbb-a5a5-0d99d534f426.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/4df41b03-32ad-4df1-b2a7-f66fea166b3f.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_7df219bad7c046c1"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/29e9d0b2-94df-46ac-a33a-0c64476e2d6d.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/559731bc-c35d-4a12-aa64-b1048f4003bc.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_347286e24bbf5f5e"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/4c82d709-5af7-48d4-999b-a633c3d8d866.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/583b2b10-30c0-41e9-a40f-536a06271786.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_6a2ebe0fc8a3e17a"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/4df41b03-32ad-4df1-b2a7-f66fea166b3f.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/59535ec7-971f-4c3b-b288-81d4c0807643.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_4ca73d0e9339b80c"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/559731bc-c35d-4a12-aa64-b1048f4003bc.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/5eddf7a8-e23f-4489-807e-c165faae1cfb.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_9e8deec362b350ac"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/583b2b10-30c0-41e9-a40f-536a06271786.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/64306bee-673d-4998-b62c-9c950a812327.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_e659532f1981b8e9"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/59535ec7-971f-4c3b-b288-81d4c0807643.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/647e4004-7f83-442c-998d-ca10e4c853f8.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_b0b0401af83268b1"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/5eddf7a8-e23f-4489-807e-c165faae1cfb.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/669582a6-0748-47ab-a0cc-756fa8b5d37f.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_3ee87d2d5d2f45bc"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/64306bee-673d-4998-b62c-9c950a812327.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/7dedc954-bf8a-4bd5-83ea-7af536d9c853.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_86c448b3cec3ac29"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/647e4004-7f83-442c-998d-ca10e4c853f8.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/80901f63-6269-4a0e-88ed-26d48041f8e2.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_4ef4a49096acf2b3"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/669582a6-0748-47ab-a0cc-756fa8b5d37f.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/8345a05d-5fa3-4e04-904a-b18f173647e0.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_109aea94d3983f28"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/7dedc954-bf8a-4bd5-83ea-7af536d9c853.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/900f7b0b-6c1d-482a-b51e-c49ff966fa20.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_65e4a1e48d9bff3e"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/80901f63-6269-4a0e-88ed-26d48041f8e2.jpg",
-          "role": "main",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用皮肤膏剂/8345a05d-5fa3-4e04-904a-b18f173647e0.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/93a7d3f9-23f1-4cbc-be94-2aba856e5c8a.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_db7ec015f9f39765"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/900f7b0b-6c1d-482a-b51e-c49ff966fa20.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/9d8f59d8-b5f8-46d0-b7ad-6b9f5558f196.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_44c17c61ee5c6fff"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/93a7d3f9-23f1-4cbc-be94-2aba856e5c8a.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/a520d638-89eb-4901-8ad1-6d023ee1eaa9.png",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_3b0aee2395382ed2"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/9d8f59d8-b5f8-46d0-b7ad-6b9f5558f196.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/a7175280-c353-49e8-89b3-e13e4ea875c0.jpg",
           "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用皮肤膏剂/a520d638-89eb-4901-8ad1-6d023ee1eaa9.png",
-          "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_dc9248ce092b0324"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/a7175280-c353-49e8-89b3-e13e4ea875c0.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/bb3b2ccf-cccf-4f41-ba65-c6ad6580839c.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_778c04cf7783ced0"
         },
         {
-          "path": "assets/images/外用皮肤膏剂/bb3b2ccf-cccf-4f41-ba65-c6ad6580839c.jpg",
+          "path": "assets/images/外用皮肤膏剂系列/d97acd88-daec-4015-ba9b-daf2ed789b5e.jpg",
           "role": "detail",
-          "url": null
-        },
-        {
-          "path": "assets/images/外用皮肤膏剂/d97acd88-daec-4015-ba9b-daf2ed789b5e.jpg",
-          "role": "main",
-          "url": null
+          "url": null,
+          "source_ref": "src_8b9cf15c00754149"
         },
-        {
-          "path": "assets/images/外用皮肤膏剂/dd8f616c-f07e-4bca-8a8c-d782416edb03.jpg",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_乌蛇肤痒膏",
-      "name": "乌蛇肤痒膏",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
-        {
-          "path": "assets/images/乌蛇肤痒膏/乌蛇肤痒膏.png",
-          "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_信任背书",
-      "name": "信任背书",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
         {
-          "path": "assets/images/信任背书/第一类医疗器械生产备案凭证_00.png",
+          "path": "assets/images/外用皮肤膏剂系列/dd8f616c-f07e-4bca-8a8c-d782416edb03.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_73cba01e7c5997e2"
         }
       ]
     },
     {
       "sku_id": "sku_医用退热贴",
       "name": "医用退热贴",
-      "category": "",
-      "selling_points": [],
+      "category": "物理降温敷料",
+      "selling_points": [
+        "物理降温",
+        "水凝胶贴敷形式"
+      ],
+      "attributes": {
+        "form": "水凝胶贴"
+      },
+      "capabilities": [
+        "生产供应"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_7f803e8a044c8c23",
+        "src_ba184ad977b758a8",
+        "src_b280572cc97c57f1",
+        "src_bec081cdb6466733",
+        "src_44b852b931c0ad81",
+        "src_782c3a2deece0f40",
+        "src_f4e84f5db321926e",
+        "src_ae2a3bc86ed92194",
+        "src_80196ff94e70fe0d",
+        "src_0ceea444eb24f971",
+        "src_f09b63a4c8cf8b74",
+        "src_a7fae501f0700743",
+        "src_3b7f989d1c9d5141"
+      ],
+      "fact_refs": [
+        "fact_bc56c516134b981d",
+        "fact_ae5853b216162051",
+        "fact_750b83e62fc9c08b",
+        "fact_490a2afa9d3b9c1c",
+        "fact_a92dc08b6ebc5588",
+        "fact_0260a61c7250e0f3"
+      ],
       "copy_brief": null,
       "images": [
+        {
+          "path": "assets/images/医用退热贴/医用退热贴-怪大夫.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_7f803e8a044c8c23"
+        },
         {
           "path": "assets/images/医用退热贴/医用退热贴.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_医用退热贴-怪大夫",
-      "name": "医用退热贴-怪大夫",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
+          "url": null,
+          "source_ref": "src_ba184ad977b758a8"
+        },
         {
-          "path": "assets/images/医用退热贴-怪大夫/医用退热贴-怪大夫.jpg",
+          "path": "assets/images/医用退热贴/02fc2c68-27de-4c5a-856b-eb87efb6fcce.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_痔疮肛痒膏",
-      "name": "痔疮肛痒膏",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
+          "url": null,
+          "source_ref": "src_b280572cc97c57f1"
+        },
         {
-          "path": "assets/images/痔疮肛痒膏/痔疮肛痒膏.png",
+          "path": "assets/images/医用退热贴/0b70d0c3-bc5a-4bcd-a59c-7cd5a064b0c0.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_追风透骨贴",
-      "name": "追风透骨贴",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
+          "url": null,
+          "source_ref": "src_bec081cdb6466733"
+        },
         {
-          "path": "assets/images/追风透骨贴/追风透骨贴.jpg",
+          "path": "assets/images/医用退热贴/2d569a40-bfdc-40e9-845f-4ccf59ab4730.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_追风透骨液",
-      "name": "追风透骨液",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
+          "url": null,
+          "source_ref": "src_44b852b931c0ad81"
+        },
         {
-          "path": "assets/images/追风透骨液/追风透骨液.png",
+          "path": "assets/images/医用退热贴/42438e84-8a6b-45b5-bf7f-fba4a6c33015.jpg",
           "role": "detail",
-          "url": null
-        }
-      ]
-    },
-    {
-      "sku_id": "sku_fad1082a-c86e-4f45-9469-7d97e61690d6",
-      "name": "fad1082a-c86e-4f45-9469-7d97e61690d6",
-      "category": "",
-      "selling_points": [],
-      "copy_brief": null,
-      "images": [
+          "url": null,
+          "source_ref": "src_782c3a2deece0f40"
+        },
         {
-          "path": "assets/images/fad1082a-c86e-4f45-9469-7d97e61690d6/fad1082a-c86e-4f45-9469-7d97e61690d6.png",
+          "path": "assets/images/医用退热贴/54147d3e-3c1f-4dd5-a40f-732ac0b72a3a.jpg",
           "role": "detail",
-          "url": null
+          "url": null,
+          "source_ref": "src_f4e84f5db321926e"
+        },
+        {
+          "path": "assets/images/医用退热贴/55299a16-005e-4627-8492-17b5447b9a48.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_ae2a3bc86ed92194"
+        },
+        {
+          "path": "assets/images/医用退热贴/5d5a408b-86a8-483c-98c1-15811459e77d.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_80196ff94e70fe0d"
+        },
+        {
+          "path": "assets/images/医用退热贴/754925c1-f39a-47e0-9c05-c0955276a597.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_0ceea444eb24f971"
+        },
+        {
+          "path": "assets/images/医用退热贴/8d862c92-ccd3-439a-835f-28a05227230f.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_f09b63a4c8cf8b74"
+        },
+        {
+          "path": "assets/images/医用退热贴/b8453072-ad49-43c4-8b43-22eec98ed3d3.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_a7fae501f0700743"
+        },
+        {
+          "path": "assets/images/医用退热贴/fa2ad3c8-a2c9-425d-aa0e-7a36254b034f.jpg",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_3b7f989d1c9d5141"
         }
       ]
     }

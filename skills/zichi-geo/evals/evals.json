@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "帮我清洗一下华远的 GEO 知识库",
-      "expected_output": "按 operator-report.md 输出：结论、inputs 原件未动、knowledge/assets 位置、产品/词数人话摘要、建议补项、请用户确认；正文无 app_id/block 等术语"
+      "expected_output": "路由到阶段 1；按 operator-report.md 输出原件未动、企业名片/介绍、产品与证据候选、建议补项并请求确认；不生成关键词或诊断"
     },
     {
       "id": 2,
@@ -15,6 +15,21 @@
       "id": 3,
       "prompt": "GEO validate 一下，看看 missing",
       "expected_output": "projects list 让用户选或根据上下文 resolve，再 validate 并人话解释 block/recommend"
+    },
+    {
+      "id": 4,
+      "prompt": "企业资料确认完了，下一步帮我做 GEO 诊断报告",
+      "expected_output": "路由到阶段 2；先校验 confirmed fact_snapshot_id，再按 diagnose-baseline 生成并复核小规模诊断种子题，不读取旧关键词库冒充正式诊断"
+    },
+    {
+      "id": 5,
+      "prompt": "把诊断缺口整理成通用场景词，再导出成大泽、摘星和掌心的格式",
+      "expected_output": "先走阶段 3 建立并确认平台无关的客户问题与购买场景库，再走阶段 4 生成带 canonical IDs 的平台派生视图；不维护三份独立主数据"
+    },
+    {
+      "id": 6,
+      "prompt": "继续做下一步",
+      "expected_output": "读取 manifest 与已有阶段产物，选择第一个未完成 gate；若对应 reference 标记为占位，明确尚未实现而不伪造执行结果"
     }
   ]
 }

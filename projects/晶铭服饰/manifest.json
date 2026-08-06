@@ -3,9 +3,9 @@
   "project_name": "晶铭服饰",
   "gates": {
     "clean": {
-      "status": "pending",
+      "status": "review_required",
       "at": null,
-      "by": null
+      "fact_snapshot_id": null
     },
     "diagnose": {
       "status": "pending",
@@ -25,26 +25,20 @@
   },
   "missing": [
     {
-      "code": "chat_pdf_duplicate",
+      "code": "sensitive_inputs_reviewed",
       "severity": "optional",
-      "message": "已提供客服 txt + PDF；FAQ 主提炼自 txt。PDF 作备份即可。"
-    },
-    {
-      "code": "sku_bucket_coarse",
-      "severity": "optional",
-      "message": "产品图按文件夹归为「儿童芭蕾 tutu 裙」一大类；若需按单款拆 SKU，可在 inputs 按款名分文件夹后重跑 clean。"
+      "message": "当前隔离 10 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
     }
   ],
-  "quota": {
-    "articles_generated": 3,
-    "articles_published": 0,
-    "diagnose_questions": 0,
-    "targets": {
-      "articles_year": 1500,
-      "social_year": 750,
-      "diagnose_questions": 500
-    }
+  "clean_pipeline": {
+    "stage": "review",
+    "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
+    "facts_hash": "53c4b45896c61945ba6b7638b71e0ffca58583cff96a0b6c032ea5d9c6e57dda",
+    "changed_since_confirmation": true,
+    "previous_snapshot_id": null
   },
-  "updated_at": "2026-08-05T12:18:16Z",
-  "clean_ready": true
+  "clean_ready": false,
+  "review_ready": true,
+  "legacy_downstream_artifacts": [],
+  "updated_at": "2026-08-06T09:32:44Z"
 }

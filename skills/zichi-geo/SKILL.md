@@ -1,121 +1,93 @@
 ---
 name: zichi-geo
 description: >
-  紫驰 GEO 本地交付工作流：客户资料清洗为标准知识库 JSON、manifest 校验、后续诊断写文发布。
-  只要用户提到 GEO、知识库、清洗、clean、validate、geo-cli、manifest、missing、信息收集表、
-  关键词问题库、新客户 onboard、或口述任意客户/公司/项目名，都应使用本 skill。
-  多客户环境下先解析项目（registry + geo-cli projects resolve），勿假设单一客户。
+  紫驰 GEO 本地交付总路由：解析客户项目，并按企业事实清洗、基线诊断、客户问题与购买场景、三平台导出、内容规划、文章生成/审稿、发布、复测优化和 SaaS 同步分阶段执行。
+  用户提到 GEO、知识库、信息收集表、clean、validate、geo-cli、诊断报告、关键词/场景词、画像、转化目标、内容计划、写文章、发布、复测、上云或任意客户项目时使用。
 ---
 
 # zichi-geo
 
-通用工作流 Skill：**不含任何客户名单**。客户映射在 `projects/registry.json`；解析方法见 `references/project-resolution.md`。
+将本文件只作为**总路由**。每次确定当前阶段后，只加载该阶段 reference；不要一次读完所有文件，也不要跨过人工确认门。
 
-仓库根：`geo/`。客户数据：`projects/{目录名}/`。CLI：`packages/geo-cli`（`geo-cli`）。
+客户工作区为 `projects/{项目名}/`；客户名单只在 `projects/registry.json`，不得写入 Skill 或通用 CLI。
 
-## 第一步：锁定项目（每次任务必做）
+## 0. 每次先锁定项目
 
-| 用户给了什么 | 你怎么做 |
-|--------------|----------|
-| `projects/...` 路径 | 直接用该路径 |
-| 公司名 / 简称 / app_id | `geo-cli projects resolve "<query>"` |
-| 没说哪家 | `geo-cli projects list` → 请人话选一家 |
+1. 读取仓库根 `AGENTS.md`。
+2. 用户给出项目路径时直接使用。
+3. 用户给出公司名、简称或 `app_id` 时，按 `references/project-resolution.md` 运行 `geo-cli projects resolve`。
+4. 用户未说明项目时，运行 `geo-cli projects list` 并只问一句。
 
-resolve 歧义时**只问一句**让用户选 `dir`，不要猜。
+## 总流程
 
-读 `AGENTS.md`（安全与目录约定）。clean 分支再读 `references/clean-enterprise.md` 与 **`references/baseinfo-vs-profile.md`**（名片 vs 介绍，必遵）；**汇报前必读** `references/operator-report.md`。
+| 阶段 | 要解决的问题 | 必读 reference | 当前状态 | 完成标志 |
+|---|---|---|---|---|
+| 1 企业事实清洗 | 原始 Excel/Word/图片里有哪些可信企业事实 | `clean-enterprise.md` | 已实现 | confirmed `fact_snapshot_id` |
+| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已规划 | confirmed diagnosis run/report |
+| 3 需求场景库 | 谁为什么问、怎样问、企业凭什么回答 | `build-demand-scenarios.md` | 已规划 | confirmed scenario library version |
+| 4 三平台导出 | 同一场景如何映射为各平台术语 | `export-platform-views.md` | 已规划 | versioned local exports |
+| 5 内容规划 | 哪些场景变成 FAQ、选题、Prompt 和生产任务 | `plan-content.md` | 占位 | confirmed content plan version |
+| 6 文章生成 | 如何依据任务与事实生成草稿 | `generate-articles.md` | 占位 | article `draft` |
+| 7 人工审稿 | 草稿是否事实正确、合规、适合渠道 | `review-articles.md` | 占位 | article `approved` |
+| 8 发布 | 已批准稿件发到哪里并如何留回执 | `publish-articles.md` | 占位 | idempotent publish receipt |
+| 9 复测迭代 | 发布后可见度怎样变化、下一轮补什么 | `measure-and-iterate.md` | 占位 | new diagnosis gaps / iteration plan |
+| 10 SaaS 同步 | 哪些本地结果同步到只读门户 | `sync-saas.md` | Part B 占位 | sync receipt |
 
-## clean 分支（默认）
+阶段 4 是阶段 3 的派生导出，不反向修改通用场景。若当前项目不需要第三方平台导出，可跳过阶段 4，进入内容规划。
 
-对解析出的 `{PROJECT}`（相对路径如 `projects/xxx`）：
+## 路由规则
 
-```bash
-geo-cli inventory --project {PROJECT}
-geo-cli clean --project {PROJECT}
-geo-cli validate --project {PROJECT}
-geo-cli status --project {PROJECT}
-```
+- 用户说“清洗、建知识库、validate、onboard” → 阶段 1。
+- 用户说“诊断、生成诊断报告、看 AI 是否推荐” → 先确认阶段 1 已完成，再进入阶段 2。
+- 用户说“关键词、场景词、用户会怎么问、画像、转换/转化目标” → 先检查诊断 gate，再进入阶段 3；只有明确要求平台格式时再进入阶段 4。
+- 用户说“选题、FAQ、Prompt、写作计划、配额” → 阶段 5。
+- 用户说“写文章、今日发文” → 阶段 6；生成后进入阶段 7，不直接发布。
+- 用户说“审稿、批准” → 阶段 7。
+- 用户说“发布、投放” → 阶段 8；外部写入必须有明确授权。
+- 用户说“复测、周报、优化下一轮” → 阶段 9。
+- 用户说“同步上云、客户门户” → 阶段 10。
+- 用户只说“继续” → 读取 `manifest.json` 与现有阶段产物，选择第一个未完成 gate，不凭猜测跳步。
 
-### CLI 之后：Skill 精修画像（必做）
+若 reference 标记为“占位/尚未实现”，只能据此完善规格或实现该阶段；不得伪造 CLI、产物、探测、发布或同步结果。
 
-`geo-cli clean` 只做表解析与粗拆。读完产物后按 `baseinfo-vs-profile.md` 检查并改写：
+## 阶段 1 特别规则
 
-1. **baseinfo = 名片**（电话、地址、店铺、账号）；**profile = 介绍文案**（intro / products_services / advantages / trust / pain_points）
-2. profile 里若还有联系方式或链接 → **删掉**（以 baseinfo 为准）
-3. `advantages` / `trust` 为空、长文全堆在 intro 或 products_services → **按语义拆开**写入对应字段
-4. `company_short_name` 应是简称，不是一句广告；广告语进 intro/advantages
-5. 有客服记录时继续填 FAQ；重跑 clean 不应清空已有 `from_chat` FAQ（CLI 已保留）
+清洗时读取：
 
-然后才按运营模板汇报。
+1. `references/clean-enterprise.md`：完整五阶段方法，已包含“企业名片 vs 企业介绍”规则。
+2. `references/schema-knowledge.md`：事实、证据、业务视图和快照 Schema。
+3. `references/operator-report.md`：提交人工确认前的业务汇报模板。
 
-**读者可能完全不懂技术。** 按 `references/operator-report.md` 固定模板输出，要点：
+Skill 与 CLI 的边界：
 
-1. **一句话结论**：能否进入「AI 诊断 / 写文」
-2. **原件在哪**：`inputs/` 未改动，列表说明用户当初提供了什么
-3. **成果在哪**：`knowledge/`（公司档案）、`assets/images/`（图片）、`manifest.json`（进度单，说「看本汇报即可」）
-4. **整理出了什么**：公司名、联系人；**名片与公司介绍已分开**；产品数、图片数、搜索词/问题数、FAQ 条数（数字 + 举例）
-5. **还缺什么**：用「建议补 / 必须补 / 可选」，**不写** `chat_logs`、`block` 等英文 code
-6. **安全一句**：密码已剥离；身份证已跳过（如有）
-7. **请您确认**：无必补项时问是否确认「资料整理完成」
+- CLI 负责文件发现、确定性解析、哈希、稳定 ID、override 执行、Schema/引用/安全校验。
+- Skill 负责产品归并、长文语义拆分、主产品、属性/能力/卖点候选和证据支持范围。
+- 把项目专属判断写入 `knowledge/clean.overrides.json`；禁止把客户名、目录名或具体 SKU 写入 CLI。
+- 用户明确确认企业事实后才运行 `geo-cli confirm-clean --project {PROJECT}`。
 
-技术字段（`app_id`、JSON 文件名、CLI 输出）仅放附录或对方明确要时再写。
+## 全流程硬规则
 
-无必补项 → 问是否确认；用户确认后更新 `manifest.gates.clean` 为 `confirmed` 并填 `at`/`by`。
+- `inputs/` 只读；产物写入项目内 `knowledge/`、`assets/`、`diagnosis/`、`strategy/`、`articles/`、`publish/` 等阶段目录。
+- 密码、Token 只进环境变量或 `.secrets.env`；法人身份证不复制、不 OCR、不进 JSON/文章。
+- `public` 事实才可进入公开内容；restricted/internal 资料不用于平台导出、文章或发布。
+- 无客服/询盘记录是建议项，不阻断企业事实或场景确认。
+- clean 不创建或刷新关键词、FAQ、Prompt、generation plan、诊断题、文章或配额。
+- 每一阶段消费上一阶段的**已确认版本**，新变化创建新版本，不覆盖历史确认快照。
 
-未跑 validate 不声称完成。不改 `inputs/`。密码不进 knowledge JSON。
+## Reference 索引
 
-## CLI 调用
-
-```bash
-# 已 link
-geo-cli projects resolve "用户说的名字"
-
-# 仓库内（新环境）
-node packages/geo-cli/dist/cli.js projects list
-node packages/geo-cli/dist/cli.js clean --project projects/{dir}
-
-# 未 build
-cd packages/geo-cli && npm install && npm run build
-```
-
-## 意图路由
-
-| 意图 | 分支 | 参考 |
-|------|------|------|
-| 清洗 / 知识库 / onboard | clean | `project-resolution.md` + `clean-enterprise.md` + `baseinfo-vs-profile.md` |
-| 已有 JSON，要诊断 | diagnose | （后续） |
-| 写文章 / 今日发文 / 按计划写 | **write** | `write-rules.md` + `prompts-defaults.md` |
-| 发布 | publish | （后续） |
-| 上云同步 | sync | Part B |
-
-### write 分支（今日写文）
-
-1. 锁定项目；确认 `clean_ready`（无必补项即可写草稿；闸门未确认也可出 `draft`，但提醒运营尽快确认资料整理）
-2. 读 `references/write-rules.md`、`company.generation_plan.json`、`company.prompts.json`、名片与画像、FAQ
-3. 按日配额从 tasks 取未写满的词包；**优先 social**；每篇绑定 `task_id` + 关键词 + `use_knowledge: true`
-4. 落盘 `articles/{channel}/{article_id}.md` + `.meta.json`，`status: draft`
-5. 更新 `produced_count`、`manifest.quota.articles_generated`
-6. 向运营汇报：今日几篇、标题、路径、**待审阅**（勿声称已发布）
-
-模糊时只问：「先清洗知识库，还是已有 JSON 直接诊断/写文？」
-
-## 硬规则
-
-- `inputs/` 只读；产物 → `knowledge/`、`assets/`、`manifest.json`
-- 配图本地 `assets/`；CDN `url` 仅 publish 阶段
-- 无客服记录 → `recommend` `chat_logs`，不阻断
-- 识别 inputs 靠**文件名模式**（见 clean-enterprise），不靠客户名写死
-
-## 延伸阅读
-
-| 文件 | 何时读 |
-|------|--------|
-| `references/operator-report.md` | **clean 完成后对运营汇报（必读）** |
-| `references/baseinfo-vs-profile.md` | **名片 vs 介绍；CLI 后 Skill 精修（必读）** |
-| `references/project-resolution.md` | 多客户解析、新客户 onboard |
-| `references/clean-enterprise.md` | clean 细则 |
-| `references/schema-knowledge.md` | A–F 字段 |
-| `references/write-rules.md` | **写文 / 今日批次（必读）** |
-| `references/prompts-defaults.md` | E/F 默认模板 |
-| `projects/registry.json` | 客户 dir / app_id / aliases（数据，非 Skill 正文） |
-| `docs/紫驰-GEO工具详细解决方案.md` | 全链路 |
+| 文件 | 用途 |
+|---|---|
+| `project-resolution.md` | 项目解析与新客户 onboard |
+| `clean-enterprise.md` | 企业事实清洗与名片/介绍分桶 |
+| `schema-knowledge.md` | 清洗事实层 Schema |
+| `operator-report.md` | 清洗确认前运营汇报 |
+| `diagnose-baseline.md` | 基线种子题、probe、指标与诊断报告 |
+| `build-demand-scenarios.md` | 平台无关的客户问题与购买场景库 |
+| `export-platform-views.md` | 大泽、摘星、掌心/荟信派生视图 |
+| `plan-content.md` | FAQ、选题、Prompt 与生产计划 |
+| `generate-articles.md` | 文章草稿生成 |
+| `review-articles.md` | 人工审稿与批准 |
+| `publish-articles.md` | 发布适配与回执 |
+| `measure-and-iterate.md` | GEO 复测与下一轮优化 |
+| `sync-saas.md` | Part B SaaS 同步 |
