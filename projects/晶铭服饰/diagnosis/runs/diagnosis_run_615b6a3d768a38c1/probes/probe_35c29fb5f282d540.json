@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_35c29fb5f282d540",
+  "run_id": "diagnosis_run_615b6a3d768a38c1",
+  "seed_set_id": "seed_set_b7ef6f28a9934464",
+  "question_id": "question_3bba87308a3e3e0d",
+  "question_text": "晶铭服饰有哪些主要产品？",
+  "question_family": "brand_recognition",
+  "platform": "DeepSeek",
+  "provider": "not_configured_placeholder",
+  "adapter_kind": "manual",
+  "model": null,
+  "attempted_at": "2026-08-07T08:00:21Z",
+  "status": "unavailable",
+  "raw_snapshot_path": null,
+  "raw_content_hash": null,
+  "error": {
+    "code": "provider_api_not_configured",
+    "message": "DeepSeek API 未配置；本记录仅为计划占位，不代表平台回答或品牌未提及。",
+    "retryable": true
+  },
+  "analysis": null,
+  "latest_analysis_revision_id": null
+}

@@ -118,10 +118,21 @@ export interface ReviewNote {
   message: string;
 }
 
+export interface ProfileOverride {
+  source_path: string;
+  intro?: string;
+  products_services?: string;
+  advantages?: string;
+  trust?: string;
+  pain_points?: string[];
+  reason: string;
+}
+
 export interface CleanOverrides {
   app_id: string;
   assets: AssetOverride[];
   products: ProductOverride[];
+  profile?: ProfileOverride;
   fact_resolutions?: FactResolution[];
   review_notes?: ReviewNote[];
 }

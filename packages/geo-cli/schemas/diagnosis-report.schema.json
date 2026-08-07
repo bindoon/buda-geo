@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "geo-diagnosis-report", "type": "object",
+  "required": ["schema_version", "report_id", "app_id", "project_name", "fact_snapshot_id", "seed_set_id", "run_id", "generated_at", "status", "confirmed_at", "limitations_accepted", "metrics", "probes", "gaps", "limitations"],
+  "properties": { "schema_version": { "const": 1 }, "report_id": { "type": "string", "pattern": "^diagnosis_report_" }, "app_id": { "type": "string" }, "project_name": { "type": "string" }, "fact_snapshot_id": { "type": "string", "pattern": "^fact_snapshot_" }, "seed_set_id": { "type": "string", "pattern": "^seed_set_" }, "run_id": { "type": "string", "pattern": "^diagnosis_run_" }, "generated_at": { "type": "string", "format": "date-time" }, "status": { "enum": ["review_required", "confirmed"] }, "confirmed_at": { "type": ["string", "null"], "format": "date-time" }, "limitations_accepted": { "type": "boolean" }, "metrics": { "$ref": "geo-diagnosis-metric" }, "probes": { "type": "array", "items": { "$ref": "geo-diagnosis-probe-result" } }, "gaps": { "type": "array", "items": { "$ref": "geo-diagnosis-gap" } }, "limitations": { "type": "array", "items": { "type": "string" } } },
+  "additionalProperties": false
+}

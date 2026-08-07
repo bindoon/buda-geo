@@ -118,7 +118,15 @@ export function defaultManifest(
     project_name: path.basename(projectRoot),
     gates: {
       clean: { status: "review_required", at: null, fact_snapshot_id: null },
-      diagnose: { status: "pending", at: null, by: null },
+      diagnose: {
+        status: "pending",
+        at: null,
+        fact_snapshot_id: null,
+        seed_set_id: null,
+        run_id: null,
+        report_id: null,
+        limitations_accepted: false,
+      },
       write_social: { status: "pending", at: null, by: null },
       publish: { status: "pending", at: null, by: null },
     },

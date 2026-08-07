@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-probe-result",
+  "type": "object",
+  "required": ["schema_version", "probe_id", "run_id", "seed_set_id", "question_id", "question_text", "question_family", "platform", "provider", "adapter_kind", "model", "attempted_at", "status", "raw_snapshot_path", "raw_content_hash", "error", "analysis", "latest_analysis_revision_id"],
+  "properties": {
+    "schema_version": { "const": 1 }, "probe_id": { "type": "string", "pattern": "^probe_" }, "run_id": { "type": "string", "pattern": "^diagnosis_run_" },
+    "seed_set_id": { "type": "string", "pattern": "^seed_set_" }, "question_id": { "type": "string", "pattern": "^question_" }, "question_text": { "type": "string", "minLength": 2 },
+    "question_family": { "enum": ["brand_recognition", "product_consideration", "supplier_capability", "regional_procurement", "negative_risk"] },
+    "platform": { "type": "string", "minLength": 1 }, "provider": { "type": "string", "minLength": 1 }, "adapter_kind": { "enum": ["manual", "api", "browser_assisted"] },
+    "model": { "type": ["string", "null"] }, "attempted_at": { "type": "string", "format": "date-time" }, "status": { "enum": ["success", "failed", "timeout", "unavailable"] },
+    "raw_snapshot_path": { "type": ["string", "null"] }, "raw_content_hash": { "type": ["string", "null"] }, "error": { "type": ["object", "null"] },
+    "analysis": { "type": ["object", "null"] }, "latest_analysis_revision_id": { "type": ["string", "null"] }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "const": "success" } } }, "then": { "properties": { "raw_snapshot_path": { "type": "string" }, "raw_content_hash": { "type": "string" }, "analysis": { "type": "object" }, "error": { "type": "null" } } } },
+    { "if": { "properties": { "status": { "enum": ["failed", "timeout", "unavailable"] } } }, "then": { "properties": { "analysis": { "type": "null" }, "error": { "type": "object", "required": ["code", "message", "retryable"] } } } }
+  ],
+  "additionalProperties": false
+}

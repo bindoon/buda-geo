@@ -14,13 +14,44 @@ import {
 import { printValidate, validateProject } from "./lib/validate.js";
 import { readJson, writeJson } from "./lib/util.js";
 import { writeCleanReview } from "./lib/review.js";
+import {
+  approveAllNonRiskSeeds,
+  confirmSeedSet,
+  createSeedDraft,
+  reviseSeedSet,
+  reviewSeed,
+} from "./lib/diagnosis-seeds.js";
+import {
+  appendAnalysisRevision,
+  createDiagnosisRun,
+  ingestManualProbes,
+} from "./lib/diagnosis-probe.js";
+import {
+  confirmDiagnosisReport,
+  generateDiagnosisReport,
+} from "./lib/diagnosis-report.js";
+import { validateDiagnosis } from "./lib/diagnosis-validate.js";
+import { importLegacyDiagnosis } from "./lib/diagnosis-legacy.js";
+import type { ProbeAnalysis } from "./lib/diagnosis-model.js";
+import {
+  approveReadyScenarios,
+  confirmScenarioLibrary,
+  generateScenarioDraft,
+  importLegacyKeywords,
+  overrideScenarioPriority,
+  reviseScenarioLibrary,
+  reviewEvidenceGap,
+  reviewMergeSuggestion,
+  reviewScenario,
+} from "./lib/scenario-strategy.js";
+import { validateScenarioStrategy } from "./lib/scenario-validate.js";
 
 function resolveProject(p: string): string {
   return path.resolve(p);
 }
 
 const program = new Command();
-program.name("geo-cli").description("GEO project clean / validate tooling");
+program.name("geo-cli").description("GEO project clean / diagnosis / validate tooling");
 
 function addProjectOpt(cmd: Command): Command {
   return cmd.requiredOption(
@@ -69,6 +100,162 @@ addProjectOpt(program.command("review-clean").description("write a business-read
           ? "continue to baseline diagnosis"
           : "review clean-review.md and explicitly confirm enterprise facts",
     }, null, 2));
+  });
+
+const diagnose = program.command("diagnose").description("prepare and audit baseline GEO diagnosis");
+
+addProjectOpt(diagnose.command("seed-draft").description("generate a small diagnostic seed draft from confirmed facts"))
+  .option("--size <number>", "target question count", "25")
+  .action(async (opts: { project: string; size: string }) => {
+    console.log(JSON.stringify(await createSeedDraft(resolveProject(opts.project), Number(opts.size)), null, 2));
+  });
+
+addProjectOpt(diagnose.command("seed-review").description("approve, reject, or replace one draft question"))
+  .requiredOption("--question <id>", "question ID")
+  .requiredOption("--action <action>", "approve | reject | edit | replace")
+  .option("--text <text>", "replacement question text")
+  .action(async (opts: { project: string; question: string; action: "approve" | "reject" | "edit" | "replace"; text?: string }) => {
+    if (!["approve", "reject", "edit", "replace"].includes(opts.action)) throw new Error("action must be approve, reject, edit, or replace");
+    const result = await reviewSeed(resolveProject(opts.project), opts.question, opts.action, opts.text);
+    console.log(JSON.stringify({ seed_set_id: result.seed_set_id, question_id: opts.question, action: opts.action }, null, 2));
+  });
+
+addProjectOpt(diagnose.command("seed-approve-non-risk").description("approve all non-risk draft questions; negative-risk questions remain explicit"))
+  .action(async (opts: { project: string }) => {
+    const result = await approveAllNonRiskSeeds(resolveProject(opts.project));
+    console.log(JSON.stringify({ seed_set_id: result.seed_set_id, still_unreviewed: result.questions.filter((q) => q.review_status === "unreviewed").map((q) => q.question_id) }, null, 2));
+  });
+
+addProjectOpt(diagnose.command("seed-confirm").description("freeze a fully reviewed seed set version"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await confirmSeedSet(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(diagnose.command("seed-revise").description("create a new draft version from a confirmed seed set"))
+  .requiredOption("--seed-set <id>", "confirmed seed set ID")
+  .action(async (opts: { project: string; seedSet: string }) => console.log(JSON.stringify(await reviseSeedSet(resolveProject(opts.project), opts.seedSet), null, 2)));
+
+addProjectOpt(diagnose.command("run-create").description("create an immutable diagnosis run shell"))
+  .requiredOption("--seed-set <id>", "confirmed seed set ID")
+  .requiredOption("--platforms <list>", "comma-separated platform names")
+  .action(async (opts: { project: string; seedSet: string; platforms: string }) => {
+    console.log(JSON.stringify(await createDiagnosisRun(resolveProject(opts.project), opts.seedSet, opts.platforms.split(",")), null, 2));
+  });
+
+addProjectOpt(diagnose.command("probe-ingest").description("ingest controlled manual probe evidence from JSON"))
+  .requiredOption("--run <id>", "diagnosis run ID")
+  .requiredOption("--input <file>", "manual probe JSON file")
+  .action(async (opts: { project: string; run: string; input: string }) => {
+    console.log(JSON.stringify(await ingestManualProbes(resolveProject(opts.project), opts.run, opts.input), null, 2));
+  });
+
+addProjectOpt(diagnose.command("analysis-revise").description("append a corrected analysis without altering raw evidence"))
+  .requiredOption("--run <id>", "diagnosis run ID")
+  .requiredOption("--probe <id>", "probe ID")
+  .requiredOption("--input <file>", "complete ProbeAnalysis JSON")
+  .requiredOption("--reason <text>", "revision reason")
+  .action(async (opts: { project: string; run: string; probe: string; input: string; reason: string }) => {
+    const analysis = await readJson<ProbeAnalysis>(path.resolve(opts.input));
+    console.log(JSON.stringify(await appendAnalysisRevision(resolveProject(opts.project), opts.run, opts.probe, analysis, opts.reason), null, 2));
+  });
+
+addProjectOpt(diagnose.command("report").description("calculate transparent metrics and render JSON/Markdown/HTML"))
+  .requiredOption("--run <id>", "diagnosis run ID")
+  .action(async (opts: { project: string; run: string }) => console.log(JSON.stringify(await generateDiagnosisReport(resolveProject(opts.project), opts.run), null, 2)));
+
+addProjectOpt(diagnose.command("confirm").description("confirm a reviewed diagnosis report and expose gaps downstream"))
+  .requiredOption("--report <id>", "diagnosis report ID")
+  .option("--accept-limitations", "explicitly accept remaining probe failures", false)
+  .action(async (opts: { project: string; report: string; acceptLimitations: boolean }) => {
+    const result = await confirmDiagnosisReport(resolveProject(opts.project), opts.report, opts.acceptLimitations);
+    console.log(JSON.stringify({ report_id: result.report_id, status: result.status, confirmed_at: result.confirmed_at }, null, 2));
+  });
+
+addProjectOpt(diagnose.command("validate").description("validate diagnosis schemas, links, evidence, and gate"))
+  .action(async (opts: { project: string }) => {
+    const result = await validateDiagnosis(resolveProject(opts.project));
+    console.log(result.ok ? "DIAGNOSIS VALIDATE OK" : "DIAGNOSIS VALIDATE FAIL");
+    for (const error of result.errors) console.log(`  ${error}`);
+    console.log(`CHECKED: ${result.checked.length}`);
+    process.exit(result.ok ? 0 : 1);
+  });
+
+addProjectOpt(diagnose.command("import-legacy").description("import old questions and web spot checks as unconfirmed legacy candidates"))
+  .requiredOption("--questions <file>", "legacy questions JSON")
+  .requiredOption("--report <file>", "legacy report JSON")
+  .action(async (opts: { project: string; questions: string; report: string }) => {
+    console.log(JSON.stringify(await importLegacyDiagnosis(resolveProject(opts.project), opts.questions, opts.report), null, 2));
+  });
+
+const strategy = program.command("strategy").description("build and confirm customer-question buying scenarios");
+
+addProjectOpt(strategy.command("import-legacy").description("import legacy company.keywords JSON/XLSX as unconfirmed candidates"))
+  .requiredOption("--input <file>", "legacy company.keywords JSON or source XLSX")
+  .action(async (opts: { project: string; input: string }) => console.log(JSON.stringify(await importLegacyKeywords(resolveProject(opts.project), opts.input), null, 2)));
+
+addProjectOpt(strategy.command("generate").description("generate a reviewable scenario library from confirmed facts and diagnosis"))
+  .option("--input <file>", "optional operator questions JSON")
+  .action(async (opts: { project: string; input?: string }) => console.log(JSON.stringify(await generateScenarioDraft(resolveProject(opts.project), opts.input), null, 2)));
+
+addProjectOpt(strategy.command("review").description("approve, reject, defer, or edit one scenario"))
+  .requiredOption("--scenario <id>", "scenario ID")
+  .requiredOption("--action <action>", "approve | reject | defer | edit")
+  .option("--note <text>", "review note")
+  .option("--input <file>", "JSON patch required for edit")
+  .action(async (opts: { project: string; scenario: string; action: "approve" | "reject" | "defer" | "edit"; note?: string; input?: string }) => {
+    if (!["approve", "reject", "defer", "edit"].includes(opts.action)) throw new Error("action must be approve, reject, defer, or edit");
+    const library = await reviewScenario(resolveProject(opts.project), opts.scenario, opts.action, opts.note, opts.input);
+    console.log(JSON.stringify({ scenario_library_id: library.scenario_library_id, scenario_id: opts.scenario, action: opts.action }, null, 2));
+  });
+
+addProjectOpt(strategy.command("approve-ready").description("approve every scenario without an open high-priority evidence gap"))
+  .action(async (opts: { project: string }) => {
+    const library = await approveReadyScenarios(resolveProject(opts.project));
+    console.log(JSON.stringify({ approved: library.scenarios.filter((item) => item.review_status === "approved").map((item) => item.scenario_id), still_unreviewed: library.scenarios.filter((item) => item.review_status === "unreviewed").map((item) => item.scenario_id) }, null, 2));
+  });
+
+addProjectOpt(strategy.command("gap-review").description("accept, defer, or resolve one evidence gap"))
+  .requiredOption("--gap <id>", "evidence gap ID")
+  .requiredOption("--action <action>", "accept | defer | resolve")
+  .requiredOption("--reason <text>", "review reason")
+  .action(async (opts: { project: string; gap: string; action: "accept" | "defer" | "resolve"; reason: string }) => {
+    if (!["accept", "defer", "resolve"].includes(opts.action)) throw new Error("action must be accept, defer, or resolve");
+    await reviewEvidenceGap(resolveProject(opts.project), opts.gap, opts.action, opts.reason);
+    console.log(JSON.stringify({ evidence_gap_id: opts.gap, action: opts.action }, null, 2));
+  });
+
+addProjectOpt(strategy.command("priority-override").description("override scenario priority with actor and reason"))
+  .requiredOption("--scenario <id>", "scenario ID")
+  .requiredOption("--score <number>", "0-25 final score")
+  .requiredOption("--actor <name>", "operator applying the override")
+  .requiredOption("--reason <text>", "override reason")
+  .action(async (opts: { project: string; scenario: string; score: string; actor: string; reason: string }) => {
+    await overrideScenarioPriority(resolveProject(opts.project), opts.scenario, Number(opts.score), opts.actor, opts.reason);
+    console.log(JSON.stringify({ scenario_id: opts.scenario, score: Number(opts.score), actor: opts.actor }, null, 2));
+  });
+
+addProjectOpt(strategy.command("merge-review").description("approve or reject a semantic merge suggestion"))
+  .requiredOption("--suggestion <id>", "merge suggestion ID")
+  .requiredOption("--action <action>", "approve | reject")
+  .requiredOption("--reason <text>", "review reason")
+  .action(async (opts: { project: string; suggestion: string; action: "approve" | "reject"; reason: string }) => {
+    if (!["approve", "reject"].includes(opts.action)) throw new Error("action must be approve or reject");
+    await reviewMergeSuggestion(resolveProject(opts.project), opts.suggestion, opts.action, opts.reason);
+    console.log(JSON.stringify({ suggestion_id: opts.suggestion, action: opts.action }, null, 2));
+  });
+
+addProjectOpt(strategy.command("confirm").description("freeze the reviewed scenario library and open the downstream gate"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await confirmScenarioLibrary(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(strategy.command("revise").description("create a new draft version from a confirmed scenario library"))
+  .requiredOption("--library <id>", "confirmed scenario library ID")
+  .action(async (opts: { project: string; library: string }) => console.log(JSON.stringify(await reviseScenarioLibrary(resolveProject(opts.project), opts.library), null, 2)));
+
+addProjectOpt(strategy.command("validate").description("validate scenario schemas, evidence links and manifest gate"))
+  .action(async (opts: { project: string }) => {
+    const result = await validateScenarioStrategy(resolveProject(opts.project));
+    console.log(result.ok ? "STRATEGY VALIDATE OK" : "STRATEGY VALIDATE FAIL");
+    for (const error of result.errors) console.log(`  ${error}`);
+    console.log(`CHECKED: ${result.checked.length}`);
+    process.exit(result.ok ? 0 : 1);
   });
 
 addProjectOpt(program.command("parse-form").description("parse info form xlsx only"))

@@ -38,6 +38,20 @@
         "additionalProperties": false
       }
     },
+    "profile": {
+      "type": "object",
+      "required": ["source_path", "reason"],
+      "properties": {
+        "source_path": { "type": "string", "minLength": 1 },
+        "intro": { "type": "string" },
+        "products_services": { "type": "string" },
+        "advantages": { "type": "string" },
+        "trust": { "type": "string" },
+        "pain_points": { "type": "array", "items": { "type": "string" } },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
     "fact_resolutions": {
       "type": "array",
       "items": {

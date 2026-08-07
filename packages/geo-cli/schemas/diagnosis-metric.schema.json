@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-metric",
+  "type": "object",
+  "required": ["formula_version", "composite_score", "attempted_probes", "valid_probes", "failed_probes", "valid_coverage", "brand_mention_rate", "active_recommendation_rate", "top_n", "negative_risk_mention_rate", "citation_observation_rate", "competitor_distribution", "source_distribution", "by_platform"],
+  "properties": {
+    "formula_version": { "const": "transparent-rates-v1" },
+    "composite_score": { "type": "null" },
+    "attempted_probes": { "type": "integer", "minimum": 0 },
+    "valid_probes": { "type": "integer", "minimum": 0 },
+    "failed_probes": { "type": "integer", "minimum": 0 },
+    "valid_coverage": { "$ref": "#/$defs/rate" },
+    "brand_mention_rate": { "$ref": "#/$defs/rate" },
+    "active_recommendation_rate": { "$ref": "#/$defs/rate" },
+    "top_n": { "type": "object", "required": ["n", "metric"], "properties": { "n": { "type": "integer", "minimum": 1 }, "metric": { "$ref": "#/$defs/rate" } } },
+    "negative_risk_mention_rate": { "$ref": "#/$defs/rate" },
+    "citation_observation_rate": { "$ref": "#/$defs/rate" },
+    "competitor_distribution": { "type": "array", "items": { "$ref": "#/$defs/distribution" } },
+    "source_distribution": { "type": "array", "items": { "$ref": "#/$defs/distribution" } },
+    "by_platform": { "type": "object" }
+  },
+  "$defs": {
+    "rate": { "type": "object", "required": ["numerator", "denominator", "rate", "unavailable_reason"], "properties": { "numerator": { "type": "integer", "minimum": 0 }, "denominator": { "type": "integer", "minimum": 0 }, "rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }, "unavailable_reason": { "type": ["string", "null"] } }, "additionalProperties": false },
+    "distribution": { "type": "object", "required": ["name", "count", "denominator", "rate"], "properties": { "name": { "type": "string" }, "count": { "type": "integer", "minimum": 0 }, "denominator": { "type": "integer", "minimum": 0 }, "rate": { "type": ["number", "null"], "minimum": 0 } }, "additionalProperties": false }
+  },
+  "additionalProperties": false
+}

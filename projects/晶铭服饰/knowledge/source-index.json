@@ -1,6 +1,6 @@
 {
   "app_id": "jm_apparel_cx",
-  "generated_at": "2026-08-07T06:35:10Z",
+  "generated_at": "2026-08-07T07:13:47Z",
   "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
   "sources": [
     {
@@ -681,8 +681,8 @@
       "path": "knowledge/company.profile.json",
       "name": "company.profile.json",
       "kind": "legacy_projection",
-      "hash": "82d40495e136a3d02f23b9de86b3de691017722f85cb99e0dc2b79632b89fbe5",
-      "size": 10831,
+      "hash": "d6ced7912c284dfd10474b071eedb10220f58de93af918131669a4be9d79eea5",
+      "size": 2526,
       "parse_status": "indexed_only",
       "ignored": false,
       "ignored_reason": null

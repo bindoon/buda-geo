@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "geo-legacy-keyword-audit", "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "app_id", "generated_at", "source_path", "candidates", "counts"],
+  "properties": {
+    "schema_version": { "const": 1 }, "app_id": { "type": "string" }, "generated_at": { "type": "string", "format": "date-time" }, "source_path": { "type": "string" },
+    "candidates": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["candidate_id", "text", "normalized_text", "original_bucket", "source_path", "source_refs", "duplicate_of_candidate_id", "cross_bucket_with", "evidence_status"], "properties": {
+      "candidate_id": { "type": "string", "pattern": "^legacy_candidate_" }, "text": { "type": "string" }, "normalized_text": { "type": "string" }, "original_bucket": { "type": "string" },
+      "source_path": { "type": "string" }, "source_refs": { "type": "array" }, "duplicate_of_candidate_id": { "type": ["string", "null"] },
+      "cross_bucket_with": { "type": "array", "items": { "type": "string" } }, "evidence_status": { "const": "unreviewed" }
+    } } },
+    "counts": { "type": "object", "required": ["total", "unique", "exact_duplicates", "cross_bucket", "unsupported"], "properties": {
+      "total": { "type": "integer", "minimum": 0 }, "unique": { "type": "integer", "minimum": 0 }, "exact_duplicates": { "type": "integer", "minimum": 0 },
+      "cross_bucket": { "type": "integer", "minimum": 0 }, "unsupported": { "type": "integer", "minimum": 0 }
+    } }
+  }
+}

@@ -132,6 +132,7 @@ export async function buildFactLayer(args: {
   profile: ProfileView;
   skus: { app_id: string; items: SkuItem[] };
   factResolutions?: CleanOverrides["fact_resolutions"];
+  profileDerivation?: Derivation;
   previous: PreviousCleanViews;
 }): Promise<{
   baseinfo: BaseInfoView;
@@ -147,6 +148,7 @@ export async function buildFactLayer(args: {
     profile,
     skus,
     factResolutions = [],
+    profileDerivation = "extracted",
     previous,
   } = args;
   const subjects: SubjectRecord[] = [];
@@ -182,7 +184,7 @@ export async function buildFactLayer(args: {
 
   const profileFactRefs: Record<string, string[]> = {};
   for (const field of ["intro", "products_services", "advantages", "trust", "pain_points"] as const) {
-    const fact = addFact(facts, companySubject, field, profile[field], profileRefs, "extracted");
+    const fact = addFact(facts, companySubject, field, profile[field], profileRefs, profileDerivation);
     if (fact) profileFactRefs[field] = [fact.fact_id];
   }
 

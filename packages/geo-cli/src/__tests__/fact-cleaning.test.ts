@@ -98,6 +98,15 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
       capabilities: ["生产供应"],
       reason: "测试规则",
     }],
+    profile: {
+      source_path: "企业知识库.docx",
+      intro: `测试制造有限公司是一家用于自动化测试的制造企业。${"该企业资料经过项目级语义清理。".repeat(12)}`,
+      products_services: "主营测试产品，提供生产供应服务。",
+      advantages: "测试产品采用测试材料，来源明确。",
+      trust: "企业资料由测试原件支持。",
+      pain_points: ["客户需要来源明确且可追溯的产品资料。"],
+      reason: "测试项目级画像精修，不写死在 CLI。",
+    },
     fact_resolutions: [{
       subject: "company",
       field: "company_short_name",
@@ -178,6 +187,8 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   assert.equal(beforeConfirmation.ok, true, beforeConfirmation.errors.join("\n"));
   assert.equal(beforeConfirmation.structural.length, 0);
   const resolvedFacts = await readJson<FactLedger>(path.join(knowledge, "company.facts.json"));
+  const profileFacts = resolvedFacts.facts.filter((fact) => ["intro", "products_services", "advantages", "trust", "pain_points"].includes(fact.field));
+  assert(profileFacts.every((fact) => fact.derivation === "operator"));
   assert.equal(resolvedFacts.subjects.some((subject) => (subject.type as string) === "asset"), false);
   assert.equal(resolvedFacts.facts.some((fact) => fact.field === "path"), false);
   const sourceIndexAfterClean = await readJson<SourceIndex>(path.join(knowledge, "source-index.json"));
@@ -208,6 +219,10 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   assert.equal("confirmed_by" in snapshot, false);
   assert.equal(snapshot.schema_version, 2);
   assert.equal("evidence" in snapshot, false);
+  const confirmedLedger = (snapshot as { facts: FactLedger }).facts;
+  const shortNameFacts = confirmedLedger.facts.filter((fact) => fact.field === "company_short_name");
+  assert.equal(shortNameFacts.find((fact) => fact.value === "测试制造")?.review_status, "confirmed");
+  assert.equal(shortNameFacts.find((fact) => fact.value === "旧测试简称")?.review_status, "rejected");
   const manifestAfterConfirmation = await readJson<Record<string, any>>(path.join(projectRoot, "manifest.json"));
   assert.equal(manifestAfterConfirmation.gates.clean.status, "confirmed");
   assert.equal("by" in manifestAfterConfirmation.gates.clean, false);

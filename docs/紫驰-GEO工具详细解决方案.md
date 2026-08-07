@@ -9,7 +9,7 @@
 
 ## 0. 一句话目标
 
-把大泽式交付（信息收集表 → 知识库 → 诊断 → 写文 → 三大权威信源投放）收成**可复用的本地流水线**：运营在 Cursor 里对一家客户跑通 `clean → diagnose → write → publish`，结构化结果落盘；稳定后再同步 SaaS 给客户看。代码沉淀在 CLI，流程沉淀在 Skill，客户数据按项目隔离。
+把对标平台的共性方法（信息收集表 → 知识库 → 诊断 → 场景 → 写文 → 三大权威信源投放）收成**紫驰自己的可复用本地流水线**：运营在 Cursor 里对一家客户跑通 `clean → diagnose → strategy → plan/write → publish`，结构化结果落盘；稳定后再同步 SaaS 给客户看。代码沉淀在 CLI，流程沉淀在 Skill，客户数据按项目隔离。
 
 ---
 
@@ -140,9 +140,9 @@ geo/
 
 | 项目 | 收集表 | 知识库 docx | 词表 | 产品图结构化 | 建议角色 |
 |------|--------|-------------|------|--------------|----------|
-| 华远工具厂 | ✓ | ✓ 质量好 | ✓ 问题库完整 | 品类文件夹较全 | **标杆 #1（工具/工厂）** |
+| 华远工具厂 | ✓ | ✓ 质量好 | ✓ 问题库完整 | 品类文件夹较全 | 工具/工厂参考项目 |
 | 朗威晶电 | ✓ | ✓ | ✓ | 按 SKU/品类分桶清晰 | **标杆 #2（电子件）** |
-| 晶铭服饰 | ✓ | ✓ | ✓ | 单品图多 + 指令 docx | 服饰定制样例 |
+| 晶铭服饰 | ✓ | ✓ | ✓ | 单品图多 + 指令 docx | **标杆 #1（服饰定制）** |
 | 仁丹药业 | ✓ | ✓ | 弱 | 产品/公司/背书分桶好 | **敏感行业**（写文风控） |
 | 晨源针织 | ✓ | ✓ | ✓ | 证照与产品混目录 | 辅料/配件样例 |
 
@@ -185,7 +185,7 @@ geo/
 | A2 | Skill 入口与路由 | `skills/zichi-geo/SKILL.md` |
 | A3 | 清洗 / 诊断 / 写文 / 发布 references | `skills/zichi-geo/references/*.md` |
 | A4 | CLI：`validate` / `diagnose` / `publish` | `packages/geo-cli` |
-| A5 | 标杆项目跑通包 | 优先华远，次选朗威 |
+| A5 | 标杆项目跑通包 | 晶铭服饰 |
 | A6 | `manifest` 闸门与周报字段约定 | 各 `projects/*/manifest.json` |
 
 ### 4.2 单项目目录约定（从 inputs 抽出通用结构后）
@@ -206,9 +206,22 @@ projects/{项目名}/
     _company/                  # 厂房/团队/门头
     {sku_or_category}/         # 主图/详情/场景
   diagnosis/
-    report.json                # 分平台命中明细
-    report.md                  # 客户可读版
-    snapshots/                 # 回答摘要或截图路径（验收凭证）
+    seed-draft.json            # 当前待复核种子题草稿（只用于基线诊断）
+    seed-review.md             # 普通用户可读的逐题复核清单
+    seed-sets/{seed_set_id}.json # 已确认不可变种子题版本
+    runs/{run_id}/
+      run.json                 # 事实快照、种子版本、平台和运行状态
+      raw/{probe_id}.md        # 精确问题与原始回答快照（不可变）
+      probes/{probe_id}.json   # 状态、提及/推荐/排名/竞品/风险/引用
+      analysis-revisions/      # 解析修订；不改原始回答
+    reports/{report_id}.{json,md,html} # 机器可读 + 客户可读报告
+    gaps/{report_id}.json      # 仅确认报告后供场景阶段读取
+    legacy/                    # 旧问题和网页摸底；不计入正式指标
+  strategy/
+    legacy/keyword-audit.{json,md} # 旧关键词来源与重复审计；不是正式场景库
+    scenario-draft.json        # 待复核场景、问题 facets、证据缺口、优先级与合并建议
+    scenario-review.md         # 普通用户确认入口
+    scenario-libraries/{id}.json # 已确认不可变场景库版本
   articles/
     social/                    # ① 自媒体矩阵（百家号/搜狐/头条/抖音图文/知乎）
     media/                     # ② 付费官媒软文（权威新闻网）
@@ -244,7 +257,7 @@ projects/{项目名}/
 | 「复测 / 优化下一轮」 | `measure` | `measure-and-iterate.md` | 新诊断缺口/迭代计划 |
 | 「同步上云」 | `sync` | `sync-saas.md` | Part B 同步回执 |
 
-闸门：clean / diagnose / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。clean 的确认只记录时间与 `fact_snapshot_id`，当前不维护“确认人”字段。
+闸门：clean / diagnose / scenario / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。clean 的确认只记录时间与 `fact_snapshot_id`，当前不维护“确认人”字段。
 
 ### 4.4 `clean`：从杂乱 inputs 到统一 JSON
 
@@ -278,12 +291,34 @@ geo-cli clean         --project <path>       # 只生成企业事实层；不生
 geo-cli validate      --project <path>       # structure / reference / semantic / security
 geo-cli review-clean  --project <path>       # 生成普通用户可读的企业资料确认清单
 geo-cli confirm-clean --project <path>       # 无 block 时生成 confirmed fact snapshot
+geo-cli diagnose seed-draft --project <path> # 从已确认事实生成 20–30 条诊断小样本
+geo-cli diagnose seed-review ...             # approve / reject / replace
+geo-cli diagnose seed-confirm --project <path> # 冻结已复核 seed set
+geo-cli diagnose run-create ...              # 绑定事实快照、seed 版本和平台
+geo-cli diagnose probe-ingest ...            # 首期受控人工录入并冻结原始回答
+geo-cli diagnose report ...                  # 透明指标 + JSON/Markdown/HTML
+geo-cli diagnose confirm ...                 # 确认报告后才开放 diagnosis gaps
+geo-cli diagnose validate --project <path>   # 校验 Schema、引用、证据和 gate
+geo-cli strategy import-legacy ...           # 审计旧词表，只作为未确认候选
+geo-cli strategy generate --project <path>   # 生成场景草稿 + 普通用户复核清单
+geo-cli strategy review ...                  # 逐场景批准/编辑/拒绝/延期
+geo-cli strategy gap-review ...              # 接受/延期/解决证据缺口
+geo-cli strategy merge-review ...            # 人工决定语义近似项是否合并
+geo-cli strategy confirm --project <path>    # 冻结场景库版本，开放内容规划
+geo-cli strategy validate --project <path>   # 校验 Schema、事实引用和 gate
 geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 ```
 
 实现要点：
 
-- 诊断：首期可接第三方 GEO 诊断 API 或半自动；**出参固定为分平台命中 + snapshots 凭证路径**（对齐大泽「查询带截图」）。
+- 诊断：首期已实现受控人工录入；后续 API / 浏览器辅助适配器复用同一 Probe 契约。每次成功探测保留精确问题、平台/模型/时间、原始回答路径与哈希；失败/超时/不可用不算品牌未提及。
+- 指标：分开报告有效覆盖、品牌提及、主动推荐、Top-N、负面风险、竞品和引用来源，全部显示分子/分母；首期不设置不透明综合分。
+- 报告：机器可读 JSON 与客户可读 Markdown/HTML 同源。种子题是诊断输入，不是正式关键词库；报告确认前，缺口不能进入场景阶段。
+- 无 API 过渡：可以把题目×平台组合记录为 `unavailable` 并生成限制版报告；只有用户明确接受限制后才能确认闸门。此类报告只证明“当前无法探测”，不能解读为品牌提及率为 0；接入 API 或获得人工回答后必须新建真实运行。
+- 场景：用“目标客户 + 客户需求 + 代表问题 + 已确认依据/缺口 + 可选下一步行动”描述购买情境。一个场景可关联多个问题、FAQ 和未来选题，**不是要求一篇文章包含全部字段**。
+- 旧关键词：brand/search/qa/intent 等客户原分组只保留在 `strategy/legacy` 做来源审计；精确重复可自动合并，语义近似仅生成待审建议，不把竞品术语变成紫驰 Schema 或三平台导出。
+- 优先级：业务价值、有效诊断缺口、证据就绪度、客户原话与运营判断分项记录。`unavailable` 探测不能贡献品牌未提及/推荐缺口分；人工覆盖必须记录操作者与原因。
+- 场景闸门：未确认场景库不得进入 FAQ、选题或写作计划；high evidence gap 必须解决、延期或明确接受，禁止补造企业能力。
 - 发布：封装聚合发文 API；无 API 平台半自动仍写同一 `receipts`（幂等键：`article_id + platform`）；若目标渠道强制 CDN，再在 publish 前上传 OSS 并回写 `url`。
 - 密钥：仅环境变量 / `.secrets.env`（gitignore）；不进知识库。
 - 诊断、场景/关键词、FAQ、prompt 与写作任务必须消费已确认的 `fact_snapshot_id`；它们由各自阶段生成，不能塞回 clean。
@@ -313,8 +348,8 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 
 | 序 | 任务 | 完成定义 | 估时（量级） |
 |----|------|----------|--------------|
-| 1 | Schema + 华远手写/半自动样例 JSON + `validate` | 样例过校验 | 2–3 天 |
-| 2 | `SKILL.md` 路由 + `clean-enterprise.md` | 华远 inputs → knowledge 可确认 | 3–5 天 |
+| 1 | Schema + 晶铭服饰样例 JSON + `validate` | 样例过校验 | 2–3 天 |
+| 2 | `SKILL.md` 路由 + `clean-enterprise.md` | 晶铭 inputs → knowledge 可确认 | 3–5 天 |
 | 3 | `diagnose-baseline.md` + diagnose CLI | 小批量种子题、逐题证据与基线报告 | 2–4 天 |
 | 4 | `build-demand-scenarios.md` + 竞品案例覆盖测试 | 紫驰场景库确认，且不依赖竞品格式 | 3–5 天 |
 | 5 | 内容规划 + 生成 + 审稿 references | social/media/b2b 各出合规样稿 | 3–5 天 |
@@ -394,7 +429,7 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 ### Part A
 
 - [ ] 新客户按「四件套」放入 `inputs/` 后，`clean` 产出过 `validate` 的知识库，或仅剩已提示的 `recommend`/`optional` 缺失  
-- [ ] 华远（或约定标杆）diagnose：`report.md` + 分平台明细 + 至少一类 `snapshots` 凭证  
+- [ ] 晶铭服饰真实 diagnose：客户可读报告 + 分平台明细 + 逐题原始回答凭证（当前仅完成豆包/DeepSeek 无 API 限制版闭环，不作为真实可见度验收）
 - [ ] 写作均绑定词包且 `use_knowledge`；稿件带 `status`/`channel`；自媒体经 `approved` 后可发  
 - [ ] 三大信源均有可验收样例（social 真发 ≥1 平台；media/b2b 至少统一回执或半自动闭环）  
 - [ ] `manifest.quota` 可追踪年 1500 篇在三类 channel 的进度  
@@ -429,11 +464,11 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 **Part A 启动包：**
 
 1. 冻结目录：`packages/geo-cli`、`skills/zichi-geo`、`projects/*/knowledge|assets|...`  
-2. 写 `schema-knowledge.md`，用**华远**打出第一份合规 JSON  
+2. 写 `schema-knowledge.md`，用**晶铭服饰**打出第一份合规 JSON
 3. 实现 `geo-cli validate`  
-4. 写 `SKILL.md` 路由 + `clean-enterprise.md`，对华远跑通清洗闸门  
+4. 写 `SKILL.md` 路由 + `clean-enterprise.md`，对晶铭服饰跑通清洗闸门
 5. 并行：向紫驰确认诊断 API / 发布 API 供应商（或半自动过渡方案）  
-6. 华远串跑后再用朗威验证「通用清洗」是否成立  
+6. 晶铭服饰串跑后再选择不同类型项目验证「通用清洗」是否成立
 
 **Part B：** Part A 验收签字后再开，避免 Schema 漂移。
 

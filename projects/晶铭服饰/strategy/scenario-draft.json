@@ -1,0 +1,2239 @@
+{
+  "schema_version": 1,
+  "scenario_library_id": "scenario_library_draft_a3ac2b1ec9df0234",
+  "app_id": "jm_apparel_cx",
+  "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+  "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
+  "diagnosis_gap_path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+  "lifecycle": "review_required",
+  "version": 1,
+  "based_on_scenario_library_id": null,
+  "created_at": "2026-08-07T09:08:55Z",
+  "confirmed_at": null,
+  "scenarios": [
+    {
+      "scenario_id": "scenario_c75e19046e1d71da",
+      "name": "儿童舞蹈服饰选购与适用场景",
+      "target_customer": "舞蹈培训机构",
+      "customer_need": "根据实际使用和采购场景选择合适的儿童芭蕾tutu裙",
+      "concerns": [
+        "多层高密度网纱并配置定型硬衬",
+        "网纱边缘锁边，内衬采用全棉透气里衬",
+        "覆盖100至160尺码",
+        "100-160",
+        "锦纶冰丝、多层网纱与全棉里衬",
+        "3-14岁"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_c31f4414cafd9c27",
+          "text": "儿童芭蕾tutu裙怎么选？",
+          "normalized_text": "儿童芭蕾tutu裙怎么选",
+          "facets": {
+            "wording_form": "how_to",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": [
+              "多层高密度网纱并配置定型硬衬",
+              "网纱边缘锁边，内衬采用全棉透气里衬",
+              "覆盖100至160尺码",
+              "100-160"
+            ]
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_9ca1ceb88252b2d4"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+              "kind": "fact",
+              "ref_id": "fact_9ca1ceb88252b2d4",
+              "path": null,
+              "original_bucket": null,
+              "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_38f6385f44ae3f6f",
+          "text": "儿童芭蕾tutu裙适合哪些使用和采购场景？",
+          "normalized_text": "儿童芭蕾tutu裙适合哪些使用和采购场景",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": [
+              "多层高密度网纱并配置定型硬衬",
+              "网纱边缘锁边，内衬采用全棉透气里衬",
+              "覆盖100至160尺码",
+              "100-160"
+            ]
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_9ca1ceb88252b2d4"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+              "kind": "fact",
+              "ref_id": "fact_9ca1ceb88252b2d4",
+              "path": null,
+              "original_bucket": null,
+              "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_fde66cd155a9ad67",
+          "text": "采购儿童芭蕾tutu裙要重点比较哪些材质、规格和做工？",
+          "normalized_text": "采购儿童芭蕾tutu裙要重点比较哪些材质规格和做工",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "purchase",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": [
+              "多层高密度网纱并配置定型硬衬",
+              "网纱边缘锁边，内衬采用全棉透气里衬",
+              "覆盖100至160尺码",
+              "100-160",
+              "锦纶冰丝、多层网纱与全棉里衬",
+              "3-14岁"
+            ]
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_11917e4281b81e29",
+          "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+          "normalized_text": "儿童芭蕾tutu裙哪家工厂靠谱",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_9a1885c87f72b5f6",
+              "kind": "legacy_keyword",
+              "ref_id": "legacy_candidate_27f11bcd712fccce",
+              "path": "inputs/晶铭服饰关键词.xlsx",
+              "original_bucket": "intent.questions",
+              "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+              "derivation": "legacy"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_6cf909fa1fea91fa",
+          "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+          "normalized_text": "儿童芭蕾tutu裙工厂哪家靠谱",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_fc37431b09d829c7",
+              "kind": "legacy_keyword",
+              "ref_id": "legacy_candidate_358e192095a91f87",
+              "path": "inputs/晶铭服饰关键词.xlsx",
+              "original_bucket": "intent.questions",
+              "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+              "derivation": "legacy"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_9a1885c87f72b5f6",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_27f11bcd712fccce",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+          "derivation": "legacy"
+        },
+        {
+          "source_ref_id": "scenario_source_fc37431b09d829c7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_358e192095a91f87",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "priority": {
+        "components": {
+          "business_value": 5,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 5,
+          "customer_language": 4,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "主产品选购属于核心业务问题",
+          "诊断无有效回答，不增加诊断分",
+          "已有产品结构与适用场景事实",
+          "关联了客户提供的旧问题/词表候选；仍需人工复核"
+        ],
+        "override": null
+      },
+      "review_status": "unreviewed",
+      "review_note": null
+    },
+    {
+      "scenario_id": "scenario_de8856b9df34b90b",
+      "name": "儿童芭蕾tutu裙小批量试单",
+      "target_customer": "B端采购客户",
+      "customer_need": "先以混批或小批量方式验证儿童芭蕾tutu裙的产品与供应配合",
+      "concerns": [
+        "起订与混批条件",
+        "供货稳定性",
+        "发货与售后"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_9ebe454726e4dbe4",
+          "text": "哪些儿童芭蕾tutu裙厂家支持一件起混批与小批量试单？",
+          "normalized_text": "哪些儿童芭蕾tutu裙厂家支持一件起混批与小批量试单",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": [
+              "小批量试单",
+              "混批"
+            ]
+          },
+          "fact_ids": [
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_4cc76e8376bbb44a",
+          "text": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商？",
+          "normalized_text": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商",
+          "facets": {
+            "wording_form": "how_to",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": [
+              "小批量试单",
+              "供货与售后"
+            ]
+          },
+          "fact_ids": [
+            "fact_c8d5cc0c8dda17b0",
+            "fact_88c684883b54ef30",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_16500517b491d4dc",
+            "fact_9ca1ceb88252b2d4"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_555ffe6afa924d5d",
+              "kind": "fact",
+              "ref_id": "fact_88c684883b54ef30",
+              "path": null,
+              "original_bucket": null,
+              "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cdccfa42adc12492",
+              "kind": "fact",
+              "ref_id": "fact_16500517b491d4dc",
+              "path": null,
+              "original_bucket": null,
+              "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+              "kind": "fact",
+              "ref_id": "fact_9ca1ceb88252b2d4",
+              "path": null,
+              "original_bucket": null,
+              "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "priority": {
+        "components": {
+          "business_value": 5,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 5,
+          "customer_language": 3,
+          "operator_judgment": 0
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "medium",
+        "rationale": [
+          "小批量试单直接影响采购转化",
+          "已确认企业支持混批与小批量试单"
+        ],
+        "override": null
+      },
+      "review_status": "unreviewed",
+      "review_note": null
+    },
+    {
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "name": "儿童芭蕾tutu裙机构定制",
+      "target_customer": "舞蹈培训机构",
+      "customer_need": "按机构活动、课程或演出需要定制儿童芭蕾tutu裙",
+      "concerns": [
+        "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_c60f44e2c82cb77a",
+          "text": "哪些儿童芭蕾tutu裙厂家支持机构 LOGO、配色、规格和尺码定制？",
+          "normalized_text": "哪些儿童芭蕾tutu裙厂家支持机构logo配色规格和尺码定制",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ]
+          },
+          "fact_ids": [
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_54c4554700fadbca",
+          "text": "定制儿童芭蕾tutu裙要向厂家确认哪些条件？",
+          "normalized_text": "定制儿童芭蕾tutu裙要向厂家确认哪些条件",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "purchase",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": [
+              "款式",
+              "配色",
+              "尺码",
+              "交付",
+              "售后"
+            ]
+          },
+          "fact_ids": [
+            "fact_c8d5cc0c8dda17b0",
+            "fact_88c684883b54ef30",
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_16500517b491d4dc",
+            "fact_9ca1ceb88252b2d4"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_555ffe6afa924d5d",
+              "kind": "fact",
+              "ref_id": "fact_88c684883b54ef30",
+              "path": null,
+              "original_bucket": null,
+              "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cdccfa42adc12492",
+              "kind": "fact",
+              "ref_id": "fact_16500517b491d4dc",
+              "path": null,
+              "original_bucket": null,
+              "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+              "kind": "fact",
+              "ref_id": "fact_9ca1ceb88252b2d4",
+              "path": null,
+              "original_bucket": null,
+              "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_77ad2c84509c8a98",
+          "text": "定制儿童舞蹈服",
+          "normalized_text": "定制儿童舞蹈服",
+          "facets": {
+            "wording_form": "direct_question",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_b514a1ccf35d3d9a",
+              "kind": "legacy_keyword",
+              "ref_id": "legacy_candidate_8a9d8cd785fa32b8",
+              "path": "inputs/晶铭服饰关键词.xlsx",
+              "original_bucket": "search.terms",
+              "text": "定制儿童舞蹈服",
+              "derivation": "legacy"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_f22d03473ebafab1",
+          "text": "儿童芭蕾tutu裙支持定制厂家",
+          "normalized_text": "儿童芭蕾tutu裙支持定制厂家",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d287862dd447de2b",
+              "kind": "legacy_keyword",
+              "ref_id": "legacy_candidate_07ee3cbc51e05712",
+              "path": "inputs/晶铭服饰关键词.xlsx",
+              "original_bucket": "intent.questions",
+              "text": "儿童芭蕾tutu裙支持定制厂家",
+              "derivation": "legacy"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_4fa66c8491b33150",
+          "text": "可以单件定制吗？",
+          "normalized_text": "可以单件定制吗",
+          "facets": {
+            "wording_form": "direct_question",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "evidence_gap_ids": [
+            "evidence_gap_0ce5ff66feb30ffe"
+          ],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_dca0d7184340989b",
+              "kind": "fact",
+              "ref_id": "fact_5d421c9f6e2a7fd5",
+              "path": null,
+              "original_bucket": null,
+              "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_ae1794588be8b999",
+              "kind": "customer_language",
+              "ref_id": "customer_language_4b3edf4a4e354d0b",
+              "path": "inputs/晶铭服饰客服报告.txt",
+              "original_bucket": null,
+              "text": "可以单件定制吗？",
+              "derivation": "extracted"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "evidence_gaps": [
+        {
+          "evidence_gap_id": "evidence_gap_0ce5ff66feb30ffe",
+          "kind": "business_evidence",
+          "severity": "high",
+          "description": "已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制",
+          "scenario_id": "scenario_8594e0a5c5c73f12",
+          "question_ids": [
+            "scenario_question_4fa66c8491b33150"
+          ],
+          "fact_ids": [
+            "fact_5d421c9f6e2a7fd5",
+            "fact_d8fb8318a6fabd89",
+            "fact_c8d5cc0c8dda17b0"
+          ],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_ae1794588be8b999",
+              "kind": "customer_language",
+              "ref_id": "customer_language_4b3edf4a4e354d0b",
+              "path": "inputs/晶铭服饰客服报告.txt",
+              "original_bucket": null,
+              "text": "可以单件定制吗？",
+              "derivation": "extracted"
+            }
+          ],
+          "status": "open",
+          "review_reason": null
+        }
+      ],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_b514a1ccf35d3d9a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8a9d8cd785fa32b8",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "定制儿童舞蹈服",
+          "derivation": "legacy"
+        },
+        {
+          "source_ref_id": "scenario_source_d287862dd447de2b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_07ee3cbc51e05712",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        },
+        {
+          "source_ref_id": "scenario_source_ae1794588be8b999",
+          "kind": "customer_language",
+          "ref_id": "customer_language_4b3edf4a4e354d0b",
+          "path": "inputs/晶铭服饰客服报告.txt",
+          "original_bucket": null,
+          "text": "可以单件定制吗？",
+          "derivation": "extracted"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "priority": {
+        "components": {
+          "business_value": 5,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 5,
+          "customer_language": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "定制是已确认的差异化供应能力",
+          "机构采购具有明确转化意图",
+          "关联了客户提供的旧问题/词表候选；仍需人工复核",
+          "包含脱敏后的客服/询盘原话"
+        ],
+        "override": null
+      },
+      "review_status": "unreviewed",
+      "review_note": null
+    },
+    {
+      "scenario_id": "scenario_b890f16beb7be9be",
+      "name": "山东菏泽曹县 儿童芭蕾tutu裙供应商筛选",
+      "target_customer": "区域采购与渠道客户",
+      "customer_need": "在山东菏泽曹县筛选具备事实依据的儿童芭蕾tutu裙供应商",
+      "concerns": [
+        "是否为生产供应主体",
+        "产品与定制能力",
+        "公开经营触点"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_e3f20d473f7fdbb0",
+          "text": "山东菏泽曹县儿童芭蕾tutu裙供应商有哪些？",
+          "normalized_text": "山东菏泽曹县儿童芭蕾tutu裙供应商有哪些",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [
+              "山东菏泽曹县"
+            ],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517",
+            "fact_f74062502b5e9cc5"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+              "kind": "fact",
+              "ref_id": "fact_f74062502b5e9cc5",
+              "path": null,
+              "original_bucket": null,
+              "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_5fd2e474efc76a2a",
+          "text": "山东菏泽曹县采购儿童芭蕾tutu裙怎么筛选源头厂家？",
+          "normalized_text": "山东菏泽曹县采购儿童芭蕾tutu裙怎么筛选源头厂家",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [
+              "山东菏泽曹县"
+            ],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [
+              "生产供应",
+              "支持一件起混批与小批量试单",
+              "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+            ],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517",
+            "fact_f74062502b5e9cc5",
+            "fact_d8fb8318a6fabd89",
+            "fact_16500517b491d4dc"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+              "kind": "fact",
+              "ref_id": "fact_f74062502b5e9cc5",
+              "path": null,
+              "original_bucket": null,
+              "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_9627806650cc7395",
+              "kind": "fact",
+              "ref_id": "fact_d8fb8318a6fabd89",
+              "path": null,
+              "original_bucket": null,
+              "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_cdccfa42adc12492",
+              "kind": "fact",
+              "ref_id": "fact_16500517b491d4dc",
+              "path": null,
+              "original_bucket": null,
+              "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_08520825844492af",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+          "kind": "fact",
+          "ref_id": "fact_f74062502b5e9cc5",
+          "path": null,
+          "original_bucket": null,
+          "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_7b0cb1eaa57e94ef",
+          "kind": "fact",
+          "ref_id": "fact_08520825844492af",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://jm15965827526.1688.com/",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 2,
+          "operator_judgment": 0
+        },
+        "calculated_total": 10,
+        "final_score": 10,
+        "tier": "low",
+        "rationale": [
+          "地区采购问法有地址事实支持",
+          "区域限定与全国推荐场景保持独立"
+        ],
+        "override": null
+      },
+      "review_status": "unreviewed",
+      "review_note": null
+    },
+    {
+      "scenario_id": "scenario_f9315d418f5d9120",
+      "name": "晶铭服饰企业与供应能力核验",
+      "target_customer": "首次接触品牌的采购客户",
+      "customer_need": "核验晶铭服饰的企业身份、主营产品、供应能力和公开经营触点",
+      "concerns": [
+        "企业与品牌是否对应",
+        "主营产品",
+        "供应与定制能力",
+        "可核验来源"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_e1385249d95104d4",
+          "text": "晶铭服饰是做什么的？",
+          "normalized_text": "晶铭服饰是做什么的",
+          "facets": {
+            "wording_form": "direct_question",
+            "regions": [],
+            "decision_stage": "awareness",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_5f89ef81b622ade7",
+            "fact_88c684883b54ef30",
+            "fact_44f9ff6c4fad64a9",
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_7133d8797edadc4b",
+              "kind": "fact",
+              "ref_id": "fact_5f89ef81b622ade7",
+              "path": null,
+              "original_bucket": null,
+              "text": "曹县晶铭服饰有限公司",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_555ffe6afa924d5d",
+              "kind": "fact",
+              "ref_id": "fact_88c684883b54ef30",
+              "path": null,
+              "original_bucket": null,
+              "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_379a48829254ee02",
+              "kind": "fact",
+              "ref_id": "fact_44f9ff6c4fad64a9",
+              "path": null,
+              "original_bucket": null,
+              "text": "晶铭服饰",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        },
+        {
+          "question_id": "scenario_question_c606f42c0642ad18",
+          "text": "晶铭服饰靠谱吗？有哪些可核验依据？",
+          "normalized_text": "晶铭服饰靠谱吗有哪些可核验依据",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "supplier_selection",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_78f8dc1314a78919"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_5f89ef81b622ade7",
+            "fact_08520825844492af",
+            "fact_16500517b491d4dc",
+            "fact_8671c5bfb63fb61d",
+            "fact_71ca91fe0f9a05d7",
+            "fact_609e6e5cbb03db6f",
+            "fact_1277a7ca911a72df",
+            "fact_c8d5cc0c8dda17b0",
+            "fact_90fe608ee01e9517"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_7133d8797edadc4b",
+              "kind": "fact",
+              "ref_id": "fact_5f89ef81b622ade7",
+              "path": null,
+              "original_bucket": null,
+              "text": "曹县晶铭服饰有限公司",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_7b0cb1eaa57e94ef",
+              "kind": "fact",
+              "ref_id": "fact_08520825844492af",
+              "path": null,
+              "original_bucket": null,
+              "text": "https://jm15965827526.1688.com/",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_cdccfa42adc12492",
+              "kind": "fact",
+              "ref_id": "fact_16500517b491d4dc",
+              "path": null,
+              "original_bucket": null,
+              "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+              "kind": "fact",
+              "ref_id": "fact_8671c5bfb63fb61d",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童芭蕾tutu裙",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_545f57ec945b4683",
+              "kind": "fact",
+              "ref_id": "fact_71ca91fe0f9a05d7",
+              "path": null,
+              "original_bucket": null,
+              "text": "儿童舞蹈服饰",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+              "kind": "fact",
+              "ref_id": "fact_609e6e5cbb03db6f",
+              "path": null,
+              "original_bucket": null,
+              "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_d50d2555ce290242",
+              "kind": "fact",
+              "ref_id": "fact_1277a7ca911a72df",
+              "path": null,
+              "original_bucket": null,
+              "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+              "kind": "fact",
+              "ref_id": "fact_c8d5cc0c8dda17b0",
+              "path": null,
+              "original_bucket": null,
+              "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+              "kind": "fact",
+              "ref_id": "fact_90fe608ee01e9517",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+              "kind": "diagnosis_gap",
+              "ref_id": "gap_8f72055d55c9aa8c",
+              "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+              "original_bucket": null,
+              "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+              "derivation": "derived"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_f74062502b5e9cc5",
+        "fact_08520825844492af",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4",
+        "fact_389c30b0c87f0141",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_7133d8797edadc4b",
+          "kind": "fact",
+          "ref_id": "fact_5f89ef81b622ade7",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+          "kind": "fact",
+          "ref_id": "fact_f74062502b5e9cc5",
+          "path": null,
+          "original_bucket": null,
+          "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_7b0cb1eaa57e94ef",
+          "kind": "fact",
+          "ref_id": "fact_08520825844492af",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://jm15965827526.1688.com/",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_555ffe6afa924d5d",
+          "kind": "fact",
+          "ref_id": "fact_88c684883b54ef30",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_4b81f76117ea3645",
+          "kind": "fact",
+          "ref_id": "fact_389c30b0c87f0141",
+          "path": null,
+          "original_bucket": null,
+          "text": "晶铭服饰",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_379a48829254ee02",
+          "kind": "fact",
+          "ref_id": "fact_44f9ff6c4fad64a9",
+          "path": null,
+          "original_bucket": null,
+          "text": "晶铭服饰",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 5,
+          "customer_language": 2,
+          "operator_judgment": 0
+        },
+        "calculated_total": 11,
+        "final_score": 11,
+        "tier": "low",
+        "rationale": [
+          "品牌核验影响供应商信任",
+          "当前诊断仅有探测覆盖缺口，不能推断品牌表现"
+        ],
+        "override": null
+      },
+      "review_status": "unreviewed",
+      "review_note": null
+    }
+  ],
+  "merge_suggestions": [
+    {
+      "suggestion_id": "merge_suggestion_4904ad258646ff59",
+      "item_type": "question",
+      "item_ids": [
+        "scenario_question_11917e4281b81e29",
+        "scenario_question_6cf909fa1fea91fa"
+      ],
+      "reason": "同一场景内的代表问题存在语义重叠，需运营判断是否合并。",
+      "similarity": 0.625,
+      "meaningful_differences": [],
+      "status": "pending",
+      "review_reason": null
+    }
+  ],
+  "limitations": [
+    "基线诊断仅有 provider/API 不可用记录；场景优先级未使用品牌提及、推荐、竞品或引用数据，只能使用“探测覆盖不足”这一诊断缺口。"
+  ]
+}

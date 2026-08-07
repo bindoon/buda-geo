@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "geo-diagnosis-analysis-revision", "type": "object",
+  "required": ["schema_version", "analysis_revision_id", "probe_id", "created_at", "reason", "previous_analysis", "revised_analysis"],
+  "properties": { "schema_version": { "const": 1 }, "analysis_revision_id": { "type": "string", "pattern": "^analysis_revision_" }, "probe_id": { "type": "string", "pattern": "^probe_" }, "created_at": { "type": "string", "format": "date-time" }, "reason": { "type": "string", "minLength": 1 }, "previous_analysis": { "type": "object" }, "revised_analysis": { "type": "object" } },
+  "additionalProperties": false
+}

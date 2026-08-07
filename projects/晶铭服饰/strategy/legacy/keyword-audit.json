@@ -1,0 +1,3501 @@
+{
+  "schema_version": 1,
+  "app_id": "jm_apparel_cx",
+  "generated_at": "2026-08-07T08:44:00Z",
+  "source_path": "inputs/晶铭服饰关键词.xlsx",
+  "candidates": [
+    {
+      "candidate_id": "legacy_candidate_ea81421c578792bc",
+      "text": "儿童芭蕾tutu裙",
+      "normalized_text": "儿童芭蕾tutu裙",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_b17ecaa4c4a8ed09",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_ea81421c578792bc",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_964f1a15b660e166",
+      "text": "儿童舞蹈演出服",
+      "normalized_text": "儿童舞蹈演出服",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2507ad3769dc3b6d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_964f1a15b660e166",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "儿童舞蹈演出服",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_96628b52f06af3ab",
+      "text": "少儿芭蕾舞练功服",
+      "normalized_text": "少儿芭蕾舞练功服",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_9a217b624a4db0fd",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_96628b52f06af3ab",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "少儿芭蕾舞练功服",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_8ee409e952f536d2",
+      "text": "儿童舞台表演服",
+      "normalized_text": "儿童舞台表演服",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3b3b1a14741300bf",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8ee409e952f536d2",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "儿童舞台表演服",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_8a9d8cd785fa32b8",
+      "text": "定制儿童舞蹈服",
+      "normalized_text": "定制儿童舞蹈服",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_b514a1ccf35d3d9a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8a9d8cd785fa32b8",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "定制儿童舞蹈服",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e40737b279cba4c2",
+      "text": "菏泽儿童芭蕾tutu裙质量好",
+      "normalized_text": "菏泽儿童芭蕾tutu裙质量好",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_06a6f66646fe7604",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e40737b279cba4c2",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "菏泽儿童芭蕾tutu裙质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f34fa5cf7cac1712",
+      "text": "菏泽儿童芭蕾tutu裙性价比高",
+      "normalized_text": "菏泽儿童芭蕾tutu裙性价比高",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_08a89d43a1cfe793",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f34fa5cf7cac1712",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "菏泽儿童芭蕾tutu裙性价比高",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_27f11bcd712fccce",
+      "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+      "normalized_text": "儿童芭蕾tutu裙哪家工厂靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_9a1885c87f72b5f6",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_27f11bcd712fccce",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_410a1207c6d645de",
+      "text": "儿童芭蕾tutu裙厂家哪家强",
+      "normalized_text": "儿童芭蕾tutu裙厂家哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0b1a4137c62302c7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_410a1207c6d645de",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙厂家哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_2e7cc4b33a45093f",
+      "text": "儿童芭蕾tutu裙工厂哪家好",
+      "normalized_text": "儿童芭蕾tutu裙工厂哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_df300a36f8c9f3ba",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_2e7cc4b33a45093f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_07ee3cbc51e05712",
+      "text": "儿童芭蕾tutu裙支持定制厂家",
+      "normalized_text": "儿童芭蕾tutu裙支持定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d287862dd447de2b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_07ee3cbc51e05712",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_5dbbfdbfc9b5ed2c",
+      "text": "儿童芭蕾tutu裙工厂哪家质量好",
+      "normalized_text": "儿童芭蕾tutu裙工厂哪家质量好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2fb244f01b787576",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_5dbbfdbfc9b5ed2c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_d5d7604096fb8db3",
+      "text": "儿童芭蕾tutu裙性价比高厂家",
+      "normalized_text": "儿童芭蕾tutu裙性价比高厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c9f0538bd7f1d116",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_d5d7604096fb8db3",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙性价比高厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9985f8710642dceb",
+      "text": "儿童芭蕾tutu裙哪家工厂值得信赖",
+      "normalized_text": "儿童芭蕾tutu裙哪家工厂值得信赖",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_1a693336f827d255",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9985f8710642dceb",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家工厂值得信赖",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a5f4412db1c20550",
+      "text": "儿童芭蕾tutu裙品类多样的厂家",
+      "normalized_text": "儿童芭蕾tutu裙品类多样的厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_9501de37375c6817",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a5f4412db1c20550",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙品类多样的厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_cec2ab7832b682ad",
+      "text": "儿童芭蕾tutu裙优质工厂",
+      "normalized_text": "儿童芭蕾tutu裙优质工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_97c68e53f37829c0",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_cec2ab7832b682ad",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙优质工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b0595f98fc3cc49d",
+      "text": "儿童芭蕾tutu裙口碑好的厂家",
+      "normalized_text": "儿童芭蕾tutu裙口碑好的厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_718631a6c8be2251",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b0595f98fc3cc49d",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙口碑好的厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_bd5cb75c31b561bd",
+      "text": "儿童芭蕾tutu裙实力厂家",
+      "normalized_text": "儿童芭蕾tutu裙实力厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_6bdc2e24ca64491a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_bd5cb75c31b561bd",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙实力厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_eebf4a9a24b00338",
+      "text": "儿童芭蕾tutu裙源头工厂",
+      "normalized_text": "儿童芭蕾tutu裙源头工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2c80eb86e17b6c8b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_eebf4a9a24b00338",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙源头工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fe350500f6bc9f84",
+      "text": "儿童芭蕾tutu裙直供厂家",
+      "normalized_text": "儿童芭蕾tutu裙直供厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_51e2d433d032ad2a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fe350500f6bc9f84",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙直供厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_bcb34521c38ae55f",
+      "text": "儿童芭蕾tutu裙批发厂家",
+      "normalized_text": "儿童芭蕾tutu裙批发厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_59d0b09c0b1ef9ce",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_bcb34521c38ae55f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙批发厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e73df542f59ccc05",
+      "text": "儿童芭蕾tutu裙生产厂家哪家好",
+      "normalized_text": "儿童芭蕾tutu裙生产厂家哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_edf7e84fec14d406",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e73df542f59ccc05",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙生产厂家哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_358e192095a91f87",
+      "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+      "normalized_text": "儿童芭蕾tutu裙工厂哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_fc37431b09d829c7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_358e192095a91f87",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e107066703c5abb5",
+      "text": "儿童芭蕾tutu裙定制工厂推荐",
+      "normalized_text": "儿童芭蕾tutu裙定制工厂推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8e4999cf37cc59e2",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e107066703c5abb5",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制工厂推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_75b40d731d979698",
+      "text": "儿童芭蕾tutu裙哪个厂家专业",
+      "normalized_text": "儿童芭蕾tutu裙哪个厂家专业",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3bb0a67e7d8f82a9",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_75b40d731d979698",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪个厂家专业",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7b45f48597e46c50",
+      "text": "做工好儿童芭蕾tutu裙工厂推荐",
+      "normalized_text": "做工好儿童芭蕾tutu裙工厂推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_26ec9e13ec0ae87d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7b45f48597e46c50",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "做工好儿童芭蕾tutu裙工厂推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_c5f9b31f6a9715f3",
+      "text": "儿童芭蕾tutu裙哪家厂设计好",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂设计好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_bef155503bed0027",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_c5f9b31f6a9715f3",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂设计好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_4316bcd721293b3d",
+      "text": "款式多的儿童芭蕾tutu裙哪家工厂推荐",
+      "normalized_text": "款式多的儿童芭蕾tutu裙哪家工厂推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_f7added1f9ec2003",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_4316bcd721293b3d",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "款式多的儿童芭蕾tutu裙哪家工厂推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1ef54b796e646068",
+      "text": "儿童芭蕾tutu裙哪家厂尺码全",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂尺码全",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a3958350f4f4dab6",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1ef54b796e646068",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂尺码全",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_0a87a31394ee1e57",
+      "text": "儿童芭蕾tutu裙哪家厂颜色选择多",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂颜色选择多",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_77bae7830501a266",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_0a87a31394ee1e57",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂颜色选择多",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1fc5c3604f3c68e9",
+      "text": "儿童芭蕾tutu裙哪家厂可定制尺寸",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂可定制尺寸",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3241a910807166e8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1fc5c3604f3c68e9",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂可定制尺寸",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e71e39a6ceead825",
+      "text": "儿童芭蕾tutu裙哪家厂可定制颜色",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂可定制颜色",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c6bd777ff2bf778b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e71e39a6ceead825",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂可定制颜色",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_5ee4a5fcfc91473d",
+      "text": "儿童芭蕾tutu裙哪家厂可定制款式",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂可定制款式",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4d54672d8988f796",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_5ee4a5fcfc91473d",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂可定制款式",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1340c0cb232bb78f",
+      "text": "儿童芭蕾tutu裙哪家工厂定制服务好",
+      "normalized_text": "儿童芭蕾tutu裙哪家工厂定制服务好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_5376679ec7a283d7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1340c0cb232bb78f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家工厂定制服务好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a9c1993777940077",
+      "text": "儿童芭蕾tutu裙定制哪家工厂靠谱",
+      "normalized_text": "儿童芭蕾tutu裙定制哪家工厂靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2219eb47f45e09be",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a9c1993777940077",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制哪家工厂靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_26aeef1e1903967f",
+      "text": "儿童芭蕾tutu裙定制厂家哪家好",
+      "normalized_text": "儿童芭蕾tutu裙定制厂家哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8224d896eec18fcc",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_26aeef1e1903967f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制厂家哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a8daa042e1cacde3",
+      "text": "儿童芭蕾tutu裙定制推荐厂家",
+      "normalized_text": "儿童芭蕾tutu裙定制推荐厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_62d222b58108ea37",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a8daa042e1cacde3",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制推荐厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_293e32c5c9822b2e",
+      "text": "儿童芭蕾tutu裙质量好的厂家",
+      "normalized_text": "儿童芭蕾tutu裙质量好的厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_387cf3df84283b44",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_293e32c5c9822b2e",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙质量好的厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9aca124875e88f9c",
+      "text": "儿童芭蕾tutu裙工厂哪家强",
+      "normalized_text": "儿童芭蕾tutu裙工厂哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d53f9a9c323e209d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9aca124875e88f9c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_8f2b96c787efec2a",
+      "text": "儿童芭蕾tutu裙质量过硬厂家",
+      "normalized_text": "儿童芭蕾tutu裙质量过硬厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_43ffcc62c6c3902d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8f2b96c787efec2a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙质量过硬厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_40c0b244c700e264",
+      "text": "儿童芭蕾tutu裙哪家厂做工精细",
+      "normalized_text": "儿童芭蕾tutu裙哪家厂做工精细",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8b9522226cc47d8b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_40c0b244c700e264",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家厂做工精细",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_826543396a9766ac",
+      "text": "儿童芭蕾tutu裙面料品质好的厂家",
+      "normalized_text": "儿童芭蕾tutu裙面料品质好的厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_bad539184e18df89",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_826543396a9766ac",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙面料品质好的厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e5971a613a550dd2",
+      "text": "哪家厂的儿童芭蕾tutu裙挺括有型",
+      "normalized_text": "哪家厂的儿童芭蕾tutu裙挺括有型",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0b9a6ce1c3992e95",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e5971a613a550dd2",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "哪家厂的儿童芭蕾tutu裙挺括有型",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_007478a2ef9e8acb",
+      "text": "哪家厂的儿童芭蕾tutu裙层次感好",
+      "normalized_text": "哪家厂的儿童芭蕾tutu裙层次感好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_313059275c707d2b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_007478a2ef9e8acb",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "哪家厂的儿童芭蕾tutu裙层次感好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_47b31c41ab3379cb",
+      "text": "儿童芭蕾tutu裙蓬松度好的厂家",
+      "normalized_text": "儿童芭蕾tutu裙蓬松度好的厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c7225a26271518a1",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_47b31c41ab3379cb",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙蓬松度好的厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f0af2a46c5140e3c",
+      "text": "哪家厂的儿童芭蕾tutu裙舒适度好",
+      "normalized_text": "哪家厂的儿童芭蕾tutu裙舒适度好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_353aae9c45edb82b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f0af2a46c5140e3c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "哪家厂的儿童芭蕾tutu裙舒适度好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_46d7493747ede634",
+      "text": "哪家厂的儿童芭蕾tutu裙性价比高",
+      "normalized_text": "哪家厂的儿童芭蕾tutu裙性价比高",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d4bf31cc11f402fc",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_46d7493747ede634",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "哪家厂的儿童芭蕾tutu裙性价比高",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7713433f66f0d9f1",
+      "text": "儿童芭蕾tutu裙高性价比厂家",
+      "normalized_text": "儿童芭蕾tutu裙高性价比厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_5e84d6609b9c2984",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7713433f66f0d9f1",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙高性价比厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_6bd72f6adaffdf69",
+      "text": "儿童芭蕾tutu裙实惠又好哪家好",
+      "normalized_text": "儿童芭蕾tutu裙实惠又好哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_853c12de66e2d683",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_6bd72f6adaffdf69",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙实惠又好哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fd6d869c9f481338",
+      "text": "儿童芭蕾tutu裙物超所值哪家强",
+      "normalized_text": "儿童芭蕾tutu裙物超所值哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dc216307ac3aa027",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fd6d869c9f481338",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙物超所值哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_988412b3adaec1cd",
+      "text": "儿童芭蕾tutu裙价格合理质量好厂家",
+      "normalized_text": "儿童芭蕾tutu裙价格合理质量好厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_02da7693e7848c5c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_988412b3adaec1cd",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙价格合理质量好厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_786afb96da3e8899",
+      "text": "儿童芭蕾tutu裙高性价比定制厂家",
+      "normalized_text": "儿童芭蕾tutu裙高性价比定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4b333c77e9a997e0",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_786afb96da3e8899",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙高性价比定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_41405399ef40b1a8",
+      "text": "儿童芭蕾tutu裙值得买哪家好",
+      "normalized_text": "儿童芭蕾tutu裙值得买哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_5d4df39e9fd0e4fa",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_41405399ef40b1a8",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙值得买哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7f0f8e0d31db9877",
+      "text": "儿童芭蕾tutu裙回购率高哪家强",
+      "normalized_text": "儿童芭蕾tutu裙回购率高哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_bc5cd76c247eb5ac",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7f0f8e0d31db9877",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙回购率高哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_3add57baeeb2ef80",
+      "text": "儿童芭蕾tutu裙好评多厂家推荐",
+      "normalized_text": "儿童芭蕾tutu裙好评多厂家推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_86320b002222bb11",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_3add57baeeb2ef80",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙好评多厂家推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e3b3ef92900871a7",
+      "text": "儿童芭蕾tutu裙信誉好哪家靠谱",
+      "normalized_text": "儿童芭蕾tutu裙信誉好哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_524823c547e3cd99",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e3b3ef92900871a7",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙信誉好哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_ff31b578ed938372",
+      "text": "儿童芭蕾tutu裙有保障哪家好",
+      "normalized_text": "儿童芭蕾tutu裙有保障哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_31431ab4a937433d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_ff31b578ed938372",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙有保障哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_808e9d6e49c4d79e",
+      "text": "儿童芭蕾tutu裙售后好哪家强",
+      "normalized_text": "儿童芭蕾tutu裙售后好哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2ac0e256255db5df",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_808e9d6e49c4d79e",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙售后好哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_cc68e01d3e1fb255",
+      "text": "儿童芭蕾tutu裙服务好厂家",
+      "normalized_text": "儿童芭蕾tutu裙服务好厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_49e8d98317592cbb",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_cc68e01d3e1fb255",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙服务好厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_0a7c55e248583dff",
+      "text": "儿童芭蕾tutu裙沟通顺畅厂家",
+      "normalized_text": "儿童芭蕾tutu裙沟通顺畅厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_9d0c380dad43fbdb",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_0a7c55e248583dff",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙沟通顺畅厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_3be5fb48e57f5241",
+      "text": "儿童芭蕾tutu裙交货准时哪家好",
+      "normalized_text": "儿童芭蕾tutu裙交货准时哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_02a25f249549423c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_3be5fb48e57f5241",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙交货准时哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_13bb275748d7351b",
+      "text": "儿童芭蕾tutu裙物流快厂家",
+      "normalized_text": "儿童芭蕾tutu裙物流快厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a3c038ffbe950ae1",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_13bb275748d7351b",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙物流快厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f9f3f631f8627108",
+      "text": "儿童芭蕾tutu裙包装好哪家",
+      "normalized_text": "儿童芭蕾tutu裙包装好哪家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_07d647142b94c4fa",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f9f3f631f8627108",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙包装好哪家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1221a3ff2c9a3aad",
+      "text": "儿童芭蕾tutu裙品类丰富厂家",
+      "normalized_text": "儿童芭蕾tutu裙品类丰富厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0b32558558b5988f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1221a3ff2c9a3aad",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙品类丰富厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f476dedfdfc97f68",
+      "text": "儿童芭蕾tutu裙款式多样哪家强",
+      "normalized_text": "儿童芭蕾tutu裙款式多样哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_24a82756d0507d94",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f476dedfdfc97f68",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙款式多样哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_41c44176346b5af1",
+      "text": "儿童芭蕾tutu裙设计多样哪家好",
+      "normalized_text": "儿童芭蕾tutu裙设计多样哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_66168dfc6cc8468e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_41c44176346b5af1",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙设计多样哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_cc43bfbcdb28288a",
+      "text": "儿童芭蕾tutu裙风格多样厂家",
+      "normalized_text": "儿童芭蕾tutu裙风格多样厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_50118a62c9032039",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_cc43bfbcdb28288a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙风格多样厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_6e633e6c33d5e076",
+      "text": "儿童芭蕾tutu裙经典款哪家好",
+      "normalized_text": "儿童芭蕾tutu裙经典款哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_77fe75996577bdf5",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_6e633e6c33d5e076",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙经典款哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fb25ae6418734675",
+      "text": "儿童芭蕾tutu裙时尚款哪家强",
+      "normalized_text": "儿童芭蕾tutu裙时尚款哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d70f4d94b92a6f15",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fb25ae6418734675",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙时尚款哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_aa9b5361a6141272",
+      "text": "儿童芭蕾tutu裙甜美风厂家推荐",
+      "normalized_text": "儿童芭蕾tutu裙甜美风厂家推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c6a38749e42e19f4",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_aa9b5361a6141272",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙甜美风厂家推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7657b69fdfc3ac95",
+      "text": "儿童芭蕾tutu裙优雅风哪家好",
+      "normalized_text": "儿童芭蕾tutu裙优雅风哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ed91d64f0ec133d9",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7657b69fdfc3ac95",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙优雅风哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_cf0f516ed53bf840",
+      "text": "儿童芭蕾tutu裙舞台专用哪家强",
+      "normalized_text": "儿童芭蕾tutu裙舞台专用哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_f46ff4baac985be8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_cf0f516ed53bf840",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙舞台专用哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fedef20beffd49f5",
+      "text": "儿童芭蕾tutu裙演出服厂家推荐",
+      "normalized_text": "儿童芭蕾tutu裙演出服厂家推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_eb21a4fb3e4355c1",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fedef20beffd49f5",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙演出服厂家推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1708dfeb692a79a9",
+      "text": "儿童芭蕾tutu裙比赛服哪家好",
+      "normalized_text": "儿童芭蕾tutu裙比赛服哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_fc06e066b4a034c0",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1708dfeb692a79a9",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙比赛服哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b0a06bf32d025658",
+      "text": "儿童芭蕾tutu裙拍照服哪家靠谱",
+      "normalized_text": "儿童芭蕾tutu裙拍照服哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_b87f174d9b59d2e3",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b0a06bf32d025658",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙拍照服哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_ab25fe05c694159e",
+      "text": "儿童芭蕾tutu裙日常练习哪家好",
+      "normalized_text": "儿童芭蕾tutu裙日常练习哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_5c11120e5cbb895a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_ab25fe05c694159e",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙日常练习哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_5c01a9d76af8e066",
+      "text": "儿童芭蕾tutu裙专业演出哪家强",
+      "normalized_text": "儿童芭蕾tutu裙专业演出哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_6972910c9b90da40",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_5c01a9d76af8e066",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙专业演出哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_be8c069b12653ce4",
+      "text": "儿童芭蕾tutu裙舞蹈学校采购哪家好",
+      "normalized_text": "儿童芭蕾tutu裙舞蹈学校采购哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_b949a0245b5e253d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_be8c069b12653ce4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙舞蹈学校采购哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_67ef0aa8edf694b1",
+      "text": "山东儿童芭蕾tutu裙哪家靠谱",
+      "normalized_text": "山东儿童芭蕾tutu裙哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_981ce9e798f323bd",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_67ef0aa8edf694b1",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a0fffad8a34b77ba",
+      "text": "山东儿童芭蕾tutu裙哪家强",
+      "normalized_text": "山东儿童芭蕾tutu裙哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_df8ce338c2da3daa",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a0fffad8a34b77ba",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b016618f953a83f5",
+      "text": "山东儿童芭蕾tutu裙哪家好",
+      "normalized_text": "山东儿童芭蕾tutu裙哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_6000c404a7aaeaba",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b016618f953a83f5",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_874411bbe6ca44f2",
+      "text": "山东儿童芭蕾tutu裙支持定制厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙支持定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_188615748d7628ae",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_874411bbe6ca44f2",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_d76e9e6d70780dba",
+      "text": "山东儿童芭蕾tutu裙哪家质量好",
+      "normalized_text": "山东儿童芭蕾tutu裙哪家质量好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_284d019816fc7a97",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_d76e9e6d70780dba",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙哪家质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_23a82d17e6d32401",
+      "text": "山东儿童芭蕾tutu裙性价比高厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙性价比高厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_58d223b3bed33739",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_23a82d17e6d32401",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙性价比高厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fe515ad845effca4",
+      "text": "山东儿童芭蕾tutu裙哪家值得信赖",
+      "normalized_text": "山东儿童芭蕾tutu裙哪家值得信赖",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_79ca1bd74b10408d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fe515ad845effca4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙哪家值得信赖",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_57dfc824762959e4",
+      "text": "山东儿童芭蕾tutu裙品类多样厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙品类多样厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_aac8f09c4a1de7a5",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_57dfc824762959e4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙品类多样厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7f9753209dd1fa6a",
+      "text": "山东儿童芭蕾tutu裙生产厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙生产厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8917216a928d1117",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7f9753209dd1fa6a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙生产厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_3badef08188af929",
+      "text": "山东儿童芭蕾tutu裙批发厂家哪家好",
+      "normalized_text": "山东儿童芭蕾tutu裙批发厂家哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cc9b7141f9825b74",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_3badef08188af929",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙批发厂家哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_44e7a8ddf3b23354",
+      "text": "山东儿童芭蕾tutu裙定制工厂推荐",
+      "normalized_text": "山东儿童芭蕾tutu裙定制工厂推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_893514269cbcc7ff",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_44e7a8ddf3b23354",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙定制工厂推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f3afd7d8f8464643",
+      "text": "山东儿童芭蕾tutu裙源头工厂",
+      "normalized_text": "山东儿童芭蕾tutu裙源头工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_7d422529788e8b64",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f3afd7d8f8464643",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙源头工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_8edbbb477ed1e697",
+      "text": "山东儿童芭蕾tutu裙实力厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙实力厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c0903835de7ac0e0",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8edbbb477ed1e697",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙实力厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_91fd9f2df2eb24bf",
+      "text": "山东儿童芭蕾tutu裙口碑好厂家",
+      "normalized_text": "山东儿童芭蕾tutu裙口碑好厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_95624a0b8c91ff97",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_91fd9f2df2eb24bf",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "山东儿童芭蕾tutu裙口碑好厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_169885b1621fea30",
+      "text": "菏泽儿童芭蕾tutu裙哪家靠谱",
+      "normalized_text": "菏泽儿童芭蕾tutu裙哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dac9c8ff41a4ce8b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_169885b1621fea30",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_2c5a5d856ca770be",
+      "text": "菏泽儿童芭蕾tutu裙哪家强",
+      "normalized_text": "菏泽儿童芭蕾tutu裙哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_174f299abac6bb72",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_2c5a5d856ca770be",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f344c3805ad1a628",
+      "text": "菏泽儿童芭蕾tutu裙哪家好",
+      "normalized_text": "菏泽儿童芭蕾tutu裙哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_e9734ac632aa4662",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f344c3805ad1a628",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_d04c16fa7bb7a463",
+      "text": "菏泽儿童芭蕾tutu裙支持定制厂家",
+      "normalized_text": "菏泽儿童芭蕾tutu裙支持定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3e5836d43db7a3a1",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_d04c16fa7bb7a463",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_ad5eccb831b9003e",
+      "text": "菏泽儿童芭蕾tutu裙哪家质量好",
+      "normalized_text": "菏泽儿童芭蕾tutu裙哪家质量好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0e35716b6e06b966",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_ad5eccb831b9003e",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙哪家质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_07d7516a6197fdaf",
+      "text": "菏泽儿童芭蕾tutu裙性价比高厂家",
+      "normalized_text": "菏泽儿童芭蕾tutu裙性价比高厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_da92616548b8854e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_07d7516a6197fdaf",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙性价比高厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9577cb3b589ad3b4",
+      "text": "菏泽儿童芭蕾tutu裙哪家值得信赖",
+      "normalized_text": "菏泽儿童芭蕾tutu裙哪家值得信赖",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_668f19a9c1a3ad41",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9577cb3b589ad3b4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙哪家值得信赖",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_6446df2badc25596",
+      "text": "菏泽儿童芭蕾tutu裙品类多样厂家",
+      "normalized_text": "菏泽儿童芭蕾tutu裙品类多样厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_b15400c0e0228212",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_6446df2badc25596",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙品类多样厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_528b97afbc0fbef7",
+      "text": "菏泽儿童芭蕾tutu裙生产工厂",
+      "normalized_text": "菏泽儿童芭蕾tutu裙生产工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_941b3d594a5e2d49",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_528b97afbc0fbef7",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙生产工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_313f40114ee278cd",
+      "text": "菏泽儿童芭蕾tutu裙批发厂家哪家好",
+      "normalized_text": "菏泽儿童芭蕾tutu裙批发厂家哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8334bb7f9274f089",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_313f40114ee278cd",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙批发厂家哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7dadae612435caba",
+      "text": "菏泽儿童芭蕾tutu裙定制推荐",
+      "normalized_text": "菏泽儿童芭蕾tutu裙定制推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3984704194b131a9",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7dadae612435caba",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙定制推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_156310dece39badd",
+      "text": "菏泽儿童芭蕾tutu裙本地厂家",
+      "normalized_text": "菏泽儿童芭蕾tutu裙本地厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_62cf18cd2cc8ea66",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_156310dece39badd",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙本地厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_63d3df4039875a3c",
+      "text": "菏泽儿童芭蕾tutu裙靠谱工厂",
+      "normalized_text": "菏泽儿童芭蕾tutu裙靠谱工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_95941d7e7acff567",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_63d3df4039875a3c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙靠谱工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_56a1cf776466c352",
+      "text": "菏泽儿童芭蕾tutu裙质量好工厂",
+      "normalized_text": "菏泽儿童芭蕾tutu裙质量好工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_286dc8c9a408af9c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_56a1cf776466c352",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙质量好工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_142133f3b41bf876",
+      "text": "曹县儿童芭蕾tutu裙哪家靠谱",
+      "normalized_text": "曹县儿童芭蕾tutu裙哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_78cf259aafa83448",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_142133f3b41bf876",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_78814d3ddd599fd3",
+      "text": "曹县儿童芭蕾tutu裙哪家强",
+      "normalized_text": "曹县儿童芭蕾tutu裙哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3585dd43837d6fe0",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_78814d3ddd599fd3",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_18896aca219fb612",
+      "text": "曹县儿童芭蕾tutu裙哪家好",
+      "normalized_text": "曹县儿童芭蕾tutu裙哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3c9a758fe09d18e7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_18896aca219fb612",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f121bacd67725b23",
+      "text": "曹县儿童芭蕾tutu裙支持定制厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙支持定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ea55d121c91d2426",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f121bacd67725b23",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a930f2272f76708c",
+      "text": "曹县儿童芭蕾tutu裙哪家质量好",
+      "normalized_text": "曹县儿童芭蕾tutu裙哪家质量好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_e5f0c1e3c3596852",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a930f2272f76708c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙哪家质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b6f645907ce3f7d0",
+      "text": "曹县儿童芭蕾tutu裙性价比高厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙性价比高厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ef4e3088a98e27cd",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b6f645907ce3f7d0",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙性价比高厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_120719c7f8fea998",
+      "text": "曹县儿童芭蕾tutu裙哪家值得信赖",
+      "normalized_text": "曹县儿童芭蕾tutu裙哪家值得信赖",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_798e06e660f8ee81",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_120719c7f8fea998",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙哪家值得信赖",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_784e69247bed59c0",
+      "text": "曹县儿童芭蕾tutu裙品类多样厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙品类多样厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d9f59fc37fc44fa5",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_784e69247bed59c0",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙品类多样厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7d2f89cc5281f8f8",
+      "text": "曹县儿童芭蕾tutu裙生产厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙生产厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c637e95ac480b719",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7d2f89cc5281f8f8",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙生产厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_909112d26bfd5075",
+      "text": "曹县儿童芭蕾tutu裙批发哪家好",
+      "normalized_text": "曹县儿童芭蕾tutu裙批发哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a5a5a9e1b0389764",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_909112d26bfd5075",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙批发哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7843887616aa9b15",
+      "text": "曹县儿童芭蕾tutu裙定制工厂",
+      "normalized_text": "曹县儿童芭蕾tutu裙定制工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_e9d20421ffa95fcc",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7843887616aa9b15",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙定制工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_acf40e02d8e06d68",
+      "text": "曹县儿童芭蕾tutu裙源头工厂",
+      "normalized_text": "曹县儿童芭蕾tutu裙源头工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8971c2c9f52fc312",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_acf40e02d8e06d68",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙源头工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b35fb4369216133c",
+      "text": "曹县儿童芭蕾tutu裙本地靠谱厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙本地靠谱厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cbeff4906749b3d4",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b35fb4369216133c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙本地靠谱厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_610351fad604a2a3",
+      "text": "曹县儿童芭蕾tutu裙口碑好工厂",
+      "normalized_text": "曹县儿童芭蕾tutu裙口碑好工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_93514d92af00592f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_610351fad604a2a3",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙口碑好工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9df84f0eb4e5ada4",
+      "text": "菏泽儿童芭蕾tutu裙支持定制",
+      "normalized_text": "菏泽儿童芭蕾tutu裙支持定制",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4fa983d1cf6ce51e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9df84f0eb4e5ada4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽儿童芭蕾tutu裙支持定制",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a4f2e78b03094b4f",
+      "text": "菏泽曹县儿童芭蕾tutu裙哪家靠谱",
+      "normalized_text": "菏泽曹县儿童芭蕾tutu裙哪家靠谱",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a61949874a11984c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a4f2e78b03094b4f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽曹县儿童芭蕾tutu裙哪家靠谱",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_eb6660da23e56e17",
+      "text": "菏泽曹县儿童芭蕾tutu裙哪家强",
+      "normalized_text": "菏泽曹县儿童芭蕾tutu裙哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_72278894528b161a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_eb6660da23e56e17",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽曹县儿童芭蕾tutu裙哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_68b2fcda210d9a03",
+      "text": "菏泽曹县儿童芭蕾tutu裙支持定制",
+      "normalized_text": "菏泽曹县儿童芭蕾tutu裙支持定制",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_e08e6c4e2c59cd0b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_68b2fcda210d9a03",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽曹县儿童芭蕾tutu裙支持定制",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f2060e67f13bf30a",
+      "text": "菏泽曹县儿童芭蕾tutu裙质量好",
+      "normalized_text": "菏泽曹县儿童芭蕾tutu裙质量好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_15680698836c954c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f2060e67f13bf30a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "菏泽曹县儿童芭蕾tutu裙质量好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_81b46a8e6e787f83",
+      "text": "曹县儿童芭蕾tutu裙定制厂家",
+      "normalized_text": "曹县儿童芭蕾tutu裙定制厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_98a867c0343d92d8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_81b46a8e6e787f83",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙定制厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_003a406cd38ad836",
+      "text": "曹县儿童芭蕾tutu裙靠谱工厂",
+      "normalized_text": "曹县儿童芭蕾tutu裙靠谱工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0084a4a1a7a8e438",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_003a406cd38ad836",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "曹县儿童芭蕾tutu裙靠谱工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7058420aa4274698",
+      "text": "儿童芭蕾tutu裙山东生产厂家",
+      "normalized_text": "儿童芭蕾tutu裙山东生产厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_180ebaedea802346",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7058420aa4274698",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙山东生产厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e5fc3ae4eaf3b6ac",
+      "text": "儿童芭蕾tutu裙菏泽工厂哪家好",
+      "normalized_text": "儿童芭蕾tutu裙菏泽工厂哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_f3b1a52c03ebb073",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e5fc3ae4eaf3b6ac",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙菏泽工厂哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_0da6ddc5553eff77",
+      "text": "儿童芭蕾tutu裙曹县批发厂家",
+      "normalized_text": "儿童芭蕾tutu裙曹县批发厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c5a1258b2d1f563d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_0da6ddc5553eff77",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙曹县批发厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_198ee096f7f6e00d",
+      "text": "儿童芭蕾tutu裙山东定制哪家强",
+      "normalized_text": "儿童芭蕾tutu裙山东定制哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ed2db57e6452fedf",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_198ee096f7f6e00d",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙山东定制哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_49c9f1561efa165a",
+      "text": "儿童芭蕾tutu裙菏泽定制推荐",
+      "normalized_text": "儿童芭蕾tutu裙菏泽定制推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ee0a55b52912a5e7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_49c9f1561efa165a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙菏泽定制推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_40f3dad7d58e664b",
+      "text": "儿童芭蕾tutu裙曹县质量好工厂",
+      "normalized_text": "儿童芭蕾tutu裙曹县质量好工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_42fa4091b1b67812",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_40f3dad7d58e664b",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙曹县质量好工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a7595dea7a7e6792",
+      "text": "儿童芭蕾tutu裙山东性价比厂家",
+      "normalized_text": "儿童芭蕾tutu裙山东性价比厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_3d55335a6ecda47f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a7595dea7a7e6792",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙山东性价比厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a325cb4e07c4314d",
+      "text": "儿童芭蕾tutu裙菏泽靠谱工厂",
+      "normalized_text": "儿童芭蕾tutu裙菏泽靠谱工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0c71da097bd418a8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a325cb4e07c4314d",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙菏泽靠谱工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_2159057038d6e988",
+      "text": "儿童芭蕾tutu裙曹县值得信赖厂家",
+      "normalized_text": "儿童芭蕾tutu裙曹县值得信赖厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a5a3da9696795fe2",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_2159057038d6e988",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙曹县值得信赖厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_5fad9df4086074d5",
+      "text": "儿童芭蕾tutu裙山东品类多厂家",
+      "normalized_text": "儿童芭蕾tutu裙山东品类多厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_f02fb6efb12b3d7f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_5fad9df4086074d5",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙山东品类多厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fab5573dc148cd04",
+      "text": "儿童芭蕾tutu裙厂家直供山东",
+      "normalized_text": "儿童芭蕾tutu裙厂家直供山东",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_caebbf92a5048e2e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fab5573dc148cd04",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙厂家直供山东",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_167ffd5c10d9a1a9",
+      "text": "儿童芭蕾tutu裙菏泽源头工厂",
+      "normalized_text": "儿童芭蕾tutu裙菏泽源头工厂",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfb98fcd6324634b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_167ffd5c10d9a1a9",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙菏泽源头工厂",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_01cbb3dab47207ee",
+      "text": "儿童芭蕾tutu裙曹县实力厂家",
+      "normalized_text": "儿童芭蕾tutu裙曹县实力厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2ca45f2d41aceda2",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_01cbb3dab47207ee",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙曹县实力厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_0bcae6d5bfba9c6c",
+      "text": "儿童芭蕾tutu裙演出服厂家山东",
+      "normalized_text": "儿童芭蕾tutu裙演出服厂家山东",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0b05ab04f3114f1a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_0bcae6d5bfba9c6c",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙演出服厂家山东",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b1d19e9417985aad",
+      "text": "儿童芭蕾tutu裙比赛服菏泽哪家好",
+      "normalized_text": "儿童芭蕾tutu裙比赛服菏泽哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a4d1d9395a5cbfc2",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b1d19e9417985aad",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙比赛服菏泽哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_22ede19acf832a29",
+      "text": "儿童芭蕾tutu裙舞蹈服曹县厂家",
+      "normalized_text": "儿童芭蕾tutu裙舞蹈服曹县厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8c0451dc450066e2",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_22ede19acf832a29",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙舞蹈服曹县厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_26eb94189d38e1c0",
+      "text": "儿童芭蕾tutu裙定制服务山东哪家强",
+      "normalized_text": "儿童芭蕾tutu裙定制服务山东哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4cd1123f2e9a5985",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_26eb94189d38e1c0",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制服务山东哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_de4626571f107ddc",
+      "text": "儿童芭蕾tutu裙团体定制菏泽厂家",
+      "normalized_text": "儿童芭蕾tutu裙团体定制菏泽厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_57bd4325d8512fff",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_de4626571f107ddc",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙团体定制菏泽厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_094ef0800d16a09e",
+      "text": "儿童芭蕾tutu裙批量定制曹县哪家好",
+      "normalized_text": "儿童芭蕾tutu裙批量定制曹县哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c58b6fb6abf6efd5",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_094ef0800d16a09e",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙批量定制曹县哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_d1cc93159476de8b",
+      "text": "儿童芭蕾tutu裙专业厂家山东推荐",
+      "normalized_text": "儿童芭蕾tutu裙专业厂家山东推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_446b08e099fbe7ad",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_d1cc93159476de8b",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙专业厂家山东推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_a76fa94dc860b40b",
+      "text": "儿童芭蕾tutu裙优质工厂菏泽",
+      "normalized_text": "儿童芭蕾tutu裙优质工厂菏泽",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_408ee649a812f4a8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_a76fa94dc860b40b",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙优质工厂菏泽",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_7bfb17fd96627927",
+      "text": "儿童芭蕾tutu裙老牌厂家曹县",
+      "normalized_text": "儿童芭蕾tutu裙老牌厂家曹县",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d488d903014d0347",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_7bfb17fd96627927",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙老牌厂家曹县",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_28a1b446b1fbb9cc",
+      "text": "儿童芭蕾tutu裙口碑工厂山东",
+      "normalized_text": "儿童芭蕾tutu裙口碑工厂山东",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_0b564b9e8e3ca66b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_28a1b446b1fbb9cc",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙口碑工厂山东",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_37e3f10b616b85d4",
+      "text": "儿童芭蕾tutu裙设计好菏泽哪家",
+      "normalized_text": "儿童芭蕾tutu裙设计好菏泽哪家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c4587a8692b3dd58",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_37e3f10b616b85d4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙设计好菏泽哪家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_c11035f382e6c9e9",
+      "text": "儿童芭蕾tutu裙做工精细曹县厂家",
+      "normalized_text": "儿童芭蕾tutu裙做工精细曹县厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d5d4b07f30bc09bc",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_c11035f382e6c9e9",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙做工精细曹县厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_c6d7d1d3637cbcfe",
+      "text": "儿童芭蕾tutu裙蓬松度好山东哪家",
+      "normalized_text": "儿童芭蕾tutu裙蓬松度好山东哪家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_6599bacf3074904e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_c6d7d1d3637cbcfe",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙蓬松度好山东哪家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_421c72a9e949b5c4",
+      "text": "儿童芭蕾tutu裙层次感强菏泽厂家",
+      "normalized_text": "儿童芭蕾tutu裙层次感强菏泽厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cb52062878637d73",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_421c72a9e949b5c4",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙层次感强菏泽厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_2b117d0c032eec77",
+      "text": "儿童芭蕾tutu裙款式新颖曹县推荐",
+      "normalized_text": "儿童芭蕾tutu裙款式新颖曹县推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a5bcf88f9b587c1e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_2b117d0c032eec77",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙款式新颖曹县推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_779f1c2ff1f17e0f",
+      "text": "儿童芭蕾tutu裙颜色多样山东厂家",
+      "normalized_text": "儿童芭蕾tutu裙颜色多样山东厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2312b9d68954ef25",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_779f1c2ff1f17e0f",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙颜色多样山东厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_659b4d1791daa53a",
+      "text": "儿童芭蕾tutu裙尺码齐全菏泽哪家",
+      "normalized_text": "儿童芭蕾tutu裙尺码齐全菏泽哪家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_18f83ceb20cddeba",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_659b4d1791daa53a",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙尺码齐全菏泽哪家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_5d5c06d964f983fc",
+      "text": "儿童芭蕾tutu裙定制尺寸曹县厂家",
+      "normalized_text": "儿童芭蕾tutu裙定制尺寸曹县厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2de54240d0db5d3f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_5d5c06d964f983fc",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制尺寸曹县厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9ba983c540cb5087",
+      "text": "儿童芭蕾tutu裙定制颜色山东哪家好",
+      "normalized_text": "儿童芭蕾tutu裙定制颜色山东哪家好",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_737b765aa47e8620",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9ba983c540cb5087",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制颜色山东哪家好",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_b494dd8e624fe761",
+      "text": "儿童芭蕾tutu裙定制款式菏泽推荐",
+      "normalized_text": "儿童芭蕾tutu裙定制款式菏泽推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_e43dc0a785ccbe78",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_b494dd8e624fe761",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙定制款式菏泽推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_fcb061e9a02f80a1",
+      "text": "儿童芭蕾tutu裙快速定制曹县厂家",
+      "normalized_text": "儿童芭蕾tutu裙快速定制曹县厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_f075ead584589382",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_fcb061e9a02f80a1",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙快速定制曹县厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_afee356588eae190",
+      "text": "儿童芭蕾tutu裙交货准时山东哪家强",
+      "normalized_text": "儿童芭蕾tutu裙交货准时山东哪家强",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_641684514921da2b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_afee356588eae190",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙交货准时山东哪家强",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_66bff44ad2229e47",
+      "text": "儿童芭蕾tutu裙售后保障菏泽厂家",
+      "normalized_text": "儿童芭蕾tutu裙售后保障菏泽厂家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_5342ea9152db7997",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_66bff44ad2229e47",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙售后保障菏泽厂家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_e5e7dce05324ec38",
+      "text": "儿童芭蕾tutu裙服务好曹县推荐",
+      "normalized_text": "儿童芭蕾tutu裙服务好曹县推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4470791a93a038f5",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_e5e7dce05324ec38",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙服务好曹县推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_db288424c7276013",
+      "text": "儿童芭蕾tutu裙舞蹈学校采购菏泽哪家",
+      "normalized_text": "儿童芭蕾tutu裙舞蹈学校采购菏泽哪家",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_c0e6a67904decac8",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_db288424c7276013",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙舞蹈学校采购菏泽哪家",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_c68d3de065bfbf90",
+      "text": "儿童芭蕾tutu裙舞台专用曹县厂家推荐",
+      "normalized_text": "儿童芭蕾tutu裙舞台专用曹县厂家推荐",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/晶铭服饰关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_36dea3a9599a5749",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_c68d3de065bfbf90",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙舞台专用曹县厂家推荐",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    }
+  ],
+  "counts": {
+    "total": 166,
+    "unique": 166,
+    "exact_duplicates": 0,
+    "cross_bucket": 0,
+    "unsupported": 165
+  }
+}

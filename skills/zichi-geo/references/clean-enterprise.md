@@ -60,6 +60,8 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 
 若语义检查发现重复段落、残片、相互矛盾的数字、无法安全确认的产品归并等问题，把它写入 `clean.overrides.json.review_notes[]`，包含稳定 `code`、`severity` 和人话 `message`。不要只在对话里提醒，否则下一次 clean 会丢失判断。
 
+若 Word 的章节解析结果存在重复、错位或混入无法统一的宣传数字，可在项目级 `clean.overrides.json.profile` 写入精修后的 `intro / products_services / advantages / trust / pain_points`，同时填写原始 `source_path` 和处理理由。CLI 会把这些字段记录为待确认的 `operator` 事实；不能核实的说法应直接排除并写入 `review_notes`，不得替企业选择某个冲突数字。
+
 #### 名片与企业介绍必须分开
 
 `company.baseinfo.json` 是企业名片；`company.profile.json` 是企业介绍。两者混用会导致联系方式进入正文、介绍内容无法复用。

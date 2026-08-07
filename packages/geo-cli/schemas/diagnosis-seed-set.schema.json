@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-seed-set",
+  "type": "object",
+  "required": ["schema_version", "seed_set_id", "app_id", "fact_snapshot_id", "purpose", "status", "version", "based_on_seed_set_id", "created_at", "confirmed_at", "target_size", "questions"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "seed_set_id": { "type": "string", "pattern": "^seed_set_" },
+    "app_id": { "type": "string", "minLength": 1 },
+    "fact_snapshot_id": { "type": "string", "pattern": "^fact_snapshot_" },
+    "purpose": { "const": "baseline_diagnosis_only" },
+    "status": { "enum": ["draft", "confirmed", "legacy_candidate"] },
+    "version": { "type": "integer", "minimum": 0 },
+    "based_on_seed_set_id": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "confirmed_at": { "type": ["string", "null"], "format": "date-time" },
+    "target_size": { "type": "integer", "minimum": 1, "maximum": 500 },
+    "questions": { "type": "array", "minItems": 1, "items": { "$ref": "geo-diagnosis-question" } }
+  },
+  "additionalProperties": false
+}

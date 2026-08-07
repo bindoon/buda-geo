@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "geo-diagnosis-gap", "type": "object",
+  "required": ["gap_id", "kind", "severity", "observed_issue", "question_ids", "probe_ids", "platforms", "competitors", "sources", "fact_ids", "recommended_investigation"],
+  "properties": { "gap_id": { "type": "string", "pattern": "^gap_" }, "kind": { "enum": ["visibility", "recommendation", "negative_risk", "evidence", "probe_coverage"] }, "severity": { "enum": ["high", "medium", "low"] }, "observed_issue": { "type": "string" }, "question_ids": { "type": "array", "items": { "type": "string" } }, "probe_ids": { "type": "array", "items": { "type": "string" } }, "platforms": { "type": "array", "items": { "type": "string" } }, "competitors": { "type": "array", "items": { "type": "string" } }, "sources": { "type": "array", "items": { "type": "string" } }, "fact_ids": { "type": "array", "items": { "type": "string" } }, "recommended_investigation": { "type": "string" } },
+  "additionalProperties": false
+}

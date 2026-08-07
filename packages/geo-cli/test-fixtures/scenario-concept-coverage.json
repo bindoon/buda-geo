@@ -1,0 +1,7 @@
+[
+  { "research_concept": "产品词", "canonical_field": "representative_questions.facets.product_subject_ids" },
+  { "research_concept": "客户问题/关键词", "canonical_field": "representative_questions.text" },
+  { "research_concept": "场景词", "canonical_field": "scenario.name" },
+  { "research_concept": "画像设置", "canonical_field": "scenario.target_customer" },
+  { "research_concept": "转换目标", "canonical_field": "scenario.desired_next_action" }
+]

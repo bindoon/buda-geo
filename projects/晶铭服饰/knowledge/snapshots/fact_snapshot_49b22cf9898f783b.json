@@ -1,0 +1,1101 @@
+{
+  "schema_version": 2,
+  "fact_snapshot_id": "fact_snapshot_49b22cf9898f783b",
+  "app_id": "jm_apparel_cx",
+  "confirmed_at": "2026-08-07T07:21:33Z",
+  "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
+  "facts_hash": "5a5aea074b6b9a36e686fc501ab8259c33844ee30187810e4ba8da9bdabed797",
+  "source_index": {
+    "app_id": "jm_apparel_cx",
+    "generated_at": "2026-08-07T07:13:47Z",
+    "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
+    "sources": [
+      {
+        "source_id": "src_3590e80a90d569e0",
+        "scope": "input",
+        "path": "inputs/.DS_Store",
+        "name": ".DS_Store",
+        "kind": "other",
+        "hash": "5fa0ce37f3ea323273b01e88bc823f4f6deb5647c41671f66f07df6efa4e2e64",
+        "size": 6148,
+        "parse_status": "ignored",
+        "ignored": true,
+        "ignored_reason": "system_or_temporary_file"
+      },
+      {
+        "source_id": "src_4f66e6c20d033661",
+        "scope": "input",
+        "path": "inputs/~$曹县晶铭服饰有限公司 GEO信息收集表.xlsx",
+        "name": "~$曹县晶铭服饰有限公司 GEO信息收集表.xlsx",
+        "kind": "other",
+        "hash": "d550b2d221e3dde75f067ac27abfc07fa1e22c2d81e9c00f57228a0f72777bf0",
+        "size": 165,
+        "parse_status": "ignored",
+        "ignored": true,
+        "ignored_reason": "system_or_temporary_file"
+      },
+      {
+        "source_id": "src_41a9616538ec1bbb",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/20765187034_39621472.jpg",
+        "name": "20765187034_39621472.jpg",
+        "kind": "product_image",
+        "hash": "9bf73cc08589a6a554ba172cc05409117cfc4d16b25f680a21a0272a817de747",
+        "size": 155638,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_c3db39c515abebe5",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/20765295730_39621472.jpg",
+        "name": "20765295730_39621472.jpg",
+        "kind": "product_image",
+        "hash": "38a242756d87e0aca98814d341857ccefdbac21cdc47ed85adfe92e4028ef53c",
+        "size": 184618,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_3b387a8f53138acf",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/20923211393_39621472.jpg",
+        "name": "20923211393_39621472.jpg",
+        "kind": "product_image",
+        "hash": "5ff1f9b84d611e9f298093833a17b293e1f92618fdf0227c3b886af6ff4d82ce",
+        "size": 184545,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_2537eb19908c5282",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/21223626989_39621472.jpg",
+        "name": "21223626989_39621472.jpg",
+        "kind": "product_image",
+        "hash": "ce2790dbe38cdf27174d92233950e24df50091928604cdfccdb62239a30691bf",
+        "size": 217177,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_4df7b2358c7f0511",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/21675954885_39621472.jpg",
+        "name": "21675954885_39621472.jpg",
+        "kind": "product_image",
+        "hash": "f7641a8bcc634bbf7bb1855ec8e7486d3e8e4f45041fc3f10766a05bf583f552",
+        "size": 167165,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_8db898a1525b626b",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/21676197381_39621472.jpg",
+        "name": "21676197381_39621472.jpg",
+        "kind": "product_image",
+        "hash": "650b6ac6017734b4b20b99c5616e9c7f3afccf8c53e5fc149b858236e95ed6fa",
+        "size": 69786,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_f15065b006aedea9",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/21676236068_39621472.jpg",
+        "name": "21676236068_39621472.jpg",
+        "kind": "product_image",
+        "hash": "dd17b902f8fcde08ae6864ab06f75d7b026c8c8f9fe589de9884f3e3cfb8e2c8",
+        "size": 128645,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_3fcf2bd5401900a9",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/21815365172_39621472.jpg",
+        "name": "21815365172_39621472.jpg",
+        "kind": "product_image",
+        "hash": "b28a441c3ce3e7229b6da3afa3fd77fce838f384981e9a3a3ed5576b8cd83272",
+        "size": 105194,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_609d6daf671a5d0a",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
+        "name": "O1CN0146I4WP2IXclihCuVF_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "820ee6fc0109f8ff8e3b7aec608c292f6eecd0f2ca890b3aa18a36099ef7475d",
+        "size": 125870,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_a6aaa24446070a91",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
+        "name": "O1CN016El4pE2IXcZezaYrz_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "4c2275ed11168c3561bb40dc600a4388a2c575248b42fbebdcebb940ec0af481",
+        "size": 201785,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_41d52ef0289d866d",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
+        "name": "O1CN017aohBW2IXcrv1ijHw_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "50b163b0997c72894d3c470fd2db31ca008fe141ff5b3c2abf01218d7c2cf224",
+        "size": 29015,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_c449e4686e65f52f",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
+        "name": "O1CN018gmW0W2IXcap5cJMq_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "acf02418609f440ab4dbce2d6e9d136905f6b8f6c76bf9fdbc369a976bf9a4cf",
+        "size": 279166,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_17c9b608eaa943a4",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
+        "name": "O1CN0190FxWT2IXcm12IhRH_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "84551ff80b7854db13a401d389b3cc77a9349e4c3282b345d28697e2e676c884",
+        "size": 175213,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_8733ffffb8d7d55b",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
+        "name": "O1CN019ebK3m2IXcafUXWIj_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "913b754ce02cb7d7fe1181e8d06ea281c2fec77769b37e95f52a1df8e5fe08f5",
+        "size": 344351,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_b140d25508eae3c5",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01CxIJT12IXcgRqyYet_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "31f9904347bab38e1b496a027127360005d62039f6fce7e370c16470749a0b15",
+        "size": 189091,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_0b24979404673686",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01D2utmN2IXcmTw17Xb_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "4fc518825a0a7f6a7d99636858d6e78df2dce2d2da54733208958c8b173da0c7",
+        "size": 161444,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_1766764d07dc7037",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01EfstTK2IXcxOR3vEb_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "e2a550ce96e59b72791aa3cf040aea4a350746e1d4459911ba3dc1db89b118fe",
+        "size": 217508,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_e40b83cc87804b6b",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01JDY9DQ2IXcueVD4Ae_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "88c2c5f99ecc22923b9a614fb53faf48c74c99748c070ad6b91b2eebea0aa4f4",
+        "size": 119636,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_0a7eb23f21cee275",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01MYHZFi2IXcnPIRhAp_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "dbb3ad5edfe861d984c5512af22c454cc9000220a4d9b22f495970802e8b1d54",
+        "size": 103974,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_b27b96df86f18e2b",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
+        "name": "O1CN01MrucxM1Bs2leuS9cb_!!0-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "a5bab6c3430b34241ff42e1b45e5913c750ab3172ed69864bbfd2af440d84a8a",
+        "size": 251308,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_64b3f55e608e944e",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01N643cT2IXclwmypZt_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "0d250d8a8cb4a05697cc0abfb15c7c871029c9ae8d8879b9f9c8e243c6505f2a",
+        "size": 102389,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_c9ecdbf15dab0872",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01NWrxSg2IXclyp45HA_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "91e002ab7efe0eb73213b6dec50cbd1dac199c779f706bc4441c314762976c71",
+        "size": 259852,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_cff4f11f0996fe83",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01RVFPSU2IXcavflhZf_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "12be303232cad963501cb9e5190e561483364bfccfbcb6ad012574a7fa46da60",
+        "size": 311873,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_75aa785b8802e78e",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01WadfTs2IXcVEWZ57G_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "7914e47b0256380a4421afba35e5f5f4504f6c475fb47a12c0902ccf1219dd75",
+        "size": 268483,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_92799fd2d83a25de",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01XjHUoq2IXcrv3TWVU_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "2500bf9633f124503264d178ace3dd758350508bb647a63a992ace03ee564796",
+        "size": 117370,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_9888dc595551f2a4",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01ZnCI1b2IXcnNnRAii_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "1b61aa8bc7a7ec1e5bef5d80e88c672ed594d3ab0c273bdf05c85eff3ad33da1",
+        "size": 89692,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_891ced7df5310956",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01bduZDK2IXcqSS3SQK_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "a33022f4a22c71d32fbea10548cd461dd39718cfda30bedaca1b948f3d47a09b",
+        "size": 277345,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_ba4206cd347962f5",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01fqISpK2IXcmTw1SKu_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "66b20fd19ebbd4cf9b25ba2d8d9eb6ddc88c7845bdcb99672b6e2fdab981a298",
+        "size": 171839,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_03d2b213417f4ca5",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01jm7IQG2IXcrupS3Tb_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "e223600a0f1020adea142f2ed26dcbb763a7ee61f250c73df3f98ae7255d75c4",
+        "size": 148208,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_6ce4d7e638026ca6",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01ky7TbL2IXcmfx7LZ7_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "d9d3c9485ca4d9138b570ad3bfc4edcaea9386eea985cb10b0149b371466810b",
+        "size": 50055,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_110fa2ff4c1e4286",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01mJmAsQ2IXcsfOwJua_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "943248f00d001b617fc969899e359529fa2ee33794ababe2df323dcf56436ce8",
+        "size": 122574,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_10413d14048856f7",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01pZ6qQC2IXcqQSoOL5_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "c8fbb2596d97611486f8029adb15f297baa8ee9c9cb840c5e9f57f00ab8971c7",
+        "size": 234264,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_98a6388bc8caee59",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
+        "name": "O1CN01qa8you1Bs2kHUUAvE_!!0-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "841365cdaf43989c247c71ae77d8cb1725787486183f3a390383f7d43ac308a0",
+        "size": 498690,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_2fc932276a84576a",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01shoIuV2IXcZbENc52_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "7012b315c175870e335826d6b90798be08b3b4975f93c83633e65933dc1a89db",
+        "size": 171329,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_0fe3f6d48bec27dd",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01ueUBrR2IXcnOUgCOV_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "7526b829eb9a6be5ec2ff423a0e5bed84bf9a215dea693c3b00f2b02c8efff47",
+        "size": 75760,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_b0f07a365cfc86a9",
+        "scope": "input",
+        "path": "inputs/儿童芭蕾 tutu 裙/O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
+        "name": "O1CN01zK4JHD2IXcmeJOX2T_!!2208994249296-0-cib.jpg",
+        "kind": "product_image",
+        "hash": "6085c6c9400be8a8bcd1c171b78308c38c29ac67c34a8e8c2c9be9dbf42a744b",
+        "size": 118746,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_72825246682b1cd8",
+        "scope": "input",
+        "path": "inputs/指令/儿童芭蕾tutu裙.docx",
+        "name": "儿童芭蕾tutu裙.docx",
+        "kind": "instruction_docx",
+        "hash": "ae1a9947eaf25eea3176b31eac48078191766c964d77b83d41790de7d8c8dd8d",
+        "size": 19534,
+        "parse_status": "extractable",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_d06457e10c72fdf1",
+        "scope": "input",
+        "path": "inputs/晶铭服饰关键词.xlsx",
+        "name": "晶铭服饰关键词.xlsx",
+        "kind": "keywords",
+        "hash": "baf53ae4868be1b0d00c341cfe8b0b28f6d331f5b0d65c28739b4a438b1a43d4",
+        "size": 14181,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_26b409b60da31c3b",
+        "scope": "input",
+        "path": "inputs/晶铭服饰客服报告.txt",
+        "name": "晶铭服饰客服报告.txt",
+        "kind": "chat_logs",
+        "hash": "803ed8d5f241f462fd32998273c97aba376fa4e08236d382f282e53a3fd4eae6",
+        "size": 1423894,
+        "parse_status": "extractable",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_f21228e659eb4914",
+        "scope": "input",
+        "path": "inputs/晶铭服饰查情文 客服报告.pdf",
+        "name": "晶铭服饰查情文 客服报告.pdf",
+        "kind": "chat_logs",
+        "hash": "e5a140d5c27c55f646419d1ef37e5f7c3859d2730d4848d9b09be3234d24df79",
+        "size": 1863216,
+        "parse_status": "extractable",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_413e749433702a1b",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 GEO信息收集表.xlsx",
+        "name": "曹县晶铭服饰有限公司 GEO信息收集表.xlsx",
+        "kind": "info_form",
+        "hash": "fbffa146df8f97c7d3314c38c0c22659d4d52d0ef29c392e478d7c43b27621af",
+        "size": 18490,
+        "parse_status": "extractable",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_e9909a93aa707519",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息.zip",
+        "name": "曹县晶铭服饰有限公司 信息.zip",
+        "kind": "archive",
+        "hash": "75c95caa53d17bd15aa2abceab6d87ad34a0ab25ae52b04fd2ae7aa6afbf3b74",
+        "size": 9785851,
+        "parse_status": "discovered",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_f09ee2c97394e3f0",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/0692535a5a0d81e6c960d66ab6125167.png",
+        "name": "0692535a5a0d81e6c960d66ab6125167.png",
+        "kind": "company_asset",
+        "hash": "3c3d6f8a385aa8a4f66eea885bdde349cd485c0897abc437462a27480d765223",
+        "size": 2490454,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_da5853442558465c",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/1e3ad889d80c22271ec7b6f7d0a602aa.jpg",
+        "name": "1e3ad889d80c22271ec7b6f7d0a602aa.jpg",
+        "kind": "unclassified_sensitive",
+        "hash": "d88f200fc996499af8634156d85f628231cd7a862c86c4b1d957a546a36bbefd",
+        "size": 490398,
+        "parse_status": "ignored",
+        "ignored": true,
+        "ignored_reason": "法人身份证照片；不复制、不 OCR、不写入知识库或文章。"
+      },
+      {
+        "source_id": "src_a3ceaf6aae503388",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/581f1cd242eeae969c16ecec209fa9c7.png",
+        "name": "581f1cd242eeae969c16ecec209fa9c7.png",
+        "kind": "company_asset",
+        "hash": "4b3e412ab6f262771d075d12f0714a42247163fe31a9249ea245cccbe83f98fc",
+        "size": 1639365,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_88fee5a3ad2e12af",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/90b11ef98588423417302c8c66f59047.png",
+        "name": "90b11ef98588423417302c8c66f59047.png",
+        "kind": "company_asset",
+        "hash": "50f936688abeda1b276c9379781382acd14146ceccc2006521bb6c9046ba1c79",
+        "size": 418505,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_563e8cd299115df3",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/9945ac5ef4159084cdf7e6aab6f61712.jpg",
+        "name": "9945ac5ef4159084cdf7e6aab6f61712.jpg",
+        "kind": "unclassified_sensitive",
+        "hash": "60e5285ff25e294e4c5a1ffb6996cd0cc8d87367d6179c969b1c077ce4dac94a",
+        "size": 182278,
+        "parse_status": "ignored",
+        "ignored": true,
+        "ignored_reason": "商标注册证只保留在 inputs，不复制、不 OCR、不写入企业事实或文章。"
+      },
+      {
+        "source_id": "src_caa34d044c336a51",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/9bc85bcaf81b5fd69b99178a05084089.png",
+        "name": "9bc85bcaf81b5fd69b99178a05084089.png",
+        "kind": "company_asset",
+        "hash": "f7059b426aa4824330f25fd37a1100ce2932b549af11ffaec8257d4a28bc4627",
+        "size": 2257212,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_beef4b26df8344bf",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/9d9bf13be78b3b75a359533087177989.png",
+        "name": "9d9bf13be78b3b75a359533087177989.png",
+        "kind": "product_image",
+        "hash": "8933fcee0c3d1a7afc222d65fbf978355ad72fa8c8134f03dc3acd1a82b875de",
+        "size": 1216790,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_6458ca3f42d13c65",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/9e9b542e255267672a5c8fa679bc758e.png",
+        "name": "9e9b542e255267672a5c8fa679bc758e.png",
+        "kind": "company_asset",
+        "hash": "5d4de28ab2880b3e7f14b1979a31677d40873da50b15e981d3e9f8b881fe959f",
+        "size": 56855,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_b5019cc2e5621211",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/a889ebdaf9a20fe56d731a1752e7c6aa.png",
+        "name": "a889ebdaf9a20fe56d731a1752e7c6aa.png",
+        "kind": "company_asset",
+        "hash": "b9e4041df24a4646f29e4f6ad9da2723f65a8134aa0f51a1df556fe789329b8e",
+        "size": 1246142,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_344ed17d55e83650",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司 信息/e87aee611900335001b9928ef35e958e.jpg",
+        "name": "e87aee611900335001b9928ef35e958e.jpg",
+        "kind": "unclassified_sensitive",
+        "hash": "a97507a186e302fc2e25eedad3a15e161d30bdc63d019d91c0136a6bb464a688",
+        "size": 296257,
+        "parse_status": "ignored",
+        "ignored": true,
+        "ignored_reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
+      },
+      {
+        "source_id": "src_fd3cfa703ba98a56",
+        "scope": "input",
+        "path": "inputs/曹县晶铭服饰有限公司GEO知识库.docx",
+        "name": "曹县晶铭服饰有限公司GEO知识库.docx",
+        "kind": "knowledge_docx",
+        "hash": "3cf1bddbe55f4669fd58b236978e2646c6677d2dda22cb2f950c1b2596495f8d",
+        "size": 18214,
+        "parse_status": "extractable",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_legacy_46a9c83a697a2b45",
+        "scope": "legacy_projection",
+        "path": "knowledge/company.baseinfo.json",
+        "name": "company.baseinfo.json",
+        "kind": "legacy_projection",
+        "hash": "365c9fc4674e0005c80609b75875ae43d19dc5c538b3490ad5390441196ee19f",
+        "size": 1087,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_legacy_4c64936b013fef64",
+        "scope": "legacy_projection",
+        "path": "knowledge/company.profile.json",
+        "name": "company.profile.json",
+        "kind": "legacy_projection",
+        "hash": "d6ced7912c284dfd10474b071eedb10220f58de93af918131669a4be9d79eea5",
+        "size": 2526,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      },
+      {
+        "source_id": "src_legacy_74c7d5cfb3233d62",
+        "scope": "legacy_projection",
+        "path": "knowledge/company.skus.json",
+        "name": "company.skus.json",
+        "kind": "legacy_projection",
+        "hash": "61097f676c5e18cd88b430c4caafd460b8522064a7149698fe001ede65721105",
+        "size": 12062,
+        "parse_status": "indexed_only",
+        "ignored": false,
+        "ignored_reason": null
+      }
+    ]
+  },
+  "facts": {
+    "app_id": "jm_apparel_cx",
+    "generated_at": "2026-08-07T07:13:47Z",
+    "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
+    "facts_hash": "5a5aea074b6b9a36e686fc501ab8259c33844ee30187810e4ba8da9bdabed797",
+    "subjects": [
+      {
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "type": "company",
+        "name": "曹县晶铭服饰有限公司",
+        "parent_subject_id": null,
+        "source_refs": [
+          "src_413e749433702a1b",
+          "src_fd3cfa703ba98a56"
+        ],
+        "review_status": "confirmed"
+      },
+      {
+        "subject_id": "sub_brand_20c690fc91d64070",
+        "type": "brand",
+        "name": "晶铭服饰",
+        "parent_subject_id": "sub_company_0e74341ab7180b08",
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "review_status": "confirmed"
+      },
+      {
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "type": "product",
+        "name": "儿童芭蕾tutu裙",
+        "parent_subject_id": "sub_company_0e74341ab7180b08",
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "review_status": "confirmed"
+      }
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_5f89ef81b622ade7",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "company_name",
+        "value": "曹县晶铭服饰有限公司",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_006357fb08a27dce",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "company_short_name",
+        "value": "公司经营12年时间 专门生产儿童舞蹈服的厂家",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_e103adc30a84b062",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "contact_name",
+        "value": "葛柱龙",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "restricted"
+      },
+      {
+        "fact_id": "fact_de3a12149aaecafd",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "contact_phone",
+        "value": "15965827526",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "restricted"
+      },
+      {
+        "fact_id": "fact_f74062502b5e9cc5",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "address",
+        "value": "山东菏泽曹县安蔡楼镇王楼村190号",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_08520825844492af",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "website_or_shop_url",
+        "value": "https://jm15965827526.1688.com/",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_6173bb78eaeb7092",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "media_accounts",
+        "value": [
+          {
+            "platform": "百家号",
+            "account_id": "15965827526"
+          },
+          {
+            "platform": "知乎",
+            "account_id": "15965827526"
+          },
+          {
+            "platform": "抖音",
+            "account_id": "15965827526"
+          },
+          {
+            "platform": "头条号",
+            "account_id": "15965827526"
+          },
+          {
+            "platform": "搜狐号",
+            "account_id": "15965827526"
+          }
+        ],
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "restricted"
+      },
+      {
+        "fact_id": "fact_e8ca7c6e4a7777d8",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "conversion",
+        "value": {
+          "phone": "15965827526",
+          "shop_url": "https://jm15965827526.1688.com/"
+        },
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "restricted"
+      },
+      {
+        "fact_id": "fact_88c684883b54ef30",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "intro",
+        "value": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_5d421c9f6e2a7fd5",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "products_services",
+        "value": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_d8fb8318a6fabd89",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "advantages",
+        "value": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_16500517b491d4dc",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "trust",
+        "value": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_9ca1ceb88252b2d4",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "pain_points",
+        "value": [
+          "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。",
+          "舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。",
+          "电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。"
+        ],
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_389c30b0c87f0141",
+        "subject_id": "sub_brand_20c690fc91d64070",
+        "field": "name",
+        "value": "晶铭服饰",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "extracted",
+        "confidence": 0.95,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_8671c5bfb63fb61d",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "name",
+        "value": "儿童芭蕾tutu裙",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.9,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_71ca91fe0f9a05d7",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "category",
+        "value": "儿童舞蹈服饰",
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "inferred",
+        "confidence": 0.72,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_609e6e5cbb03db6f",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "selling_points",
+        "value": [
+          "多层高密度网纱并配置定型硬衬",
+          "网纱边缘锁边，内衬采用全棉透气里衬",
+          "覆盖100至160尺码"
+        ],
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "inferred",
+        "confidence": 0.7,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_1277a7ca911a72df",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "attributes",
+        "value": {
+          "size_range": "100-160",
+          "main_material": "锦纶冰丝、多层网纱与全棉里衬",
+          "applicable_age": "3-14岁",
+          "application_scenarios": "日常练功、考级、舞台汇演、舞蹈比赛"
+        },
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "inferred",
+        "confidence": 0.7,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_c8d5cc0c8dda17b0",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "capabilities",
+        "value": [
+          "生产供应",
+          "支持一件起混批与小批量试单",
+          "支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+        ],
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "inferred",
+        "confidence": 0.72,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_90fe608ee01e9517",
+        "subject_id": "sub_product_78f8dc1314a78919",
+        "field": "is_main",
+        "value": true,
+        "unit": null,
+        "source_refs": [
+          "src_fd3cfa703ba98a56"
+        ],
+        "derivation": "operator",
+        "confidence": 0.9,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      },
+      {
+        "fact_id": "fact_44f9ff6c4fad64a9",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "company_short_name",
+        "value": "晶铭服饰",
+        "unit": null,
+        "source_refs": [
+          "src_413e749433702a1b"
+        ],
+        "derivation": "operator",
+        "confidence": 0.8,
+        "review_status": "confirmed",
+        "disclosure_level": "public"
+      }
+    ],
+    "conflicts": [
+      {
+        "conflict_id": "conflict_d50f88856fcc1b01",
+        "subject_id": "sub_company_0e74341ab7180b08",
+        "field": "company_short_name",
+        "candidate_fact_ids": [
+          "fact_006357fb08a27dce",
+          "fact_44f9ff6c4fad64a9"
+        ],
+        "severity": "block",
+        "status": "resolved",
+        "resolution": "信息表的“公司简称”填写为经营描述，不是简称；从企业全称规范化为待确认简称“晶铭服饰”。"
+      }
+    ]
+  }
+}

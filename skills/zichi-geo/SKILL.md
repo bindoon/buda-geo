@@ -23,8 +23,8 @@ description: >
 | 阶段 | 要解决的问题 | 必读 reference | 当前状态 | 完成标志 |
 |---|---|---|---|---|
 | 1 企业事实清洗 | 原始 Excel/Word/图片里有哪些可信企业事实 | `clean-enterprise.md` | 已实现 | confirmed `fact_snapshot_id` |
-| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已规划 | confirmed diagnosis run/report |
-| 3 需求场景库 | 谁为什么问、怎样问、企业凭什么回答 | `build-demand-scenarios.md` | 已规划 | confirmed scenario library version |
+| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已实现（人工录入适配器） | confirmed diagnosis run/report |
+| 3 需求场景库 | 谁为什么问、怎样问、企业凭什么回答 | `build-demand-scenarios.md` | 已实现 | confirmed scenario library version |
 | 4 内容规划 | 哪些场景变成 FAQ、选题、Prompt 和生产任务 | `plan-content.md` | 占位 | confirmed content plan version |
 | 5 文章生成 | 如何依据任务与事实生成草稿 | `generate-articles.md` | 占位 | article `draft` |
 | 6 人工审稿 | 草稿是否事实正确、合规、适合渠道 | `review-articles.md` | 占位 | article `approved` |

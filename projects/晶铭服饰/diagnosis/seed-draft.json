@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "seed_set_id": "seed_set_b7ef6f28a9934464",
+  "app_id": "jm_apparel_cx",
+  "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+  "purpose": "baseline_diagnosis_only",
+  "status": "confirmed",
+  "version": 1,
+  "based_on_seed_set_id": null,
+  "created_at": "2026-08-07T07:34:31Z",
+  "confirmed_at": "2026-08-07T07:42:02Z",
+  "target_size": 25,
+  "questions": [
+    {
+      "question_id": "question_1513b35c0c658e85",
+      "text": "晶铭服饰是做什么的？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能正确识别企业/品牌主体。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_f2a880f8f6fd4423",
+      "text": "儿童舞蹈服饰怎么选？",
+      "family": "product_consideration",
+      "rationale": "检查通用品类选购回答中是否出现目标企业。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_8886f4792bc9c253",
+      "text": "能生产儿童芭蕾tutu裙的源头厂家有哪些？",
+      "family": "supplier_capability",
+      "rationale": "检查供应商能力型问法中的目标企业推荐情况。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_89f80a3478d79d74",
+      "text": "山东菏泽曹县儿童芭蕾tutu裙供应商有哪些？",
+      "family": "regional_procurement",
+      "rationale": "检查有事实支持的区域采购可见度。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_f74062502b5e9cc5"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_6d69f40a224404e1",
+      "text": "晶铭服饰的儿童芭蕾tutu裙有哪些质量或售后风险？",
+      "family": "negative_risk",
+      "rationale": "经人工批准后检查 AI 是否传播与目标产品有关的负面风险。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": true
+    },
+    {
+      "question_id": "question_3bba87308a3e3e0d",
+      "text": "晶铭服饰有哪些主要产品？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能把品牌与已确认主产品关联。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_8671c5bfb63fb61d"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_64e9f2099339da47",
+      "text": "儿童芭蕾tutu裙有哪些靠谱厂家或品牌？",
+      "family": "product_consideration",
+      "rationale": "检查目标产品的推荐可见度与竞品占位。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_cf47e1e9613a8af0",
+      "text": "哪些儿童芭蕾tutu裙厂家支持生产供应？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_f89b215e75d8cd20",
+      "text": "山东菏泽曹县采购儿童芭蕾tutu裙怎么筛选源头厂家？",
+      "family": "regional_procurement",
+      "rationale": "检查区域与供应能力组合问法。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_f74062502b5e9cc5",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_0f63f297ef0c4f0a",
+      "text": "晶铭服饰是生产厂家还是贸易商？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 对企业经营角色的理解是否准确。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_5885dd35c8d3af0f",
+      "text": "采购儿童芭蕾tutu裙要重点比较哪些参数和服务？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对采购决策要素的覆盖。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_3dfaf731f205e2b0",
+      "text": "哪些儿童芭蕾tutu裙厂家支持一件起混批与小批量试单？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_df72878521bd3cc2",
+      "text": "晶铭服饰靠谱吗？有哪些可核验依据？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能给出有来源的品牌信任说明。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_656bb101cc765335",
+      "text": "儿童芭蕾tutu裙适合哪些使用和采购场景？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对产品适用场景与采购对象的理解。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_18ff3c23f3c7c957",
+      "text": "哪些儿童芭蕾tutu裙厂家支持机构 LOGO、配色、裙摆层数和成人加大码定制？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_7c82056b195f1ae0",
+      "text": "晶铭服饰主要服务哪些客户和采购场景？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否理解企业服务对象，而不只认识品牌名称。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_fdbabec14f516441",
+      "text": "儿童芭蕾tutu裙的材质、规格和做工应该怎么比较？",
+      "family": "product_consideration",
+      "rationale": "检查产品细节型选购回答及目标品牌可见度。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_1277a7ca911a72df",
+        "fact_609e6e5cbb03db6f"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_07e93d43574de9b6",
+      "text": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商？",
+      "family": "supplier_capability",
+      "rationale": "检查小批量采购决策中的供应商比较与目标企业露出。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_50ec79dbe1db79d7",
+      "text": "晶铭服饰有哪些生产、供应或定制能力？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能把品牌与已确认企业能力关联。",
+      "fact_ids": [
+        "fact_44f9ff6c4fad64a9",
+        "fact_389c30b0c87f0141",
+        "fact_5f89ef81b622ade7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_e6f45401b7653bd0",
+      "text": "B 端采购适合选什么样的儿童芭蕾tutu裙？",
+      "family": "product_consideration",
+      "rationale": "检查有企业事实线索支持的使用人群/场景问法。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_eddea7f8c6e411f3",
+      "text": "定制儿童芭蕾tutu裙要向厂家确认哪些条件？",
+      "family": "supplier_capability",
+      "rationale": "检查定制能力型问题中的目标企业与竞品推荐。",
+      "fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    }
+  ]
+}

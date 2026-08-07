@@ -13,11 +13,33 @@ export async function confirmClean(projectRoot: string): Promise<{
   const knowledge = path.join(projectRoot, "knowledge");
   const facts = await readJson<FactLedger>(path.join(knowledge, "company.facts.json"));
   const sourceIndex = await readJson<SourceIndex>(path.join(knowledge, "source-index.json"));
+  const baseinfo = await readJson<{ fact_refs?: Record<string, string[]> }>(path.join(knowledge, "company.baseinfo.json"));
+  const profile = await readJson<{ fact_refs?: Record<string, string[]> }>(path.join(knowledge, "company.profile.json"));
+  const skus = await readJson<{ items?: Array<{ fact_refs?: string[] }> }>(path.join(knowledge, "company.skus.json"));
   const manifestPath = path.join(projectRoot, "manifest.json");
   const manifest = await readJson<Record<string, any>>(manifestPath);
-  for (const subject of facts.subjects) if (subject.review_status === "candidate") subject.review_status = "confirmed";
-  for (const fact of facts.facts) if (fact.review_status === "candidate") fact.review_status = "confirmed";
-  const factSnapshotId = stableId("fact_snapshot", facts.inputs_hash, facts.facts_hash);
+  const activeFactIds = new Set<string>([
+    ...Object.values(baseinfo.fact_refs ?? {}).flat(),
+    ...Object.values(profile.fact_refs ?? {}).flat(),
+    ...(skus.items ?? []).flatMap((item) => item.fact_refs ?? []),
+  ]);
+  for (const fact of facts.facts) {
+    const subject = facts.subjects.find((item) => item.subject_id === fact.subject_id);
+    if (subject?.type === "brand" && fact.field === "name") activeFactIds.add(fact.fact_id);
+    fact.review_status = activeFactIds.has(fact.fact_id) ? "confirmed" : "rejected";
+  }
+  const activeSubjectIds = new Set(facts.facts.filter((fact) => fact.review_status === "confirmed").map((fact) => fact.subject_id));
+  let addedParent = true;
+  while (addedParent) {
+    addedParent = false;
+    for (const subject of facts.subjects) {
+      if (!activeSubjectIds.has(subject.subject_id) || !subject.parent_subject_id || activeSubjectIds.has(subject.parent_subject_id)) continue;
+      activeSubjectIds.add(subject.parent_subject_id);
+      addedParent = true;
+    }
+  }
+  for (const subject of facts.subjects) subject.review_status = activeSubjectIds.has(subject.subject_id) ? "confirmed" : "rejected";
+  const factSnapshotId = stableId("fact_snapshot", facts.inputs_hash, facts.facts_hash, [...activeFactIds].sort());
   const confirmedAt = utcNow();
   const snapshotPath = path.join(knowledge, "snapshots", `${factSnapshotId}.json`);
   const snapshot = {

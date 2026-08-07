@@ -1,0 +1,36 @@
+[
+  {
+    "case": "success_recommended",
+    "status": "success",
+    "answer": "推荐测试品牌，排名第2。参考 https://example.com/a",
+    "analysis": { "competitors": ["竞品甲"] }
+  },
+  {
+    "case": "valid_non_mention",
+    "status": "success",
+    "answer": "可以考虑竞品甲和竞品乙。",
+    "analysis": { "competitors": ["竞品甲", "竞品乙"] }
+  },
+  {
+    "case": "mentioned_not_recommended",
+    "status": "success",
+    "answer": "测试品牌是相关厂商之一，但本次优先推荐竞品甲。",
+    "analysis": { "target_mentioned": true, "actively_recommended": false, "competitors": ["竞品甲"] }
+  },
+  {
+    "case": "negative_mention",
+    "status": "success",
+    "answer": "有用户担心测试品牌的售后问题，需要进一步核验。",
+    "analysis": { "target_mentioned": true, "negative_risk_mentioned": true, "actively_recommended": false }
+  },
+  {
+    "case": "no_citation",
+    "status": "success",
+    "answer": "测试品牌可以作为候选。"
+  },
+  {
+    "case": "provider_failure",
+    "status": "timeout",
+    "error": { "code": "timeout", "message": "provider timed out", "retryable": true }
+  }
+]

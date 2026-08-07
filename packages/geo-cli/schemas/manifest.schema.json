@@ -18,6 +18,31 @@
             "at": { "type": ["string", "null"] },
             "fact_snapshot_id": { "type": ["string", "null"] }
           }
+        },
+        "diagnose": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["pending", "review_required", "confirmed"] },
+            "at": { "type": ["string", "null"] },
+            "fact_snapshot_id": { "type": ["string", "null"] },
+            "seed_set_id": { "type": ["string", "null"] },
+            "run_id": { "type": ["string", "null"] },
+            "report_id": { "type": ["string", "null"] },
+            "limitations_accepted": { "type": "boolean" }
+          }
+        },
+        "scenario": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["pending", "review_required", "confirmed"] },
+            "at": { "type": ["string", "null"] },
+            "fact_snapshot_id": { "type": ["string", "null"] },
+            "diagnosis_report_id": { "type": ["string", "null"] },
+            "scenario_library_id": { "type": ["string", "null"] },
+            "version": { "type": ["integer", "null"] }
+          }
         }
       }
     },

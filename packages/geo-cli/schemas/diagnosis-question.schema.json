@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-question",
+  "type": "object",
+  "required": ["question_id", "text", "family", "rationale", "fact_ids", "derivation", "review_status", "replacement_for_question_id", "negative_risk_approved"],
+  "properties": {
+    "question_id": { "type": "string", "pattern": "^question_" },
+    "text": { "type": "string", "minLength": 2 },
+    "family": { "enum": ["brand_recognition", "product_consideration", "supplier_capability", "regional_procurement", "negative_risk"] },
+    "rationale": { "type": "string", "minLength": 2 },
+    "fact_ids": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^fact_" } },
+    "derivation": { "enum": ["fact_template", "operator", "legacy"] },
+    "review_status": { "enum": ["unreviewed", "approved", "rejected", "replaced"] },
+    "replacement_for_question_id": { "type": ["string", "null"] },
+    "negative_risk_approved": { "type": "boolean" }
+  },
+  "additionalProperties": false
+}

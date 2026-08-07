@@ -3,14 +3,18 @@
   "project_name": "晶铭服饰",
   "gates": {
     "clean": {
-      "status": "review_required",
-      "at": null,
-      "fact_snapshot_id": null
+      "status": "confirmed",
+      "at": "2026-08-07T07:34:30Z",
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd"
     },
     "diagnose": {
-      "status": "pending",
-      "at": null,
-      "by": null
+      "status": "confirmed",
+      "at": "2026-08-07T08:17:55Z",
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "seed_set_id": "seed_set_b7ef6f28a9934464",
+      "run_id": "diagnosis_run_615b6a3d768a38c1",
+      "report_id": "diagnosis_report_7a935870c7cbce00",
+      "limitations_accepted": true
     },
     "write_social": {
       "status": "pending",
@@ -21,18 +25,21 @@
       "status": "pending",
       "at": null,
       "by": null
+    },
+    "scenario": {
+      "status": "review_required",
+      "at": null,
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
+      "scenario_library_id": null,
+      "version": null
     }
   },
   "missing": [
     {
-      "code": "operator_review_note:profile_intro_duplicate_fragments",
-      "severity": "block",
-      "message": "公司概况仍有重复介绍、残留序号“二、”和段落错位；需要先清理 company.profile.json，再提交确认。"
-    },
-    {
-      "code": "operator_review_note:scale_claims_need_reconciliation",
-      "severity": "block",
-      "message": "人员、设备、产能、销量、复购率等数字在知识库文字与宣传图中存在不同口径；需企业给出统一可公开口径，未确认前不得用于诊断或文章。"
+      "code": "operator_review_note:scale_claims_excluded_pending_confirmation",
+      "severity": "recommend",
+      "message": "人员、设备、产能、销量、成交量和复购率等不同口径数字已从当前画像排除；企业以后给出统一公开口径时，再创建新的事实候选和快照。"
     },
     {
       "code": "operator_review_note:product_family_scope",
@@ -46,14 +53,14 @@
     }
   ],
   "clean_pipeline": {
-    "stage": "review",
+    "stage": "confirmed",
     "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-    "facts_hash": "0485d2d81b5377cf886f76ff88ae724d92a0b587fe647499364b9737ba8ae07d",
-    "changed_since_confirmation": true,
+    "facts_hash": "5a5aea074b6b9a36e686fc501ab8259c33844ee30187810e4ba8da9bdabed797",
+    "changed_since_confirmation": false,
     "previous_snapshot_id": null
   },
-  "clean_ready": false,
-  "review_ready": false,
+  "clean_ready": true,
+  "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-07T06:35:10Z"
+  "updated_at": "2026-08-07T09:08:55Z"
 }

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_4e3d2dcc84142073",
+  "run_id": "diagnosis_run_615b6a3d768a38c1",
+  "seed_set_id": "seed_set_b7ef6f28a9934464",
+  "question_id": "question_07e93d43574de9b6",
+  "question_text": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商？",
+  "question_family": "supplier_capability",
+  "platform": "豆包",
+  "provider": "not_configured_placeholder",
+  "adapter_kind": "manual",
+  "model": null,
+  "attempted_at": "2026-08-07T08:00:21Z",
+  "status": "unavailable",
+  "raw_snapshot_path": null,
+  "raw_content_hash": null,
+  "error": {
+    "code": "provider_api_not_configured",
+    "message": "豆包 API 未配置；本记录仅为计划占位，不代表平台回答或品牌未提及。",
+    "retryable": true
+  },
+  "analysis": null,
+  "latest_analysis_revision_id": null
+}

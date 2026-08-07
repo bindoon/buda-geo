@@ -1,8 +1,8 @@
 {
   "app_id": "jm_apparel_cx",
-  "generated_at": "2026-08-07T06:35:10Z",
+  "generated_at": "2026-08-07T07:13:47Z",
   "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-  "facts_hash": "0485d2d81b5377cf886f76ff88ae724d92a0b587fe647499364b9737ba8ae07d",
+  "facts_hash": "5a5aea074b6b9a36e686fc501ab8259c33844ee30187810e4ba8da9bdabed797",
   "subjects": [
     {
       "subject_id": "sub_company_0e74341ab7180b08",
@@ -13,7 +13,7 @@
         "src_413e749433702a1b",
         "src_fd3cfa703ba98a56"
       ],
-      "review_status": "candidate"
+      "review_status": "confirmed"
     },
     {
       "subject_id": "sub_brand_20c690fc91d64070",
@@ -23,7 +23,7 @@
       "source_refs": [
         "src_413e749433702a1b"
       ],
-      "review_status": "candidate"
+      "review_status": "confirmed"
     },
     {
       "subject_id": "sub_product_78f8dc1314a78919",
@@ -33,7 +33,7 @@
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "review_status": "candidate"
+      "review_status": "confirmed"
     }
   ],
   "facts": [
@@ -48,7 +48,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -62,7 +62,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "rejected",
       "disclosure_level": "public"
     },
     {
@@ -76,7 +76,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "restricted"
     },
     {
@@ -90,7 +90,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "restricted"
     },
     {
@@ -104,7 +104,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -118,7 +118,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -153,7 +153,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "restricted"
     },
     {
@@ -170,85 +170,81 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "restricted"
     },
     {
-      "fact_id": "fact_092eb38867127d1c",
+      "fact_id": "fact_88c684883b54ef30",
       "subject_id": "sub_company_0e74341ab7180b08",
       "field": "intro",
-      "value": "曹县晶铭服饰有限公司成立于2014年，坐落于山东菏泽曹县安蔡楼镇王楼村，是深耕儿童表演服饰研发、设计、生产、供货一体化的专业科技型服装企业，十余年专注儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服全品类生产。\n一、硬核工厂硬实力\n生产规模体量：自有标准化生产厂房1500㎡，完整裁床、缝纫、锁边、定型、包装全独立车间；在职专业生产员工35人，全套自动化缝纫、刺绣、网纱定型设备40台，可承接大批量订单稳定排产，全年年销售额稳定800万元，现货库存常备上万件，爆款单品月销可达8000+件，供货产能充足不缺货。\n专业研发设计团队：配备5名资深舞蹈服饰设计师，紧跟国内舞蹈机构需求、海外跨境流行趋势，每月上新3-5款新款芭蕾裙，覆盖考级简约款、重工舞台比赛款、童话剧目演出款；可独立完成版型改版、配色定制、机构logo印花打样，3天快速出样品，按需匹配客户差异化需求。\n品控质检体系：每一件舞蹈服历经面料检测、车缝初检、刺绣定型复检、成品完整质检四道工序，面料全部采用A类母婴级标准，无荧光剂、无刺激染料，网纱、刺绣、肩带细节全部人工排查，杜绝扎肤、脱钻、断线等质量问题。\n二、\n\n曹县晶铭服饰有限公司自2014年建厂以来，十余年专注儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服全品类生产。公司从山东菏泽曹县起步，凭借源头工厂的硬实力和对产品工艺的不断钻研，逐步建立起从研发设计到生产供货的一体化体系。通过自研网纱定型缝制、高温固色刺绣、儿童人体工学版型等核心工艺，公司持续为市场提供高品质的儿童舞蹈服饰。经过多年发展，晶铭服饰已从一家地方服装厂成长为深耕内销与跨境双渠道的供货型企业，累计与100余家国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作。公司始终坚持以靠谱品质、灵活政策和完善服务，收获全国采购商的长期复购信赖，在行业内积累了良好的口碑。",
+      "value": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
       "unit": null,
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "derivation": "extracted",
+      "derivation": "operator",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_cce4233532041ac9",
+      "fact_id": "fact_5d421c9f6e2a7fd5",
       "subject_id": "sub_company_0e74341ab7180b08",
       "field": "products_services",
-      "value": "公司专注于儿童芭蕾舞TUTU裙、练功服、舞台汇演表演服的全品类生产，并为B端采购客户提供灵活拿货政策（支持1件起混批、小批量试单，拿货量越大阶梯批发价，长期合作客户可享专属订货优惠）、定制一站式服务（支持定制舞蹈机构班服印LOGO、修改裙摆层数、专属配色打版、成人加大码定制、全套配饰配套打包）、极速物流发货（现货订单48小时内揽收出库，大批量多包裹采用子母件同步发货）和完善售后保障体系（破损、少件、面料瑕疵无条件赔付补发，滞销常规款支持同价位调换，专属业务一对一跟进订单）。",
+      "value": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
       "unit": null,
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "derivation": "extracted",
+      "derivation": "operator",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_8153466b46e84102",
+      "fact_id": "fact_d8fb8318a6fabd89",
       "subject_id": "sub_company_0e74341ab7180b08",
       "field": "advantages",
-      "value": "灵活拿货政策：支持1件起混批、小批量试单，培训机构、电商卖家、外贸商家均可适配；拿货量越大阶梯批发价，长期合作客户可享专属订货优惠。\n定制一站式服务：支持定制舞蹈机构班服印LOGO、修改裙摆层数、专属配色打版、成人加大码定制、全套配饰（头花、手花、舞蹈袜）配套打包，省去客户二次采购成本。\n极速物流发货：现货订单48小时内揽收出库，大批量多包裹采用子母件同步发货，国内主流快递稳定合作，保障舞蹈班汇演、赛事档期不延误。\n完善售后保障体系\n工厂承诺破损、少件、面料瑕疵无条件赔付补发，收货发现任何质量问题，无需复杂流程，拍照核实即安排补发/退换；滞销常规款支持同价位调换，降低客户囤货经营风险；专属业务一对一跟进订单，售前版型咨询、售中进度跟踪、售后问题快速响应。\n长期稳定合作案例\n深耕内销+跨境双渠道，累计与100+国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作，合作客户覆盖全国各省市艺术培训机构、淘宝/拼多多/抖音零售商家、亚马逊、Temu跨境出口商家；多款芭蕾tutu裙常年作为舞蹈班统一班服、少儿赛事指定演出服装，凭借靠谱品质收获全国采购商长期复购信赖。\n\n1688\n\n面料特点：上身主体采用高弹亲肤锦纶冰丝面料，透气速干，不闷汗，练舞长时间贴身不磨皮肤；高弹力拉伸不变形，胖瘦儿童都贴合身形。裙摆TUTU网纱为多层高密度软网纱，内置定型硬衬，裙摆自然蓬挺不塌陷，不用额外撑裙；网纱边缘锁边处理，不扎腿、不勾丝、不掉纱。内衬为全棉透气里衬，防走光，无荧光剂、无刺鼻染料，母婴级安全面料，儿童贴身穿无刺激。装饰辅料采用烫金刺绣、手工立体花朵、珍珠水钻，采用高温固色工艺，水洗不脱金、不掉钻。\n工艺特点：一体式立体剪裁，V领显瘦、小飞袖遮拜拜肉，肩带可调节，适配3-14岁不同身高儿童。重工手工缝制，每一层网纱分层独立车缝，裙摆支撑力强，转圈跳舞不散乱。加固车线，腰头、肩带、刺绣位置双线锁缝，高强度拉扯不易断线，反复穿洗耐用。环保印染，活性染料上色，多色可选（白、粉、紫、蓝），水洗无褪色、无异味，通过婴幼儿服饰安全检测。\n版型细节特点：分码全覆盖，100-160全尺码，幼儿小班到大龄考级儿童一站式配齐。可调节隐形肩带，不滑落，跳舞大幅度动作不走光。低腰舒适版型，不勒肚子，下腰、劈叉、跳跃无束缚。可拆卸装饰花朵/头花，一物多用，日常练习、舞台演出两种穿法。\n\n源头自产工厂，无中间商差价，支持混批、小批量拿货（1件起批），库存充足常年现货，爆款月销8000+稳定供货。支持定制服务：印机构logo、改裙摆层数、定制专属配色、定做成人加大码，打样周期短3天出样。极速发货：48小时揽收发货，现货订单当天出库，大件多包裹子母件发货，物流稳定，不耽误培训机构演出档期。售后保障：残次破损包补发，滞销款可调换，长期合作机构客户提供账期、阶梯拿货价政策。\n\n（对比市场普通舞蹈裙）：定型升级，同行单层软纱易塌，本店多层加硬衬TUTU裙，上台拍照出片，舞台视觉效果高级。安全升级，全线面料A类儿童服饰标准，无尖锐水钻、无硬质毛刺，舞蹈课大幅度动作不划伤孩子。性价比优势，重工刺绣款批发价70-108区间，同等工艺线下培训机构拿货价低30%，利润空间充足。款式更新快，每月上新跨境风新款，童话剧目款、考级简约款、公主演出款全覆盖，紧跟舞蹈机构流行趋势。配套一站式，下单赠送配套袜裤、头花、手花，培训机构采购不用额外搭配配饰，省心省力。\n\n（采购商家好卖货）：受众广，兼顾日常练功、考级、舞台汇演、比赛四大需求，一年四季持续走单，淡旺季差距小。颜值适配短视频带货，蓬蓬纱裙拍照、拍视频出片，抖音、小红书、线下舞蹈班引流卖货自带流量。多渠道适配，支持跨境外贸、线下舞蹈培训机构、母婴店、电商淘宝拼多多卖家、幼儿园采购全渠道分销。\n产品应用场景（采购客户使用渠道+适用场合）：\n线下培训机构采购（核心B端客户）：少儿芭蕾培训班日常练功服（简约款tutu裙，舒适耐穿，长期上课统一班服）；舞蹈考级专用（纯色简约刺绣款，符合考级服装规范，不浮夸扣分）；年度汇报演出、六一儿童节舞台汇演（重工水钻花朵款，上镜华丽，集体舞蹈统一着装）；芭蕾剧目表演（小天鹅、睡美人、胡桃夹子童话主题剧目定制款，配套头饰全套道具）。\n赛事/比赛场景：少儿芭蕾舞大赛、全国舞蹈特长生竞赛、艺术特长生测评，高质感刺绣裙提升舞台观感，适合独舞、群舞参赛。\n零售终端零售渠道：母婴实体店、儿童服饰店（零售卖给家长，生日拍照、儿童写真、生日派对公主穿搭）；电商卖家（淘宝/拼多多/抖音）（零售单件发货，宝妈自用拍照、兴趣班穿搭）；跨境外贸（出口欧美东南亚儿童舞蹈市场，海外舞蹈工作室、亚马逊跨境供货）。\n其他商用场景：幼儿园文艺晚会、儿童摄影写真馆、少儿艺术活动、商场儿童舞台活动租赁服装、亲子芭蕾活动穿搭。",
+      "value": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
       "unit": null,
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "derivation": "extracted",
+      "derivation": "operator",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_ec45d3991f8bc947",
+      "fact_id": "fact_16500517b491d4dc",
       "subject_id": "sub_company_0e74341ab7180b08",
       "field": "trust",
-      "value": "工艺技术：自研网纱定型缝制、高温固色刺绣、儿童人体工学版型三大核心工艺，自有全套生产设备自主加工，工艺不外包。\n行业协会与合作背书：100+线下舞蹈培训机构、国内外贸企业长期稳定合作，赛事汇演指定服装供货厂家。\n\n佐证：店铺4.9高分，爆款累计万笔成交，65%客户复购；采购商一致认可发货时效、定制服务、赔付售后政策，无售后纠纷记录。\n工厂硬实力背书：2014年建厂，1500㎡标准化厂房，稳定年产供货能力，支持客户实地验厂看货、现场打样。\n\n公司深耕内销与跨境双渠道，累计与100余家国内外外贸企业、线上电商店铺、线下少儿舞蹈培训机构达成长期稳定供货合作。合作客户覆盖全国各省市艺术培训机构、淘宝/拼多多/抖音零售商家，以及亚马逊、Temu等跨境出口商家。多款芭蕾tutu裙常年作为舞蹈班统一班服、少儿赛事指定演出服装，凭借靠谱品质收获全国采购商长期复购信赖。",
+      "value": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
       "unit": null,
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "derivation": "extracted",
+      "derivation": "operator",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_c1ef85092220d8b2",
+      "fact_id": "fact_9ca1ceb88252b2d4",
       "subject_id": "sub_company_0e74341ab7180b08",
       "field": "pain_points",
       "value": [
-        "C端家长：劣质面料刺激儿童肌肤、版型束缚舞蹈动作、做工易损坏需重复购买、场景单一配套不全、零售售后推诿耽误演出。",
-        "B端采购商：款式更新滞后、小批量定制门槛高、工厂供货延期断货、破损残次无赔付售后、无配套一站式拿货政策。",
-        "市场低价内卷，劣质通货冲击优质产品",
-        "上游供应链不稳定，旺季断料、生产周期不可控",
-        "工艺研发薄弱，版型款式同质化严重",
-        "产销信息脱节，工厂滞销、采购商难找靠谱货源",
-        "行业配套服务缺失，定制、物流、售后体系不完善。"
+        "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。",
+        "舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。",
+        "电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。"
       ],
       "unit": null,
       "source_refs": [
         "src_fd3cfa703ba98a56"
       ],
-      "derivation": "extracted",
+      "derivation": "operator",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -262,7 +258,7 @@
       ],
       "derivation": "extracted",
       "confidence": 0.95,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -276,7 +272,7 @@
       ],
       "derivation": "operator",
       "confidence": 0.9,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -290,7 +286,7 @@
       ],
       "derivation": "inferred",
       "confidence": 0.72,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -308,7 +304,7 @@
       ],
       "derivation": "inferred",
       "confidence": 0.7,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -327,7 +323,7 @@
       ],
       "derivation": "inferred",
       "confidence": 0.7,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -345,7 +341,7 @@
       ],
       "derivation": "inferred",
       "confidence": 0.72,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -359,7 +355,7 @@
       ],
       "derivation": "operator",
       "confidence": 0.9,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     },
     {
@@ -373,7 +369,7 @@
       ],
       "derivation": "operator",
       "confidence": 0.8,
-      "review_status": "candidate",
+      "review_status": "confirmed",
       "disclosure_level": "public"
     }
   ],

@@ -6,7 +6,7 @@
 
 | 路径 | 用途 |
 |------|------|
-| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：inventory / clean / validate / review-clean / confirm-clean |
+| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：企业事实清洗、基线诊断、需求场景库、Schema/证据校验 |
 | `skills/` | Agent Skill（`zichi-geo` 等）；**`.cursor/skills/zichi-geo` → 软链到此** |
 | `projects/{项目名}/` | 按客户拆分；`inputs/` 原始资料；`knowledge/` 等为清洗产物 |
 | `openspec/` | 研发期规格驱动变更；不属于最终运行交付 |
@@ -31,18 +31,19 @@
 
 ### OpenSpec（进行中）
 - [`openspec/changes/clean-projects-to-knowledge-schema/`](./openspec/changes/clean-projects-to-knowledge-schema/) — 华远深洗 → 标准知识库 Schema（proposal/design/specs/tasks）
-- [`openspec/changes/rebuild-enterprise-fact-cleaning/`](./openspec/changes/rebuild-enterprise-fact-cleaning/) — 企业事实层重建：来源追踪、语义复核、确认快照与多项目复用；注册材料仅保留原始输入
-- [`openspec/changes/add-baseline-geo-diagnosis/`](./openspec/changes/add-baseline-geo-diagnosis/) — 已确认事实 → 小规模种子题 → 多平台基线诊断与缺口
-- [`openspec/changes/add-customer-question-scenarios/`](./openspec/changes/add-customer-question-scenarios/) — 已确认诊断 → 紫驰自己的客户问题/购买场景；竞品仅作方法覆盖参考
+- [`openspec/changes/archive/2026-08-07-rebuild-enterprise-fact-cleaning/`](./openspec/changes/archive/2026-08-07-rebuild-enterprise-fact-cleaning/) — 已归档：企业事实层重建、来源追踪、语义复核与确认快照
+- [`openspec/changes/add-baseline-geo-diagnosis/`](./openspec/changes/add-baseline-geo-diagnosis/) — 已完成待归档：已确认事实 → 可复核种子题 → 探测证据 → 透明指标、报告与缺口
+- [`openspec/changes/add-customer-question-scenarios/`](./openspec/changes/add-customer-question-scenarios/) — 已实现待人工确认晶铭场景库；竞品仅作方法覆盖参考
 
 ## geo-cli 快速开始
 
 ```bash
 cd packages/geo-cli && npm install && npm run build && npm link
-geo-cli clean --project projects/南通市海门华远工具厂
-geo-cli validate --project projects/南通市海门华远工具厂
-geo-cli review-clean --project projects/南通市海门华远工具厂
-geo-cli confirm-clean --project projects/南通市海门华远工具厂
+geo-cli clean --project projects/晶铭服饰
+geo-cli validate --project projects/晶铭服饰
+geo-cli review-clean --project projects/晶铭服饰
+geo-cli confirm-clean --project projects/晶铭服饰
+geo-cli diagnose seed-draft --project projects/晶铭服饰 --size 25
 ```
 
 未 link 时用：`node packages/geo-cli/dist/cli.js clean --project projects/南通市海门华远工具厂`

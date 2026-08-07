@@ -173,6 +173,17 @@ export async function cleanProject(
     const sections = splitProfileSections(await docxPlainText(kbPath));
     profile = { app_id: appId, ...sections, source: `docx:${path.basename(kbPath)}` };
   }
+  if (overrides.profile) {
+    const profileSource = sourceIndex.sources.find((source) =>
+      source.scope === "input" && sourcePathMatches(source.path, overrides.profile!.source_path),
+    );
+    if (!profileSource) throw new Error(`profile override source not found: ${overrides.profile.source_path}`);
+    for (const field of ["intro", "products_services", "advantages", "trust", "pain_points"] as const) {
+      const value = overrides.profile[field];
+      if (value !== undefined) (profile[field] as string | string[]) = value;
+    }
+    profile.source = `operator:${profileSource.name}`;
+  }
 
   const previousItems = previous.skus?.items ?? [];
   const opaqueSourceNames = new Set(
@@ -211,6 +222,7 @@ export async function cleanProject(
     profile,
     skus,
     factResolutions: overrides.fact_resolutions,
+    profileDerivation: overrides.profile ? "operator" : "extracted",
     previous,
   });
   const findings = semanticFindings({
@@ -285,6 +297,9 @@ export async function cleanProject(
             fact_snapshot_id: recoverableSnapshot!.fact_snapshot_id,
           }
         : { status: "review_required", at: null, fact_snapshot_id: null },
+      diagnose: unchangedConfirmed
+        ? (previousManifest?.gates?.diagnose ?? baseline.gates.diagnose)
+        : baseline.gates.diagnose,
     },
     missing,
     clean_pipeline: {
