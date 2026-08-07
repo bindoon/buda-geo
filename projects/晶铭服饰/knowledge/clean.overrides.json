@@ -23,13 +23,8 @@
     },
     {
       "source_path": "曹县晶铭服饰有限公司 信息/9945ac5ef4159084cdf7e6aab6f61712.jpg",
-      "action": "evidence",
-      "evidence_type": "trademark_registration_certificate",
-      "supports_fields": [
-        "company_name"
-      ],
-      "disclosure_level": "restricted",
-      "reason": "商标注册证中列明注册人为曹县晶铭服饰有限公司；仅窄关联企业主体，不证明产品性能。"
+      "action": "ignore",
+      "reason": "商标注册证只保留在 inputs，不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_path": "曹县晶铭服饰有限公司 信息/9bc85bcaf81b5fd69b99178a05084089.png",
@@ -54,14 +49,8 @@
     },
     {
       "source_path": "曹县晶铭服饰有限公司 信息/e87aee611900335001b9928ef35e958e.jpg",
-      "action": "evidence",
-      "evidence_type": "business_license",
-      "supports_fields": [
-        "company_name",
-        "address"
-      ],
-      "disclosure_level": "restricted",
-      "reason": "营业执照仅支持企业名称与登记住所；不用于证明产品、产能或服务承诺。"
+      "action": "ignore",
+      "reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     }
   ],
   "products": [

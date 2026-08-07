@@ -3,14 +3,8 @@
   "assets": [
     {
       "source_path": "河北仁丹药业副本（新）.jpg",
-      "action": "evidence",
-      "evidence_type": "business_license",
-      "supports_fields": [
-        "company_name",
-        "address"
-      ],
-      "disclosure_level": "restricted",
-      "reason": "人工查看确认为营业执照副本，仅支持企业主体与注册地址。"
+      "action": "ignore",
+      "reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_path": "公司图片/**",
@@ -19,11 +13,8 @@
     },
     {
       "source_path": "信任背书(1)/信任背书/**",
-      "action": "evidence",
-      "evidence_type": "license_or_product_filing",
-      "supports_fields": [],
-      "disclosure_level": "restricted",
-      "reason": "许可证、备案和产品资料；具体支持范围待逐份人工核对。"
+      "action": "ignore",
+      "reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     }
   ],
   "products": [

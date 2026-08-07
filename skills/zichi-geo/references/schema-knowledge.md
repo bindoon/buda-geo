@@ -8,23 +8,22 @@
 knowledge/
   source-index.json          # 原始文件索引与哈希
   company.facts.json         # 主体、事实、冲突
-  company.evidence.json      # 证据及支持范围
   clean.overrides.json       # Skill/运营的项目级语义决策
   company.baseinfo.json      # 名片视图
   company.profile.json       # 介绍文案视图
   company.skus.json          # 产品视图
   snapshots/{id}.json        # 人工确认后生成的不可变事实快照
-assets/images/{_company|_trust|产品名}/
+assets/images/{_company|产品名}/
 manifest.json
 ```
 
-source / facts / evidence 是事实权威层；baseinfo / profile / skus 是便于人和下游使用的投影视图。keywords、FAQ、prompts、generation_plan 等旧文件不是 clean 的输出或确认依据。
+source / facts 是事实权威层；baseinfo / profile / skus 是便于人和下游使用的投影视图。keywords、FAQ、prompts、generation_plan 等旧文件不是 clean 的输出或确认依据。
 
 ## `source-index.json`
 
 每个 input 记录：`source_id`、`path`、`kind`、`hash`、`size`、`parse_status`、`ignored`、`ignored_reason`。稳定 ID 按相对路径生成；`inputs_hash` 只由输入路径与内容哈希决定。
 
-身份证必须 `ignored`。不透明命名图片默认 ignored，只有项目 override 明确分类后才可派生。
+身份证、营业执照、商标证及注册/申请材料必须 `ignored`，只保留在原始 `inputs/`。不透明命名图片默认 ignored，只有项目 override 明确归为产品或企业素材后才可派生。
 
 ## `company.facts.json`
 
@@ -32,7 +31,7 @@ source / facts / evidence 是事实权威层；baseinfo / profile / skus 是便�
 
 `subject_id`、`type`、`name`、`parent_subject_id`、`source_refs`、`review_status`。
 
-主体类型包括 company、brand、product、product_family、capability、service、evidence、asset。
+主体类型包括 company、brand、product、product_family、capability、service、asset。
 
 ### fact
 
@@ -47,12 +46,6 @@ source / facts / evidence 是事实权威层；baseinfo / profile / skus 是便�
 | `disclosure_level` | `public` / `restricted` / `internal` |
 
 同字段多来源不同值进入 `conflicts[]`，保留所有候选，不静默覆盖。
-
-## `company.evidence.json`
-
-证据记录 `source_ref`、关联主体、派生 `path`、`supports_fact_ids`、披露级别、有效期和复核状态。
-
-证据只支持它明确证明的事实。证据文件存在不等于其中所有可能相关的公司表述都被证实。
 
 ## 三个业务视图
 
@@ -72,7 +65,7 @@ source / facts / evidence 是事实权威层；baseinfo / profile / skus 是便�
 
 ## `clean.overrides.json`
 
-`assets[]` 记录单图的 product/company/evidence/ignore 决策；`products[]` 记录产品归并、主产品、分类、属性、能力、卖点与来源图片。它是 Skill 的项目级语义输出，不得复制到通用 CLI 代码。
+`assets[]` 记录单图的 product/company/ignore 决策；`products[]` 记录产品归并、主产品、分类、属性、能力、卖点与来源图片。它是 Skill 的项目级语义输出，不得复制到通用 CLI 代码。
 
 ## `manifest.json` 与确认快照
 

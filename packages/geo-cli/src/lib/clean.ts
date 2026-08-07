@@ -23,7 +23,6 @@ export interface CleanResult {
   missing: MissingItem[];
   sku_count: number;
   facts_count: number;
-  evidence_count: number;
   facts_hash: string;
   review_ready: boolean;
   clean_ready: boolean;
@@ -43,8 +42,33 @@ async function loadPrevious(projectRoot: string): Promise<PreviousCleanViews> {
     profile: await readIfExists<ProfileView>(path.join(knowledge, "company.profile.json")),
     skus: await readIfExists<{ app_id: string; items: SkuItem[] }>(path.join(knowledge, "company.skus.json")),
     facts: await readIfExists(path.join(knowledge, "company.facts.json")),
-    evidence: await readIfExists(path.join(knowledge, "company.evidence.json")),
   };
+}
+
+interface LegacyEvidenceItem {
+  path?: string | null;
+}
+
+async function removeLegacyEvidenceOutputs(projectRoot: string): Promise<string[]> {
+  const evidencePath = path.join(projectRoot, "knowledge", "company.evidence.json");
+  if (!(await pathExists(evidencePath))) return [];
+  const removed: string[] = [];
+  const legacy = await readJson<{ items?: LegacyEvidenceItem[] }>(evidencePath);
+  const allowedRoots = [
+    path.resolve(projectRoot, "assets", "images", "_trust"),
+    path.resolve(projectRoot, "assets", "evidence"),
+  ];
+  for (const item of legacy.items ?? []) {
+    if (!item.path) continue;
+    const absolute = path.resolve(projectRoot, item.path);
+    if (!allowedRoots.some((root) => absolute.startsWith(`${root}${path.sep}`))) continue;
+    if (!(await pathExists(absolute))) continue;
+    await unlink(absolute);
+    removed.push(item.path);
+  }
+  await unlink(evidencePath);
+  removed.push("knowledge/company.evidence.json");
+  return removed;
 }
 
 async function removeMisclassifiedDerivedAssets(
@@ -76,6 +100,7 @@ export async function cleanProject(
   const inv = await inventory(projectRoot);
   inv.source_index.app_id = appId;
   const knowledge = path.join(projectRoot, "knowledge");
+  const removedLegacyEvidence = await removeLegacyEvidenceOutputs(projectRoot);
   const previous = await loadPrevious(projectRoot);
   const overrides = await loadCleanOverrides(projectRoot, appId);
   const sourceIndex = await addLegacyProjectionSources(projectRoot, inv.source_index, previous);
@@ -91,9 +116,7 @@ export async function cleanProject(
       : null;
     if (override.action !== "ignore") {
       source.parse_status = "indexed_only";
-      source.kind = override.action === "evidence"
-        ? "evidence_candidate"
-        : override.action === "company"
+      source.kind = override.action === "company"
           ? "company_asset"
           : override.action === "product"
             ? "product_image"
@@ -112,6 +135,9 @@ export async function cleanProject(
   }
 
   let warnings: string[] = [];
+  if (removedLegacyEvidence.length) {
+    warnings.push(`removed_legacy_evidence:${removedLegacyEvidence.join(",")}`);
+  }
   let baseinfo: BaseInfoView = {
     app_id: appId,
     company_name: "",
@@ -129,7 +155,7 @@ export async function cleanProject(
   if (formPath) {
     const parsed = parseInfoForm(path.join(projectRoot, "inputs", formPath), appId);
     baseinfo = parsed.baseinfo;
-    warnings = parsed.warnings;
+    warnings.push(...parsed.warnings);
   }
 
   let profile: ProfileView = {
@@ -184,7 +210,6 @@ export async function cleanProject(
     baseinfo,
     profile,
     skus,
-    overrides: overrides.assets,
     factResolutions: overrides.fact_resolutions,
     previous,
   });
@@ -192,7 +217,6 @@ export async function cleanProject(
     profile: layer.profile,
     skus: layer.skus.items,
     facts: layer.facts,
-    evidence: layer.evidence,
     sourceIndex,
   });
   let missing = buildMissing(layer.baseinfo as BaseInfo, layer.profile, layer.skus.items, inv.has_chat_logs, findings);
@@ -210,7 +234,7 @@ export async function cleanProject(
   if (ignoredSensitive.length) missing.push({
     code: "sensitive_inputs_reviewed",
     severity: "optional",
-    message: `当前隔离 ${ignoredSensitive.length} 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。`,
+    message: `当前有 ${ignoredSensitive.length} 个身份证、注册材料或不透明命名文件仅保留在 inputs；清洗不会复制、OCR 或写入企业事实。`,
   });
 
   const previousManifest = await readIfExists<Record<string, any>>(path.join(projectRoot, "manifest.json"));
@@ -227,7 +251,6 @@ export async function cleanProject(
         inputs_hash: string;
         facts_hash: string;
         facts: typeof layer.facts;
-        evidence: typeof layer.evidence;
       }>(path.join(knowledge, "snapshots", `${recoverableSnapshotId}.json`))
     : undefined;
   const unchangedConfirmed =
@@ -235,7 +258,6 @@ export async function cleanProject(
     recoverableSnapshot?.facts_hash === layer.facts.facts_hash;
   if (unchangedConfirmed && recoverableSnapshot) {
     layer.facts = recoverableSnapshot.facts;
-    layer.evidence = recoverableSnapshot.evidence;
   }
   const blockCount = missing.filter((item) => item.severity === "block").length;
   const legacyNames = [
@@ -282,7 +304,6 @@ export async function cleanProject(
   await writeJson(path.join(knowledge, "company.profile.json"), layer.profile);
   await writeJson(path.join(knowledge, "company.skus.json"), layer.skus);
   await writeJson(path.join(knowledge, "company.facts.json"), layer.facts);
-  await writeJson(path.join(knowledge, "company.evidence.json"), layer.evidence);
   await writeJson(path.join(projectRoot, "manifest.json"), manifest);
 
   return {
@@ -292,7 +313,6 @@ export async function cleanProject(
     missing,
     sku_count: layer.skus.items.length,
     facts_count: layer.facts.facts.length,
-    evidence_count: layer.evidence.items.length,
     facts_hash: layer.facts.facts_hash,
     review_ready: blockCount === 0,
     clean_ready: unchangedConfirmed,

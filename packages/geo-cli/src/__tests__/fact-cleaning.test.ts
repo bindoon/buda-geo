@@ -7,7 +7,7 @@ import JSZip from "jszip";
 import * as XLSX from "xlsx";
 import { cleanProject } from "../lib/clean.js";
 import { confirmClean } from "../lib/confirm.js";
-import { digestObject, stableId, type EvidenceLedger, type FactLedger, type SourceIndex } from "../lib/fact-model.js";
+import { digestObject, stableId, type FactLedger, type SourceIndex } from "../lib/fact-model.js";
 import { inventory } from "../lib/inventory.js";
 import { semanticFindings } from "../lib/quality.js";
 import type { SkuItem } from "../lib/skus.js";
@@ -56,7 +56,6 @@ test("semantic checks reject hash products, empty main products and unresolved c
       resolution: null,
     }],
   };
-  const evidence: EvidenceLedger = { app_id: "app_test", generated_at: "2026-01-01T00:00:00Z", items: [] };
   const findings = semanticFindings({
     profile: {
       app_id: "app_test",
@@ -69,7 +68,6 @@ test("semantic checks reject hash products, empty main products and unresolved c
     },
     skus: [sku],
     facts,
-    evidence,
     sourceIndex,
   });
   const codes = findings.map((item) => item.code);
@@ -152,11 +150,22 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   const imagePath = path.join(inputs, "产品图", "测试产品.jpg");
   await mkdir(path.dirname(imagePath), { recursive: true });
   await writeFile(imagePath, Buffer.from("fake-image-v1"));
+  const legacyEvidenceAsset = path.join(projectRoot, "assets", "images", "_trust", "license.jpg");
+  await mkdir(path.dirname(legacyEvidenceAsset), { recursive: true });
+  await writeFile(legacyEvidenceAsset, Buffer.from("legacy-derived-copy"));
+  await writeJson(path.join(knowledge, "company.evidence.json"), {
+    app_id: "app_test",
+    generated_at: "2026-01-01T00:00:00Z",
+    items: [{ path: "assets/images/_trust/license.jpg" }],
+  });
 
   const inputInventoryBefore = await inventory(projectRoot);
   const first = await cleanProject(projectRoot, "app_test");
   assert.equal(first.review_ready, true);
   assert.equal(first.clean_ready, false);
+  assert(first.warnings.some((warning) => warning.startsWith("removed_legacy_evidence:")));
+  await assert.rejects(readFile(path.join(knowledge, "company.evidence.json")));
+  await assert.rejects(readFile(legacyEvidenceAsset));
   assert(!JSON.stringify(await readJson(path.join(knowledge, "company.baseinfo.json"))).includes("never-store-this"));
   const beforeConfirmation = await validateProject(projectRoot, true);
   assert.equal(beforeConfirmation.ok, true, beforeConfirmation.errors.join("\n"));
@@ -171,6 +180,8 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   const confirmation = await confirmClean(projectRoot);
   const snapshot = await readJson<Record<string, unknown>>(path.join(projectRoot, confirmation.snapshot_path));
   assert.equal("confirmed_by" in snapshot, false);
+  assert.equal(snapshot.schema_version, 2);
+  assert.equal("evidence" in snapshot, false);
   const manifestAfterConfirmation = await readJson<Record<string, any>>(path.join(projectRoot, "manifest.json"));
   assert.equal(manifestAfterConfirmation.gates.clean.status, "confirmed");
   assert.equal("by" in manifestAfterConfirmation.gates.clean, false);

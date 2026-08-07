@@ -39,7 +39,7 @@ AI 向客户推荐品牌时，引用的是它抓到的外部信息。因此年�
                               │
 资料包 ──clean──▶ 企业事实层 ──人工复核/确认──▶ diagnose ──▶ 场景/关键词 ──▶ write
                       │                                                   │
-                      ├── source index / facts / evidence                 ├── social
+                      ├── source index / facts                            ├── social
                       └── baseinfo / profile / products                   ├── media
                                                                           └── b2b
 ```
@@ -58,7 +58,7 @@ geo/
 ├── projects/                  # 按客户/项目隔离（唯一工作区）
 │   └── {项目名}/
 │       ├── inputs/            # 原始文件（只读约定，不改客户原件）
-│       ├── knowledge/         # 清洗后的来源索引、企业事实、证据与兼容视图
+│       ├── knowledge/         # 清洗后的来源索引、企业事实与业务视图
 │       ├── assets/            # 规范化配图（从 inputs 归类拷贝/软链）
 │       ├── diagnosis/         # 诊断结果与快照
 │       ├── articles/          # 生成稿件 + 队列
@@ -91,7 +91,7 @@ geo/
 | **GEO 信息收集表 `.xlsx`** | 5/5（表名略异，Sheet 均为「公司信息」） | A 基础信息 + A5 媒体账号 |
 | **企业知识库 `.docx`** | 5/5（已有大泽/运营侧成稿） | B 画像（介绍/产品/优势/背书） |
 | **关键词 / 问题库 `.xlsx`** | 4/5（仁丹缺独立词表，词在知识库正文里） | clean 只索引原件；确认企业事实后，作为诊断/场景词阶段的候选输入 |
-| **证照与人像图** | 5/5（身份证、营业执照散落或独立文件夹） | 执照可进信任桶；**法人身份证仅用于五大自媒体企业实名**，工具清洗忽略（不进知识库/文章） |
+| **证照与人像图** | 5/5（身份证、营业执照散落或独立文件夹） | 全部只保留在原始 `inputs/`；工具清洗不复制、不 OCR、不进知识库/文章。身份证与营业执照可由运营在线下企业实名流程中使用 |
 
 ### 2.2 高频但形态不统一的输入
 
@@ -199,13 +199,11 @@ projects/{项目名}/
     company.profile.json       # 企业介绍：产品服务、优势、背书、痛点；不放联系方式
     company.skus.json          # 经 Skill 语义归桶后的产品/产品族；CLI 不写死客户 SKU
     company.facts.json         # 主体、事实、来源引用、推断方式、置信度、冲突
-    company.evidence.json      # 证据台账及 evidence→fact 关联
     clean.overrides.json       # 项目级 Skill 规则：资产归类、产品归桶、冲突选择/字段规范化
     snapshots/                 # 已确认事实快照；不可被 re-clean 覆盖
     # keywords / FAQ / prompts / generation_plan 属下游阶段，clean 不创建或刷新
   assets/images/
     _company/                  # 厂房/团队/门头
-    _trust/                    # 证书/背书（不含法人身份证）
     {sku_or_category}/         # 主图/详情/场景
   diagnosis/
     report.json                # 分平台命中明细
@@ -235,7 +233,7 @@ projects/{项目名}/
 
 | 输入/状态 | 分支 | 加载 | 产出 |
 |-----------|------|------|------|
-| 只有 `inputs/` 或说「清洗」 | `clean` | clean-enterprise + schema | 来源索引 + 企业事实/证据 + 兼容视图 + 缺失清单 |
+| 只有 `inputs/` 或说「清洗」 | `clean` | clean-enterprise + schema | 来源索引 + 企业事实 + 业务视图 + 缺失清单 |
 | 企业事实已确认，「诊断」 | `diagnose` | `diagnose-baseline.md` | `diagnosis/*` |
 | 诊断已确认，「整理关键词/场景」 | `scenarios` | `build-demand-scenarios.md` | `strategy/*` |
 | 「选题 / FAQ / Prompt / 计划」 | `plan` | `plan-content.md` | 内容计划版本 |
@@ -256,10 +254,10 @@ projects/{项目名}/
 | 文件名含 `信息收集表` 或 Sheet「公司信息」 | 解析 → baseinfo；账号密码 → secrets 提示 |
 | 文件名含 `知识库` 的 docx | 按「一/二/三/四」章节 → profile |
 | 文件名含 `关键词` / `问题库` | 只写入 source index，留给确认后的场景/关键词阶段使用 |
-| 产品图、公司图、证据图 | CLI 只做 inventory；Skill 阅读语义后写项目级 `clean.overrides.json`，再由 CLI 确定性归档 |
+| 产品图、公司图、不透明图片 | CLI 只做 inventory；Skill 阅读语义后写项目级 `clean.overrides.json`，仅产品图和公司图由 CLI 确定性归档 |
 | `指令/*.docx` | 挂到对应 SKU `copy_brief` |
-| 营业执照等资质图 | 可进 `assets/_trust` 或 A4 路径索引 |
-| 法人身份证 | **忽略入库**：仅支撑运营在五大自媒体做企业实名；inventory 标 `ignored: legal_id`，不复制、不进 JSON/文章 |
+| 营业执照、商标证、许可证图片、平台注册材料 | **只保留原件**：source index 标记 ignored；不复制、不 OCR、不生成事实或文章素材 |
+| 法人身份证 | **只保留原件**：仅支撑运营在五大自媒体做企业实名；inventory 标 `ignored: legal_id`，不复制、不 OCR、不进知识 JSON/文章 |
 
 **缺失分级**（允许缺，但必须提示）：
 
@@ -363,7 +361,7 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 
 | 报价模块 | 本方案落点 | 阶段 |
 |----------|------------|------|
-| 1 企业事实 Schema | `schema-knowledge.md` + `knowledge/{source-index,facts,evidence,baseinfo,profile,skus}` | Part A |
+| 1 企业事实 Schema | `schema-knowledge.md` + `knowledge/{source-index,facts,baseinfo,profile,skus}` | Part A |
 | 2 清洗 Agent | Skill `clean` +（可选）CLI 辅助解析 | Part A |
 | 3 诊断 | Skill `diagnose` + `geo-cli diagnose` | Part A |
 | 4–5 写文 | Skill `write` + 规则；批量可后挂 CLI | Part A |

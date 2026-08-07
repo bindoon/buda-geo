@@ -1,6 +1,6 @@
 {
   "app_id": "cy_knit_lx",
-  "generated_at": "2026-08-06T09:32:44Z",
+  "generated_at": "2026-08-07T02:56:18Z",
   "inputs_hash": "51756e83aa46529367ae5ee52ebf3b8de02f944117f51ac3d11aaa200d925d80",
   "sources": [
     {
@@ -297,8 +297,8 @@
       "path": "knowledge/company.profile.json",
       "name": "company.profile.json",
       "kind": "legacy_projection",
-      "hash": "67b70ef2b1bcedd727eee845a9ebf8f18d7e0ce1ab6ab46ee907c9406945b60d",
-      "size": 5818,
+      "hash": "752311a0febe87940eaaf8e54fe2158c4ddd412577a666eeb0531285fbf1059d",
+      "size": 5814,
       "parse_status": "indexed_only",
       "ignored": false,
       "ignored_reason": null

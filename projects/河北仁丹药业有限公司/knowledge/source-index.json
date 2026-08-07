@@ -1,6 +1,6 @@
 {
   "app_id": "rd_pharma_hb",
-  "generated_at": "2026-08-06T09:32:48Z",
+  "generated_at": "2026-08-07T02:56:18Z",
   "inputs_hash": "455f7868026d13bb8d90a0412cf6ed80afe3f38998a7702fd55cbca66de394cb",
   "sources": [
     {
@@ -2288,72 +2288,72 @@
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/仁丹药业--涂抹类(1).pdf",
       "name": "仁丹药业--涂抹类(1).pdf",
-      "kind": "evidence_candidate",
+      "kind": "other",
       "hash": "8219b50f0a9ef7ea20857e1849c9959ef74bc35977b3713710a6690adc6d919e",
       "size": 430131,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "discovered",
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_e20f330f6f5ef1ce",
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/仁丹药业--滴液类.pdf",
       "name": "仁丹药业--滴液类.pdf",
-      "kind": "evidence_candidate",
+      "kind": "other",
       "hash": "bd84384e6cdf14d7ea7ce0d699ffc00b4afbcb4bf443fb5a881e613da54fd636",
       "size": 407213,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "discovered",
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_2f3f0f94d9e8aa0f",
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/仁丹药业--贴敷类.pdf",
       "name": "仁丹药业--贴敷类.pdf",
-      "kind": "evidence_candidate",
+      "kind": "other",
       "hash": "4706776e2ca5f43d56fafe3c9e2418ffe1b20c99b07e4773a8c4e3b1801ef3de",
       "size": 696817,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "discovered",
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_8c085e5225cc1b3d",
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/生产许可证.ofd",
       "name": "生产许可证.ofd",
-      "kind": "evidence_candidate",
+      "kind": "other",
       "hash": "60e56df3b85d462fe06dbb28cae8d16f83e9b1fdee17cc94709109ecbd78efd8",
       "size": 442837,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "discovered",
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_1442939d1f9f732a",
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/第一类医疗器械生产备案凭证_00.png",
       "name": "第一类医疗器械生产备案凭证_00.png",
-      "kind": "evidence_candidate",
+      "kind": "image",
       "hash": "b8a4571c0d847151c0d746669609950afc663b5b82cebe4b431a18a3afecab3d",
       "size": 2269579,
       "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_b943fd711f6c9a15",
       "scope": "input",
       "path": "inputs/信任背书(1)/信任背书/证书.pdf",
       "name": "证书.pdf",
-      "kind": "evidence_candidate",
+      "kind": "other",
       "hash": "b4c7bb5712fe575668b36d55c9bbbae9a54f701efd4e7881e45fc7c9ff2dcda7",
       "size": 8309355,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "discovered",
+      "ignored": true,
+      "ignored_reason": "许可证、备案及注册资料只保留在 inputs；当前清洗阶段不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_3511045903523e47",
@@ -2468,12 +2468,12 @@
       "scope": "input",
       "path": "inputs/河北仁丹药业副本（新）.jpg",
       "name": "河北仁丹药业副本（新）.jpg",
-      "kind": "evidence_candidate",
+      "kind": "image",
       "hash": "0cfeca4b810a366c2f65c4fa1613765648d420b87cefd4e41f50545663122af4",
       "size": 642763,
       "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "ignored": true,
+      "ignored_reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_9ca98b8edc510241",

@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { KNOWLEDGE_FILES, LEGAL_ID_RE } from "./constants.js";
 import { factsContentHash, type BaseInfoView, type ProfileView } from "./fact-layer.js";
-import type { EvidenceLedger, FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
+import type { FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
 import type { MissingItem } from "./manifest.js";
 import { semanticFindings } from "./quality.js";
 import type { SkuItem } from "./skus.js";
@@ -94,11 +94,10 @@ export async function validateProject(
 
   const sourceIndex = loaded.get("source-index.json") as SourceIndex | undefined;
   const facts = loaded.get("company.facts.json") as FactLedger | undefined;
-  const evidence = loaded.get("company.evidence.json") as EvidenceLedger | undefined;
   const skusData = loaded.get("company.skus.json") as { app_id: string; items: SkuItem[] } | undefined;
   const profile = loaded.get("company.profile.json") as ProfileView | undefined;
   const baseinfo = loaded.get("company.baseinfo.json") as BaseInfoView | undefined;
-  if (sourceIndex && facts && evidence && skusData && profile && baseinfo) {
+  if (sourceIndex && facts && skusData && profile && baseinfo) {
     const sourceIds = new Set(sourceIndex.sources.map((source) => source.source_id));
     const ignoredSourceIds = new Set(sourceIndex.sources.filter((source) => source.ignored).map((source) => source.source_id));
     const subjectIds = new Set(facts.subjects.map((subject) => subject.subject_id));
@@ -116,16 +115,6 @@ export async function validateProject(
       }
     }
     for (const conflict of facts.conflicts) for (const factRef of conflict.candidate_fact_ids) if (!factIds.has(factRef)) referential.push(finding(`conflict_fact:${conflict.conflict_id}`, "referential", `conflict fact not found: ${factRef}`));
-    for (const item of evidence.items) {
-      if (!sourceIds.has(item.source_ref)) referential.push(finding(`evidence_source:${item.evidence_id}`, "referential", `evidence source not found: ${item.source_ref}`));
-      if (ignoredSourceIds.has(item.source_ref)) security.push(finding(`ignored_source_evidence:${item.evidence_id}`, "security", `evidence references ignored sensitive source: ${item.source_ref}`));
-      for (const subjectRef of item.subject_refs) if (!subjectIds.has(subjectRef)) referential.push(finding(`evidence_subject:${item.evidence_id}`, "referential", `evidence subject not found: ${subjectRef}`));
-      for (const factRef of item.supports_fact_ids) if (!factIds.has(factRef)) referential.push(finding(`evidence_fact:${item.evidence_id}`, "referential", `evidence fact not found: ${factRef}`));
-      if (item.path) {
-        if (LEGAL_ID_RE.test(item.path)) security.push(finding(`legal_id_evidence:${item.evidence_id}`, "security", `legal ID must not be copied to evidence: ${item.path}`));
-        if (!(await pathExists(path.join(projectRoot, item.path)))) referential.push(finding(`evidence_path:${item.evidence_id}`, "referential", `evidence path not found: ${item.path}`));
-      }
-    }
     for (const item of skusData.items) {
       for (const sourceRef of item.source_refs) {
         if (!sourceIds.has(sourceRef)) referential.push(finding(`sku_source:${item.sku_id}`, "referential", `SKU source not found: ${sourceRef}`));
@@ -141,7 +130,7 @@ export async function validateProject(
     for (const refs of Object.values(profile.fact_refs ?? {})) for (const ref of refs) if (!factIds.has(ref)) referential.push(finding(`profile_fact:${ref}`, "referential", `profile fact not found: ${ref}`));
     if (facts.inputs_hash !== sourceIndex.inputs_hash) referential.push(finding("inputs_hash_mismatch", "referential", "fact ledger inputs_hash differs from source index"));
     if (facts.facts_hash !== factsContentHash(facts)) referential.push(finding("facts_hash_mismatch", "referential", "fact ledger facts_hash does not match its semantic content"));
-    semantic.push(...semanticFindings({ profile, skus: skusData.items, facts, evidence, sourceIndex }));
+    semantic.push(...semanticFindings({ profile, skus: skusData.items, facts, sourceIndex }));
   }
 
   const serializedKnowledge = [...loaded.entries()].map(([name, value]) => `${name}\n${JSON.stringify(value)}`).join("\n");

@@ -4,7 +4,6 @@ export const KNOWLEDGE_FILES: Record<string, string> = {
   "company.skus.json": "skus.schema.json",
   "source-index.json": "source-index.schema.json",
   "company.facts.json": "facts.schema.json",
-  "company.evidence.json": "evidence.schema.json",
 };
 
 export const DEFAULT_PROMPTS = [

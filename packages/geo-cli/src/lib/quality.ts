@@ -1,5 +1,5 @@
 import path from "node:path";
-import type { EvidenceLedger, FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
+import type { FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
 import type { ProfileView } from "./fact-layer.js";
 import type { SkuItem } from "./skus.js";
 
@@ -11,10 +11,9 @@ export function semanticFindings(args: {
   profile: ProfileView;
   skus: SkuItem[];
   facts: FactLedger;
-  evidence: EvidenceLedger;
   sourceIndex: SourceIndex;
 }): FindingRecord[] {
-  const { profile, skus, facts, evidence, sourceIndex } = args;
+  const { profile, skus, facts, sourceIndex } = args;
   const findings: FindingRecord[] = [];
   if (skus.length > 0 && !skus.some((item) => item.is_main)) {
     findings.push({
@@ -30,7 +29,7 @@ export function semanticFindings(args: {
         code: `product_hash_name:${item.sku_id}`,
         severity: "block",
         layer: "semantic",
-        message: `产品名称疑似文件哈希：${item.name}。请将图片归为产品、企业资料、证据或忽略。`,
+        message: `产品名称疑似文件哈希：${item.name}。请将图片归为产品、企业资料或忽略。`,
         refs: [item.sku_id],
       });
     }
@@ -93,14 +92,13 @@ export function semanticFindings(args: {
 
   const linkedSources = new Set<string>();
   for (const item of skus) for (const sourceRef of item.source_refs) linkedSources.add(sourceRef);
-  for (const item of evidence.items) linkedSources.add(item.source_ref);
   for (const source of sourceIndex.sources) {
     if (source.scope !== "input" || source.kind !== "image" || source.ignored) continue;
     if (!linkedSources.has(source.source_id)) findings.push({
       code: `orphan_image:${source.source_id}`,
       severity: "recommend",
       layer: "referential",
-      message: `图片尚未关联产品或证据：${path.basename(source.path)}。`,
+      message: `图片尚未关联产品或企业素材：${path.basename(source.path)}。`,
       refs: [source.source_id],
     });
   }

@@ -1,8 +1,8 @@
 {
   "app_id": "jm_apparel_cx",
-  "generated_at": "2026-08-06T10:23:33Z",
+  "generated_at": "2026-08-07T02:56:11Z",
   "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-  "facts_hash": "bc94bcf1696e6114d8f74fd69c771580da390bdd80c9a2af284a91cee4a71901",
+  "facts_hash": "861d34c561b52153be3f702e05ec0296104a87b9ac37fe9c711a3e807e1a6054",
   "subjects": [
     {
       "subject_id": "sub_company_0e74341ab7180b08",
@@ -462,16 +462,6 @@
       "review_status": "candidate"
     },
     {
-      "subject_id": "sub_asset_2eb9d5d48bba5e27",
-      "type": "asset",
-      "name": "9945ac5ef4159084cdf7e6aab6f61712.jpg",
-      "parent_subject_id": "sub_company_0e74341ab7180b08",
-      "source_refs": [
-        "src_563e8cd299115df3"
-      ],
-      "review_status": "candidate"
-    },
-    {
       "subject_id": "sub_asset_32f898ab58c707d9",
       "type": "asset",
       "name": "9bc85bcaf81b5fd69b99178a05084089.png",
@@ -508,16 +498,6 @@
       "parent_subject_id": "sub_company_0e74341ab7180b08",
       "source_refs": [
         "src_b5019cc2e5621211"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_868dc1de6c5421b9",
-      "type": "asset",
-      "name": "e87aee611900335001b9928ef35e958e.jpg",
-      "parent_subject_id": "sub_company_0e74341ab7180b08",
-      "source_refs": [
-        "src_344ed17d55e83650"
       ],
       "review_status": "candidate"
     }
@@ -1625,20 +1605,6 @@
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_6a219580518df56f",
-      "subject_id": "sub_asset_2eb9d5d48bba5e27",
-      "field": "path",
-      "value": "assets/images/_trust/9945ac5ef4159084cdf7e6aab6f61712.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_563e8cd299115df3"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
       "fact_id": "fact_c20eaa2ff39ccb88",
       "subject_id": "sub_asset_32f898ab58c707d9",
       "field": "path",
@@ -1693,20 +1659,6 @@
       "confidence": 0.95,
       "review_status": "candidate",
       "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_3d2d4050956bc677",
-      "subject_id": "sub_asset_868dc1de6c5421b9",
-      "field": "path",
-      "value": "assets/images/_trust/e87aee611900335001b9928ef35e958e.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_344ed17d55e83650"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
     }
   ],
   "conflicts": [

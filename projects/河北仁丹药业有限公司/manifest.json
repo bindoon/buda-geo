@@ -37,18 +37,18 @@
     {
       "code": "sensitive_inputs_reviewed",
       "severity": "optional",
-      "message": "当前隔离 2 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
+      "message": "当前有 2 个身份证、注册材料或不透明命名文件仅保留在 inputs；清洗不会复制、OCR 或写入企业事实。"
     }
   ],
   "clean_pipeline": {
     "stage": "review",
     "inputs_hash": "455f7868026d13bb8d90a0412cf6ed80afe3f38998a7702fd55cbca66de394cb",
-    "facts_hash": "1226c5f54e0a0eff307da08948c1df1bdfb52661f98094cdecd6f900a498ebce",
+    "facts_hash": "945349f238624713ee3c47c55845235ddeb2ba375e0d2cdf36513594181b0d25",
     "changed_since_confirmation": true,
     "previous_snapshot_id": null
   },
   "clean_ready": false,
   "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-06T09:32:48Z"
+  "updated_at": "2026-08-07T02:56:18Z"
 }

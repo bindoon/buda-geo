@@ -58,9 +58,9 @@ description: >
 Skill 与 CLI 的边界：
 
 - CLI 负责文件发现、确定性解析、哈希、稳定 ID、override 执行、Schema/引用/安全校验。
-- Skill 负责产品归并、长文语义拆分、主产品、属性/能力/卖点候选和证据支持范围。
+- Skill 负责产品归并、长文语义拆分、主产品、属性/能力/卖点候选和事实来源边界。
 - 把项目专属判断写入 `knowledge/clean.overrides.json`；禁止把客户名、目录名或具体 SKU 写入 CLI。
-- 最终复核报告必须逐项读取 `company.baseinfo.json`、`company.profile.json`、`company.skus.json`、`company.evidence.json`、`company.facts.json` 与 `manifest.json`，用业务名称列出当前值、存放位置、来源、候选状态和空缺；不得让用户自己打开 JSON 才能知道清洗结果。
+- 最终复核报告必须逐项读取 `company.baseinfo.json`、`company.profile.json`、`company.skus.json`、`company.facts.json`、`source-index.json` 与 `manifest.json`，用业务名称列出当前值、存放位置、来源、候选状态和空缺；不得让用户自己打开 JSON 才能知道清洗结果。
 - 用户明确确认企业事实后才运行 `geo-cli confirm-clean --project {PROJECT}`。
 
 ## 全流程硬规则

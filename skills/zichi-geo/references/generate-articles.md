@@ -17,7 +17,7 @@
 1. 读取任务、事实快照、允许公开的证据和本地配图。
 2. 按渠道模板生成标题、正文、FAQ/CTA 等必要部分；一篇文章只选择当前主题需要的事实。
 3. 禁止绝对化、疗效承诺和无来源宣传；联系方式只从经批准名片/转化字段读取。
-4. 落盘正文与 meta，记录 task/scenario/question/fact/evidence refs，初始状态为 `draft`。
+4. 落盘正文与 meta，记录 task/scenario/question/fact/source refs，初始状态为 `draft`。
 5. 更新生产计数并提交人工审稿，不声称已经发布。
 
 建议路径：`articles/{channel}/{article_id}.md` 与同名 `.meta.json`。

@@ -1,6 +1,6 @@
 {
   "app_id": "hy_tool_nt",
-  "generated_at": "2026-08-06T09:32:44Z",
+  "generated_at": "2026-08-07T02:56:11Z",
   "inputs_hash": "21df339349db403753c37e5fc511becc112985e566e5374311cfe84e27b54141",
   "sources": [
     {
@@ -20,12 +20,12 @@
       "scope": "input",
       "path": "inputs/5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
       "name": "5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
-      "kind": "evidence_candidate",
+      "kind": "unclassified_sensitive",
       "hash": "31599db957f3a08bed83f860f549080f290b2556d2dec90d0f5f25e8f3be3c40",
       "size": 272378,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "ignored",
+      "ignored": true,
+      "ignored_reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_f54872f2e8156818",
@@ -44,12 +44,12 @@
       "scope": "input",
       "path": "inputs/a9ea193505772f99fe6d003546c45e77.jpg",
       "name": "a9ea193505772f99fe6d003546c45e77.jpg",
-      "kind": "evidence_candidate",
+      "kind": "unclassified_sensitive",
       "hash": "aed78485dea04644c67159020bea30ef6affb6d75f4b3e04ee2168f45162d444",
       "size": 327251,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "ignored",
+      "ignored": true,
+      "ignored_reason": "平台企业账号申请资料只保留在 inputs，不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_6d6ee9b386e2af38",

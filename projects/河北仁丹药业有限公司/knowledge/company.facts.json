@@ -1,8 +1,8 @@
 {
   "app_id": "rd_pharma_hb",
-  "generated_at": "2026-08-06T09:32:48Z",
+  "generated_at": "2026-08-07T02:56:18Z",
   "inputs_hash": "455f7868026d13bb8d90a0412cf6ed80afe3f38998a7702fd55cbca66de394cb",
-  "facts_hash": "1226c5f54e0a0eff307da08948c1df1bdfb52661f98094cdecd6f900a498ebce",
+  "facts_hash": "945349f238624713ee3c47c55845235ddeb2ba375e0d2cdf36513594181b0d25",
   "subjects": [
     {
       "subject_id": "sub_company_c3fc547600c0259a",
@@ -2124,66 +2124,6 @@
       "review_status": "candidate"
     },
     {
-      "subject_id": "sub_asset_0514622a6c4e647e",
-      "type": "asset",
-      "name": "仁丹药业--涂抹类(1).pdf",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_53094c001da7525e"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_dc02edb2e26e18a4",
-      "type": "asset",
-      "name": "仁丹药业--滴液类.pdf",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_e20f330f6f5ef1ce"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_56fd28d025a9fa5d",
-      "type": "asset",
-      "name": "仁丹药业--贴敷类.pdf",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_2f3f0f94d9e8aa0f"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_ad60161ba7290d01",
-      "type": "asset",
-      "name": "生产许可证.ofd",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_8c085e5225cc1b3d"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_a4a32f9c34303585",
-      "type": "asset",
-      "name": "第一类医疗器械生产备案凭证_00.png",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_1442939d1f9f732a"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_3fea60134d0d3ec7",
-      "type": "asset",
-      "name": "证书.pdf",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_b943fd711f6c9a15"
-      ],
-      "review_status": "candidate"
-    },
-    {
       "subject_id": "sub_asset_fac210a0138a7dd3",
       "type": "asset",
       "name": "公司大门口.jpg",
@@ -2270,16 +2210,6 @@
       "parent_subject_id": "sub_company_c3fc547600c0259a",
       "source_refs": [
         "src_36b373b713735aba"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_9e98b236eea88963",
-      "type": "asset",
-      "name": "河北仁丹药业副本（新）.jpg",
-      "parent_subject_id": "sub_company_c3fc547600c0259a",
-      "source_refs": [
-        "src_9d8dd7102af05d48"
       ],
       "review_status": "candidate"
     }
@@ -6560,90 +6490,6 @@
       "disclosure_level": "public"
     },
     {
-      "fact_id": "fact_883d2ed215ff7f58",
-      "subject_id": "sub_asset_0514622a6c4e647e",
-      "field": "path",
-      "value": "assets/evidence/仁丹药业--涂抹类(1).pdf",
-      "unit": null,
-      "source_refs": [
-        "src_53094c001da7525e"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
-      "fact_id": "fact_03c7e58580d1d4b3",
-      "subject_id": "sub_asset_dc02edb2e26e18a4",
-      "field": "path",
-      "value": "assets/evidence/仁丹药业--滴液类.pdf",
-      "unit": null,
-      "source_refs": [
-        "src_e20f330f6f5ef1ce"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
-      "fact_id": "fact_ff2d28110a2b862e",
-      "subject_id": "sub_asset_56fd28d025a9fa5d",
-      "field": "path",
-      "value": "assets/evidence/仁丹药业--贴敷类.pdf",
-      "unit": null,
-      "source_refs": [
-        "src_2f3f0f94d9e8aa0f"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
-      "fact_id": "fact_4ecc2ee5d7d42193",
-      "subject_id": "sub_asset_ad60161ba7290d01",
-      "field": "path",
-      "value": "assets/evidence/生产许可证.ofd",
-      "unit": null,
-      "source_refs": [
-        "src_8c085e5225cc1b3d"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
-      "fact_id": "fact_9c344ba954494db8",
-      "subject_id": "sub_asset_a4a32f9c34303585",
-      "field": "path",
-      "value": "assets/images/_trust/第一类医疗器械生产备案凭证_00.png",
-      "unit": null,
-      "source_refs": [
-        "src_1442939d1f9f732a"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
-      "fact_id": "fact_5109a516999689c8",
-      "subject_id": "sub_asset_3fea60134d0d3ec7",
-      "field": "path",
-      "value": "assets/evidence/证书.pdf",
-      "unit": null,
-      "source_refs": [
-        "src_b943fd711f6c9a15"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
-    },
-    {
       "fact_id": "fact_72e2bb9310dfd8dd",
       "subject_id": "sub_asset_fac210a0138a7dd3",
       "field": "path",
@@ -6768,20 +6614,6 @@
       "confidence": 0.95,
       "review_status": "candidate",
       "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_dc8b170b21e2723d",
-      "subject_id": "sub_asset_9e98b236eea88963",
-      "field": "path",
-      "value": "assets/images/_trust/河北仁丹药业副本（新）.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_9d8dd7102af05d48"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "restricted"
     }
   ],
   "conflicts": []

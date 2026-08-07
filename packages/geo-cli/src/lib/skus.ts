@@ -62,10 +62,8 @@ export async function syncImagesAndSkus(
   const inputs = path.join(projectRoot, "inputs");
   const assets = path.join(projectRoot, "assets", "images");
   const companyDir = path.join(assets, "_company");
-  const trustDir = path.join(assets, "_trust");
   const { mkdir } = await import("node:fs/promises");
   await mkdir(companyDir, { recursive: true });
-  await mkdir(trustDir, { recursive: true });
 
   const sourceByPath = new Map(
     sourceIndex.sources.map((source) => [normalizeSourcePath(source.path), source]),
@@ -96,10 +94,6 @@ export async function syncImagesAndSkus(
 
     if (assetOverride?.action === "company") {
       await copyIfMissing(absolute, path.join(companyDir, name));
-      continue;
-    }
-    if (assetOverride?.action === "evidence") {
-      await copyIfMissing(absolute, path.join(trustDir, name));
       continue;
     }
     // An unreviewed image remains only in the source index. CLI must not turn a

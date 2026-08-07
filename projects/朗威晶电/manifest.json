@@ -27,7 +27,7 @@
     {
       "code": "sensitive_inputs_reviewed",
       "severity": "optional",
-      "message": "当前隔离 2 个身份证或不透明命名图片；只有项目 clean.overrides.json 明确分类后才可派生。"
+      "message": "当前有 2 个身份证、注册材料或不透明命名文件仅保留在 inputs；清洗不会复制、OCR 或写入企业事实。"
     }
   ],
   "clean_pipeline": {
@@ -40,5 +40,5 @@
   "clean_ready": false,
   "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-06T09:32:46Z"
+  "updated_at": "2026-08-07T02:56:14Z"
 }

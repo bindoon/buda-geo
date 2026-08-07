@@ -13,6 +13,7 @@
 - ❌ 不要把媒体账号**密码**、Token 写入任何 `knowledge/*.json`。
 - ✅ 密码进 `projects/{名}/.secrets.env`（已被 gitignore）或环境变量。
 - ❌ 法人身份证**不要**复制进 `assets/`、不要 OCR 进 JSON、不要写进文章。用途仅是五大自媒体企业实名（百家号/搜狐/头条/抖音图文/知乎）。
+- ❌ 营业执照、商标证、许可证图片和平台注册材料也只保留在原始 `inputs/`：不要复制、OCR、转成事实或恢复已删除的 `company.evidence.json` / `_trust`。
 - ❌ 演示账号口令只在根 `README.md` 摸底备注；不要拷进客户知识库。
 
 ## 清洗 / Schema

@@ -15,7 +15,6 @@ export type SubjectType =
   | "product_family"
   | "capability"
   | "service"
-  | "evidence"
   | "asset";
 
 export interface SourceRecord {
@@ -80,26 +79,6 @@ export interface FactLedger {
   conflicts: ConflictRecord[];
 }
 
-export interface EvidenceRecord {
-  evidence_id: string;
-  type: string;
-  subject_refs: string[];
-  source_ref: string;
-  path: string | null;
-  supports_fact_ids: string[];
-  disclosure_level: DisclosureLevel;
-  review_status: ReviewStatus;
-  valid_from: string | null;
-  valid_until: string | null;
-  notes: string;
-}
-
-export interface EvidenceLedger {
-  app_id: string;
-  generated_at: string;
-  items: EvidenceRecord[];
-}
-
 export interface FindingRecord {
   code: string;
   severity: Severity;
@@ -110,11 +89,8 @@ export interface FindingRecord {
 
 export interface AssetOverride {
   source_path: string;
-  action: "product" | "company" | "evidence" | "ignore";
+  action: "product" | "company" | "ignore";
   product_name?: string;
-  evidence_type?: string;
-  supports_fields?: string[];
-  disclosure_level?: DisclosureLevel;
   reason?: string;
 }
 
@@ -146,7 +122,7 @@ export interface CleanOverrides {
 export const MANUFACTURING_COMPLETENESS_PROFILE = {
   required_company_fields: ["company_name", "website_or_shop_url", "intro"],
   main_product_required: ["human_readable_name", "category", "substance"],
-  recommended: ["trust_evidence", "capability_evidence", "chat_logs"],
+  recommended: ["trust_sources", "capability_sources", "chat_logs"],
   optional: ["video", "full_price_list", "all_sku_variants"],
 } as const;
 

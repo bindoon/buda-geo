@@ -1,24 +1,21 @@
-import { copyFile, mkdir, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import path from "node:path";
 import type { BaseInfo } from "./parse.js";
-import { sourcePathMatches, type SkuItem } from "./skus.js";
+import type { SkuItem } from "./skus.js";
 import {
   digestObject,
   stableId,
-  type AssetOverride,
   type CleanOverrides,
   type ConflictRecord,
   type Derivation,
   type DisclosureLevel,
-  type EvidenceLedger,
-  type EvidenceRecord,
   type FactLedger,
   type FactRecord,
   type SourceIndex,
   type SourceRecord,
   type SubjectRecord,
 } from "./fact-model.js";
-import { pathExists, readJson, relToProject, utcNow } from "./util.js";
+import { pathExists, readJson, utcNow } from "./util.js";
 
 export interface ProfileView {
   app_id: string;
@@ -40,7 +37,6 @@ export interface PreviousCleanViews {
   profile?: ProfileView;
   skus?: { app_id: string; items: SkuItem[] };
   facts?: FactLedger;
-  evidence?: EvidenceLedger;
 }
 
 export async function loadCleanOverrides(
@@ -135,7 +131,6 @@ export async function buildFactLayer(args: {
   baseinfo: BaseInfoView;
   profile: ProfileView;
   skus: { app_id: string; items: SkuItem[] };
-  overrides: AssetOverride[];
   factResolutions?: CleanOverrides["fact_resolutions"];
   previous: PreviousCleanViews;
 }): Promise<{
@@ -143,7 +138,6 @@ export async function buildFactLayer(args: {
   profile: ProfileView;
   skus: { app_id: string; items: SkuItem[] };
   facts: FactLedger;
-  evidence: EvidenceLedger;
 }> {
   const {
     projectRoot,
@@ -152,7 +146,6 @@ export async function buildFactLayer(args: {
     baseinfo,
     profile,
     skus,
-    overrides,
     factResolutions = [],
     previous,
   } = args;
@@ -370,18 +363,15 @@ export async function buildFactLayer(args: {
     }
   }
 
-  const evidence = await buildEvidence(projectRoot, sourceIndex, companySubject, facts, overrides);
   for (const source of sourceIndex.sources) {
     if (
       source.scope !== "input" ||
       source.ignored ||
-      !["image", "product_image", "company_asset", "evidence_candidate"].includes(source.kind)
+      !["image", "product_image", "company_asset"].includes(source.kind)
     ) continue;
     const skuImage = skus.items.flatMap((item) => item.images).find((image) => image.source_ref === source.source_id);
-    const evidenceItem = evidence.items.find((item) => item.source_ref === source.source_id);
     const assetPath =
       skuImage?.path ??
-      evidenceItem?.path ??
       (source.kind === "company_asset" ? `assets/images/_company/${source.name}` : null);
     const assetId = stableId("sub_asset", source.source_id);
     subjects.push({
@@ -392,7 +382,7 @@ export async function buildFactLayer(args: {
       source_refs: [source.source_id],
       review_status: "candidate",
     });
-    if (assetPath) addFact(facts, assetId, "path", assetPath, [source.source_id], "extracted", evidenceItem?.disclosure_level ?? "public");
+    if (assetPath) addFact(facts, assetId, "path", assetPath, [source.source_id], "extracted", "public");
   }
   const draftLedger: FactLedger = {
     app_id: appId,
@@ -406,62 +396,7 @@ export async function buildFactLayer(args: {
   draftLedger.facts_hash = semanticLedgerHash(draftLedger);
   baseinfo.fact_refs = baseFactRefs;
   profile.fact_refs = profileFactRefs;
-  return { baseinfo, profile, skus, facts: draftLedger, evidence };
-}
-
-async function buildEvidence(
-  projectRoot: string,
-  sourceIndex: SourceIndex,
-  companySubject: string,
-  facts: FactRecord[],
-  overrides: AssetOverride[],
-): Promise<EvidenceLedger> {
-  const items: EvidenceRecord[] = [];
-  for (const source of sourceIndex.sources) {
-    if (source.scope !== "input") continue;
-    const relInput = source.path.replace(/^inputs\//, "");
-    const override = overrides.find((item) => sourcePathMatches(relInput, item.source_path));
-    if (!override && source.kind !== "image" && source.kind !== "unclassified_sensitive") continue;
-    if (override?.action === "ignore" || source.ignored && !override) continue;
-    const fileName = path.basename(relInput);
-    let type: string | null = null;
-    let disclosure: DisclosureLevel = "public";
-    let derivedPath: string | null = null;
-    if (override?.action === "evidence") {
-      type = override.evidence_type ?? "operator_classified_evidence";
-      disclosure = override.disclosure_level ?? "restricted";
-      derivedPath = /\.(?:jpe?g|png|webp|gif)$/i.test(fileName)
-        ? `assets/images/_trust/${fileName}`
-        : `assets/evidence/${fileName}`;
-    }
-    if (!type) continue;
-    const absoluteSource = path.join(projectRoot, source.path);
-    const absoluteDerived = derivedPath ? path.join(projectRoot, derivedPath) : null;
-    if (absoluteDerived && !(await pathExists(absoluteDerived))) {
-      await mkdir(path.dirname(absoluteDerived), { recursive: true });
-      await copyFile(absoluteSource, absoluteDerived);
-    }
-    items.push({
-      evidence_id: stableId("evidence", source.source_id, type),
-      type,
-      subject_refs: [companySubject],
-      source_ref: source.source_id,
-      path: absoluteDerived ? relToProject(projectRoot, absoluteDerived) : null,
-      supports_fact_ids: facts
-        .filter(
-          (fact) =>
-            fact.subject_id === companySubject &&
-            (override?.supports_fields ?? []).includes(fact.field),
-        )
-        .map((fact) => fact.fact_id),
-      disclosure_level: disclosure,
-      review_status: "candidate",
-      valid_from: null,
-      valid_until: null,
-      notes: override?.reason ?? "",
-    });
-  }
-  return { app_id: sourceIndex.app_id, generated_at: utcNow(), items };
+  return { baseinfo, profile, skus, facts: draftLedger };
 }
 
 export function factsContentHash(ledger: FactLedger): string {

@@ -3,24 +3,13 @@
   "assets": [
     {
       "source_path": "5560a7ef0e9bdc4a8a9da113a7e6fea6.jpg",
-      "action": "evidence",
-      "evidence_type": "business_license",
-      "supports_fields": [
-        "company_name",
-        "address"
-      ],
-      "disclosure_level": "restricted",
-      "reason": "运营人工识别为营业执照；仅作企业主体证据，不作为产品图。"
+      "action": "ignore",
+      "reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_path": "a9ea193505772f99fe6d003546c45e77.jpg",
-      "action": "evidence",
-      "evidence_type": "platform_application_form",
-      "supports_fields": [
-        "company_name"
-      ],
-      "disclosure_level": "restricted",
-      "reason": "运营人工识别为平台企业账号申请资料；不可发布。"
+      "action": "ignore",
+      "reason": "平台企业账号申请资料只保留在 inputs，不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_path": "6846b281-8926-4b2d-8ed8-2305172f021c.png",

@@ -12,11 +12,8 @@
         "required": ["source_path", "action"],
         "properties": {
           "source_path": { "type": "string" },
-          "action": { "enum": ["product", "company", "evidence", "ignore"] },
+          "action": { "enum": ["product", "company", "ignore"] },
           "product_name": { "type": "string" },
-          "evidence_type": { "type": "string" },
-          "supports_fields": { "type": "array", "items": { "type": "string" } },
-          "disclosure_level": { "enum": ["public", "restricted", "internal"] },
           "reason": { "type": "string" }
         },
         "additionalProperties": false

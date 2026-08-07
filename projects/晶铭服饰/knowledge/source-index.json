@@ -1,6 +1,6 @@
 {
   "app_id": "jm_apparel_cx",
-  "generated_at": "2026-08-06T10:23:33Z",
+  "generated_at": "2026-08-07T02:56:11Z",
   "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
   "sources": [
     {
@@ -584,12 +584,12 @@
       "scope": "input",
       "path": "inputs/曹县晶铭服饰有限公司 信息/9945ac5ef4159084cdf7e6aab6f61712.jpg",
       "name": "9945ac5ef4159084cdf7e6aab6f61712.jpg",
-      "kind": "evidence_candidate",
+      "kind": "unclassified_sensitive",
       "hash": "60e5285ff25e294e4c5a1ffb6996cd0cc8d87367d6179c969b1c077ce4dac94a",
       "size": 182278,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "ignored",
+      "ignored": true,
+      "ignored_reason": "商标注册证只保留在 inputs，不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_caa34d044c336a51",
@@ -644,12 +644,12 @@
       "scope": "input",
       "path": "inputs/曹县晶铭服饰有限公司 信息/e87aee611900335001b9928ef35e958e.jpg",
       "name": "e87aee611900335001b9928ef35e958e.jpg",
-      "kind": "evidence_candidate",
+      "kind": "unclassified_sensitive",
       "hash": "a97507a186e302fc2e25eedad3a15e161d30bdc63d019d91c0136a6bb464a688",
       "size": 296257,
-      "parse_status": "indexed_only",
-      "ignored": false,
-      "ignored_reason": null
+      "parse_status": "ignored",
+      "ignored": true,
+      "ignored_reason": "营业执照只保留在 inputs，用于企业注册等线下流程；不复制、不 OCR、不写入企业事实或文章。"
     },
     {
       "source_id": "src_fd3cfa703ba98a56",

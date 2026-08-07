@@ -26,7 +26,7 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 
 读原始资料与候选产物，生成项目级 `knowledge/clean.overrides.json`。这份文件是“本项目的清洗决策”，不是通用代码。
 
-#### 图片四分法
+#### 图片三分法
 
 每张图片只能选择一种：
 
@@ -34,10 +34,9 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 |---|---|---|
 | `product` / `products[].source_paths` | 产品或型号图片 | 归到具体产品 |
 | `company` | 工厂、设备、仓库、团队环境 | 归到 `_company`，不自动证明任何性能事实 |
-| `evidence` | 营业执照、证书、平台申请等 | 归到 `_trust`，设置披露级别与精确支持字段 |
-| `ignore` | 身份证、无关图、无法安全识别 | 不复制、不 OCR、不入事实 |
+| `ignore` | 身份证、营业执照、商标证、注册/申请材料、无关图、无法安全识别的文件 | 只保留原始 `inputs/`；不复制、不 OCR、不入事实 |
 
-不透明文件名必须先看图再分类；包含身份证时只能 `ignore`。
+不透明文件名必须先看图再分类。身份证、营业执照、商标证和账号注册材料统一 `ignore`：它们可供线下注册流程使用，但不是企业知识库或文章素材。若其他证书中的公开结论确实要用于写作，应从正式文字来源单独采集为候选事实，而不是把证件图片复制进知识库。
 
 #### 产品归并方法
 
@@ -85,15 +84,12 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 
 `pain_points` 没有可靠来源时可保留 `[]`。profile 字段允许缺失，但错桶或联系方式泄漏必须修复。
 
-#### 证据关联方法
+#### 原始材料与事实边界
 
-`evidence.supports_fields` 必须窄关联：
-
-- 营业执照可支持公司名称、注册地址等主体字段。
-- 认证证书只支持证书中明确的主体、产品范围和有效期。
-- 工厂照片可作为资产；不能自动支持产能、良品率、交付时效。
-- 平台申请表不能支持其他平台账号，更不能支持产品性能。
-- restricted/internal 证据不得用于公开文章。
+- 企业信息表、知识库 Word 等文字来源可形成候选事实，并通过 `source_refs` 追溯原件。
+- 工厂照片可作为企业素材；不能自动支持产能、良品率、交付时效。
+- 营业执照、商标证、许可证图片、平台申请表和身份证只登记在 `source-index.json`，不派生知识文件或素材副本。
+- 原始文件的存在不等于其中可能相关的营销表述已被证实；需要公开使用的资质结论，应另行收集可公开的文字事实并人工确认。
 
 ### 4. Review：复跑与三层检查
 
@@ -106,7 +102,7 @@ geo-cli status --project {PROJECT}
 逐组处理：
 
 - structural：Schema 与 `app_id`。
-- referential：source / subject / fact / evidence / asset 引用。
+- referential：source / subject / fact / asset 引用。
 - semantic：哈希产品、重复主体、主产品空壳、画像错桶、冲突与孤立图片。
 - security：密码、身份证、被隔离来源进入产物。
 
@@ -114,7 +110,7 @@ geo-cli status --project {PROJECT}
 
 ### 5. Confirm：必须由人确认
 
-按 `operator-report.md` 输出复核报告并停住。报告必须把企业名片、企业介绍五个分区、每个产品、每条证据、所有推断/规范化值、冲突和空缺逐项列出；不能只写“已拆分”“已生成 JSON”或“校验通过”。只有用户明确确认企业事实后运行：
+按 `operator-report.md` 输出复核报告并停住。报告必须把企业名片、企业介绍五个分区、每个产品、所有推断/规范化值、冲突、空缺和注册材料的忽略结果逐项列出；不能只写“已拆分”“已生成 JSON”或“校验通过”。只有用户明确确认企业事实后运行：
 
 ```bash
 geo-cli confirm-clean --project {PROJECT}
@@ -127,4 +123,4 @@ geo-cli confirm-clean --project {PROJECT}
 - 不在 `skus.ts` 或任何 CLI 文件里写客户名、客户目录、具体 SKU、客户专属分类或卖点。
 - 不在 clean 阶段生成关键词、诊断题、场景词、受众画像、prompts、内容计划或配额；`company.profile.json` 的企业介绍视图属于事实清洗产物。
 - 不复制或 OCR 法人身份证。
-- 不让证据超范围支持事实。
+- 不把营业执照、商标证、许可证图片、平台申请表或身份证派生成知识事实与写作素材。
