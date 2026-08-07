@@ -27,12 +27,22 @@
       "by": null
     },
     "scenario": {
-      "status": "review_required",
-      "at": null,
+      "status": "confirmed",
+      "at": "2026-08-07T09:32:52Z",
       "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
       "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
-      "scenario_library_id": null,
-      "version": null
+      "scenario_library_id": "scenario_library_1a7ecebdcb0b2177",
+      "version": 1
+    },
+    "content_plan": {
+      "status": "confirmed",
+      "at": "2026-08-07T11:01:48Z",
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
+      "scenario_library_id": "scenario_library_1a7ecebdcb0b2177",
+      "scenario_library_version": 1,
+      "content_plan_id": "content_plan_3d816a873a076300",
+      "version": 1
     }
   },
   "missing": [
@@ -62,5 +72,24 @@
   "clean_ready": true,
   "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-07T09:08:55Z"
+  "updated_at": "2026-08-07T11:28:21Z",
+  "article_generation": {
+    "content_plan_id": "content_plan_3d816a873a076300",
+    "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+    "planned": 24,
+    "drafted": 3,
+    "updated_at": "2026-08-07T11:16:06Z"
+  },
+  "article_review": {
+    "content_plan_id": "content_plan_3d816a873a076300",
+    "counts": {
+      "draft": 0,
+      "pending_review": 0,
+      "changes_requested": 0,
+      "approved": 3,
+      "rejected": 0,
+      "deferred": 0
+    },
+    "updated_at": "2026-08-07T11:28:21Z"
+  }
 }

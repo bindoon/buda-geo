@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-legacy-content-audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "app_id", "generated_at", "sources", "candidates", "counts"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "app_id": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "sources": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "kind", "text", "normalized_text", "source_path", "original_key", "duplicate_of_candidate_id", "evidence_status"],
+        "properties": {
+          "candidate_id": { "type": "string" }, "kind": { "enum": ["faq", "prompt", "keyword", "generation_task", "unknown"] }, "text": { "type": "string" }, "normalized_text": { "type": "string" }, "source_path": { "type": "string" }, "original_key": { "type": "string" }, "duplicate_of_candidate_id": { "type": ["string", "null"] }, "evidence_status": { "const": "unreviewed" }
+        }
+      }
+    },
+    "counts": { "type": "object", "additionalProperties": false, "required": ["total", "unique", "exact_duplicates"], "properties": { "total": { "type": "integer" }, "unique": { "type": "integer" }, "exact_duplicates": { "type": "integer" } } }
+  }
+}

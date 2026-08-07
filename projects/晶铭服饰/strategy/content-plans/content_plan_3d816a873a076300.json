@@ -1,0 +1,4166 @@
+{
+  "schema_version": 1,
+  "content_plan_id": "content_plan_3d816a873a076300",
+  "app_id": "jm_apparel_cx",
+  "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+  "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
+  "scenario_library_id": "scenario_library_1a7ecebdcb0b2177",
+  "scenario_library_version": 1,
+  "lifecycle": "confirmed",
+  "version": 1,
+  "based_on_content_plan_id": null,
+  "created_at": "2026-08-07T11:01:46Z",
+  "confirmed_at": "2026-08-07T11:01:48Z",
+  "fact_catalog": [
+    {
+      "fact_id": "fact_5f89ef81b622ade7",
+      "field": "company_name",
+      "summary": "曹县晶铭服饰有限公司"
+    },
+    {
+      "fact_id": "fact_f74062502b5e9cc5",
+      "field": "address",
+      "summary": "山东菏泽曹县安蔡楼镇王楼村190号"
+    },
+    {
+      "fact_id": "fact_08520825844492af",
+      "field": "website_or_shop_url",
+      "summary": "https://jm15965827526.1688.com/"
+    },
+    {
+      "fact_id": "fact_88c684883b54ef30",
+      "field": "intro",
+      "summary": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。"
+    },
+    {
+      "fact_id": "fact_5d421c9f6e2a7fd5",
+      "field": "products_services",
+      "summary": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。"
+    },
+    {
+      "fact_id": "fact_d8fb8318a6fabd89",
+      "field": "advantages",
+      "summary": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。"
+    },
+    {
+      "fact_id": "fact_16500517b491d4dc",
+      "field": "trust",
+      "summary": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。"
+    },
+    {
+      "fact_id": "fact_9ca1ceb88252b2d4",
+      "field": "pain_points",
+      "summary": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。"
+    },
+    {
+      "fact_id": "fact_8671c5bfb63fb61d",
+      "field": "name",
+      "summary": "儿童芭蕾tutu裙"
+    },
+    {
+      "fact_id": "fact_71ca91fe0f9a05d7",
+      "field": "category",
+      "summary": "儿童舞蹈服饰"
+    },
+    {
+      "fact_id": "fact_609e6e5cbb03db6f",
+      "field": "selling_points",
+      "summary": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码"
+    },
+    {
+      "fact_id": "fact_1277a7ca911a72df",
+      "field": "attributes",
+      "summary": "size_range: 100-160；main_material: 锦纶冰丝、多层网纱与全棉里衬；applicable_age: 3-14岁；application_scenarios: 日常练功、考级、舞台汇演、舞蹈比赛"
+    },
+    {
+      "fact_id": "fact_c8d5cc0c8dda17b0",
+      "field": "capabilities",
+      "summary": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制"
+    },
+    {
+      "fact_id": "fact_90fe608ee01e9517",
+      "field": "is_main",
+      "summary": "是"
+    },
+    {
+      "fact_id": "fact_44f9ff6c4fad64a9",
+      "field": "company_short_name",
+      "summary": "晶铭服饰"
+    }
+  ],
+  "faq_candidates": [
+    {
+      "faq_id": "faq_candidate_baa86943c642d451",
+      "question": "儿童芭蕾tutu裙怎么选？",
+      "normalized_question": "儿童芭蕾tutu裙怎么选",
+      "answer_goal": "给出基于已确认事实的判断步骤和选择条件",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_c75e19046e1d71da",
+      "question_ids": [
+        "scenario_question_c31f4414cafd9c27"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_df07344a637492e3",
+      "question": "儿童芭蕾tutu裙适合哪些使用和采购场景？",
+      "normalized_question": "儿童芭蕾tutu裙适合哪些使用和采购场景",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_c75e19046e1d71da",
+      "question_ids": [
+        "scenario_question_38f6385f44ae3f6f"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_9bd369db157aedc0",
+      "question": "采购儿童芭蕾tutu裙要重点比较哪些材质、规格和做工？",
+      "normalized_question": "采购儿童芭蕾tutu裙要重点比较哪些材质规格和做工",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_c75e19046e1d71da",
+      "question_ids": [
+        "scenario_question_fde66cd155a9ad67"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_eb4950cba4a8096d",
+      "question": "儿童芭蕾tutu裙哪家工厂靠谱",
+      "normalized_question": "儿童芭蕾tutu裙哪家工厂靠谱",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_c75e19046e1d71da",
+      "question_ids": [
+        "scenario_question_11917e4281b81e29"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_9a1885c87f72b5f6",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_27f11bcd712fccce",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙哪家工厂靠谱",
+          "derivation": "legacy"
+        },
+        {
+          "source_ref_id": "scenario_source_fc37431b09d829c7",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_358e192095a91f87",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙工厂哪家靠谱",
+          "derivation": "legacy"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_256d025399d68330",
+      "question": "哪些儿童芭蕾tutu裙厂家支持一件起混批与小批量试单？",
+      "normalized_question": "哪些儿童芭蕾tutu裙厂家支持一件起混批与小批量试单",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "B端采购客户",
+      "scenario_id": "scenario_de8856b9df34b90b",
+      "question_ids": [
+        "scenario_question_9ebe454726e4dbe4"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_818f4dfd85286bbe",
+      "question": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商？",
+      "normalized_question": "小批量采购儿童芭蕾tutu裙应该怎样评估供应商",
+      "answer_goal": "给出基于已确认事实的判断步骤和选择条件",
+      "target_audience": "B端采购客户",
+      "scenario_id": "scenario_de8856b9df34b90b",
+      "question_ids": [
+        "scenario_question_4cc76e8376bbb44a"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_555ffe6afa924d5d",
+          "kind": "fact",
+          "ref_id": "fact_88c684883b54ef30",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_3f450f0ba478482d",
+      "question": "哪些儿童芭蕾tutu裙厂家支持机构 LOGO、配色、规格和尺码定制？",
+      "normalized_question": "哪些儿童芭蕾tutu裙厂家支持机构logo配色规格和尺码定制",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_c60f44e2c82cb77a"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_af3c903ccb30ec52",
+      "question": "定制儿童芭蕾tutu裙要向厂家确认哪些条件？",
+      "normalized_question": "定制儿童芭蕾tutu裙要向厂家确认哪些条件",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_54c4554700fadbca"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_555ffe6afa924d5d",
+          "kind": "fact",
+          "ref_id": "fact_88c684883b54ef30",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_36a37894f3d2fdaa",
+          "kind": "fact",
+          "ref_id": "fact_9ca1ceb88252b2d4",
+          "path": null,
+          "original_bucket": null,
+          "text": "B端采购商需要兼顾小批量试单、款式更新、稳定供货、定制配合和售后处理。；舞蹈培训机构需要根据日常练功、考级、汇演和比赛等场景选择不同款式与配置。；电商及外贸采购方关注面料舒适性、裙摆定型、尺码覆盖、产品配套和渠道适配。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_7b859536b2300b24",
+      "question": "定制儿童舞蹈服",
+      "normalized_question": "定制儿童舞蹈服",
+      "answer_goal": "直接解释问题并给出可核验的企业与产品信息",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_77ad2c84509c8a98"
+      ],
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_b514a1ccf35d3d9a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8a9d8cd785fa32b8",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "定制儿童舞蹈服",
+          "derivation": "legacy"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_14398a10c435406f",
+      "question": "儿童芭蕾tutu裙支持定制厂家",
+      "normalized_question": "儿童芭蕾tutu裙支持定制厂家",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_f22d03473ebafab1"
+      ],
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d287862dd447de2b",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_07ee3cbc51e05712",
+          "path": "inputs/晶铭服饰关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "儿童芭蕾tutu裙支持定制厂家",
+          "derivation": "legacy"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_fc9089d0184d1f05",
+      "question": "可以单件定制吗？",
+      "normalized_question": "可以单件定制吗",
+      "answer_goal": "直接解释问题并给出可核验的企业与产品信息",
+      "target_audience": "舞蹈培训机构",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_4fa66c8491b33150"
+      ],
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [
+        "evidence_gap_0ce5ff66feb30ffe"
+      ],
+      "readiness": "research_only",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dca0d7184340989b",
+          "kind": "fact",
+          "ref_id": "fact_5d421c9f6e2a7fd5",
+          "path": null,
+          "original_bucket": null,
+          "text": "公司主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服，覆盖日常练功、舞蹈考级、舞台汇演和舞蹈比赛等使用场景。面向 B 端采购客户支持混批与小批量试单，并提供机构 LOGO、配色、裙摆层数、成人加大码及配套饰品等定制服务；同时提供订单跟进、发货和质量问题补发退换等售后支持。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_ae1794588be8b999",
+          "kind": "customer_language",
+          "ref_id": "customer_language_4b3edf4a4e354d0b",
+          "path": "inputs/晶铭服饰客服报告.txt",
+          "original_bucket": null,
+          "text": "可以单件定制吗？",
+          "derivation": "extracted"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_40e3f2b5be738ccb",
+      "question": "山东菏泽曹县儿童芭蕾tutu裙供应商有哪些？",
+      "normalized_question": "山东菏泽曹县儿童芭蕾tutu裙供应商有哪些",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "区域采购与渠道客户",
+      "scenario_id": "scenario_b890f16beb7be9be",
+      "question_ids": [
+        "scenario_question_e3f20d473f7fdbb0"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+          "kind": "fact",
+          "ref_id": "fact_f74062502b5e9cc5",
+          "path": null,
+          "original_bucket": null,
+          "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_c2f6e5b7e31a1f1b",
+      "question": "山东菏泽曹县采购儿童芭蕾tutu裙怎么筛选源头厂家？",
+      "normalized_question": "山东菏泽曹县采购儿童芭蕾tutu裙怎么筛选源头厂家",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "区域采购与渠道客户",
+      "scenario_id": "scenario_b890f16beb7be9be",
+      "question_ids": [
+        "scenario_question_5fd2e474efc76a2a"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_ceefc9a5c9e843c5",
+          "kind": "fact",
+          "ref_id": "fact_f74062502b5e9cc5",
+          "path": null,
+          "original_bucket": null,
+          "text": "山东菏泽曹县安蔡楼镇王楼村190号",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_9627806650cc7395",
+          "kind": "fact",
+          "ref_id": "fact_d8fb8318a6fabd89",
+          "path": null,
+          "original_bucket": null,
+          "text": "企业具备儿童舞蹈服饰生产供应能力，产品采用多层网纱、定型硬衬、锁边工艺和透气里衬，并覆盖多种儿童尺码。采购合作支持小批量试单和多项定制，可服务舞蹈培训机构、电商零售、跨境外贸、幼儿园演出和儿童摄影等渠道。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_5ecd061ec8efaf5e",
+      "question": "晶铭服饰是做什么的？",
+      "normalized_question": "晶铭服饰是做什么的",
+      "answer_goal": "直接解释问题并给出可核验的企业与产品信息",
+      "target_audience": "首次接触品牌的采购客户",
+      "scenario_id": "scenario_f9315d418f5d9120",
+      "question_ids": [
+        "scenario_question_e1385249d95104d4"
+      ],
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_7133d8797edadc4b",
+          "kind": "fact",
+          "ref_id": "fact_5f89ef81b622ade7",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_555ffe6afa924d5d",
+          "kind": "fact",
+          "ref_id": "fact_88c684883b54ef30",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司（简称晶铭服饰）成立于2014年，位于山东菏泽曹县，专注儿童舞蹈服饰的研发、设计、生产与供货，主营儿童芭蕾舞 TUTU 裙、练功服和舞台汇演表演服。企业面向舞蹈培训机构、电商卖家、外贸客户及其他儿童演出服饰采购方，提供产品供应、款式与配色定制以及售后服务。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_379a48829254ee02",
+          "kind": "fact",
+          "ref_id": "fact_44f9ff6c4fad64a9",
+          "path": null,
+          "original_bucket": null,
+          "text": "晶铭服饰",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    },
+    {
+      "faq_id": "faq_candidate_034637e4b96e946f",
+      "question": "晶铭服饰靠谱吗？有哪些可核验依据？",
+      "normalized_question": "晶铭服饰靠谱吗有哪些可核验依据",
+      "answer_goal": "提供供应商或产品筛选依据，不做无证据推荐",
+      "target_audience": "首次接触品牌的采购客户",
+      "scenario_id": "scenario_f9315d418f5d9120",
+      "question_ids": [
+        "scenario_question_c606f42c0642ad18"
+      ],
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "evidence_gap_ids": [],
+      "readiness": "ready",
+      "review_status": "approved",
+      "review_note": null,
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_7133d8797edadc4b",
+          "kind": "fact",
+          "ref_id": "fact_5f89ef81b622ade7",
+          "path": null,
+          "original_bucket": null,
+          "text": "曹县晶铭服饰有限公司",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_7b0cb1eaa57e94ef",
+          "kind": "fact",
+          "ref_id": "fact_08520825844492af",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://jm15965827526.1688.com/",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_cdccfa42adc12492",
+          "kind": "fact",
+          "ref_id": "fact_16500517b491d4dc",
+          "path": null,
+          "original_bucket": null,
+          "text": "可核对的经营触点包括企业 1688 店铺；企业提供的儿童芭蕾 TUTU 裙产品资料覆盖产品结构、材质、尺码、应用场景和定制说明。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_82e6b8b20a7a68e1",
+          "kind": "fact",
+          "ref_id": "fact_8671c5bfb63fb61d",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童芭蕾tutu裙",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_545f57ec945b4683",
+          "kind": "fact",
+          "ref_id": "fact_71ca91fe0f9a05d7",
+          "path": null,
+          "original_bucket": null,
+          "text": "儿童舞蹈服饰",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5bd2fe9b7a5133f9",
+          "kind": "fact",
+          "ref_id": "fact_609e6e5cbb03db6f",
+          "path": null,
+          "original_bucket": null,
+          "text": "多层高密度网纱并配置定型硬衬；网纱边缘锁边，内衬采用全棉透气里衬；覆盖100至160尺码",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_d50d2555ce290242",
+          "kind": "fact",
+          "ref_id": "fact_1277a7ca911a72df",
+          "path": null,
+          "original_bucket": null,
+          "text": "100-160；锦纶冰丝、多层网纱与全棉里衬；3-14岁；日常练功、考级、舞台汇演、舞蹈比赛",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_cfbc3a28c5e99958",
+          "kind": "fact",
+          "ref_id": "fact_c8d5cc0c8dda17b0",
+          "path": null,
+          "original_bucket": null,
+          "text": "生产供应；支持一件起混批与小批量试单；支持机构 LOGO、配色、裙摆层数和成人加大码定制",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_4b5882fe3bf4e8a9",
+          "kind": "fact",
+          "ref_id": "fact_90fe608ee01e9517",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65eb6c71d3f4e2f3",
+          "kind": "diagnosis_gap",
+          "ref_id": "gap_8f72055d55c9aa8c",
+          "path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
+          "original_bucket": null,
+          "text": "42 次探测失败或不可用，不能当作品牌未提及。",
+          "derivation": "derived"
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "topic_id": "content_topic_382cedc5ed79b79a",
+      "name": "儿童芭蕾tutu裙机构定制：产品与能力概览",
+      "objective": "用已确认事实解释产品、能力和适用客户",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "consideration",
+      "faq_ids": [
+        "faq_candidate_7b859536b2300b24"
+      ],
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_77ad2c84509c8a98"
+      ],
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_746c3beb994b012c",
+      "name": "儿童舞蹈服饰选购与适用场景：供应能力与合作条件",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "consideration",
+      "faq_ids": [
+        "faq_candidate_eb4950cba4a8096d"
+      ],
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_11917e4281b81e29"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_c5881907b4502bca",
+      "name": "儿童芭蕾tutu裙机构定制：供应能力与合作条件",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_3f450f0ba478482d",
+        "faq_candidate_14398a10c435406f"
+      ],
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_c60f44e2c82cb77a",
+        "scenario_question_f22d03473ebafab1"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_53a922ab1ae4a4cc",
+      "name": "儿童芭蕾tutu裙机构定制：供应商评估与采购核验",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "purchase",
+      "faq_ids": [
+        "faq_candidate_af3c903ccb30ec52"
+      ],
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_54c4554700fadbca"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_6de8dd34e51cf976",
+      "name": "儿童舞蹈服饰选购与适用场景：采购决策指南",
+      "objective": "帮助客户确认采购前需要比较的条件和事实",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "purchase",
+      "faq_ids": [
+        "faq_candidate_9bd369db157aedc0"
+      ],
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_fde66cd155a9ad67"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_7a3b79787a4a3663",
+      "name": "儿童舞蹈服饰选购与适用场景：产品选择与适用场景",
+      "objective": "帮助客户根据用途、材质、规格和做工选择合适产品",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "consideration",
+      "faq_ids": [
+        "faq_candidate_baa86943c642d451",
+        "faq_candidate_df07344a637492e3"
+      ],
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_c31f4414cafd9c27",
+        "scenario_question_38f6385f44ae3f6f"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "问答/经验型图文",
+        "采购指南/供应能力说明"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_8005021a3d17c1c4",
+      "name": "儿童芭蕾tutu裙小批量试单：供应商评估与采购核验",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "target_audience": "B端采购客户",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_818f4dfd85286bbe"
+      ],
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_4cc76e8376bbb44a"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_896aea22f5ecf655",
+      "name": "儿童芭蕾tutu裙小批量试单：供应能力与合作条件",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "target_audience": "B端采购客户",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_256d025399d68330"
+      ],
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_9ebe454726e4dbe4"
+      ],
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_3507bc376b0e0fb5",
+      "name": "山东菏泽曹县 儿童芭蕾tutu裙供应商筛选：地区供应商筛选",
+      "objective": "帮助区域采购客户用公开事实筛选和核验供应商",
+      "target_audience": "区域采购与渠道客户",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_40e3f2b5be738ccb",
+        "faq_candidate_c2f6e5b7e31a1f1b"
+      ],
+      "scenario_ids": [
+        "scenario_b890f16beb7be9be"
+      ],
+      "question_ids": [
+        "scenario_question_e3f20d473f7fdbb0",
+        "scenario_question_5fd2e474efc76a2a"
+      ],
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_5485a02bb52e6696",
+      "name": "晶铭服饰企业与供应能力核验：企业与品牌认知",
+      "objective": "说明企业是谁、主营什么以及哪些公开信息可核验",
+      "target_audience": "首次接触品牌的采购客户",
+      "decision_stage": "awareness",
+      "faq_ids": [
+        "faq_candidate_5ecd061ec8efaf5e"
+      ],
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_e1385249d95104d4"
+      ],
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "企业事实与行业解释稿",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_d93676c7a3c97944",
+      "name": "晶铭服饰企业与供应能力核验：供应能力与合作条件",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "target_audience": "首次接触品牌的采购客户",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_034637e4b96e946f"
+      ],
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_c606f42c0642ad18"
+      ],
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "evidence_gap_ids": [],
+      "content_forms": [
+        "企业事实与行业解释稿",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "ready",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null
+    },
+    {
+      "topic_id": "content_topic_c70c3d7559c846a4",
+      "name": "儿童芭蕾tutu裙机构定制：待核验需求",
+      "objective": "保留客户真实需求并说明需要核验的条件，不把未确认能力写成企业事实",
+      "target_audience": "舞蹈培训机构",
+      "decision_stage": "supplier_selection",
+      "faq_ids": [
+        "faq_candidate_fc9089d0184d1f05"
+      ],
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_4fa66c8491b33150"
+      ],
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "evidence_gap_ids": [
+        "evidence_gap_0ce5ff66feb30ffe"
+      ],
+      "content_forms": [
+        "采购指南/供应能力说明",
+        "问答/经验型图文"
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "查看公开店铺并进一步咨询",
+        "url": "https://jm15965827526.1688.com/"
+      },
+      "readiness": "research_only",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 0,
+          "diagnosis_gap": 0,
+          "customer_language": 5,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "low",
+        "rationale": [
+          "继承已确认场景优先级",
+          "存在事实缺口，证据就绪分为 0",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": "批准为研究与核验型内容；不得宣称企业支持单件定制"
+    }
+  ],
+  "prompt_recipes": [
+    {
+      "prompt_id": "content_prompt_984b7b4914d57373",
+      "topic_id": "content_topic_7a3b79787a4a3663",
+      "channel": "social",
+      "objective": "帮助客户根据用途、材质、规格和做工选择合适产品",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_c4d57f93469dfebe",
+      "topic_id": "content_topic_7a3b79787a4a3663",
+      "channel": "b2b",
+      "objective": "帮助客户根据用途、材质、规格和做工选择合适产品",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_f28f5551ce774abb",
+      "topic_id": "content_topic_6de8dd34e51cf976",
+      "channel": "b2b",
+      "objective": "帮助客户确认采购前需要比较的条件和事实",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_d1265833d0beb8d3",
+      "topic_id": "content_topic_6de8dd34e51cf976",
+      "channel": "social",
+      "objective": "帮助客户确认采购前需要比较的条件和事实",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_5f0963c60b1579be",
+      "topic_id": "content_topic_746c3beb994b012c",
+      "channel": "b2b",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_2dd78574d0420fce",
+      "topic_id": "content_topic_746c3beb994b012c",
+      "channel": "social",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_941ecc33b173319e",
+      "topic_id": "content_topic_896aea22f5ecf655",
+      "channel": "b2b",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "B端采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_28d2f75134d52c72",
+      "topic_id": "content_topic_896aea22f5ecf655",
+      "channel": "social",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "B端采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_088d4ff325e568f1",
+      "topic_id": "content_topic_8005021a3d17c1c4",
+      "channel": "b2b",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "audience": "B端采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_2d7f4d21a7b65f71",
+      "topic_id": "content_topic_8005021a3d17c1c4",
+      "channel": "social",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "audience": "B端采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_22f108ebb4bd9800",
+      "topic_id": "content_topic_c5881907b4502bca",
+      "channel": "b2b",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_4b7c6a1e5bfbca59",
+      "topic_id": "content_topic_c5881907b4502bca",
+      "channel": "social",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_cf151d199ba45531",
+      "topic_id": "content_topic_53a922ab1ae4a4cc",
+      "channel": "b2b",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_141d76cda0fa75ad",
+      "topic_id": "content_topic_53a922ab1ae4a4cc",
+      "channel": "social",
+      "objective": "给出供应商评估步骤、采购条件和核验方法",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_2f8430878c0ad6c7",
+      "topic_id": "content_topic_382cedc5ed79b79a",
+      "channel": "b2b",
+      "objective": "用已确认事实解释产品、能力和适用客户",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_bd9acb687edc84fb",
+      "topic_id": "content_topic_382cedc5ed79b79a",
+      "channel": "social",
+      "objective": "用已确认事实解释产品、能力和适用客户",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_f0c74d17488e7b35",
+      "topic_id": "content_topic_c70c3d7559c846a4",
+      "channel": "b2b",
+      "objective": "保留客户真实需求并说明需要核验的条件，不把未确认能力写成企业事实",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [
+        "不得把“已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制”改写为企业已具备的事实"
+      ],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_593156cccd3bcab6",
+      "topic_id": "content_topic_c70c3d7559c846a4",
+      "channel": "social",
+      "objective": "保留客户真实需求并说明需要核验的条件，不把未确认能力写成企业事实",
+      "audience": "舞蹈培训机构",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "forbidden_claims": [
+        "不得把“已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制”改写为企业已具备的事实"
+      ],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_838d214cfd93ba2f",
+      "topic_id": "content_topic_3507bc376b0e0fb5",
+      "channel": "b2b",
+      "objective": "帮助区域采购客户用公开事实筛选和核验供应商",
+      "audience": "区域采购与渠道客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "具体、采购导向、可核验",
+      "channel_constraints": [
+        "突出采购条件而非空泛品牌词",
+        "能力声明只使用 allowlist facts",
+        "不承诺未确认交期或规模"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_846f9c04c4a8b492",
+      "topic_id": "content_topic_3507bc376b0e0fb5",
+      "channel": "social",
+      "objective": "帮助区域采购客户用公开事实筛选和核验供应商",
+      "audience": "区域采购与渠道客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_d5b75c3831541538",
+      "topic_id": "content_topic_5485a02bb52e6696",
+      "channel": "media",
+      "objective": "说明企业是谁、主营什么以及哪些公开信息可核验",
+      "audience": "首次接触品牌的采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "客观、专业、证据优先",
+      "channel_constraints": [
+        "事实与观点分开",
+        "关键声明需要来源",
+        "不得写成虚假新闻"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_1546db3461dfbe92",
+      "topic_id": "content_topic_5485a02bb52e6696",
+      "channel": "social",
+      "objective": "说明企业是谁、主营什么以及哪些公开信息可核验",
+      "audience": "首次接触品牌的采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_79965052a5d853b3",
+      "topic_id": "content_topic_d93676c7a3c97944",
+      "channel": "media",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "首次接触品牌的采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "客观、专业、证据优先",
+      "channel_constraints": [
+        "事实与观点分开",
+        "关键声明需要来源",
+        "不得写成虚假新闻"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    },
+    {
+      "prompt_id": "content_prompt_bf0ecd0402377770",
+      "topic_id": "content_topic_d93676c7a3c97944",
+      "channel": "social",
+      "objective": "说明可核验的供应、定制与合作条件，不做无依据推荐",
+      "audience": "首次接触品牌的采购客户",
+      "outline_requirements": [
+        "先回答核心问题",
+        "再给出选择或核验维度",
+        "只使用 allowed_fact_ids 对应的公开确认事实",
+        "结尾给出与场景一致的下一步行动"
+      ],
+      "tone": "清晰、克制、面向实际决策",
+      "channel_constraints": [
+        "不得伪装用户评价",
+        "发布前必须人工审稿",
+        "不使用绝对化推荐"
+      ],
+      "citation_policy": "事实声明必须可追溯到 allowed_fact_ids；无法证明的信息写成待确认条件",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "forbidden_claims": [],
+      "review_status": "approved"
+    }
+  ],
+  "production_tasks": [
+    {
+      "task_id": "production_task_972e2572634aa610",
+      "topic_id": "content_topic_7a3b79787a4a3663",
+      "faq_ids": [
+        "faq_candidate_baa86943c642d451",
+        "faq_candidate_df07344a637492e3"
+      ],
+      "prompt_id": "content_prompt_984b7b4914d57373",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_c31f4414cafd9c27",
+        "scenario_question_38f6385f44ae3f6f"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_65aba5bd41d5e719",
+      "topic_id": "content_topic_7a3b79787a4a3663",
+      "faq_ids": [
+        "faq_candidate_baa86943c642d451",
+        "faq_candidate_df07344a637492e3"
+      ],
+      "prompt_id": "content_prompt_c4d57f93469dfebe",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_c31f4414cafd9c27",
+        "scenario_question_38f6385f44ae3f6f"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_6d465631e964efc6",
+      "topic_id": "content_topic_6de8dd34e51cf976",
+      "faq_ids": [
+        "faq_candidate_9bd369db157aedc0"
+      ],
+      "prompt_id": "content_prompt_f28f5551ce774abb",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_fde66cd155a9ad67"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_d129a076d3a2bd7d",
+      "topic_id": "content_topic_6de8dd34e51cf976",
+      "faq_ids": [
+        "faq_candidate_9bd369db157aedc0"
+      ],
+      "prompt_id": "content_prompt_d1265833d0beb8d3",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_fde66cd155a9ad67"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_992be0a658492c38",
+      "topic_id": "content_topic_746c3beb994b012c",
+      "faq_ids": [
+        "faq_candidate_eb4950cba4a8096d"
+      ],
+      "prompt_id": "content_prompt_5f0963c60b1579be",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_11917e4281b81e29"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_2ed5214fd508918d",
+      "topic_id": "content_topic_746c3beb994b012c",
+      "faq_ids": [
+        "faq_candidate_eb4950cba4a8096d"
+      ],
+      "prompt_id": "content_prompt_2dd78574d0420fce",
+      "scenario_ids": [
+        "scenario_c75e19046e1d71da"
+      ],
+      "question_ids": [
+        "scenario_question_11917e4281b81e29"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_54b9f8d119d5f2b8",
+      "topic_id": "content_topic_896aea22f5ecf655",
+      "faq_ids": [
+        "faq_candidate_256d025399d68330"
+      ],
+      "prompt_id": "content_prompt_941ecc33b173319e",
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_9ebe454726e4dbe4"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_e2b8f6864638bcc8",
+      "topic_id": "content_topic_896aea22f5ecf655",
+      "faq_ids": [
+        "faq_candidate_256d025399d68330"
+      ],
+      "prompt_id": "content_prompt_28d2f75134d52c72",
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_9ebe454726e4dbe4"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_127d75a54e942ff7",
+      "topic_id": "content_topic_8005021a3d17c1c4",
+      "faq_ids": [
+        "faq_candidate_818f4dfd85286bbe"
+      ],
+      "prompt_id": "content_prompt_088d4ff325e568f1",
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_4cc76e8376bbb44a"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_68bba1bbabf7bfee",
+      "topic_id": "content_topic_8005021a3d17c1c4",
+      "faq_ids": [
+        "faq_candidate_818f4dfd85286bbe"
+      ],
+      "prompt_id": "content_prompt_2d7f4d21a7b65f71",
+      "scenario_ids": [
+        "scenario_de8856b9df34b90b"
+      ],
+      "question_ids": [
+        "scenario_question_4cc76e8376bbb44a"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_8406fd47c00c05ce",
+      "topic_id": "content_topic_c5881907b4502bca",
+      "faq_ids": [
+        "faq_candidate_3f450f0ba478482d",
+        "faq_candidate_14398a10c435406f"
+      ],
+      "prompt_id": "content_prompt_22f108ebb4bd9800",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_c60f44e2c82cb77a",
+        "scenario_question_f22d03473ebafab1"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_cdf9193ed67be8ff",
+      "topic_id": "content_topic_c5881907b4502bca",
+      "faq_ids": [
+        "faq_candidate_3f450f0ba478482d",
+        "faq_candidate_14398a10c435406f"
+      ],
+      "prompt_id": "content_prompt_4b7c6a1e5bfbca59",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_c60f44e2c82cb77a",
+        "scenario_question_f22d03473ebafab1"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_9cdd667d4059d39d",
+      "topic_id": "content_topic_53a922ab1ae4a4cc",
+      "faq_ids": [
+        "faq_candidate_af3c903ccb30ec52"
+      ],
+      "prompt_id": "content_prompt_cf151d199ba45531",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_54c4554700fadbca"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_03cad50d38096ce5",
+      "topic_id": "content_topic_53a922ab1ae4a4cc",
+      "faq_ids": [
+        "faq_candidate_af3c903ccb30ec52"
+      ],
+      "prompt_id": "content_prompt_141d76cda0fa75ad",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_54c4554700fadbca"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_c8d5cc0c8dda17b0",
+        "fact_88c684883b54ef30",
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc",
+        "fact_9ca1ceb88252b2d4"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 15,
+        "final_score": 15,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_c441e520532c179b",
+      "topic_id": "content_topic_382cedc5ed79b79a",
+      "faq_ids": [
+        "faq_candidate_7b859536b2300b24"
+      ],
+      "prompt_id": "content_prompt_2f8430878c0ad6c7",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_77ad2c84509c8a98"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_f59d42dc09e57f52",
+      "topic_id": "content_topic_382cedc5ed79b79a",
+      "faq_ids": [
+        "faq_candidate_7b859536b2300b24"
+      ],
+      "prompt_id": "content_prompt_bd9acb687edc84fb",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_77ad2c84509c8a98"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 3,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 16,
+        "final_score": 16,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_29e0fd63892e07bf",
+      "topic_id": "content_topic_c70c3d7559c846a4",
+      "faq_ids": [
+        "faq_candidate_fc9089d0184d1f05"
+      ],
+      "prompt_id": "content_prompt_f0c74d17488e7b35",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_4fa66c8491b33150"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [
+        "evidence_gap_0ce5ff66feb30ffe"
+      ],
+      "claim_boundaries": [
+        "已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制"
+      ],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "research_only",
+      "readiness": "research_only",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 0,
+          "diagnosis_gap": 0,
+          "customer_language": 5,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "low",
+        "rationale": [
+          "继承已确认场景优先级",
+          "存在事实缺口，证据就绪分为 0",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_b1b3c718b7d90d18",
+      "topic_id": "content_topic_c70c3d7559c846a4",
+      "faq_ids": [
+        "faq_candidate_fc9089d0184d1f05"
+      ],
+      "prompt_id": "content_prompt_593156cccd3bcab6",
+      "scenario_ids": [
+        "scenario_8594e0a5c5c73f12"
+      ],
+      "question_ids": [
+        "scenario_question_4fa66c8491b33150"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5d421c9f6e2a7fd5",
+        "fact_d8fb8318a6fabd89",
+        "fact_c8d5cc0c8dda17b0"
+      ],
+      "blocked_evidence_gap_ids": [
+        "evidence_gap_0ce5ff66feb30ffe"
+      ],
+      "claim_boundaries": [
+        "已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制"
+      ],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "research_only",
+      "readiness": "research_only",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 3,
+          "evidence_readiness": 0,
+          "diagnosis_gap": 0,
+          "customer_language": 5,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "low",
+        "rationale": [
+          "继承已确认场景优先级",
+          "存在事实缺口，证据就绪分为 0",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_eb1f5e17785a0600",
+      "topic_id": "content_topic_3507bc376b0e0fb5",
+      "faq_ids": [
+        "faq_candidate_40e3f2b5be738ccb",
+        "faq_candidate_c2f6e5b7e31a1f1b"
+      ],
+      "prompt_id": "content_prompt_838d214cfd93ba2f",
+      "scenario_ids": [
+        "scenario_b890f16beb7be9be"
+      ],
+      "question_ids": [
+        "scenario_question_e3f20d473f7fdbb0",
+        "scenario_question_5fd2e474efc76a2a"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "b2b",
+      "content_format": "采购指南/供应能力说明",
+      "channel_reason": "适合规格、采购条件、供应能力和公开业务触点",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_ce420302d478c80f",
+      "topic_id": "content_topic_3507bc376b0e0fb5",
+      "faq_ids": [
+        "faq_candidate_40e3f2b5be738ccb",
+        "faq_candidate_c2f6e5b7e31a1f1b"
+      ],
+      "prompt_id": "content_prompt_846f9c04c4a8b492",
+      "scenario_ids": [
+        "scenario_b890f16beb7be9be"
+      ],
+      "question_ids": [
+        "scenario_question_e3f20d473f7fdbb0",
+        "scenario_question_5fd2e474efc76a2a"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517",
+        "fact_f74062502b5e9cc5",
+        "fact_d8fb8318a6fabd89",
+        "fact_16500517b491d4dc"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_9f99e58f8c1cddd0",
+      "topic_id": "content_topic_5485a02bb52e6696",
+      "faq_ids": [
+        "faq_candidate_5ecd061ec8efaf5e"
+      ],
+      "prompt_id": "content_prompt_d5b75c3831541538",
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_e1385249d95104d4"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "media",
+      "content_format": "企业事实与行业解释稿",
+      "channel_reason": "适合呈现可核验企业信息和行业判断框架",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_11c92ff0a944ac0e",
+      "topic_id": "content_topic_5485a02bb52e6696",
+      "faq_ids": [
+        "faq_candidate_5ecd061ec8efaf5e"
+      ],
+      "prompt_id": "content_prompt_1546db3461dfbe92",
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_e1385249d95104d4"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_88c684883b54ef30",
+        "fact_44f9ff6c4fad64a9",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_2c9f9f8b2fe16aa3",
+      "topic_id": "content_topic_d93676c7a3c97944",
+      "faq_ids": [
+        "faq_candidate_034637e4b96e946f"
+      ],
+      "prompt_id": "content_prompt_79965052a5d853b3",
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_c606f42c0642ad18"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "media",
+      "content_format": "企业事实与行业解释稿",
+      "channel_reason": "适合呈现可核验企业信息和行业判断框架",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    },
+    {
+      "task_id": "production_task_a063d76f0a90f838",
+      "topic_id": "content_topic_d93676c7a3c97944",
+      "faq_ids": [
+        "faq_candidate_034637e4b96e946f"
+      ],
+      "prompt_id": "content_prompt_bf0ecd0402377770",
+      "scenario_ids": [
+        "scenario_f9315d418f5d9120"
+      ],
+      "question_ids": [
+        "scenario_question_c606f42c0642ad18"
+      ],
+      "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
+      "allowed_fact_ids": [
+        "fact_5f89ef81b622ade7",
+        "fact_08520825844492af",
+        "fact_16500517b491d4dc",
+        "fact_8671c5bfb63fb61d",
+        "fact_71ca91fe0f9a05d7",
+        "fact_609e6e5cbb03db6f",
+        "fact_1277a7ca911a72df",
+        "fact_c8d5cc0c8dda17b0",
+        "fact_90fe608ee01e9517"
+      ],
+      "blocked_evidence_gap_ids": [],
+      "claim_boundaries": [],
+      "channel": "social",
+      "content_format": "问答/经验型图文",
+      "channel_reason": "适合用客户问题组织易理解的选择与核验方法",
+      "batch": 1,
+      "quantity": 1,
+      "use_knowledge": true,
+      "mode": "factual",
+      "readiness": "ready",
+      "status": "planned",
+      "priority": {
+        "components": {
+          "scenario_priority": 2,
+          "evidence_readiness": 5,
+          "diagnosis_gap": 0,
+          "customer_language": 2,
+          "coverage_value": 5,
+          "operator_judgment": 0
+        },
+        "calculated_total": 14,
+        "final_score": 14,
+        "tier": "medium",
+        "rationale": [
+          "继承已确认场景优先级",
+          "问题已关联公开确认事实",
+          "诊断无有效回答，不增加品牌表现分",
+          "覆盖一个尚未进入计划的代表问题"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": null,
+      "planning_override": null
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "content_blocker_fa96ba6862b0e49a",
+      "evidence_gap_id": "evidence_gap_0ce5ff66feb30ffe",
+      "scenario_id": "scenario_8594e0a5c5c73f12",
+      "question_ids": [
+        "scenario_question_4fa66c8491b33150"
+      ],
+      "severity": "high",
+      "description": "已确认事实分别支持一件起混批和定制，但不能据此推断支持单件定制",
+      "status": "research_only",
+      "review_reason": "只讨论采购方需要向厂家核验的条件，不声明晶铭服饰支持单件定制"
+    }
+  ],
+  "merge_suggestions": [],
+  "quota": {
+    "requested_total": 30,
+    "planned_total": 24,
+    "by_channel": {
+      "social": {
+        "requested": 12,
+        "planned": 12
+      },
+      "media": {
+        "requested": 2,
+        "planned": 2
+      },
+      "b2b": {
+        "requested": 10,
+        "planned": 10
+      },
+      "site": {
+        "requested": 0,
+        "planned": 0
+      }
+    }
+  },
+  "coverage": {
+    "scenario_total": 5,
+    "scenario_planned": 5,
+    "question_total": 15,
+    "question_planned": 15,
+    "uncovered_question_ids": []
+  },
+  "limitations": [
+    "基线诊断仅有 provider/API 不可用记录；场景优先级未使用品牌提及、推荐、竞品或引用数据，只能使用“探测覆盖不足”这一诊断缺口。"
+  ]
+}

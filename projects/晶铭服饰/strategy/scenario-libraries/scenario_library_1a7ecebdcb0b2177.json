@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "scenario_library_id": "scenario_library_draft_a3ac2b1ec9df0234",
+  "scenario_library_id": "scenario_library_1a7ecebdcb0b2177",
   "app_id": "jm_apparel_cx",
   "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
   "diagnosis_report_id": "diagnosis_report_7a935870c7cbce00",
   "diagnosis_gap_path": "diagnosis/gaps/diagnosis_report_7a935870c7cbce00.json",
-  "lifecycle": "review_required",
+  "lifecycle": "confirmed",
   "version": 1,
   "based_on_scenario_library_id": null,
   "created_at": "2026-08-07T09:08:55Z",
-  "confirmed_at": null,
+  "confirmed_at": "2026-08-07T09:32:52Z",
   "scenarios": [
     {
       "scenario_id": "scenario_c75e19046e1d71da",

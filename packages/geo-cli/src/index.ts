@@ -10,3 +10,8 @@ export { validateDiagnosis } from "./lib/diagnosis-validate.js";
 export { importLegacyDiagnosis } from "./lib/diagnosis-legacy.js";
 export { importLegacyKeywords, generateScenarioDraft, reviewScenario, approveReadyScenarios, reviewEvidenceGap, overrideScenarioPriority, reviewMergeSuggestion, confirmScenarioLibrary, reviseScenarioLibrary, scenarioLibraryInput, normalizeScenarioText, semanticSuggestions } from "./lib/scenario-strategy.js";
 export { validateScenarioStrategy } from "./lib/scenario-validate.js";
+export { generateContentPlan, importLegacyContent, reviewContentTopic, approveReadyContentTopics, reviewContentBlocker, reviewContentMerge, overrideContentPriority, overrideProductionTask, confirmContentPlan, reviseContentPlan, contentPlanInput, contentMergeSuggestions } from "./lib/content-planning.js";
+export { validateContentPlanning } from "./lib/content-plan-validate.js";
+export { prepareArticles, ingestArticle, reviseArticle, articleStatus, renderDraftReview, draftReviewInput } from "./lib/article-generation.js";
+export { validateArticles } from "./lib/article-validate.js";
+export { prepareArticleReviews, decideArticleReview, approvedArticleInput, articleReviewStatus, renderArticleReviewReport, validateArticleReviews } from "./lib/article-review.js";

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-content-plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "content_plan_id", "app_id", "fact_snapshot_id", "diagnosis_report_id", "scenario_library_id", "scenario_library_version", "lifecycle", "version", "based_on_content_plan_id", "created_at", "confirmed_at", "fact_catalog", "faq_candidates", "topics", "prompt_recipes", "production_tasks", "blockers", "merge_suggestions", "quota", "coverage", "limitations"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "content_plan_id": { "type": "string", "minLength": 1 },
+    "app_id": { "type": "string", "minLength": 1 },
+    "fact_snapshot_id": { "type": "string", "minLength": 1 },
+    "diagnosis_report_id": { "type": "string", "minLength": 1 },
+    "scenario_library_id": { "type": "string", "minLength": 1 },
+    "scenario_library_version": { "type": "integer", "minimum": 1 },
+    "lifecycle": { "enum": ["draft", "review_required", "confirmed", "retired"] },
+    "version": { "type": "integer", "minimum": 1 },
+    "based_on_content_plan_id": { "type": ["string", "null"] },
+    "created_at": { "type": "string" },
+    "confirmed_at": { "type": ["string", "null"] },
+    "fact_catalog": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["fact_id", "field", "summary"], "properties": { "fact_id": { "type": "string" }, "field": { "type": "string" }, "summary": { "type": "string" } } } },
+    "faq_candidates": { "type": "array", "items": { "$ref": "#/$defs/faq" } },
+    "topics": { "type": "array", "items": { "$ref": "#/$defs/topic" } },
+    "prompt_recipes": { "type": "array", "items": { "$ref": "#/$defs/prompt" } },
+    "production_tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } },
+    "blockers": { "type": "array", "items": { "$ref": "#/$defs/blocker" } },
+    "merge_suggestions": { "type": "array", "items": { "$ref": "#/$defs/merge" } },
+    "quota": {
+      "type": "object", "additionalProperties": false,
+      "required": ["requested_total", "planned_total", "by_channel"],
+      "properties": {
+        "requested_total": { "type": "integer", "minimum": 0 },
+        "planned_total": { "type": "integer", "minimum": 0 },
+        "by_channel": {
+          "type": "object", "additionalProperties": false,
+          "required": ["social", "media", "b2b", "site"],
+          "properties": {
+            "social": { "$ref": "#/$defs/channelQuota" }, "media": { "$ref": "#/$defs/channelQuota" }, "b2b": { "$ref": "#/$defs/channelQuota" }, "site": { "$ref": "#/$defs/channelQuota" }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scenario_total", "scenario_planned", "question_total", "question_planned", "uncovered_question_ids"],
+      "properties": {
+        "scenario_total": { "type": "integer", "minimum": 0 }, "scenario_planned": { "type": "integer", "minimum": 0 },
+        "question_total": { "type": "integer", "minimum": 0 }, "question_planned": { "type": "integer", "minimum": 0 },
+        "uncovered_question_ids": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "limitations": { "$ref": "#/$defs/stringArray" }
+  },
+  "$defs": {
+    "stringArray": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "reviewStatus": { "enum": ["unreviewed", "approved", "rejected", "deferred"] },
+    "readiness": { "enum": ["ready", "blocked", "research_only", "deferred"] },
+    "channel": { "enum": ["social", "media", "b2b", "site"] },
+    "sourceRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_ref_id", "kind", "ref_id", "path", "original_bucket", "text", "derivation"],
+      "properties": {
+        "source_ref_id": { "type": "string" }, "kind": { "enum": ["fact", "diagnosis_gap", "legacy_keyword", "customer_language", "operator"] },
+        "ref_id": { "type": "string" }, "path": { "type": ["string", "null"] }, "original_bucket": { "type": ["string", "null"] },
+        "text": { "type": ["string", "null"] }, "derivation": { "enum": ["extracted", "derived", "operator", "legacy"] }
+      }
+    },
+    "priority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["components", "calculated_total", "final_score", "tier", "rationale", "override"],
+      "properties": {
+        "components": {
+          "type": "object", "additionalProperties": false,
+          "required": ["scenario_priority", "evidence_readiness", "diagnosis_gap", "customer_language", "coverage_value", "operator_judgment"],
+          "properties": {
+            "scenario_priority": { "type": "integer", "minimum": 0, "maximum": 5 }, "evidence_readiness": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "diagnosis_gap": { "type": "integer", "minimum": 0, "maximum": 5 }, "customer_language": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "coverage_value": { "type": "integer", "minimum": 0, "maximum": 5 }, "operator_judgment": { "type": "integer", "minimum": 0, "maximum": 5 }
+          }
+        },
+        "calculated_total": { "type": "integer", "minimum": 0, "maximum": 30 }, "final_score": { "type": "integer", "minimum": 0, "maximum": 30 },
+        "tier": { "enum": ["high", "medium", "low"] }, "rationale": { "$ref": "#/$defs/stringArray" },
+        "override": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "object", "additionalProperties": false, "required": ["score", "actor", "reason", "at"], "properties": { "score": { "type": "integer", "minimum": 0, "maximum": 30 }, "actor": { "type": "string" }, "reason": { "type": "string" }, "at": { "type": "string" } } }
+          ]
+        }
+      }
+    },
+    "faq": {
+      "type": "object", "additionalProperties": false,
+      "required": ["faq_id", "question", "normalized_question", "answer_goal", "target_audience", "scenario_id", "question_ids", "allowed_fact_ids", "evidence_gap_ids", "readiness", "review_status", "review_note", "source_refs"],
+      "properties": {
+        "faq_id": { "type": "string" }, "question": { "type": "string", "minLength": 1 }, "normalized_question": { "type": "string" }, "answer_goal": { "type": "string" }, "target_audience": { "type": "string" }, "scenario_id": { "type": "string" },
+        "question_ids": { "$ref": "#/$defs/stringArray" }, "allowed_fact_ids": { "$ref": "#/$defs/stringArray" }, "evidence_gap_ids": { "$ref": "#/$defs/stringArray" }, "readiness": { "$ref": "#/$defs/readiness" }, "review_status": { "$ref": "#/$defs/reviewStatus" }, "review_note": { "type": ["string", "null"] },
+        "source_refs": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" } }
+      }
+    },
+    "topic": {
+      "type": "object", "additionalProperties": false,
+      "required": ["topic_id", "name", "objective", "target_audience", "decision_stage", "faq_ids", "scenario_ids", "question_ids", "allowed_fact_ids", "evidence_gap_ids", "content_forms", "desired_next_action", "readiness", "priority", "review_status", "review_note"],
+      "properties": {
+        "topic_id": { "type": "string" }, "name": { "type": "string" }, "objective": { "type": "string" }, "target_audience": { "type": "string" }, "decision_stage": { "type": "string" },
+        "faq_ids": { "$ref": "#/$defs/stringArray" }, "scenario_ids": { "$ref": "#/$defs/stringArray" }, "question_ids": { "$ref": "#/$defs/stringArray" }, "allowed_fact_ids": { "$ref": "#/$defs/stringArray" }, "evidence_gap_ids": { "$ref": "#/$defs/stringArray" }, "content_forms": { "$ref": "#/$defs/stringArray" },
+        "desired_next_action": { "type": ["object", "null"] }, "readiness": { "$ref": "#/$defs/readiness" }, "priority": { "$ref": "#/$defs/priority" }, "review_status": { "$ref": "#/$defs/reviewStatus" }, "review_note": { "type": ["string", "null"] }
+      }
+    },
+    "prompt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["prompt_id", "topic_id", "channel", "objective", "audience", "outline_requirements", "tone", "channel_constraints", "citation_policy", "allowed_fact_ids", "forbidden_claims", "review_status"],
+      "properties": {
+        "prompt_id": { "type": "string" }, "topic_id": { "type": "string" }, "channel": { "$ref": "#/$defs/channel" }, "objective": { "type": "string" }, "audience": { "type": "string" },
+        "outline_requirements": { "$ref": "#/$defs/stringArray" }, "tone": { "type": "string" }, "channel_constraints": { "$ref": "#/$defs/stringArray" }, "citation_policy": { "type": "string" }, "allowed_fact_ids": { "$ref": "#/$defs/stringArray" }, "forbidden_claims": { "$ref": "#/$defs/stringArray" }, "review_status": { "$ref": "#/$defs/reviewStatus" }
+      }
+    },
+    "task": {
+      "type": "object", "additionalProperties": false,
+      "required": ["task_id", "topic_id", "faq_ids", "prompt_id", "scenario_ids", "question_ids", "fact_snapshot_id", "allowed_fact_ids", "blocked_evidence_gap_ids", "claim_boundaries", "channel", "content_format", "channel_reason", "batch", "quantity", "use_knowledge", "mode", "readiness", "status", "priority", "review_status", "review_note", "planning_override"],
+      "properties": {
+        "task_id": { "type": "string" }, "topic_id": { "type": "string" }, "faq_ids": { "$ref": "#/$defs/stringArray" }, "prompt_id": { "type": "string" }, "scenario_ids": { "$ref": "#/$defs/stringArray" }, "question_ids": { "$ref": "#/$defs/stringArray" }, "fact_snapshot_id": { "type": "string" },
+        "allowed_fact_ids": { "$ref": "#/$defs/stringArray" }, "blocked_evidence_gap_ids": { "$ref": "#/$defs/stringArray" }, "claim_boundaries": { "$ref": "#/$defs/stringArray" }, "channel": { "$ref": "#/$defs/channel" }, "content_format": { "type": "string" }, "channel_reason": { "type": "string" },
+        "batch": { "type": "integer", "minimum": 1 }, "quantity": { "type": "integer", "minimum": 1 }, "use_knowledge": { "const": true }, "mode": { "enum": ["factual", "research_only"] }, "readiness": { "$ref": "#/$defs/readiness" }, "status": { "enum": ["blocked", "planned", "deferred", "rejected"] }, "priority": { "$ref": "#/$defs/priority" }, "review_status": { "$ref": "#/$defs/reviewStatus" }, "review_note": { "type": ["string", "null"] },
+        "planning_override": { "oneOf": [{ "type": "null" }, { "type": "object", "additionalProperties": false, "required": ["original_batch", "original_quantity", "batch", "quantity", "actor", "reason", "at"], "properties": { "original_batch": { "type": "integer", "minimum": 1 }, "original_quantity": { "type": "integer", "minimum": 1 }, "batch": { "type": "integer", "minimum": 1 }, "quantity": { "type": "integer", "minimum": 1 }, "actor": { "type": "string" }, "reason": { "type": "string" }, "at": { "type": "string" } } }] }
+      }
+    },
+    "blocker": {
+      "type": "object", "additionalProperties": false,
+      "required": ["blocker_id", "evidence_gap_id", "scenario_id", "question_ids", "severity", "description", "status", "review_reason"],
+      "properties": {
+        "blocker_id": { "type": "string" }, "evidence_gap_id": { "type": "string" }, "scenario_id": { "type": "string" }, "question_ids": { "$ref": "#/$defs/stringArray" }, "severity": { "enum": ["high", "medium", "low"] }, "description": { "type": "string" }, "status": { "enum": ["open", "deferred", "accepted", "resolved", "research_only"] }, "review_reason": { "type": ["string", "null"] }
+      }
+    },
+    "merge": {
+      "type": "object", "additionalProperties": false,
+      "required": ["suggestion_id", "item_type", "item_ids", "reason", "similarity", "meaningful_differences", "status", "review_reason"],
+      "properties": {
+        "suggestion_id": { "type": "string" }, "item_type": { "enum": ["faq", "topic", "task"] }, "item_ids": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }], "minItems": 2, "maxItems": 2 }, "reason": { "type": "string" }, "similarity": { "type": "number", "minimum": 0, "maximum": 1 }, "meaningful_differences": { "$ref": "#/$defs/stringArray" }, "status": { "enum": ["pending", "approved", "rejected"] }, "review_reason": { "type": ["string", "null"] }
+      }
+    },
+    "channelQuota": { "type": "object", "additionalProperties": false, "required": ["requested", "planned"], "properties": { "requested": { "type": "integer", "minimum": 0 }, "planned": { "type": "integer", "minimum": 0 } } }
+  }
+}

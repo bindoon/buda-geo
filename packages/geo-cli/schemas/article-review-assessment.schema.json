@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"geo-article-review-assessment","type":"object","additionalProperties":false,"required":["schema_version","article_id","body_sha256","checks","summary"],
+  "properties":{"schema_version":{"const":1},"article_id":{"type":"string"},"body_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},"checks":{"type":"object","additionalProperties":false,"required":["factual_accuracy","claim_boundaries","channel_fit","compliance","originality"],"properties":{"factual_accuracy":{"$ref":"#/$defs/check"},"claim_boundaries":{"$ref":"#/$defs/check"},"channel_fit":{"$ref":"#/$defs/check"},"compliance":{"$ref":"#/$defs/check"},"originality":{"$ref":"#/$defs/check"}}},"summary":{"type":"string","minLength":1}},
+  "$defs":{"check":{"type":"object","additionalProperties":false,"required":["pass","note"],"properties":{"pass":{"type":"boolean"},"note":{"type":"string","minLength":1}}}}
+}

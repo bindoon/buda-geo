@@ -1,6 +1,6 @@
 # geo-cli
 
-Node.js CLI：GEO 项目企业事实清洗、基线诊断、客户问题与购买场景及校验（Part A）。可发布至 npm。
+Node.js CLI：GEO 项目企业事实清洗、基线诊断、客户问题与购买场景、内容规划及校验（Part A）。可发布至 npm。
 
 ## 安装
 
@@ -36,6 +36,10 @@ geo-cli diagnose validate --project projects/晶铭服饰
 geo-cli strategy import-legacy --project projects/晶铭服饰 --input projects/晶铭服饰/inputs/晶铭服饰关键词.xlsx
 geo-cli strategy generate --project projects/晶铭服饰
 geo-cli strategy validate --project projects/晶铭服饰
+geo-cli plan generate --project projects/晶铭服饰 --quota 30
+geo-cli plan validate --project projects/晶铭服饰
+geo-cli article prepare --project projects/晶铭服饰 --limit 3
+geo-cli article validate --project projects/晶铭服饰
 ```
 
 客户映射在 `projects/registry.json`（非 Skill 正文）。`resolve` 输出 `path` 后用于 `--project`。
@@ -77,6 +81,23 @@ cd packages/geo-cli && npm run dev -- projects resolve "晶铭"
 | `strategy priority-override` | 记录操作者和原因后覆盖场景优先级 |
 | `strategy confirm` / `revise` | 冻结不可变场景库版本 / 基于确认版本创建修订草稿 |
 | `strategy validate` | 校验场景 Schema、事实证据引用和 manifest gate |
+| `plan import-legacy` | 审计旧 FAQ/prompts/keywords/generation plan；只生成未确认候选与来源报告 |
+| `plan generate` | 从 confirmed fact/diagnosis/scenario 生成 FAQ、Topic、Prompt、任务与普通用户复核单 |
+| `plan review` / `approve-ready` | 按 Topic bundle 批准、编辑、拒绝、延期，或批量批准证据就绪主题 |
+| `plan gap-review` | 解决、延期、接受阻断项，或批准为保留 forbidden claims 的 research-only 内容 |
+| `plan merge-review` | 人工批准或拒绝 FAQ/Topic/任务语义合并建议 |
+| `plan priority-override` / `task-override` | 带操作者和理由调整优先级、批次或数量；不得超过请求配额 |
+| `plan confirm` / `revise` | 冻结不可变内容计划版本 / 基于确认版本创建修订草稿 |
+| `plan validate` | 校验 Schema、上游版本、事实边界、引用、配额和 manifest gate |
+| `article prepare` | 从 confirmed content plan 展开稳定 writing briefs；支持 `--task` / `--limit` |
+| `article ingest` | 校验本地 Agent 生成的 Markdown、实际 Fact IDs 和 research-only 边界并存为 draft |
+| `article revise` | 追加 v2+ 修订并保留正文哈希、原因和 lineage，不覆盖 v1 |
+| `article status` | 显示 planned/prepared/drafted/missing，不把草稿冒充发布 |
+| `article validate` | 校验 brief/meta Schema、计划引用、allowlist、正文路径和 SHA-256 |
+| `article review-prepare` | 生成正文、事实、边界、风险和 revision 自足审稿包 |
+| `article review-decide` | 记录五项 assessment 与 request-changes/approve/reject/defer；批准绑定正文哈希 |
+| `article review-status` | 按审稿生命周期显示数量，不把 approved 说成 published |
+| `article review-validate` | 校验 review history、当前正文哈希和 approved 硬条件 |
 | `status` | 打印 manifest |
 
 ## 目录结构
@@ -100,6 +121,12 @@ packages/geo-cli/
 没有 API 时可将计划组合录入为 `unavailable`，报告会显示中文状态和具体错误原因。只有用户明确接受限制后才能用 `diagnose confirm --accept-limitations` 确认闸门；这种确认只允许流程继续，不代表已取得真实可见度结论。后续真实探测应创建新的 run，避免占位记录污染正式指标。
 
 `strategy` 的边界是“把客户问题组织成平台无关的购买场景”。场景不是文章模板；一项场景可以关联多条代表问题、未来 FAQ 和选题。旧 brand/search/qa/intent 分组仅保留来源审计，不是紫驰的正式模型。精确重复自动合并，语义近似只提建议；high evidence gap 和合并建议必须人工处置，确认版本后才开放内容规划。
+
+`plan` 的边界是“决定写什么、为什么写、依据什么、投向哪个 channel 和写几条”。FAQ candidate、content topic、prompt recipe、production task 是四类独立对象，业务复核单按 Topic bundle 展示，并直接列出可用事实内容。计划阶段不生成 FAQ 答案、标题成稿、文章、图片或发布队列。只有 confirmed plan 中已批准且 `ready | research_only` 的 planned tasks 可被下游读取。
+
+`article` 的边界是“把确认任务变成可人工审阅的 Markdown 草稿”。CLI 不绑定模型提供商：`prepare` 生成最小事实写作包，Skill/本地 Agent 写正文，`ingest` 校验并保存 meta。每篇都保持 `draft + requires_human_review`；本阶段不批准、不发布、不上传图片或 OSS。
+
+审稿以五项独立检查为准，不使用黑盒总分。approve 必须满足事实准确、边界、channel、合规、原创性全部通过，且绑定当前正文 SHA-256；任何 revision 都会让旧批准失效。只有 `approvedArticleInput` 可被未来发布阶段读取。
 
 ## 测试
 

@@ -6,7 +6,7 @@
 
 | 路径 | 用途 |
 |------|------|
-| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：企业事实清洗、基线诊断、需求场景库、Schema/证据校验 |
+| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：企业事实清洗、基线诊断、需求场景库、内容规划、Schema/证据校验 |
 | `skills/` | Agent Skill（`zichi-geo` 等）；**`.cursor/skills/zichi-geo` → 软链到此** |
 | `projects/{项目名}/` | 按客户拆分；`inputs/` 原始资料；`knowledge/` 等为清洗产物 |
 | `openspec/` | 研发期规格驱动变更；不属于最终运行交付 |
@@ -33,7 +33,10 @@
 - [`openspec/changes/clean-projects-to-knowledge-schema/`](./openspec/changes/clean-projects-to-knowledge-schema/) — 华远深洗 → 标准知识库 Schema（proposal/design/specs/tasks）
 - [`openspec/changes/archive/2026-08-07-rebuild-enterprise-fact-cleaning/`](./openspec/changes/archive/2026-08-07-rebuild-enterprise-fact-cleaning/) — 已归档：企业事实层重建、来源追踪、语义复核与确认快照
 - [`openspec/changes/add-baseline-geo-diagnosis/`](./openspec/changes/add-baseline-geo-diagnosis/) — 已完成待归档：已确认事实 → 可复核种子题 → 探测证据 → 透明指标、报告与缺口
-- [`openspec/changes/add-customer-question-scenarios/`](./openspec/changes/add-customer-question-scenarios/) — 已实现待人工确认晶铭场景库；竞品仅作方法覆盖参考
+- [`openspec/changes/archive/2026-08-07-add-customer-question-scenarios/`](./openspec/changes/archive/2026-08-07-add-customer-question-scenarios/) — 已归档：晶铭场景库 v1、问题去重、证据缺口与确认闸门
+- [`openspec/changes/archive/2026-08-07-add-content-planning-workflow/`](./openspec/changes/archive/2026-08-07-add-content-planning-workflow/) — 已归档：场景库 → FAQ、Topic、Prompt 配方、生产任务与确认闸门
+- [`openspec/changes/archive/2026-08-07-add-article-generation-workflow/`](./openspec/changes/archive/2026-08-07-add-article-generation-workflow/) — 已归档：confirmed content plan → writing brief → 本地 Agent 草稿 → 可追溯 meta
+- [`openspec/changes/archive/2026-08-07-add-article-review-workflow/`](./openspec/changes/archive/2026-08-07-add-article-review-workflow/) — 已归档：五项语义审稿、正文哈希绑定、修改闭环与 approved gate
 
 ## geo-cli 快速开始
 
@@ -44,9 +47,14 @@ geo-cli validate --project projects/晶铭服饰
 geo-cli review-clean --project projects/晶铭服饰
 geo-cli confirm-clean --project projects/晶铭服饰
 geo-cli diagnose seed-draft --project projects/晶铭服饰 --size 25
+geo-cli strategy validate --project projects/晶铭服饰
+geo-cli plan generate --project projects/晶铭服饰 --quota 30
+geo-cli plan validate --project projects/晶铭服饰
+geo-cli article prepare --project projects/晶铭服饰 --limit 3
+geo-cli article validate --project projects/晶铭服饰
 ```
 
-未 link 时用：`node packages/geo-cli/dist/cli.js clean --project projects/南通市海门华远工具厂`
+未 link 时用：`node packages/geo-cli/dist/cli.js plan validate --project projects/晶铭服饰`
 
 详见 [`packages/geo-cli/README.md`](./packages/geo-cli/README.md)。
 

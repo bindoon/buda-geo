@@ -45,6 +45,22 @@ import {
   reviewScenario,
 } from "./lib/scenario-strategy.js";
 import { validateScenarioStrategy } from "./lib/scenario-validate.js";
+import {
+  approveReadyContentTopics,
+  confirmContentPlan,
+  generateContentPlan,
+  importLegacyContent,
+  overrideContentPriority,
+  overrideProductionTask,
+  reviseContentPlan,
+  reviewContentBlocker,
+  reviewContentMerge,
+  reviewContentTopic,
+} from "./lib/content-planning.js";
+import { validateContentPlanning } from "./lib/content-plan-validate.js";
+import { articleStatus, ingestArticle, prepareArticles, reviseArticle } from "./lib/article-generation.js";
+import { validateArticles } from "./lib/article-validate.js";
+import { articleReviewStatus, decideArticleReview, prepareArticleReviews, validateArticleReviews } from "./lib/article-review.js";
 
 function resolveProject(p: string): string {
   return path.resolve(p);
@@ -257,6 +273,93 @@ addProjectOpt(strategy.command("validate").description("validate scenario schema
     console.log(`CHECKED: ${result.checked.length}`);
     process.exit(result.ok ? 0 : 1);
   });
+
+const plan = program.command("plan").description("build and confirm FAQ, topic, prompt, and production-task plans");
+
+addProjectOpt(plan.command("import-legacy").description("audit legacy FAQ/prompt/keyword/generation-plan JSON as unconfirmed candidates"))
+  .requiredOption("--input <files...>", "one or more legacy JSON files")
+  .action(async (opts: { project: string; input: string[] }) => console.log(JSON.stringify(await importLegacyContent(resolveProject(opts.project), opts.input), null, 2)));
+
+addProjectOpt(plan.command("generate").description("generate a reviewable content plan from the confirmed scenario library"))
+  .option("--quota <number>", "requested maximum task quantity for this batch", "30")
+  .action(async (opts: { project: string; quota: string }) => console.log(JSON.stringify(await generateContentPlan(resolveProject(opts.project), Number(opts.quota)), null, 2)));
+
+addProjectOpt(plan.command("review").description("approve, reject, defer, or edit one content topic bundle"))
+  .requiredOption("--topic <id>", "topic ID")
+  .requiredOption("--action <action>", "approve | reject | defer | edit")
+  .option("--note <text>", "review note")
+  .option("--input <file>", "JSON patch required for edit")
+  .action(async (opts: { project: string; topic: string; action: "approve" | "reject" | "defer" | "edit"; note?: string; input?: string }) => {
+    if (!["approve", "reject", "defer", "edit"].includes(opts.action)) throw new Error("action must be approve, reject, defer, or edit");
+    await reviewContentTopic(resolveProject(opts.project), opts.topic, opts.action, opts.note, opts.input); console.log(JSON.stringify({ topic_id: opts.topic, action: opts.action }, null, 2));
+  });
+
+addProjectOpt(plan.command("approve-ready").description("approve every evidence-ready content topic bundle"))
+  .action(async (opts: { project: string }) => { const value = await approveReadyContentTopics(resolveProject(opts.project)); console.log(JSON.stringify({ approved: value.topics.filter((x) => x.review_status === "approved").map((x) => x.topic_id), still_unreviewed: value.topics.filter((x) => x.review_status === "unreviewed").map((x) => x.topic_id) }, null, 2)); });
+
+addProjectOpt(plan.command("gap-review").description("resolve, defer, accept, or make one evidence blocker research-only"))
+  .requiredOption("--blocker <id>", "content blocker ID")
+  .requiredOption("--action <action>", "resolve | defer | accept | research-only")
+  .requiredOption("--reason <text>", "review reason")
+  .action(async (opts: { project: string; blocker: string; action: "resolve" | "defer" | "accept" | "research-only"; reason: string }) => { if (!["resolve", "defer", "accept", "research-only"].includes(opts.action)) throw new Error("action must be resolve, defer, accept, or research-only"); await reviewContentBlocker(resolveProject(opts.project), opts.blocker, opts.action, opts.reason); console.log(JSON.stringify({ blocker_id: opts.blocker, action: opts.action }, null, 2)); });
+
+addProjectOpt(plan.command("merge-review").description("approve or reject a content semantic-merge suggestion"))
+  .requiredOption("--suggestion <id>", "merge suggestion ID")
+  .requiredOption("--action <action>", "approve | reject")
+  .requiredOption("--reason <text>", "review reason")
+  .action(async (opts: { project: string; suggestion: string; action: "approve" | "reject"; reason: string }) => { if (!["approve", "reject"].includes(opts.action)) throw new Error("action must be approve or reject"); await reviewContentMerge(resolveProject(opts.project), opts.suggestion, opts.action, opts.reason); console.log(JSON.stringify({ suggestion_id: opts.suggestion, action: opts.action }, null, 2)); });
+
+addProjectOpt(plan.command("priority-override").description("override topic priority with actor and reason"))
+  .requiredOption("--topic <id>", "topic ID").requiredOption("--score <number>", "0-30 final score").requiredOption("--actor <name>", "operator").requiredOption("--reason <text>", "override reason")
+  .action(async (opts: { project: string; topic: string; score: string; actor: string; reason: string }) => { await overrideContentPriority(resolveProject(opts.project), opts.topic, Number(opts.score), opts.actor, opts.reason); console.log(JSON.stringify({ topic_id: opts.topic, score: Number(opts.score), actor: opts.actor }, null, 2)); });
+
+addProjectOpt(plan.command("task-override").description("override one task batch/quantity with a complete audit record"))
+  .requiredOption("--task <id>", "task ID").requiredOption("--batch <number>", "batch number").requiredOption("--quantity <number>", "task quantity").requiredOption("--actor <name>", "operator").requiredOption("--reason <text>", "override reason")
+  .action(async (opts: { project: string; task: string; batch: string; quantity: string; actor: string; reason: string }) => { await overrideProductionTask(resolveProject(opts.project), opts.task, Number(opts.batch), Number(opts.quantity), opts.actor, opts.reason); console.log(JSON.stringify({ task_id: opts.task, batch: Number(opts.batch), quantity: Number(opts.quantity), actor: opts.actor }, null, 2)); });
+
+addProjectOpt(plan.command("confirm").description("freeze the reviewed content plan and open the article-generation gate"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await confirmContentPlan(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(plan.command("revise").description("create a new draft version from a confirmed content plan"))
+  .requiredOption("--content-plan <id>", "confirmed content plan ID")
+  .action(async (opts: { project: string; contentPlan: string }) => console.log(JSON.stringify(await reviseContentPlan(resolveProject(opts.project), opts.contentPlan), null, 2)));
+
+addProjectOpt(plan.command("validate").description("validate content-plan schemas, evidence links, quotas, and manifest gate"))
+  .action(async (opts: { project: string }) => { const result = await validateContentPlanning(resolveProject(opts.project)); console.log(result.ok ? "CONTENT PLAN VALIDATE OK" : "CONTENT PLAN VALIDATE FAIL"); for (const error of result.errors) console.log(`  ${error}`); console.log(`CHECKED: ${result.checked.length}`); process.exit(result.ok ? 0 : 1); });
+
+const article = program.command("article").description("prepare, ingest, revise, and validate local article drafts");
+
+addProjectOpt(article.command("prepare").description("prepare stable writing briefs from the confirmed content plan"))
+  .option("--task <id>", "prepare one eligible production task")
+  .option("--limit <number>", "maximum article slots to prepare")
+  .action(async (opts: { project: string; task?: string; limit?: string }) => console.log(JSON.stringify(await prepareArticles(resolveProject(opts.project), opts.task, opts.limit ? Number(opts.limit) : undefined), null, 2)));
+
+addProjectOpt(article.command("ingest").description("validate and store one locally generated Markdown draft"))
+  .requiredOption("--article <id>", "article slot ID").requiredOption("--input <file>", "Markdown draft path").requiredOption("--title <text>", "article title").requiredOption("--used-facts <ids>", "comma-separated Fact IDs actually used")
+  .action(async (opts: { project: string; article: string; input: string; title: string; usedFacts: string }) => console.log(JSON.stringify(await ingestArticle(resolveProject(opts.project), opts.article, opts.input, opts.title, opts.usedFacts.split(",").map((x) => x.trim()).filter(Boolean)), null, 2)));
+
+addProjectOpt(article.command("revise").description("append a new revision without overwriting the original draft"))
+  .requiredOption("--article <id>", "article ID").requiredOption("--input <file>", "revised Markdown path").requiredOption("--reason <text>", "human-readable revision reason")
+  .action(async (opts: { project: string; article: string; input: string; reason: string }) => { const meta = await reviseArticle(resolveProject(opts.project), opts.article, opts.input, opts.reason); console.log(JSON.stringify({ article_id: meta.article_id, revision: meta.current_revision, path: meta.body_path }, null, 2)); });
+
+addProjectOpt(article.command("status").description("show planned, prepared, drafted, and missing article counts"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await articleStatus(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(article.command("validate").description("validate briefs, draft metadata, hashes, and confirmed-plan references"))
+  .action(async (opts: { project: string }) => { const result = await validateArticles(resolveProject(opts.project)); console.log(result.ok ? "ARTICLE VALIDATE OK" : "ARTICLE VALIDATE FAIL"); for (const error of result.errors) console.log(`  ${error}`); console.log(`CHECKED: ${result.checked.length}`); process.exit(result.ok ? 0 : 1); });
+
+addProjectOpt(article.command("review-prepare").description("prepare evidence-rich review packets for current drafts"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await prepareArticleReviews(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(article.command("review-decide").description("record request-changes, approve, reject, or defer with a five-check assessment"))
+  .requiredOption("--article <id>", "article ID").requiredOption("--action <action>", "request-changes | approve | reject | defer").requiredOption("--assessment <file>", "assessment JSON path").requiredOption("--reason <text>", "decision reason")
+  .action(async (opts: { project: string; article: string; action: "request_changes" | "approve" | "reject" | "defer"; assessment: string; reason: string }) => { const action = opts.action.replace("-", "_") as "request_changes" | "approve" | "reject" | "defer"; if (!["request_changes", "approve", "reject", "defer"].includes(action)) throw new Error("invalid review action"); const meta = await decideArticleReview(resolveProject(opts.project), opts.article, action, opts.assessment, opts.reason); console.log(JSON.stringify({ article_id: meta.article_id, status: meta.status }, null, 2)); });
+
+addProjectOpt(article.command("review-status").description("show article counts by review lifecycle"))
+  .action(async (opts: { project: string }) => console.log(JSON.stringify(await articleReviewStatus(resolveProject(opts.project)), null, 2)));
+
+addProjectOpt(article.command("review-validate").description("validate review history, current hashes, and approved gate conditions"))
+  .action(async (opts: { project: string }) => { const result = await validateArticleReviews(resolveProject(opts.project)); console.log(result.ok ? "ARTICLE REVIEW VALIDATE OK" : "ARTICLE REVIEW VALIDATE FAIL"); for (const error of result.errors) console.log(`  ${error}`); console.log(`CHECKED: ${result.checked.length}`); process.exit(result.ok ? 0 : 1); });
 
 addProjectOpt(program.command("parse-form").description("parse info form xlsx only"))
   .option("--app-id <id>", "override app_id")

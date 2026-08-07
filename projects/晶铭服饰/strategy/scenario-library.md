@@ -4,7 +4,7 @@
 
 - 事实快照：`fact_snapshot_58e05074d59340bd`
 - 诊断报告：`diagnosis_report_7a935870c7cbce00`
-- 场景库草稿：`scenario_library_draft_a3ac2b1ec9df0234`
+- 已确认场景库版本：`scenario_library_1a7ecebdcb0b2177`
 - 场景数：5
 
 ## 当前限制

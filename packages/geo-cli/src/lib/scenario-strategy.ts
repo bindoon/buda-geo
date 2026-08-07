@@ -401,7 +401,8 @@ function readableFactRefs(refs: ScenarioSourceReference[], factIds: string[], li
 }
 
 function scenarioReviewMarkdown(library: ScenarioLibrary): string {
-  const lines = [`# 客户问题与购买场景复核`, "", "> 一个场景是一种客户决策情境，不是一篇文章模板。代表问题可分别用于 FAQ、诊断或未来选题。", "", `- 事实快照：\`${library.fact_snapshot_id}\``, `- 诊断报告：\`${library.diagnosis_report_id}\``, `- 场景库草稿：\`${library.scenario_library_id}\``, `- 场景数：${library.scenarios.length}`, ""];
+  const libraryLabel = library.lifecycle === "confirmed" ? "已确认场景库版本" : "场景库草稿";
+  const lines = [`# 客户问题与购买场景复核`, "", "> 一个场景是一种客户决策情境，不是一篇文章模板。代表问题可分别用于 FAQ、诊断或未来选题。", "", `- 事实快照：\`${library.fact_snapshot_id}\``, `- 诊断报告：\`${library.diagnosis_report_id}\``, `- ${libraryLabel}：\`${library.scenario_library_id}\``, `- 场景数：${library.scenarios.length}`, ""];
   if (library.limitations.length) lines.push("## 当前限制", "", ...library.limitations.map((item) => `- ${item}`), "");
   for (const [index, scenario] of library.scenarios.entries()) {
     lines.push(`## ${index + 1}. ${scenario.name}`, "", `- 场景 ID：\`${scenario.scenario_id}\``, `- 状态：${reviewLabel(scenario.review_status)}`, `- 优先级：${reviewLabel(scenario.priority.tier)}（${scenario.priority.final_score}/25）`, `- 目标客户：${scenario.target_customer}`, `- 客户需求：${scenario.customer_need}`, `- 关注条件：${scenario.concerns.join("；") || "—"}`, `- 希望下一步：${scenario.desired_next_action?.label ?? "—"}`, "", "### 客户可能会问", "");

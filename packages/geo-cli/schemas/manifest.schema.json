@@ -43,6 +43,20 @@
             "scenario_library_id": { "type": ["string", "null"] },
             "version": { "type": ["integer", "null"] }
           }
+        },
+        "content_plan": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["pending", "review_required", "confirmed"] },
+            "at": { "type": ["string", "null"] },
+            "fact_snapshot_id": { "type": ["string", "null"] },
+            "diagnosis_report_id": { "type": ["string", "null"] },
+            "scenario_library_id": { "type": ["string", "null"] },
+            "scenario_library_version": { "type": ["integer", "null"] },
+            "content_plan_id": { "type": ["string", "null"] },
+            "version": { "type": ["integer", "null"] }
+          }
         }
       }
     },
@@ -72,6 +86,16 @@
     "clean_ready": { "type": "boolean" },
     "review_ready": { "type": "boolean" },
     "legacy_downstream_artifacts": { "type": "array", "items": { "type": "string" } },
+    "article_generation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["content_plan_id", "fact_snapshot_id", "planned", "drafted", "updated_at"],
+      "properties": { "content_plan_id": { "type": "string" }, "fact_snapshot_id": { "type": "string" }, "planned": { "type": "integer", "minimum": 0 }, "drafted": { "type": "integer", "minimum": 0 }, "updated_at": { "type": "string" } }
+    },
+    "article_review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["content_plan_id", "counts", "updated_at"],
+      "properties": { "content_plan_id": { "type": "string" }, "counts": { "type": "object" }, "updated_at": { "type": "string" } }
+    },
     "quota": { "type": "object" },
     "updated_at": { "type": ["string", "null"] }
   },

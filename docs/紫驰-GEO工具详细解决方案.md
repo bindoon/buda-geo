@@ -219,13 +219,21 @@ projects/{项目名}/
     legacy/                    # 旧问题和网页摸底；不计入正式指标
   strategy/
     legacy/keyword-audit.{json,md} # 旧关键词来源与重复审计；不是正式场景库
+    legacy/content-audit.{json,md} # 旧 FAQ/Prompt/关键词/生成计划审计；不是正式内容计划
     scenario-draft.json        # 待复核场景、问题 facets、证据缺口、优先级与合并建议
     scenario-review.md         # 普通用户确认入口
     scenario-libraries/{id}.json # 已确认不可变场景库版本
+    content-plan-draft.json    # FAQ、Topic、Prompt 配方和生产任务草稿
+    content-plan-review.md     # 按 Topic 打包、直接展示事实内容的普通用户复核入口
+    content-plans/{id}.json    # 已确认不可变内容计划版本
+    content-plan.md            # 已确认内容计划业务报告
   articles/
+    work/                      # writing brief + prompt；只含任务允许事实
     social/                    # ① 自媒体矩阵（百家号/搜狐/头条/抖音图文/知乎）
     media/                     # ② 付费官媒软文（权威新闻网）
     b2b/                       # ③ 高权重 B2B 投喂
+    revisions/{article_id}/    # v2+ 追加修订；不覆盖 v1
+    draft-review.md            # planned/prepared/drafted/missing 与事实/风险清单
     queue.json                 # 队列；每篇带 status / channel / keyword_ids / platform
   publish/
     receipts.jsonl             # article_id + platform 幂等回执
@@ -257,7 +265,7 @@ projects/{项目名}/
 | 「复测 / 优化下一轮」 | `measure` | `measure-and-iterate.md` | 新诊断缺口/迭代计划 |
 | 「同步上云」 | `sync` | `sync-saas.md` | Part B 同步回执 |
 
-闸门：clean / diagnose / scenario / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。clean 的确认只记录时间与 `fact_snapshot_id`，当前不维护“确认人”字段。
+闸门：clean / diagnose / scenario / content_plan / write(自媒体) / publish 每步停等人工确认，写入 `manifest.gates`。clean 的确认只记录时间与 `fact_snapshot_id`，当前不维护“确认人”字段。
 
 ### 4.4 `clean`：从杂乱 inputs 到统一 JSON
 
@@ -306,6 +314,22 @@ geo-cli strategy gap-review ...              # 接受/延期/解决证据缺口
 geo-cli strategy merge-review ...            # 人工决定语义近似项是否合并
 geo-cli strategy confirm --project <path>    # 冻结场景库版本，开放内容规划
 geo-cli strategy validate --project <path>   # 校验 Schema、事实引用和 gate
+geo-cli plan import-legacy ...                # 审计旧 FAQ/Prompt/关键词/生成计划
+geo-cli plan generate --project <path> --quota 30 # 生成四类规划对象和业务复核单
+geo-cli plan review ...                       # 按 Topic bundle 批准/编辑/拒绝/延期
+geo-cli plan approve-ready --project <path>  # 批量批准无 blocker 的就绪主题
+geo-cli plan gap-review ...                   # 解决/延期/接受，或转 research-only
+geo-cli plan merge-review ...                 # 人工决定 FAQ/Topic/任务语义合并
+geo-cli plan priority-override ...            # 带操作者和理由调整优先级
+geo-cli plan task-override ...                # 带操作者和理由调整批次/数量
+geo-cli plan confirm --project <path>         # 冻结内容计划版本，开放文章生成
+geo-cli plan revise ...                       # 从确认版本建立新草稿，不覆盖历史版本
+geo-cli plan validate --project <path>        # 校验 Schema、引用、事实边界、配额和 gate
+geo-cli article prepare --project <path>      # 从确认任务生成稳定写作包；不调用外部模型
+geo-cli article ingest ...                    # 校验本地 Markdown 与 used Fact IDs，落为 draft
+geo-cli article revise ...                    # 追加修订，保留 v1 和 lineage
+geo-cli article status --project <path>       # planned/prepared/drafted/missing
+geo-cli article validate --project <path>     # 校验 brief/meta、正文哈希和计划引用
 geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 ```
 
@@ -319,10 +343,14 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 - 旧关键词：brand/search/qa/intent 等客户原分组只保留在 `strategy/legacy` 做来源审计；精确重复可自动合并，语义近似仅生成待审建议，不把竞品术语变成紫驰 Schema 或三平台导出。
 - 优先级：业务价值、有效诊断缺口、证据就绪度、客户原话与运营判断分项记录。`unavailable` 探测不能贡献品牌未提及/推荐缺口分；人工覆盖必须记录操作者与原因。
 - 场景闸门：未确认场景库不得进入 FAQ、选题或写作计划；high evidence gap 必须解决、延期或明确接受，禁止补造企业能力。
+- 内容计划：FAQ candidate 只记录问题和回答目标；Topic 是普通用户复核的单一业务目标；Prompt recipe 保存事实/结构/channel 约束；production task 才记录批次和数量。业务复核单必须列出实际可用事实内容，不要求用户先读 JSON。
+- 内容计划闸门：只消费完全匹配的 confirmed fact snapshot、diagnosis report 和 scenario library。restricted/internal、密码、Token、身份证不得进入计划；high gap 默认阻断，只有人工批准的 research-only 任务可写核验方法且必须保留 forbidden claims。
+- 配额：`quota_planned` 可以小于 `quota_requested`；禁止复制近义 FAQ、Topic 或任务凑量。channel 只允许 `social | media | b2b | site`，不维护竞品平台导出。
 - 发布：封装聚合发文 API；无 API 平台半自动仍写同一 `receipts`（幂等键：`article_id + platform`）；若目标渠道强制 CDN，再在 publish 前上传 OSS 并回写 `url`。
 - 密钥：仅环境变量 / `.secrets.env`（gitignore）；不进知识库。
 - 诊断、场景/关键词、FAQ、prompt 与写作任务必须消费已确认的 `fact_snapshot_id`；它们由各自阶段生成，不能塞回 clean。
-- 写作任务（学大泽）：下游 `generation_plan.tasks[]` 含 `keyword_group_id`、`limit`、`use_knowledge`（默认 true）、`produced_count`。
+- 写作任务：下游只读取 confirmed content plan 中已批准的 `planned + ready/research_only` tasks；每项绑定 Topic/FAQ/Prompt/scenario/question、`fact_snapshot_id`、事实 allowlist、channel、批次、数量和 `use_knowledge: true`，不依赖旧关键词桶。
+- 文章草稿：CLI 只准备最小事实 writing brief，Skill/本地 Agent 负责语义写作，再由 CLI ingest。每篇保存 Markdown + meta、实际 used Fact IDs、正文哈希与修订 lineage；状态固定为 `draft + requires_human_review`，不得在生成阶段批准或发布。
 
 ### 4.6 `write` / `publish`：三大权威信源 + 任务绑定
 
@@ -430,6 +458,10 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 
 - [ ] 新客户按「四件套」放入 `inputs/` 后，`clean` 产出过 `validate` 的知识库，或仅剩已提示的 `recommend`/`optional` 缺失  
 - [ ] 晶铭服饰真实 diagnose：客户可读报告 + 分平台明细 + 逐题原始回答凭证（当前仅完成豆包/DeepSeek 无 API 限制版闭环，不作为真实可见度验收）
+- [x] 晶铭服饰需求场景库 v1：5 个场景、15 个去重后代表问题均已复核并绑定确认事实；“单件定制”因依据不足延期，未补造能力
+- [x] 晶铭服饰内容计划 v1：15 个 FAQ 归入 12 个单一目标 Topic，形成 24 个 channel 任务；“单件定制”仅保留 2 个 research-only 核验型任务并禁止能力声明
+- [x] 晶铭服饰文章生成小样：24/24 个稳定 writing briefs；已生成 3 篇不同目标/channel draft，其中单件定制稿为 research-only；其余 21 篇明确显示 missing
+- [x] 晶铭服饰审稿小样：3 篇逐项完成事实、边界、channel、合规、原创性检查并绑定正文哈希；3 approved、0 published
 - [ ] 写作均绑定词包且 `use_knowledge`；稿件带 `status`/`channel`；自媒体经 `approved` 后可发  
 - [ ] 三大信源均有可验收样例（social 真发 ≥1 平台；media/b2b 至少统一回执或半自动闭环）  
 - [ ] `manifest.quota` 可追踪年 1500 篇在三类 channel 的进度  
@@ -463,12 +495,10 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 
 **Part A 启动包：**
 
-1. 冻结目录：`packages/geo-cli`、`skills/zichi-geo`、`projects/*/knowledge|assets|...`  
-2. 写 `schema-knowledge.md`，用**晶铭服饰**打出第一份合规 JSON
-3. 实现 `geo-cli validate`  
-4. 写 `SKILL.md` 路由 + `clean-enterprise.md`，对晶铭服饰跑通清洗闸门
-5. 并行：向紫驰确认诊断 API / 发布 API 供应商（或半自动过渡方案）  
-6. 晶铭服饰串跑后再选择不同类型项目验证「通用清洗」是否成立
+1. 基于晶铭 3 篇当前哈希有效的 approved 稿件设计发布准备、外部写入授权和幂等回执；批准不等于发布。
+2. 接入可用的诊断 API 或取得人工真实回答后，为晶铭创建新 diagnosis run，并通过新场景/内容计划版本替换当前不可用限制，禁止覆盖历史版本。
+3. 再选择不同类型项目复跑清洗、诊断、场景和内容规划流程，验证无询盘与强监管行业的保守行为。
+4. 审稿完成后再实现三大信源发布与幂等回执。
 
 **Part B：** Part A 验收签字后再开，避免 Schema 漂移。
 
