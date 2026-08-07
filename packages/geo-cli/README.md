@@ -29,6 +29,7 @@ geo-cli projects resolve "华远"
 geo-cli inventory --project projects/南通市海门华远工具厂
 geo-cli clean --project projects/南通市海门华远工具厂
 geo-cli validate --project projects/南通市海门华远工具厂
+geo-cli review-clean --project projects/南通市海门华远工具厂
 geo-cli confirm-clean --project projects/南通市海门华远工具厂
 ```
 
@@ -49,8 +50,9 @@ cd packages/geo-cli && npm run dev -- projects resolve "华远"
 | `inventory` | 分类并逐文件哈希 `inputs/`（法人身份证 → ignored） |
 | `parse-form` | 信息收集表 → `company.baseinfo.json` |
 | `parse-keywords` | 独立解析原始词表的兼容命令；不属于 clean 流程 |
-| `clean` | 生成来源索引、企业事实/证据、baseinfo/profile/skus 与 manifest；不生成下游 GEO 策略 |
+| `clean` | 生成来源索引、精简事实底账、baseinfo/profile/skus 与 manifest；不生成下游 GEO 策略 |
 | `validate` | 分别输出结构、引用、语义与安全检查；`--no-strict` 忽略 block missing |
+| `review-clean` | 生成项目根 `clean-review.md`，按必须修正、重点待确认、冲突、建议和业务内容组织 |
 | `confirm-clean` | 无 block 且人工复核后生成不可变事实快照；不记录确认人 |
 | `status` | 打印 manifest |
 
@@ -66,7 +68,7 @@ packages/geo-cli/
   dist/             # npm run build
 ```
 
-不修改 `inputs/`。CLI 不含客户名或具体 SKU；产品归桶、证据范围、冲突选择和明显错填字段的规范值由 Skill/运营写入项目级 `knowledge/clean.overrides.json`，CLI 再确定性执行。规范值作为待确认的 `operator` 事实保留，原始候选不会被删除。配图先复制到 `assets/images/`，OSS 在 publish 阶段再处理。
+不修改 `inputs/`。CLI 不含客户名或具体 SKU；产品归桶、事实来源、冲突选择、明显错填字段的规范值和人工语义问题由 Skill/运营写入项目级 `knowledge/clean.overrides.json`，CLI 再确定性执行。规范值作为待确认的 `operator` 事实保留，原始候选不会被删除。图片不进入 Facts：原图在 source index，可用配图关系在 SKU images，OSS 在 publish 阶段再处理。
 
 `clean` 的边界是“可追溯的企业事实”。关键词、需求场景、受众画像、FAQ、prompts、诊断题和 generation plan 必须在企业事实确认后的对应阶段生成；旧文件可迁移保留，但 clean 不创建或刷新。
 

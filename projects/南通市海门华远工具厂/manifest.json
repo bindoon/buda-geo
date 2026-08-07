@@ -43,9 +43,9 @@
   "clean_pipeline": {
     "stage": "review",
     "inputs_hash": "21df339349db403753c37e5fc511becc112985e566e5374311cfe84e27b54141",
-    "facts_hash": "2408b124d2286e7cea10d42bc22d1472f495d3dd50091065913a422c5d376493",
+    "facts_hash": "af46dc4c93ea97e4739ee153a1e7f85df46ab8e1e5fd043af875a9cbce0a77e5",
     "changed_since_confirmation": true,
-    "previous_snapshot_id": "fact_snapshot_bcbfc0deaeb2422f"
+    "previous_snapshot_id": null
   },
   "clean_ready": false,
   "review_ready": true,
@@ -55,7 +55,7 @@
     "knowledge/company.prompts.json",
     "knowledge/company.generation_plan.json"
   ],
-  "updated_at": "2026-08-07T02:56:11Z",
+  "updated_at": "2026-08-07T06:35:07Z",
   "quota": {
     "articles_generated": 0,
     "articles_published": 0,

@@ -25,6 +25,21 @@
   },
   "missing": [
     {
+      "code": "operator_review_note:profile_intro_duplicate_fragments",
+      "severity": "block",
+      "message": "公司概况仍有重复介绍、残留序号“二、”和段落错位；需要先清理 company.profile.json，再提交确认。"
+    },
+    {
+      "code": "operator_review_note:scale_claims_need_reconciliation",
+      "severity": "block",
+      "message": "人员、设备、产能、销量、复购率等数字在知识库文字与宣传图中存在不同口径；需企业给出统一可公开口径，未确认前不得用于诊断或文章。"
+    },
+    {
+      "code": "operator_review_note:product_family_scope",
+      "severity": "recommend",
+      "message": "请确认37张图片是否统一归为“儿童芭蕾tutu裙”产品族，还是需要继续拆分练功款、考级款和舞台款。"
+    },
+    {
       "code": "sensitive_inputs_reviewed",
       "severity": "optional",
       "message": "当前有 3 个身份证、注册材料或不透明命名文件仅保留在 inputs；清洗不会复制、OCR 或写入企业事实。"
@@ -33,12 +48,12 @@
   "clean_pipeline": {
     "stage": "review",
     "inputs_hash": "c32acb0dc49b61c14702c5f0c082ca327c4db14e168a028bec51163a024480df",
-    "facts_hash": "861d34c561b52153be3f702e05ec0296104a87b9ac37fe9c711a3e807e1a6054",
+    "facts_hash": "0485d2d81b5377cf886f76ff88ae724d92a0b587fe647499364b9737ba8ae07d",
     "changed_since_confirmation": true,
     "previous_snapshot_id": null
   },
   "clean_ready": false,
-  "review_ready": true,
+  "review_ready": false,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-07T02:56:11Z"
+  "updated_at": "2026-08-07T06:35:10Z"
 }

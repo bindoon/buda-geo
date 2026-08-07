@@ -6,7 +6,7 @@
 
 | 路径 | 用途 |
 |------|------|
-| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：inventory / clean / validate / confirm-clean |
+| `packages/geo-cli/` | Node.js CLI（`geo-cli` npm 包）：inventory / clean / validate / review-clean / confirm-clean |
 | `skills/` | Agent Skill（`zichi-geo` 等）；**`.cursor/skills/zichi-geo` → 软链到此** |
 | `projects/{项目名}/` | 按客户拆分；`inputs/` 原始资料；`knowledge/` 等为清洗产物 |
 | `openspec/` | 研发期规格驱动变更；不属于最终运行交付 |
@@ -41,6 +41,7 @@
 cd packages/geo-cli && npm install && npm run build && npm link
 geo-cli clean --project projects/南通市海门华远工具厂
 geo-cli validate --project projects/南通市海门华远工具厂
+geo-cli review-clean --project projects/南通市海门华远工具厂
 geo-cli confirm-clean --project projects/南通市海门华远工具厂
 ```
 

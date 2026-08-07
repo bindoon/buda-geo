@@ -12,7 +12,7 @@ import {
 import { inventory } from "./inventory.js";
 import { buildMissing, defaultManifest, ensureAppId, type MissingItem } from "./manifest.js";
 import { parseInfoForm, type BaseInfo } from "./parse.js";
-import { semanticFindings } from "./quality.js";
+import { operatorReviewFindings, semanticFindings } from "./quality.js";
 import { sourcePathMatches, syncImagesAndSkus, type SkuItem } from "./skus.js";
 import { pathExists, readJson, utcNow, writeJson } from "./util.js";
 
@@ -219,6 +219,7 @@ export async function cleanProject(
     facts: layer.facts,
     sourceIndex,
   });
+  findings.push(...operatorReviewFindings(overrides));
   let missing = buildMissing(layer.baseinfo as BaseInfo, layer.profile, layer.skus.items, inv.has_chat_logs, findings);
   if (warnings.some((warning) => warning.startsWith("password_stripped:"))) missing.push({
     code: "secrets_stripped",

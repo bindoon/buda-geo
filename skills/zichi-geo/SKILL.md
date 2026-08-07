@@ -52,15 +52,16 @@ description: >
 清洗时读取：
 
 1. `references/clean-enterprise.md`：完整五阶段方法，已包含“企业名片 vs 企业介绍”规则。
-2. `references/schema-knowledge.md`：事实、证据、业务视图和快照 Schema。
-3. `references/operator-report.md`：提交人工确认前的业务汇报模板；必须把 `knowledge/` 的当前业务结果逐项展开，不能只报“已拆分/校验通过”。
+2. `references/schema-knowledge.md`：事实底账、图片关系、业务视图和快照 Schema。
+3. `references/operator-report.md`：普通用户确认入口；先运行 `geo-cli review-clean` 生成清单，再补充只能由 Skill 发现的语义问题。
 
 Skill 与 CLI 的边界：
 
 - CLI 负责文件发现、确定性解析、哈希、稳定 ID、override 执行、Schema/引用/安全校验。
 - Skill 负责产品归并、长文语义拆分、主产品、属性/能力/卖点候选和事实来源边界。
-- 把项目专属判断写入 `knowledge/clean.overrides.json`；禁止把客户名、目录名或具体 SKU 写入 CLI。
-- 最终复核报告必须逐项读取 `company.baseinfo.json`、`company.profile.json`、`company.skus.json`、`company.facts.json`、`source-index.json` 与 `manifest.json`，用业务名称列出当前值、存放位置、来源、候选状态和空缺；不得让用户自己打开 JSON 才能知道清洗结果。
+- 把项目专属归并、事实来源和人工语义问题写入 `knowledge/clean.overrides.json`；禁止把客户名、目录名或具体 SKU 写入 CLI。
+- `company.facts.json` 是内部事实底账，不是用户确认界面；图片不得成为 subject 或 path fact。
+- 复跑 clean/validate 后必须运行 `geo-cli review-clean --project {PROJECT}`。向用户展示 `clean-review.md` 的“必须修正、重点待确认、冲突、建议”及业务内容，不要求用户打开 JSON。
 - 用户明确确认企业事实后才运行 `geo-cli confirm-clean --project {PROJECT}`。
 
 ## 全流程硬规则

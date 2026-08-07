@@ -13,6 +13,7 @@ import {
 } from "./lib/registry.js";
 import { printValidate, validateProject } from "./lib/validate.js";
 import { readJson, writeJson } from "./lib/util.js";
+import { writeCleanReview } from "./lib/review.js";
 
 function resolveProject(p: string): string {
   return path.resolve(p);
@@ -54,6 +55,20 @@ addProjectOpt(program.command("confirm-clean").description("confirm reviewed ent
   .action(async (opts: { project: string }) => {
     const result = await confirmClean(resolveProject(opts.project));
     console.log(JSON.stringify(result, null, 2));
+  });
+
+addProjectOpt(program.command("review-clean").description("write a business-readable enterprise fact confirmation checklist"))
+  .action(async (opts: { project: string }) => {
+    const result = await writeCleanReview(resolveProject(opts.project));
+    console.log(JSON.stringify({
+      wrote: result.path,
+      status: result.status,
+      next: result.status === "blocked"
+        ? "resolve must-fix items and rerun clean"
+        : result.status === "confirmed"
+          ? "continue to baseline diagnosis"
+          : "review clean-review.md and explicitly confirm enterprise facts",
+    }, null, 2));
   });
 
 addProjectOpt(program.command("parse-form").description("parse info form xlsx only"))

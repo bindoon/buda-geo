@@ -4,9 +4,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { KNOWLEDGE_FILES, LEGAL_ID_RE } from "./constants.js";
 import { factsContentHash, type BaseInfoView, type ProfileView } from "./fact-layer.js";
-import type { FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
+import type { CleanOverrides, FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
 import type { MissingItem } from "./manifest.js";
-import { semanticFindings } from "./quality.js";
+import { operatorReviewFindings, semanticFindings } from "./quality.js";
 import type { SkuItem } from "./skus.js";
 import { pathExists, readJson } from "./util.js";
 
@@ -64,6 +64,7 @@ export async function validateProject(
   const missing = (manifest.missing ?? []) as MissingItem[];
   const appId = manifest.app_id as string;
   const loaded = new Map<string, any>();
+  let cleanOverrides: CleanOverrides | undefined;
 
   const validateManifest = ajv.compile(await loadSchema("manifest.schema.json"));
   if (!validateManifest(manifest)) {
@@ -87,7 +88,8 @@ export async function validateProject(
   }
   const overridePath = path.join(knowledge, "clean.overrides.json");
   if (await pathExists(overridePath)) {
-    const overrides = await readJson<Record<string, unknown>>(overridePath);
+    const overrides = await readJson<CleanOverrides>(overridePath);
+    cleanOverrides = overrides;
     const validate = ajv.compile(await loadSchema("clean-overrides.schema.json"));
     if (!validate(overrides)) for (const message of formatAjvErrors(validate.errors ?? [])) structural.push(finding("schema:clean.overrides.json", "structural", `clean.overrides.json: ${message}`));
   }
@@ -131,6 +133,7 @@ export async function validateProject(
     if (facts.inputs_hash !== sourceIndex.inputs_hash) referential.push(finding("inputs_hash_mismatch", "referential", "fact ledger inputs_hash differs from source index"));
     if (facts.facts_hash !== factsContentHash(facts)) referential.push(finding("facts_hash_mismatch", "referential", "fact ledger facts_hash does not match its semantic content"));
     semantic.push(...semanticFindings({ profile, skus: skusData.items, facts, sourceIndex }));
+    if (cleanOverrides) semantic.push(...operatorReviewFindings(cleanOverrides));
   }
 
   const serializedKnowledge = [...loaded.entries()].map(([name, value]) => `${name}\n${JSON.stringify(value)}`).join("\n");

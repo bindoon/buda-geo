@@ -1,10 +1,19 @@
 import path from "node:path";
-import type { FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
+import type { CleanOverrides, FactLedger, FindingRecord, SourceIndex } from "./fact-model.js";
 import type { ProfileView } from "./fact-layer.js";
 import type { SkuItem } from "./skus.js";
 
 function hashLike(value: string): boolean {
   return /^[0-9a-f-]{16,}$/i.test(value.replace(/^sku_/, ""));
+}
+
+export function operatorReviewFindings(overrides: CleanOverrides): FindingRecord[] {
+  return (overrides.review_notes ?? []).map((note) => ({
+    code: `operator_review_note:${note.code}`,
+    severity: note.severity,
+    layer: "semantic",
+    message: note.message,
+  }));
 }
 
 export function semanticFindings(args: {
@@ -89,6 +98,26 @@ export function semanticFindings(args: {
     message: `事实冲突未解决：${conflict.field}。`,
     refs: conflict.candidate_fact_ids,
   });
+
+  const imageSourceIds = new Set(
+    sourceIndex.sources
+      .filter((source) => ["image", "product_image", "company_asset"].includes(source.kind))
+      .map((source) => source.source_id),
+  );
+  const productSubjectIds = new Set(
+    facts.subjects
+      .filter((subject) => subject.type === "product" || subject.type === "product_family")
+      .map((subject) => subject.subject_id),
+  );
+  for (const fact of facts.facts.filter((item) => productSubjectIds.has(item.subject_id))) {
+    if (fact.source_refs.some((sourceRef) => imageSourceIds.has(sourceRef))) findings.push({
+      code: `product_fact_image_source:${fact.fact_id}`,
+      severity: "block",
+      layer: "semantic",
+      message: `产品事实“${fact.field}”把图片当成文字证据；请改用知识库 Word、信息表或明确的运营来源。`,
+      refs: [fact.fact_id],
+    });
+  }
 
   const linkedSources = new Set<string>();
   for (const item of skus) for (const sourceRef of item.source_refs) linkedSources.add(sourceRef);

@@ -206,28 +206,28 @@ export async function buildFactLayer(args: {
     addFact(facts, brandId, "name", brandName, baseRefs, "extracted");
   }
 
-  const productSubjectBySource = new Map<string, string>();
   for (const item of skus.items) {
     const productId = stableId("sub_product", appId, item.name);
+    const productRefs = item.source_refs.length ? item.source_refs : profileRefs;
+    item.source_refs = [...new Set(productRefs)];
     subjects.push({
       subject_id: productId,
       type: "product",
       name: item.name,
       parent_subject_id: companySubject,
-      source_refs: item.source_refs,
+      source_refs: productRefs,
       review_status: "candidate",
     });
-    for (const sourceRef of item.source_refs) productSubjectBySource.set(sourceRef, productId);
     item.fact_refs = [];
     for (const [field, value, derivation, confidence] of [
-      ["name", item.name, "extracted", 0.98],
+      ["name", item.name, "operator", 0.9],
       ["category", item.category, "inferred", 0.72],
       ["selling_points", item.selling_points, "inferred", 0.7],
       ["attributes", item.attributes, "inferred", 0.7],
       ["capabilities", item.capabilities, "inferred", 0.72],
-      ["is_main", item.is_main, "inferred", 0.7],
+      ["is_main", item.is_main, "operator", 0.9],
     ] as [string, unknown, Derivation, number][]) {
-      const fact = addFact(facts, productId, field, value, item.source_refs.length ? item.source_refs : profileRefs, derivation, "public", confidence);
+      const fact = addFact(facts, productId, field, value, productRefs, derivation, "public", confidence);
       if (fact) item.fact_refs.push(fact.fact_id);
     }
   }
@@ -363,27 +363,6 @@ export async function buildFactLayer(args: {
     }
   }
 
-  for (const source of sourceIndex.sources) {
-    if (
-      source.scope !== "input" ||
-      source.ignored ||
-      !["image", "product_image", "company_asset"].includes(source.kind)
-    ) continue;
-    const skuImage = skus.items.flatMap((item) => item.images).find((image) => image.source_ref === source.source_id);
-    const assetPath =
-      skuImage?.path ??
-      (source.kind === "company_asset" ? `assets/images/_company/${source.name}` : null);
-    const assetId = stableId("sub_asset", source.source_id);
-    subjects.push({
-      subject_id: assetId,
-      type: "asset",
-      name: source.name,
-      parent_subject_id: productSubjectBySource.get(source.source_id) ?? companySubject,
-      source_refs: [source.source_id],
-      review_status: "candidate",
-    });
-    if (assetPath) addFact(facts, assetId, "path", assetPath, [source.source_id], "extracted", "public");
-  }
   const draftLedger: FactLedger = {
     app_id: appId,
     generated_at: utcNow(),

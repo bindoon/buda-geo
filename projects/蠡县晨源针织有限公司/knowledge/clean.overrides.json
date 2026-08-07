@@ -6,6 +6,7 @@
       "name": "无缝罗纹袖口",
       "category": "针织罗纹辅料",
       "is_main": true,
+      "fact_source_paths": ["晨源针织知识库.docx"],
       "source_paths": [
         "身份证信息及产品图片/罗纹袖口/**"
       ],
@@ -29,6 +30,7 @@
       "name": "校服罗纹袖口",
       "category": "针织罗纹辅料",
       "is_main": false,
+      "fact_source_paths": ["晨源针织知识库.docx"],
       "source_paths": [
         "身份证信息及产品图片/校服罗文袖口/**"
       ],
@@ -45,6 +47,7 @@
       "name": "针织罗纹领口",
       "category": "针织罗纹辅料",
       "is_main": false,
+      "fact_source_paths": ["晨源针织知识库.docx"],
       "source_paths": [
         "身份证信息及产品图片/领口/**"
       ],

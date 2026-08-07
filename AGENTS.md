@@ -22,6 +22,8 @@
 - **`company.baseinfo.json` = 名片**（电话/地址/店铺/账号）；**`company.profile.json` = 介绍文案**（intro/产品服务/优势/背书）。二者不要混；画像里不要再写联系方式。
 - 无客服记录 → `recommend`（`chat_logs`），**不阻断** clean 确认。
 - 配图先本地 `path`（`assets/images/...`）；`url`/OSS 仅在发文需要 CDN 时再做。
+- ❌ 不要把图片创建成 `company.facts.json` 的 subject 或 `path` fact；原图追溯在 `source-index.json`，产品配图关系在 `company.skus.json.images`。
+- ✅ 普通用户从项目根 `clean-review.md` 确认；Skill 语义问题持久化到 `clean.overrides.json.review_notes`，不要让用户读 Facts JSON。
 - `app_id` 必须在各 `company.*.json` 与 `manifest.json` 一致。
 
 ## Skill vs CLI

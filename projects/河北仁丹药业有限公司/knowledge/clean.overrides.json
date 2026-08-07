@@ -22,6 +22,7 @@
       "name": "创口贴",
       "category": "医用敷料",
       "is_main": true,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/弹性创口贴.jpg",
         "产品图片/透气创口贴.png",
@@ -43,6 +44,7 @@
       "name": "医用退热贴",
       "category": "物理降温敷料",
       "is_main": true,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/退热贴/**",
         "产品图片/医用退热贴.jpg",
@@ -64,6 +66,7 @@
       "name": "膏药贴",
       "category": "外用贴敷产品",
       "is_main": true,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/膏药贴剂/**",
         "产品图片/追风透骨贴.jpg",
@@ -85,6 +88,7 @@
       "name": "外用喷剂系列",
       "category": "外用喷剂",
       "is_main": false,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/外用喷剂/**"
       ],
@@ -101,6 +105,7 @@
       "name": "外用皮肤膏剂系列",
       "category": "外用膏剂",
       "is_main": false,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/外用皮肤膏剂/**"
       ],
@@ -117,6 +122,7 @@
       "name": "颈肩腰腿痛外用产品系列",
       "category": "外用健康产品",
       "is_main": false,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/颈肩腰腿痛类/**"
       ],
@@ -131,6 +137,7 @@
       "name": "其他外用健康产品",
       "category": "外用健康产品",
       "is_main": false,
+      "fact_source_paths": ["仁丹药业知识库.docx"],
       "source_paths": [
         "产品图片/**"
       ],

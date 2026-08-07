@@ -198,8 +198,8 @@ projects/{项目名}/
     company.baseinfo.json      # 企业名片：地址、联系方式、店铺/账号；不放介绍文案
     company.profile.json       # 企业介绍：产品服务、优势、背书、痛点；不放联系方式
     company.skus.json          # 经 Skill 语义归桶后的产品/产品族；CLI 不写死客户 SKU
-    company.facts.json         # 主体、事实、来源引用、推断方式、置信度、冲突
-    clean.overrides.json       # 项目级 Skill 规则：资产归类、产品归桶、冲突选择/字段规范化
+    company.facts.json         # 内部事实底账：业务主体、事实、来源、确认状态、冲突；不存图片索引
+    clean.overrides.json       # 项目级 Skill 规则：资产归类、产品归桶、事实来源、语义问题、字段规范化
     snapshots/                 # 已确认事实快照；不可被 re-clean 覆盖
     # keywords / FAQ / prompts / generation_plan 属下游阶段，clean 不创建或刷新
   assets/images/
@@ -217,6 +217,7 @@ projects/{项目名}/
   publish/
     receipts.jsonl             # article_id + platform 幂等回执
   manifest.json                # gates + missing 分级 + 1500 篇三类信源进度
+  clean-review.md              # 普通用户确认入口：必须修正/重点待确认/冲突/建议/业务内容
 ```
 
 `clean.overrides.json` 的事实决议既可在多个原始候选中选择，也可修正明显填错字段的值（例如把写进“公司简称”的经营描述规范为简称）。规范值必须保留为 `operator` 候选，同时保留原始候选与已解决冲突记录；只有人工确认后才进入不可变快照，重复 clean 不得改变事实哈希。
@@ -267,7 +268,7 @@ projects/{项目名}/
 | `recommend` | 可确认清洗，写入 `manifest.missing` | **客服/询盘记录**（后续可丰富客户问法）、信任背书图 |
 | `optional` | 仅记录 | 视频素材 |
 
-执行顺序固定为 `inventory → extract → normalize → review → confirm`。**验收**：`geo-cli validate --project ...` 通过；无未解决 `block`；`recommend` 可保留并带人话 `message`；人工复核后运行 `confirm-clean` 生成不可变快照。输入或事实哈希变化时自动退回 `review_required`，不得覆盖旧快照。
+执行顺序固定为 `inventory → extract → normalize → review → confirm`。**验收**：`geo-cli validate --project ...` 通过；`geo-cli review-clean --project ...` 生成普通用户确认清单；无未解决 `block`；`recommend` 可保留并带人话 `message`；人工复核后运行 `confirm-clean` 生成不可变快照。输入或事实哈希变化时自动退回 `review_required`，不得覆盖旧快照。
 
 ### 4.5 `packages/geo-cli` 最小命令面（Part A）
 
@@ -275,6 +276,7 @@ projects/{项目名}/
 geo-cli inventory     --project <path>       # 全量原件分类、逐文件哈希、ignored reason
 geo-cli clean         --project <path>       # 只生成企业事实层；不生成关键词、FAQ、prompt、写作计划
 geo-cli validate      --project <path>       # structure / reference / semantic / security
+geo-cli review-clean  --project <path>       # 生成普通用户可读的企业资料确认清单
 geo-cli confirm-clean --project <path>       # 无 block 时生成 confirmed fact snapshot
 geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 ```
@@ -490,7 +492,7 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 ## 附录 B · 与现有 `projects` 的迁移约定
 
 - 不移动客户已有 `inputs/` 文件。  
-- 不覆盖原件；由 clean 创建或更新来源索引、企业事实/证据、兼容视图和 `manifest.json`，下游目录按阶段建立。
+- 不覆盖原件；由 clean 创建或更新来源索引、精简事实底账、业务视图和 `manifest.json`，下游目录按阶段建立。
 - 旧的 `company.keywords.json`、FAQ、prompts、generation plan 可以暂存用于迁移对照，但 clean 不再创建或刷新。
 - 根目录空的 `inputs/`（仓库级）可废弃或仅作临时投放区；正式流程以 `projects/{名}/inputs` 为准。
 

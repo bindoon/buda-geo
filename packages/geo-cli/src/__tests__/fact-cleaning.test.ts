@@ -10,6 +10,7 @@ import { confirmClean } from "../lib/confirm.js";
 import { digestObject, stableId, type FactLedger, type SourceIndex } from "../lib/fact-model.js";
 import { inventory } from "../lib/inventory.js";
 import { semanticFindings } from "../lib/quality.js";
+import { writeCleanReview } from "../lib/review.js";
 import type { SkuItem } from "../lib/skus.js";
 import { readJson, writeJson } from "../lib/util.js";
 import { validateProject } from "../lib/validate.js";
@@ -91,6 +92,7 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
       category: "测试品类",
       is_main: true,
       source_paths: ["产品图/**"],
+      fact_source_paths: ["企业知识库.docx"],
       selling_points: ["来源明确的测试卖点"],
       attributes: { material: "测试材料" },
       capabilities: ["生产供应"],
@@ -101,6 +103,11 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
       field: "company_short_name",
       value: "测试制造",
       reason: "以本次企业信息收集表为准",
+    }],
+    review_notes: [{
+      code: "confirm_test_claim",
+      severity: "recommend",
+      message: "请确认测试资料中的业务表述。",
     }],
   });
   await writeJson(path.join(knowledge, "company.baseinfo.json"), {
@@ -171,11 +178,30 @@ test("clean, validate, confirm and re-clean preserve inputs and confirmation sem
   assert.equal(beforeConfirmation.ok, true, beforeConfirmation.errors.join("\n"));
   assert.equal(beforeConfirmation.structural.length, 0);
   const resolvedFacts = await readJson<FactLedger>(path.join(knowledge, "company.facts.json"));
+  assert.equal(resolvedFacts.subjects.some((subject) => (subject.type as string) === "asset"), false);
+  assert.equal(resolvedFacts.facts.some((fact) => fact.field === "path"), false);
+  const sourceIndexAfterClean = await readJson<SourceIndex>(path.join(knowledge, "source-index.json"));
+  const sourceById = new Map(sourceIndexAfterClean.sources.map((source) => [source.source_id, source]));
+  const productFacts = resolvedFacts.facts.filter((fact) =>
+    resolvedFacts.subjects.some((subject) => subject.subject_id === fact.subject_id && subject.type === "product"),
+  );
+  assert(productFacts.length > 0);
+  assert(productFacts.every((fact) => fact.source_refs.every((ref) =>
+    !["image", "product_image", "company_asset"].includes(sourceById.get(ref)?.kind ?? ""),
+  )));
   assert(resolvedFacts.conflicts.some((conflict) =>
     conflict.field === "company_short_name" &&
     conflict.status === "resolved" &&
     conflict.resolution === "以本次企业信息收集表为准"
   ));
+  const review = await writeCleanReview(projectRoot);
+  assert.equal(review.status, "review_required");
+  const reviewMarkdown = await readFile(review.path, "utf-8");
+  assert(reviewMarkdown.includes("## 1. 您现在需要做什么"));
+  assert(reviewMarkdown.includes("### 重点待确认"));
+  assert(reviewMarkdown.includes("图片不计入 Facts"));
+  assert(reviewMarkdown.includes("确认企业事实"));
+  assert(reviewMarkdown.includes("请确认测试资料中的业务表述"));
 
   const confirmation = await confirmClean(projectRoot);
   const snapshot = await readJson<Record<string, unknown>>(path.join(projectRoot, confirmation.snapshot_path));

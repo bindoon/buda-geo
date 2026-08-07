@@ -4,12 +4,12 @@
     {
       "id": 1,
       "prompt": "帮我清洗一下华远的 GEO 知识库",
-      "expected_output": "路由到阶段 1；按 operator-report.md 逐项展开 knowledge 当前值：企业名片每个字段（空值也列）、企业介绍五个分区的实际内容、每个产品的品类/卖点/属性/能力/图片、每条证据、推断/冲突/缺失及存放位置；不能只说已拆分或校验通过；不生成关键词或诊断"
+      "expected_output": "路由到阶段 1；运行 clean、validate、review-clean；先展示 clean-review.md 的必须修正、重点待确认、冲突和建议，再展开企业名片、介绍与每个产品；语义问题写入 review_notes 后复跑；不让用户阅读 Facts JSON，不生成关键词或诊断"
     },
     {
       "id": 2,
       "prompt": "新客户刚把资料放进 projects 了，帮我 onboard 并跑 clean",
-      "expected_output": "检查 registry.json 是否有条目，无则指导登记；inventory 分类 inputs；clean + validate"
+      "expected_output": "检查 registry.json 是否有条目，无则指导登记；inventory 分类 inputs；clean + validate + review-clean；停在人工确认门"
     },
     {
       "id": 3,

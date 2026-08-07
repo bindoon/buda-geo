@@ -14,8 +14,7 @@ export type SubjectType =
   | "product"
   | "product_family"
   | "capability"
-  | "service"
-  | "asset";
+  | "service";
 
 export interface SourceRecord {
   source_id: string;
@@ -99,6 +98,7 @@ export interface ProductOverride {
   category: string;
   is_main: boolean;
   source_paths: string[];
+  fact_source_paths?: string[];
   selling_points: string[];
   attributes: Record<string, string | number | boolean>;
   capabilities: string[];
@@ -112,11 +112,18 @@ export interface FactResolution {
   reason: string;
 }
 
+export interface ReviewNote {
+  code: string;
+  severity: Severity;
+  message: string;
+}
+
 export interface CleanOverrides {
   app_id: string;
   assets: AssetOverride[];
   products: ProductOverride[];
   fact_resolutions?: FactResolution[];
+  review_notes?: ReviewNote[];
 }
 
 export const MANUFACTURING_COMPLETENESS_PROFILE = {

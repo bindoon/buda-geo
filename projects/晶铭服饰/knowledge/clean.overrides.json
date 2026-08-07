@@ -58,6 +58,7 @@
       "name": "儿童芭蕾tutu裙",
       "category": "儿童舞蹈服饰",
       "is_main": true,
+      "fact_source_paths": ["曹县晶铭服饰有限公司GEO知识库.docx"],
       "source_paths": [
         "儿童芭蕾 tutu 裙/**",
         "曹县晶铭服饰有限公司 信息/9d9bf13be78b3b75a359533087177989.png"
@@ -87,6 +88,23 @@
       "field": "company_short_name",
       "value": "晶铭服饰",
       "reason": "信息表的“公司简称”填写为经营描述，不是简称；从企业全称规范化为待确认简称“晶铭服饰”。"
+    }
+  ],
+  "review_notes": [
+    {
+      "code": "profile_intro_duplicate_fragments",
+      "severity": "block",
+      "message": "公司概况仍有重复介绍、残留序号“二、”和段落错位；需要先清理 company.profile.json，再提交确认。"
+    },
+    {
+      "code": "scale_claims_need_reconciliation",
+      "severity": "block",
+      "message": "人员、设备、产能、销量、复购率等数字在知识库文字与宣传图中存在不同口径；需企业给出统一可公开口径，未确认前不得用于诊断或文章。"
+    },
+    {
+      "code": "product_family_scope",
+      "severity": "recommend",
+      "message": "请确认37张图片是否统一归为“儿童芭蕾tutu裙”产品族，还是需要继续拆分练功款、考级款和舞台款。"
     }
   ]
 }

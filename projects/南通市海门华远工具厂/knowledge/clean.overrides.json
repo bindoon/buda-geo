@@ -67,6 +67,7 @@
       "name": "电动修枝剪",
       "category": "园林电动剪切工具",
       "is_main": true,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/25开口修枝剪01款.jpg",
         "华远GEO信息/华远GEO信息/25开口修枝剪03款.jpg",
@@ -99,6 +100,7 @@
       "name": "水管剪",
       "category": "管材剪切工具",
       "is_main": true,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/01水管剪.jpg",
         "华远GEO信息/华远GEO信息/04水管剪.jpg"
@@ -116,6 +118,7 @@
       "name": "大蒜剪",
       "category": "农业剪切工具",
       "is_main": false,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/01大蒜剪.jpg"
       ],
@@ -130,6 +133,7 @@
       "name": "甘蔗剪",
       "category": "农业剪切工具",
       "is_main": false,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/01甘蔗剪.jpg",
         "华远GEO信息/华远GEO信息/04甘蔗剪.jpg"
@@ -145,6 +149,7 @@
       "name": "注塑箱",
       "category": "工具配件",
       "is_main": false,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/04注塑箱.jpg"
       ],
@@ -159,6 +164,7 @@
       "name": "电动修枝剪整机套装",
       "category": "工具套装",
       "is_main": false,
+      "fact_source_paths": ["华远知识库.docx"],
       "source_paths": [
         "华远GEO信息/华远GEO信息/25 30整套.jpg"
       ],

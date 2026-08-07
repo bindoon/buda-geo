@@ -6,6 +6,7 @@
       "name": "SD内存卡",
       "category": "存储卡",
       "is_main": true,
+      "fact_source_paths": ["朗威晶电GEO企业知识库.docx"],
       "source_paths": [
         "图片/SD内存卡/**"
       ],
@@ -26,6 +27,7 @@
       "name": "TF内存卡",
       "category": "存储卡",
       "is_main": true,
+      "fact_source_paths": ["朗威晶电GEO企业知识库.docx"],
       "source_paths": [
         "图片/TF内存卡/**"
       ],
@@ -46,6 +48,7 @@
       "name": "手机U盘",
       "category": "移动存储设备",
       "is_main": true,
+      "fact_source_paths": ["朗威晶电GEO企业知识库.docx"],
       "source_paths": [
         "图片/手机u盘/**"
       ],
@@ -66,6 +69,7 @@
       "name": "车载音乐U盘",
       "category": "车载移动存储设备",
       "is_main": true,
+      "fact_source_paths": ["朗威晶电GEO企业知识库.docx"],
       "source_paths": [
         "图片/音乐u盘 车载U盘/**",
         "整理图片/音乐U盘/**"

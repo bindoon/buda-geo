@@ -125,6 +125,18 @@ export async function syncImagesAndSkus(
     .map(([name, images]): SkuItem => {
       const semantic = productByName.get(name);
       const previous = previousByName.get(name);
+      const explicitFactSources = sourceIndex.sources.filter((source) =>
+        source.scope === "input" &&
+        !source.ignored &&
+        !["image", "product_image", "company_asset"].includes(source.kind) &&
+        (semantic?.fact_source_paths ?? []).some((pattern) =>
+          sourcePathMatches(source.path, pattern),
+        ),
+      );
+      const previousBusinessSourceRefs = (previous?.source_refs ?? []).filter((sourceRef) => {
+        const source = sourceIndex.sources.find((candidate) => candidate.source_id === sourceRef);
+        return source && !source.ignored && !["image", "product_image", "company_asset"].includes(source.kind);
+      });
       return {
         sku_id: previous?.sku_id ?? `sku_${name}`,
         name,
@@ -133,7 +145,13 @@ export async function syncImagesAndSkus(
         attributes: semantic?.attributes ?? previous?.attributes ?? {},
         capabilities: semantic?.capabilities ?? previous?.capabilities ?? [],
         is_main: semantic?.is_main ?? previous?.is_main ?? false,
-        source_refs: [...new Set(images.map((image) => image.source_ref))],
+        source_refs: [
+          ...new Set(
+            explicitFactSources.length
+              ? explicitFactSources.map((source) => source.source_id)
+              : previousBusinessSourceRefs,
+          ),
+        ],
         fact_refs: previous?.fact_refs ?? [],
         copy_brief: previous?.copy_brief ?? null,
         images,

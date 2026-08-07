@@ -21,17 +21,7 @@
       ],
       "is_main": true,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "fact_refs": [
         "fact_6d8d0ecc17e1a994",
@@ -124,7 +114,7 @@
       ],
       "is_main": false,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
       "fact_refs": [
         "fact_44bede537be0adb5",
@@ -156,7 +146,7 @@
       ],
       "is_main": false,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
       "fact_refs": [
         "fact_a0c43598670eac84",

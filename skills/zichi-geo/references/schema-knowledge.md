@@ -7,13 +7,14 @@
 ```text
 knowledge/
   source-index.json          # 原始文件索引与哈希
-  company.facts.json         # 主体、事实、冲突
+  company.facts.json         # 内部事实底账：业务主体、事实、冲突；不存图片索引
   clean.overrides.json       # Skill/运营的项目级语义决策
   company.baseinfo.json      # 名片视图
   company.profile.json       # 介绍文案视图
   company.skus.json          # 产品视图
   snapshots/{id}.json        # 人工确认后生成的不可变事实快照
 assets/images/{_company|产品名}/
+clean-review.md              # 普通用户确认入口
 manifest.json
 ```
 
@@ -31,7 +32,7 @@ source / facts 是事实权威层；baseinfo / profile / skus 是便于人和下
 
 `subject_id`、`type`、`name`、`parent_subject_id`、`source_refs`、`review_status`。
 
-主体类型包括 company、brand、product、product_family、capability、service、asset。
+主体类型包括 company、brand、product、product_family、capability、service。图片不是业务事实主体：原图由 `source-index.json` 索引，可用图片与产品的关系由 `company.skus.json.images` 保存。
 
 ### fact
 
@@ -61,11 +62,15 @@ source / facts 是事实权威层；baseinfo / profile / skus 是便于人和下
 
 每个产品至少包含：`sku_id`、人类可读 `name`、`category`、`is_main`、`attributes`、`capabilities`、`selling_points`、`source_refs`、`fact_refs`、本地 `images[].path`。
 
+- `source_refs`：支持产品名称、类目、属性、能力和卖点的文字来源。
+- `images[].source_ref`：单张图片的原始来源。
+- 禁止把全部产品图片 ID 填入 `source_refs` 冒充文字事实来源。
+
 主产品只有图片而无分类和实质字段时必须 block。
 
 ## `clean.overrides.json`
 
-`assets[]` 记录单图的 product/company/ignore 决策；`products[]` 记录产品归并、主产品、分类、属性、能力、卖点与来源图片。它是 Skill 的项目级语义输出，不得复制到通用 CLI 代码。
+`assets[]` 记录单图的 product/company/ignore 决策；`products[]` 记录产品归并、主产品、分类、属性、能力、卖点与来源图片。`products[].fact_source_paths` 单独列出支持结构化产品事实的 Word/Excel 等文字原件。`review_notes[]` 记录 Skill 发现但 CLI 无法确定性识别的 block/recommend/optional 语义问题。它们是项目级判断，不得复制到通用 CLI 代码。
 
 ## `manifest.json` 与确认快照
 
@@ -76,3 +81,7 @@ source / facts 是事实权威层；baseinfo / profile / skus 是便于人和下
 - `missing[]`: `block` / `recommend` / `optional`。
 
 无客服记录为 recommend。只有 `confirm-clean` 可生成 snapshot 并将 clean 置为 confirmed。
+
+## 普通用户确认入口
+
+运行 `geo-cli review-clean --project {PROJECT}` 生成项目根 `clean-review.md`。它必须先展示必须修正、重点待确认、冲突和建议，再展开企业名片、介绍和产品；事实 ID、source ID 与哈希只放技术附录。

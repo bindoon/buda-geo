@@ -15,7 +15,7 @@
         "required": ["subject_id", "type", "name", "parent_subject_id", "source_refs", "review_status"],
         "properties": {
           "subject_id": { "type": "string" },
-          "type": { "enum": ["company", "brand", "product", "product_family", "capability", "service", "asset"] },
+          "type": { "enum": ["company", "brand", "product", "product_family", "capability", "service"] },
           "name": { "type": "string", "minLength": 1 },
           "parent_subject_id": { "type": ["string", "null"] },
           "source_refs": { "type": "array", "items": { "type": "string" } },

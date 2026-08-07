@@ -54,8 +54,11 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 - `capabilities`：企业能提供的生产、定制、贴牌、交付、服务能力。
 - `selling_points`：原资料可核验的产品差异点；不要把“高端、领先、性价比高”等空泛营销语当事实。
 - `reason`：说明为何做该归并/推断，供人工复核。
+- `fact_source_paths`：列出支持上述产品结构化值的知识库 Word、信息表或其他文字原件；图片来源仍只写在 `source_paths` / `images[].source_ref`。
 
 所有语义填充都是候选；Skill 不得把自己的改写当来源。
+
+若语义检查发现重复段落、残片、相互矛盾的数字、无法安全确认的产品归并等问题，把它写入 `clean.overrides.json.review_notes[]`，包含稳定 `code`、`severity` 和人话 `message`。不要只在对话里提醒，否则下一次 clean 会丢失判断。
 
 #### 名片与企业介绍必须分开
 
@@ -96,13 +99,14 @@ CLI 解析信息表和知识库 Word，形成 source index、baseinfo/profile �
 ```bash
 geo-cli clean --project {PROJECT}
 geo-cli validate --project {PROJECT}
+geo-cli review-clean --project {PROJECT}
 geo-cli status --project {PROJECT}
 ```
 
 逐组处理：
 
 - structural：Schema 与 `app_id`。
-- referential：source / subject / fact / asset 引用。
+- referential：source / subject / fact / SKU image 引用。
 - semantic：哈希产品、重复主体、主产品空壳、画像错桶、冲突与孤立图片。
 - security：密码、身份证、被隔离来源进入产物。
 
@@ -110,7 +114,7 @@ geo-cli status --project {PROJECT}
 
 ### 5. Confirm：必须由人确认
 
-按 `operator-report.md` 输出复核报告并停住。报告必须把企业名片、企业介绍五个分区、每个产品、所有推断/规范化值、冲突、空缺和注册材料的忽略结果逐项列出；不能只写“已拆分”“已生成 JSON”或“校验通过”。只有用户明确确认企业事实后运行：
+按 `operator-report.md` 检查生成的 `clean-review.md` 并停住。普通用户先看到必须修正、重点待确认、冲突与建议，然后再看企业名片、企业介绍五个分区和每个产品；不要要求用户阅读 `company.facts.json`。只有用户明确确认企业事实后运行：
 
 ```bash
 geo-cli confirm-clean --project {PROJECT}
@@ -124,3 +128,4 @@ geo-cli confirm-clean --project {PROJECT}
 - 不在 clean 阶段生成关键词、诊断题、场景词、受众画像、prompts、内容计划或配额；`company.profile.json` 的企业介绍视图属于事实清洗产物。
 - 不复制或 OCR 法人身份证。
 - 不把营业执照、商标证、许可证图片、平台申请表或身份证派生成知识事实与写作素材。
+- 不为普通图片创建 fact subject 或 `path` fact；图片追溯走 source index，产品配图关系走 SKU images。

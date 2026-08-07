@@ -1,8 +1,8 @@
 {
   "app_id": "cy_knit_lx",
-  "generated_at": "2026-08-07T02:56:19Z",
+  "generated_at": "2026-08-07T06:35:31Z",
   "inputs_hash": "51756e83aa46529367ae5ee52ebf3b8de02f944117f51ac3d11aaa200d925d80",
-  "facts_hash": "72983066129a595e24d7471425b6c8b0a36961aed8a671ec7511a90ee7c67449",
+  "facts_hash": "aa3a6459a422bd5b50e31005eaf3456c13510b56d7d163d769feaaef435579fa",
   "subjects": [
     {
       "subject_id": "sub_company_8f5ce373003f5068",
@@ -31,17 +31,7 @@
       "name": "无缝罗纹袖口",
       "parent_subject_id": "sub_company_8f5ce373003f5068",
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "review_status": "candidate"
     },
@@ -51,7 +41,7 @@
       "name": "校服罗纹袖口",
       "parent_subject_id": "sub_company_8f5ce373003f5068",
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
       "review_status": "candidate"
     },
@@ -61,137 +51,7 @@
       "name": "针织罗纹领口",
       "parent_subject_id": "sub_company_8f5ce373003f5068",
       "source_refs": [
-        "src_92deff62f67fadd6"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_6f368ab681be0e9d",
-      "type": "asset",
-      "name": "O1CN01vrJwzK1EGR8S5mVsK_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_2d8a62127725728a",
-      "source_refs": [
-        "src_cad101380db7d924"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_9fff40d950abcc87",
-      "type": "asset",
-      "name": "O1CN010MXOtl1EGR8a8hK82_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_82ab54ee1385c8c3"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_739b30d275157fc5",
-      "type": "asset",
-      "name": "O1CN01C2hLUz1EGR8a2pyub_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_5d18e58180fe6016"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_fe3f833f88f1d0be",
-      "type": "asset",
-      "name": "O1CN01DNY1px1EGR8azZpdC_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_55fe874953142ba7"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_79bcd7185a9c635b",
-      "type": "asset",
-      "name": "O1CN01DPetW71EGRSMojTpe_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_0c560cf7d541f457"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_ed477206dde64357",
-      "type": "asset",
-      "name": "O1CN01N2T7tf1EGRTbibHHo_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_226e0036fcda1287"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_d895489d22e0183f",
-      "type": "asset",
-      "name": "O1CN01T91nCq1EGRMp24Wbh_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_47872b7410eb6583"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_a509219cf697abff",
-      "type": "asset",
-      "name": "O1CN01UyLr1T1EGR8S85RM0_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_0c4eeced96005307"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_5e9c27040728f5fb",
-      "type": "asset",
-      "name": "O1CN01VurmU61EGRSHyqo92_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_426ed50db3e31387"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_9ab6fdd4d232776e",
-      "type": "asset",
-      "name": "O1CN01vwueio1EGRSN1iveE_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_c8d684932eec76d2"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_551bc00ded7ca58d",
-      "type": "asset",
-      "name": "O1CN01ximHGq1EGR8agoaTb_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_48953795c0700b03"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_f08f726071abceee",
-      "type": "asset",
-      "name": "O1CN01yMyzFo1EGRTbhxJdh_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_fcc550b332b3b2a2",
-      "source_refs": [
-        "src_d431f76cfc9e0c29"
-      ],
-      "review_status": "candidate"
-    },
-    {
-      "subject_id": "sub_asset_ee439f5bf14b2aea",
-      "type": "asset",
-      "name": "O1CN01ALZ1am1EGRTWBQQds_!!2215349380324-0-cib.jpg",
-      "parent_subject_id": "sub_product_e2218da750b67e1e",
-      "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
       "review_status": "candidate"
     }
@@ -433,20 +293,10 @@
       "value": "无缝罗纹袖口",
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "extracted",
-      "confidence": 0.98,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -457,17 +307,7 @@
       "value": "针织罗纹辅料",
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -485,17 +325,7 @@
       ],
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -512,17 +342,7 @@
       },
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -540,17 +360,7 @@
       ],
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -564,20 +374,10 @@
       "value": true,
       "unit": null,
       "source_refs": [
-        "src_82ab54ee1385c8c3",
-        "src_5d18e58180fe6016",
-        "src_55fe874953142ba7",
-        "src_0c560cf7d541f457",
-        "src_226e0036fcda1287",
-        "src_47872b7410eb6583",
-        "src_0c4eeced96005307",
-        "src_426ed50db3e31387",
-        "src_c8d684932eec76d2",
-        "src_48953795c0700b03",
-        "src_d431f76cfc9e0c29"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "inferred",
-      "confidence": 0.7,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -588,10 +388,10 @@
       "value": "校服罗纹袖口",
       "unit": null,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "extracted",
-      "confidence": 0.98,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -602,7 +402,7 @@
       "value": "针织罗纹辅料",
       "unit": null,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -618,7 +418,7 @@
       },
       "unit": null,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -634,7 +434,7 @@
       ],
       "unit": null,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -648,10 +448,10 @@
       "value": false,
       "unit": null,
       "source_refs": [
-        "src_cad101380db7d924"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "inferred",
-      "confidence": 0.7,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -662,10 +462,10 @@
       "value": "针织罗纹领口",
       "unit": null,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "extracted",
-      "confidence": 0.98,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     },
@@ -676,7 +476,7 @@
       "value": "针织罗纹辅料",
       "unit": null,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -692,7 +492,7 @@
       },
       "unit": null,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.7,
@@ -708,7 +508,7 @@
       ],
       "unit": null,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
       "derivation": "inferred",
       "confidence": 0.72,
@@ -722,192 +522,10 @@
       "value": false,
       "unit": null,
       "source_refs": [
-        "src_92deff62f67fadd6"
+        "src_00f582365f79e94c"
       ],
-      "derivation": "inferred",
-      "confidence": 0.7,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_d13ed7bd0483d990",
-      "subject_id": "sub_asset_6f368ab681be0e9d",
-      "field": "path",
-      "value": "assets/images/校服罗纹袖口/O1CN01vrJwzK1EGR8S5mVsK_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_cad101380db7d924"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_e6ff726cf3472a09",
-      "subject_id": "sub_asset_9fff40d950abcc87",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN010MXOtl1EGR8a8hK82_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_82ab54ee1385c8c3"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_77a50cbcbfb92f14",
-      "subject_id": "sub_asset_739b30d275157fc5",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01C2hLUz1EGR8a2pyub_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_5d18e58180fe6016"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_fa6e41cdee921e18",
-      "subject_id": "sub_asset_fe3f833f88f1d0be",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01DNY1px1EGR8azZpdC_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_55fe874953142ba7"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_4c1fc7eb4c038b8f",
-      "subject_id": "sub_asset_79bcd7185a9c635b",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01DPetW71EGRSMojTpe_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_0c560cf7d541f457"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_e4b43b1752a29a0d",
-      "subject_id": "sub_asset_ed477206dde64357",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01N2T7tf1EGRTbibHHo_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_226e0036fcda1287"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_1ef636b02ab33bc9",
-      "subject_id": "sub_asset_d895489d22e0183f",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01T91nCq1EGRMp24Wbh_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_47872b7410eb6583"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_f8a8b47fa6ed60d1",
-      "subject_id": "sub_asset_a509219cf697abff",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01UyLr1T1EGR8S85RM0_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_0c4eeced96005307"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_27003af9abfe4156",
-      "subject_id": "sub_asset_5e9c27040728f5fb",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01VurmU61EGRSHyqo92_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_426ed50db3e31387"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_37e4288944390bc2",
-      "subject_id": "sub_asset_9ab6fdd4d232776e",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01vwueio1EGRSN1iveE_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_c8d684932eec76d2"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_6242fff15fc48445",
-      "subject_id": "sub_asset_551bc00ded7ca58d",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01ximHGq1EGR8agoaTb_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_48953795c0700b03"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_e1728b56bd7697bf",
-      "subject_id": "sub_asset_f08f726071abceee",
-      "field": "path",
-      "value": "assets/images/无缝罗纹袖口/O1CN01yMyzFo1EGRTbhxJdh_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_d431f76cfc9e0c29"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
-      "review_status": "candidate",
-      "disclosure_level": "public"
-    },
-    {
-      "fact_id": "fact_ed9b4a4b297bd08f",
-      "subject_id": "sub_asset_ee439f5bf14b2aea",
-      "field": "path",
-      "value": "assets/images/针织罗纹领口/O1CN01ALZ1am1EGRTWBQQds_!!2215349380324-0-cib.jpg",
-      "unit": null,
-      "source_refs": [
-        "src_92deff62f67fadd6"
-      ],
-      "derivation": "extracted",
-      "confidence": 0.95,
+      "derivation": "operator",
+      "confidence": 0.9,
       "review_status": "candidate",
       "disclosure_level": "public"
     }
