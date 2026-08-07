@@ -39,6 +39,7 @@ geo-cli strategy validate --project projects/晶铭服饰
 geo-cli plan generate --project projects/晶铭服饰 --quota 30
 geo-cli plan validate --project projects/晶铭服饰
 geo-cli article prepare --project projects/晶铭服饰 --limit 3
+geo-cli article prepare --project projects/晶铭服饰 --force
 geo-cli article validate --project projects/晶铭服饰
 ```
 
@@ -89,8 +90,8 @@ cd packages/geo-cli && npm run dev -- projects resolve "晶铭"
 | `plan priority-override` / `task-override` | 带操作者和理由调整优先级、批次或数量；不得超过请求配额 |
 | `plan confirm` / `revise` | 冻结不可变内容计划版本 / 基于确认版本创建修订草稿 |
 | `plan validate` | 校验 Schema、上游版本、事实边界、引用、配额和 manifest gate |
-| `article prepare` | 从 confirmed content plan 展开稳定 writing briefs；支持 `--task` / `--limit` |
-| `article ingest` | 校验本地 Agent 生成的 Markdown、实际 Fact IDs 和 research-only 边界并存为 draft |
+| `article prepare` | 从 confirmed content plan 展开稳定 writing briefs（含 SKU 配图 allowlist）；支持 `--task` / `--limit` / `--force` |
+| `article ingest` | 校验本地 Agent 生成的 Markdown、实际 Fact IDs、正文配图引用和 research-only 边界并存为 draft |
 | `article revise` | 追加 v2+ 修订并保留正文哈希、原因和 lineage，不覆盖 v1 |
 | `article status` | 显示 planned/prepared/drafted/missing，不把草稿冒充发布 |
 | `article validate` | 校验 brief/meta Schema、计划引用、allowlist、正文路径和 SHA-256 |
@@ -124,7 +125,7 @@ packages/geo-cli/
 
 `plan` 的边界是“决定写什么、为什么写、依据什么、投向哪个 channel 和写几条”。FAQ candidate、content topic、prompt recipe、production task 是四类独立对象，业务复核单按 Topic bundle 展示，并直接列出可用事实内容。计划阶段不生成 FAQ 答案、标题成稿、文章、图片或发布队列。只有 confirmed plan 中已批准且 `ready | research_only` 的 planned tasks 可被下游读取。
 
-`article` 的边界是“把确认任务变成可人工审阅的 Markdown 草稿”。CLI 不绑定模型提供商：`prepare` 生成最小事实写作包，Skill/本地 Agent 写正文，`ingest` 校验并保存 meta。每篇都保持 `draft + requires_human_review`；本阶段不批准、不发布、不上传图片或 OSS。
+`article` 的边界是“把确认任务变成可人工审阅的 Markdown 草稿”。CLI 不绑定模型提供商：`prepare` 生成最小事实写作包并附带本地 SKU 配图 allowlist，Skill/本地 Agent 写正文并嵌入 `assets/images/...` 相对路径，`ingest` 校验并保存 meta。每篇都保持 `draft + requires_human_review`；本阶段不批准、不发布、不上传 OSS。
 
 审稿以五项独立检查为准，不使用黑盒总分。approve 必须满足事实准确、边界、channel、合规、原创性全部通过，且绑定当前正文 SHA-256；任何 revision 都会让旧批准失效。只有 `approvedArticleInput` 可被未来发布阶段读取。
 

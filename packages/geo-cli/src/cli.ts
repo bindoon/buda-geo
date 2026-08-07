@@ -332,11 +332,13 @@ const article = program.command("article").description("prepare, ingest, revise,
 addProjectOpt(article.command("prepare").description("prepare stable writing briefs from the confirmed content plan"))
   .option("--task <id>", "prepare one eligible production task")
   .option("--limit <number>", "maximum article slots to prepare")
-  .action(async (opts: { project: string; task?: string; limit?: string }) => console.log(JSON.stringify(await prepareArticles(resolveProject(opts.project), opts.task, opts.limit ? Number(opts.limit) : undefined), null, 2)));
+  .option("--force", "refresh existing briefs/prompts without touching drafts")
+  .action(async (opts: { project: string; task?: string; limit?: string; force?: boolean }) => console.log(JSON.stringify(await prepareArticles(resolveProject(opts.project), opts.task, opts.limit ? Number(opts.limit) : undefined, Boolean(opts.force)), null, 2)));
 
 addProjectOpt(article.command("ingest").description("validate and store one locally generated Markdown draft"))
   .requiredOption("--article <id>", "article slot ID").requiredOption("--input <file>", "Markdown draft path").requiredOption("--title <text>", "article title").requiredOption("--used-facts <ids>", "comma-separated Fact IDs actually used")
-  .action(async (opts: { project: string; article: string; input: string; title: string; usedFacts: string }) => console.log(JSON.stringify(await ingestArticle(resolveProject(opts.project), opts.article, opts.input, opts.title, opts.usedFacts.split(",").map((x) => x.trim()).filter(Boolean)), null, 2)));
+  .option("--used-images <paths>", "optional comma-separated asset paths; defaults to Markdown image refs")
+  .action(async (opts: { project: string; article: string; input: string; title: string; usedFacts: string; usedImages?: string }) => console.log(JSON.stringify(await ingestArticle(resolveProject(opts.project), opts.article, opts.input, opts.title, opts.usedFacts.split(",").map((x) => x.trim()).filter(Boolean), opts.usedImages?.split(",").map((x) => x.trim()).filter(Boolean)), null, 2)));
 
 addProjectOpt(article.command("revise").description("append a new revision without overwriting the original draft"))
   .requiredOption("--article <id>", "article ID").requiredOption("--input <file>", "revised Markdown path").requiredOption("--reason <text>", "human-readable revision reason")

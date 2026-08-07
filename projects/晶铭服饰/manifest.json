@@ -72,13 +72,13 @@
   "clean_ready": true,
   "review_ready": true,
   "legacy_downstream_artifacts": [],
-  "updated_at": "2026-08-07T11:28:21Z",
+  "updated_at": "2026-08-07T12:37:05Z",
   "article_generation": {
     "content_plan_id": "content_plan_3d816a873a076300",
     "fact_snapshot_id": "fact_snapshot_58e05074d59340bd",
     "planned": 24,
     "drafted": 3,
-    "updated_at": "2026-08-07T11:16:06Z"
+    "updated_at": "2026-08-07T12:37:05Z"
   },
   "article_review": {
     "content_plan_id": "content_plan_3d816a873a076300",

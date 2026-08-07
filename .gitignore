@@ -46,6 +46,7 @@ venv/
 projects/*/inputs
 projects/*/assets
 projects/*/articles
+projects/知鱼
 
 openspec
 docs/**/*.pptx

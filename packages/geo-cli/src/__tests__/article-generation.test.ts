@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, mkdtemp, writeFile } from "node:fs/promises";
+import { access, mkdir, mkdtemp, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -9,33 +9,275 @@ import { approvedArticleInput, decideArticleReview, prepareArticleReviews, valid
 import { readJson, writeJson } from "../lib/util.js";
 import type { ArticleMeta, ArticleWritingBrief } from "../lib/article-model.js";
 
-async function fixture(): Promise<string> {
-  const root = await mkdtemp(path.join(os.tmpdir(), "geo-article-")); const planId = "content_plan_article"; const snapshotId = "snapshot_article"; const commonTask = { faq_ids: ["faq_1"], scenario_ids: ["scenario_1"], question_ids: ["question_1"], fact_snapshot_id: snapshotId, allowed_fact_ids: ["fact_public"], blocked_evidence_gap_ids: [], channel: "social", content_format: "问答图文", channel_reason: "适合解释选择方法", batch: 1, quantity: 1, use_knowledge: true, priority: { components: {}, calculated_total: 10, final_score: 10, tier: "low", rationale: [], override: null }, review_status: "approved", review_note: null, planning_override: null };
-  const plan: any = { schema_version: 1, content_plan_id: planId, app_id: "app_article", fact_snapshot_id: snapshotId, diagnosis_report_id: "report_1", scenario_library_id: "library_1", scenario_library_version: 1, lifecycle: "confirmed", version: 1, fact_catalog: [{ fact_id: "fact_public", field: "capabilities", summary: "支持小批量试单" }], faq_candidates: [{ faq_id: "faq_1", question: "小批量采购怎么选？" }], topics: [{ topic_id: "topic_ready", name: "小批量采购指南", objective: "解释采购核验方法", target_audience: "采购客户", desired_next_action: null }, { topic_id: "topic_research", name: "单件定制待核验", objective: "说明需要确认的条件", target_audience: "采购客户", desired_next_action: null }], prompt_recipes: [{ prompt_id: "prompt_ready", outline_requirements: ["先回答问题"], tone: "客观", channel_constraints: ["不夸大"], citation_policy: "只用允许事实", forbidden_claims: [] }, { prompt_id: "prompt_research", outline_requirements: ["列出核验条件"], tone: "克制", channel_constraints: ["不做能力声明"], citation_policy: "只用允许事实", forbidden_claims: ["不得声明支持单件定制"] }], production_tasks: [{ ...commonTask, task_id: "task_ready", topic_id: "topic_ready", prompt_id: "prompt_ready", mode: "factual", readiness: "ready", status: "planned", claim_boundaries: [] }, { ...commonTask, task_id: "task_research", topic_id: "topic_research", prompt_id: "prompt_research", mode: "research_only", readiness: "research_only", status: "planned", claim_boundaries: ["不能根据小批量试单推断支持单件定制"] }] };
-  await writeJson(path.join(root, "manifest.json"), { app_id: "app_article", project_name: "文章测试", gates: { clean: { status: "confirmed", fact_snapshot_id: snapshotId }, content_plan: { status: "confirmed", at: "2026-01-01T00:00:00Z", fact_snapshot_id: snapshotId, content_plan_id: planId, version: 1 } }, missing: [], clean_pipeline: { stage: "confirmed", inputs_hash: "a", facts_hash: "b", changed_since_confirmation: false, previous_snapshot_id: null }, clean_ready: true, review_ready: true });
-  await writeJson(path.join(root, "strategy", "content-plans", `${planId}.json`), plan); await writeJson(path.join(root, "knowledge", "snapshots", `${snapshotId}.json`), { facts: { facts: [{ fact_id: "fact_public", field: "capabilities", value: ["支持小批量试单"], review_status: "confirmed", disclosure_level: "public" }, { fact_id: "fact_secret", field: "account_password", value: "secret", review_status: "confirmed", disclosure_level: "public" }] } }); return root;
+async function fixture(): Promise<{ root: string; imagePath: string; markdownPath: string }> {
+  const root = await mkdtemp(path.join(os.tmpdir(), "geo-article-"));
+  const planId = "content_plan_article";
+  const snapshotId = "snapshot_article";
+  const imageRel = "assets/images/demo-sku/sample.jpg";
+  const imageAbs = path.join(root, imageRel);
+  await mkdir(path.dirname(imageAbs), { recursive: true });
+  await writeFile(imageAbs, "fake-image");
+  const commonTask = {
+    faq_ids: ["faq_1"],
+    scenario_ids: ["scenario_1"],
+    question_ids: ["question_1"],
+    fact_snapshot_id: snapshotId,
+    allowed_fact_ids: ["fact_public"],
+    blocked_evidence_gap_ids: [],
+    channel: "social",
+    content_format: "问答图文",
+    channel_reason: "适合解释选择方法",
+    batch: 1,
+    quantity: 1,
+    use_knowledge: true,
+    priority: { components: {}, calculated_total: 10, final_score: 10, tier: "low", rationale: [], override: null },
+    review_status: "approved",
+    review_note: null,
+    planning_override: null,
+  };
+  const plan: any = {
+    schema_version: 1,
+    content_plan_id: planId,
+    app_id: "app_article",
+    fact_snapshot_id: snapshotId,
+    diagnosis_report_id: "report_1",
+    scenario_library_id: "library_1",
+    scenario_library_version: 1,
+    lifecycle: "confirmed",
+    version: 1,
+    fact_catalog: [{ fact_id: "fact_public", field: "capabilities", summary: "支持小批量试单" }],
+    faq_candidates: [{ faq_id: "faq_1", question: "小批量采购怎么选？" }],
+    topics: [
+      { topic_id: "topic_ready", name: "小批量采购指南", objective: "解释采购核验方法", target_audience: "采购客户", desired_next_action: null },
+      { topic_id: "topic_research", name: "单件定制待核验", objective: "说明需要确认的条件", target_audience: "采购客户", desired_next_action: null },
+    ],
+    prompt_recipes: [
+      { prompt_id: "prompt_ready", outline_requirements: ["先回答问题"], tone: "客观", channel_constraints: ["不夸大"], citation_policy: "只用允许事实", forbidden_claims: [] },
+      { prompt_id: "prompt_research", outline_requirements: ["列出核验条件"], tone: "克制", channel_constraints: ["不做能力声明"], citation_policy: "只用允许事实", forbidden_claims: ["不得声明支持单件定制"] },
+    ],
+    production_tasks: [
+      { ...commonTask, task_id: "task_ready", topic_id: "topic_ready", prompt_id: "prompt_ready", mode: "factual", readiness: "ready", status: "planned", claim_boundaries: [] },
+      { ...commonTask, task_id: "task_research", topic_id: "topic_research", prompt_id: "prompt_research", mode: "research_only", readiness: "research_only", status: "planned", claim_boundaries: ["不能根据小批量试单推断支持单件定制"] },
+    ],
+  };
+  await writeJson(path.join(root, "manifest.json"), {
+    app_id: "app_article",
+    project_name: "文章测试",
+    gates: {
+      clean: { status: "confirmed", fact_snapshot_id: snapshotId },
+      content_plan: { status: "confirmed", at: "2026-01-01T00:00:00Z", fact_snapshot_id: snapshotId, content_plan_id: planId, version: 1 },
+    },
+    missing: [],
+    clean_pipeline: { stage: "confirmed", inputs_hash: "a", facts_hash: "b", changed_since_confirmation: false, previous_snapshot_id: null },
+    clean_ready: true,
+    review_ready: true,
+  });
+  await writeJson(path.join(root, "strategy", "content-plans", `${planId}.json`), plan);
+  await writeJson(path.join(root, "knowledge", "snapshots", `${snapshotId}.json`), {
+    facts: {
+      facts: [
+        { fact_id: "fact_public", field: "capabilities", value: ["支持小批量试单"], review_status: "confirmed", disclosure_level: "public" },
+        { fact_id: "fact_secret", field: "account_password", value: "secret", review_status: "confirmed", disclosure_level: "public" },
+      ],
+    },
+  });
+  await writeJson(path.join(root, "knowledge", "company.skus.json"), {
+    app_id: "app_article",
+    items: [
+      {
+        sku_id: "sku_demo",
+        name: "演示童裙",
+        category: "儿童舞蹈服饰",
+        selling_points: [],
+        attributes: {},
+        capabilities: ["支持小批量试单"],
+        is_main: true,
+        source_refs: [],
+        fact_refs: ["fact_public"],
+        copy_brief: null,
+        images: [{ path: imageRel, role: "main", url: null, source_ref: "src_demo" }],
+      },
+    ],
+  });
+  return { root, imagePath: imageRel, markdownPath: `../../${imageRel}` };
 }
 
-test("article briefs are stable, minimal, provider-independent, and drafts remain review-required", async () => {
-  const root = await fixture(); const first = await prepareArticles(root); assert.equal(first.prepared.length, 2); const second = await prepareArticles(root); assert.deepEqual(second.existing.sort(), first.prepared.sort()); const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${first.prepared[0]}.brief.json`)); assert.deepEqual(brief.allowed_facts.map((x) => x.fact_id), ["fact_public"]); assert.equal(JSON.stringify(brief).includes("fact_secret"), false);
-  const draft = path.join(root, "draft.md"); const body = "选择小批量儿童舞蹈服供应商时，可以先核对产品资料、可选规格与试单条件，再确认订单跟进和售后边界。公开资料能够证明的内容应直接说明，无法证明的交期、销量和规模不要写成承诺。采购方还可以通过公开店铺继续咨询具体批次、颜色和尺码，以实际订单确认为准。"; await writeFile(draft, body); await assert.rejects(ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_outside"]), /outside task allowlist/); const ingested = await ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"]); assert.equal(ingested.idempotent, false); assert.equal((await ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"])).idempotent, true); const meta = await readJson<ArticleMeta>(path.join(root, "articles", brief.channel, `${brief.article_id}.meta.json`)); assert.equal(meta.status, "draft"); assert.equal(meta.requires_human_review, true); const other = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${first.prepared[1]}.brief.json`)); await ingestArticle(root, other.article_id, draft, "另一篇采购核验稿", ["fact_public"]); const duplicate = await readJson<ArticleMeta>(path.join(root, "articles", other.channel, `${other.article_id}.meta.json`)); assert(duplicate.risks.some((x) => x.code === "duplicate_body")); await assert.rejects(access(path.join(root, "publish")));
-  const revised = path.join(root, "revised.md"); await writeFile(revised, `${body}\n\n补充说明：所有合作条件均应在下单前再次确认，避免把通用采购建议当作固定承诺。`); const changed = await reviseArticle(root, brief.article_id, revised, "补充合作条件边界"); assert.equal(changed.current_revision, 2); assert.equal(changed.revisions[1].based_on_revision, 1); const validation = await validateArticles(root); assert.deepEqual(validation.errors, []);
+function bodyWithImage(markdownPath: string, extra = ""): string {
+  return `选择小批量儿童舞蹈服供应商时，可以先核对产品资料、可选规格与试单条件，再确认订单跟进和售后边界。
+
+![演示童裙](${markdownPath})
+
+公开资料能够证明的内容应直接说明，无法证明的交期、销量和规模不要写成承诺。采购方还可以通过公开店铺继续咨询具体批次、颜色和尺码，以实际订单确认为准。${extra}`;
+}
+
+test("article briefs include allowlisted local images and drafts must embed them", async () => {
+  const { root, imagePath, markdownPath } = await fixture();
+  const first = await prepareArticles(root);
+  assert.equal(first.prepared.length, 2);
+  const second = await prepareArticles(root);
+  assert.deepEqual(second.existing.sort(), first.prepared.sort());
+  const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${first.prepared[0]}.brief.json`));
+  assert.deepEqual(brief.allowed_facts.map((x) => x.fact_id), ["fact_public"]);
+  assert.equal(JSON.stringify(brief).includes("fact_secret"), false);
+  assert.equal(brief.allowed_images.length, 1);
+  assert.equal(brief.allowed_images[0]?.path, imagePath);
+  assert.equal(brief.allowed_images[0]?.markdown_path, markdownPath);
+
+  const draft = path.join(root, "draft.md");
+  await writeFile(draft, bodyWithImage(markdownPath).replace(`![演示童裙](${markdownPath})\n\n`, ""));
+  await assert.rejects(ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"]), /at least one allowlisted local image/);
+  await writeFile(draft, bodyWithImage("../../assets/images/demo-sku/other.jpg"));
+  await assert.rejects(ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"]), /images outside task allowlist/);
+
+  await writeFile(draft, bodyWithImage(markdownPath));
+  await assert.rejects(ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_outside"]), /outside task allowlist/);
+  const ingested = await ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"]);
+  assert.equal(ingested.idempotent, false);
+  assert.equal((await ingestArticle(root, brief.article_id, draft, "小批量采购怎么选", ["fact_public"])).idempotent, true);
+  const meta = await readJson<ArticleMeta>(path.join(root, "articles", brief.channel, `${brief.article_id}.meta.json`));
+  assert.equal(meta.status, "draft");
+  assert.equal(meta.requires_human_review, true);
+  assert.deepEqual(meta.used_image_paths, [imagePath]);
+
+  const other = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${first.prepared[1]}.brief.json`));
+  await ingestArticle(root, other.article_id, draft, "另一篇采购核验稿", ["fact_public"]);
+  const duplicate = await readJson<ArticleMeta>(path.join(root, "articles", other.channel, `${other.article_id}.meta.json`));
+  assert(duplicate.risks.some((x) => x.code === "duplicate_body"));
+  await assert.rejects(access(path.join(root, "publish")));
+
+  const revised = path.join(root, "revised.md");
+  await writeFile(revised, `${bodyWithImage(markdownPath)}\n\n补充说明：所有合作条件均应在下单前再次确认，避免把通用采购建议当作固定承诺。`);
+  const changed = await reviseArticle(root, brief.article_id, revised, "补充合作条件边界");
+  assert.equal(changed.current_revision, 2);
+  assert.equal(changed.revisions[1].based_on_revision, 1);
+  assert.deepEqual(changed.used_image_paths, [imagePath]);
+  const validation = await validateArticles(root);
+  assert.deepEqual(validation.errors, []);
+
+  const refreshed = await prepareArticles(root, undefined, undefined, true);
+  assert.equal(refreshed.refreshed.length, 2);
+  assert.equal(refreshed.prepared.length, 0);
 });
 
 test("research-only drafts reject capability claims and accept verification language", async () => {
-  const root = await fixture(); const prepared = await prepareArticles(root); const briefs = await Promise.all(prepared.prepared.map((id) => readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${id}.brief.json`)))); const brief = briefs.find((x) => x.mode === "research_only")!; const bad = path.join(root, "bad.md"); await writeFile(bad, "晶铭服饰支持单件定制，可以直接按单件下单。这个能力适合所有采购客户，也不需要再向厂家确认条件。为了满足正文长度，这里继续重复说明晶铭服饰支持单件定制，可以直接下单并获得稳定供货服务。采购方可以按常规方式直接提交颜色和尺码，企业会按照单件要求完成生产与发货。上述能力已经确定，无需核验起订量、打样费用、交期或售后条件。"); await assert.rejects(ingestArticle(root, brief.article_id, bad, "晶铭服饰支持单件定制", ["fact_public"]), /待核验能力/); const good = path.join(root, "good.md"); await writeFile(good, "采购单件定制儿童舞蹈服前，首先需要向厂家确认是否接受单件订单，并分别核验打样、配色、尺码、价格和交期。现有公开事实只能说明支持小批量试单，不能据此推断企业支持单件定制。建议把需求逐项写清后再咨询，以厂家针对本次订单的正式答复为准。本文只提供核验方法，不作企业能力承诺。"); const result = await ingestArticle(root, brief.article_id, good, "单件定制需要向厂家确认什么", ["fact_public"]); assert.equal(result.idempotent, false);
+  const { root, markdownPath } = await fixture();
+  const prepared = await prepareArticles(root);
+  const briefs = await Promise.all(prepared.prepared.map((id) => readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${id}.brief.json`))));
+  const brief = briefs.find((x) => x.mode === "research_only")!;
+  const bad = path.join(root, "bad.md");
+  await writeFile(bad, `晶铭服饰支持单件定制，可以直接按单件下单。这个能力适合所有采购客户，也不需要再向厂家确认条件。
+
+![演示童裙](${markdownPath})
+
+为了满足正文长度，这里继续重复说明晶铭服饰支持单件定制，可以直接下单并获得稳定供货服务。采购方可以按常规方式直接提交颜色和尺码，企业会按照单件要求完成生产与发货。上述能力已经确定，无需核验起订量、打样费用、交期或售后条件。`);
+  await assert.rejects(ingestArticle(root, brief.article_id, bad, "晶铭服饰支持单件定制", ["fact_public"]), /待核验能力/);
+  const good = path.join(root, "good.md");
+  await writeFile(good, `采购单件定制儿童舞蹈服前，首先需要向厂家确认是否接受单件订单，并分别核验打样、配色、尺码、价格和交期。
+
+![演示童裙](${markdownPath})
+
+现有公开事实只能说明支持小批量试单，不能据此推断企业支持单件定制。建议把需求逐项写清后再咨询，以厂家针对本次订单的正式答复为准。本文只提供核验方法，不作企业能力承诺。`);
+  const result = await ingestArticle(root, brief.article_id, good, "单件定制需要向厂家确认什么", ["fact_public"]);
+  assert.equal(result.idempotent, false);
 });
 
-test("stale content plan gate blocks article preparation", async () => { const root = await fixture(); const manifest = await readJson<Record<string, any>>(path.join(root, "manifest.json")); manifest.gates.content_plan.status = "review_required"; await writeJson(path.join(root, "manifest.json"), manifest); await assert.rejects(prepareArticles(root), /not confirmed/); });
+test("stale content plan gate blocks article preparation", async () => {
+  const { root } = await fixture();
+  const manifest = await readJson<Record<string, any>>(path.join(root, "manifest.json"));
+  manifest.gates.content_plan.status = "review_required";
+  await writeJson(path.join(root, "manifest.json"), manifest);
+  await assert.rejects(prepareArticles(root), /not confirmed/);
+});
 
 test("five-check review blocks weak approval, preserves history, and revision invalidates the old decision", async () => {
-  const root = await fixture(); const prepared = await prepareArticles(root, "task_ready"); const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`)); const draft = path.join(root, "draft.md"); const body = "选择小批量采购合作方时，应先核对公开产品资料、试单条件、具体规格和售后边界。现有事实可以用于说明支持小批量试单，但不能扩展成未经确认的销量、交期或规模承诺。采购方应针对本次订单继续确认颜色、尺码、数量和履约安排，并以实际沟通结果为准。还可以把每项确认结果写入订单或沟通记录，避免把通用企业介绍误当作本批次的固定履约条件。完成试单后，再根据实际质量和配合情况决定是否增加采购数量。"; await writeFile(draft, body); await ingestArticle(root, brief.article_id, draft, "小批量采购核验方法", ["fact_public"]); await prepareArticleReviews(root); let meta = await readJson<ArticleMeta>(path.join(root, "articles", "social", `${brief.article_id}.meta.json`)); assert.equal(meta.status, "pending_review");
-  const assessment = (pass: boolean, hash: string) => ({ schema_version: 1 as const, article_id: brief.article_id, body_sha256: hash, checks: { factual_accuracy: { pass: true, note: "事实均来自允许清单" }, claim_boundaries: { pass: true, note: "没有扩大能力" }, channel_fit: { pass, note: pass ? "适合渠道" : "表达过于技术化" }, compliance: { pass: true, note: "未见敏感与绝对化表达" }, originality: { pass: true, note: "未发现重复风险" } }, summary: pass ? "五项通过" : "需调整渠道表达" });
-  const weak = path.join(root, "weak.json"); await writeJson(weak, assessment(false, meta.body_sha256)); await assert.rejects(decideArticleReview(root, brief.article_id, "approve", weak, "尝试批准"), /failed checks/); meta = await decideArticleReview(root, brief.article_id, "request_changes", weak, "改得更适合社交渠道"); assert.equal(meta.status, "changes_requested");
-  const revised = path.join(root, "revised-review.md"); await writeFile(revised, `${body}\n\n给采购方的简单做法是：先列清需求，再逐项询问，最后把确认结果写进订单。`); meta = await reviseArticle(root, brief.article_id, revised, "按渠道意见补充简明行动建议"); assert.equal(meta.status, "pending_review"); assert.equal(meta.review_history.length, 1); const good = path.join(root, "good-review.json"); await writeJson(good, assessment(true, meta.body_sha256)); meta = await decideArticleReview(root, brief.article_id, "approve", good, "五项检查通过，批准进入发布准备"); assert.equal(meta.status, "approved"); assert.equal(meta.review_history.length, 2); assert.equal((await approvedArticleInput(root)).length, 1); assert.deepEqual((await validateArticleReviews(root)).errors, []);
+  const { root, markdownPath } = await fixture();
+  const prepared = await prepareArticles(root, "task_ready");
+  const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`));
+  const draft = path.join(root, "draft.md");
+  const body = `选择小批量采购合作方时，应先核对公开产品资料、试单条件、具体规格和售后边界。
+
+![演示童裙](${markdownPath})
+
+现有事实可以用于说明支持小批量试单，但不能扩展成未经确认的销量、交期或规模承诺。采购方应针对本次订单继续确认颜色、尺码、数量和履约安排，并以实际沟通结果为准。还可以把每项确认结果写入订单或沟通记录，避免把通用企业介绍误当作本批次的固定履约条件。完成试单后，再根据实际质量和配合情况决定是否增加采购数量。`;
+  await writeFile(draft, body);
+  await ingestArticle(root, brief.article_id, draft, "小批量采购核验方法", ["fact_public"]);
+  await prepareArticleReviews(root);
+  let meta = await readJson<ArticleMeta>(path.join(root, "articles", "social", `${brief.article_id}.meta.json`));
+  assert.equal(meta.status, "pending_review");
+  const assessment = (pass: boolean, hash: string) => ({
+    schema_version: 1 as const,
+    article_id: brief.article_id,
+    body_sha256: hash,
+    checks: {
+      factual_accuracy: { pass: true, note: "事实均来自允许清单" },
+      claim_boundaries: { pass: true, note: "没有扩大能力" },
+      channel_fit: { pass, note: pass ? "适合渠道" : "表达过于技术化" },
+      compliance: { pass: true, note: "未见敏感与绝对化表达" },
+      originality: { pass: true, note: "未发现重复风险" },
+    },
+    summary: pass ? "五项通过" : "需调整渠道表达",
+  });
+  const weak = path.join(root, "weak.json");
+  await writeJson(weak, assessment(false, meta.body_sha256));
+  await assert.rejects(decideArticleReview(root, brief.article_id, "approve", weak, "尝试批准"), /failed checks/);
+  meta = await decideArticleReview(root, brief.article_id, "request_changes", weak, "改得更适合社交渠道");
+  assert.equal(meta.status, "changes_requested");
+  const revised = path.join(root, "revised-review.md");
+  await writeFile(revised, `${body}\n\n给采购方的简单做法是：先列清需求，再逐项询问，最后把确认结果写进订单。`);
+  meta = await reviseArticle(root, brief.article_id, revised, "按渠道意见补充简明行动建议");
+  assert.equal(meta.status, "pending_review");
+  assert.equal(meta.review_history.length, 1);
+  const good = path.join(root, "good-review.json");
+  await writeJson(good, assessment(true, meta.body_sha256));
+  meta = await decideArticleReview(root, brief.article_id, "approve", good, "五项检查通过，批准进入发布准备");
+  assert.equal(meta.status, "approved");
+  assert.equal(meta.review_history.length, 2);
+  assert.equal((await approvedArticleInput(root)).length, 1);
+  assert.deepEqual((await validateArticleReviews(root)).errors, []);
 });
 
 test("review supports reject/defer and refuses out-of-band body tampering", async () => {
-  for (const action of ["reject", "defer"] as const) { const root = await fixture(); const prepared = await prepareArticles(root, "task_ready"); const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`)); const input = path.join(root, "draft.md"); const body = "这是一篇用于审稿状态测试的采购说明。正文只说明已确认的小批量试单事实，并提醒采购方继续核对颜色、尺码、数量、交期和售后条件，不增加销量、排名、产能或固定履约承诺。为了保持信息清楚，采购方应把本批需求写成清单，以实际订单沟通结果为准；通用介绍不能替代具体订单确认。"; await writeFile(input, body); await ingestArticle(root, brief.article_id, input, "采购条件核验说明", ["fact_public"]); await prepareArticleReviews(root); const meta = await readJson<ArticleMeta>(path.join(root, "articles", "social", `${brief.article_id}.meta.json`)); const assessment = path.join(root, `${action}.json`); await writeJson(assessment, { schema_version: 1, article_id: brief.article_id, body_sha256: meta.body_sha256, checks: { factual_accuracy: { pass: true, note: "事实可追溯" }, claim_boundaries: { pass: true, note: "无越界" }, channel_fit: { pass: true, note: "渠道适配" }, compliance: { pass: true, note: "合规" }, originality: { pass: true, note: "无重复" } }, summary: "检查完成" }); assert.equal((await decideArticleReview(root, brief.article_id, action, assessment, `${action} 测试决定`)).status, action === "reject" ? "rejected" : "deferred"); }
-  const root = await fixture(); const prepared = await prepareArticles(root, "task_ready"); const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`)); const input = path.join(root, "draft.md"); await writeFile(input, "采购合作前应核对公开产品资料、小批量试单条件、规格和售后边界。现有事实不能扩展成销量、排名或交期承诺。采购方需要结合本批订单确认颜色、尺码、数量与履约安排，并把最终确认结果写入订单记录。这样可以避免把通用企业介绍误当作固定合作条件，也方便后续复核实际交付内容。"); await ingestArticle(root, brief.article_id, input, "采购核验", ["fact_public"]); await prepareArticleReviews(root); await writeFile(path.join(root, "articles", "social", `${brief.article_id}.md`), "绕过 revise 直接篡改正文，哈希必然失配。这里添加足够文字但仍然不应该允许审稿继续，因为所有决定必须绑定由 meta 记录的当前正文哈希。"); await assert.rejects(prepareArticleReviews(root), /body hash mismatch/);
+  for (const action of ["reject", "defer"] as const) {
+    const { root, markdownPath } = await fixture();
+    const prepared = await prepareArticles(root, "task_ready");
+    const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`));
+    const input = path.join(root, "draft.md");
+    const body = `这是一篇用于审稿状态测试的采购说明。正文只说明已确认的小批量试单事实，并提醒采购方继续核对颜色、尺码、数量、交期和售后条件，不增加销量、排名、产能或固定履约承诺。
+
+![演示童裙](${markdownPath})
+
+为了保持信息清楚，采购方应把本批需求写成清单，以实际订单沟通结果为准；通用介绍不能替代具体订单确认。`;
+    await writeFile(input, body);
+    await ingestArticle(root, brief.article_id, input, "采购条件核验说明", ["fact_public"]);
+    await prepareArticleReviews(root);
+    const meta = await readJson<ArticleMeta>(path.join(root, "articles", "social", `${brief.article_id}.meta.json`));
+    const assessment = path.join(root, `${action}.json`);
+    await writeJson(assessment, {
+      schema_version: 1,
+      article_id: brief.article_id,
+      body_sha256: meta.body_sha256,
+      checks: {
+        factual_accuracy: { pass: true, note: "事实可追溯" },
+        claim_boundaries: { pass: true, note: "无越界" },
+        channel_fit: { pass: true, note: "渠道适配" },
+        compliance: { pass: true, note: "合规" },
+        originality: { pass: true, note: "无重复" },
+      },
+      summary: "检查完成",
+    });
+    assert.equal((await decideArticleReview(root, brief.article_id, action, assessment, `${action} 测试决定`)).status, action === "reject" ? "rejected" : "deferred");
+  }
+  const { root, markdownPath } = await fixture();
+  const prepared = await prepareArticles(root, "task_ready");
+  const brief = await readJson<ArticleWritingBrief>(path.join(root, "articles", "work", `${prepared.prepared[0]}.brief.json`));
+  const input = path.join(root, "draft.md");
+  await writeFile(input, `采购合作前应核对公开产品资料、小批量试单条件、规格和售后边界。
+
+![演示童裙](${markdownPath})
+
+现有事实不能扩展成销量、排名或交期承诺。采购方需要结合本批订单确认颜色、尺码、数量与履约安排，并把最终确认结果写入订单记录。这样可以避免把通用企业介绍误当作固定合作条件，也方便后续复核实际交付内容。`);
+  await ingestArticle(root, brief.article_id, input, "采购核验", ["fact_public"]);
+  await prepareArticleReviews(root);
+  await writeFile(path.join(root, "articles", "social", `${brief.article_id}.md`), "绕过 revise 直接篡改正文，哈希必然失配。这里添加足够文字但仍然不应该允许审稿继续，因为所有决定必须绑定由 meta 记录的当前正文哈希。");
+  await assert.rejects(prepareArticleReviews(root), /body hash mismatch/);
 });

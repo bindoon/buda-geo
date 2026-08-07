@@ -26,6 +26,12 @@
       "dir": "蠡县晨源针织有限公司",
       "app_id": "cy_knit_lx",
       "aliases": ["晨源", "晨源针织"]
+    },
+    {
+      "dir": "知鱼",
+      "app_id": "zhiyu_ai_hk",
+      "aliases": ["知鱼", "ZhiYu", "zhiyu", "知鱼AI"],
+      "notes": "东方命理 AI / 自我认知工具；素材来自 yi 与 myskills"
     }
   ]
 }

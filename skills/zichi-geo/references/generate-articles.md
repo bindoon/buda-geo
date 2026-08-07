@@ -27,11 +27,13 @@ geo-cli article status --project {PROJECT}
 
 可用 `--task {TASK_ID}` 或 `--limit 3` 先做小样。每个 task 按 quantity 展开稳定 article slot，输出：
 
-- `articles/work/{article_id}.brief.json`：自足的事实、问题、目标和约束；
+- `articles/work/{article_id}.brief.json`：自足的事实、配图 allowlist、问题、目标和约束；
 - `articles/work/{article_id}.prompt.md`：给 Agent 的人类可读写作指令；
 - `articles/draft-review.md`：planned/prepared/drafted/missing 清单。
 
-重复 prepare 返回相同 article IDs，不复制任务，也不覆盖已有稿件。
+重复 prepare 返回相同 article IDs，不复制任务，也不覆盖已有稿件。需要补配图或刷新写作包时用 `--force`（只重写 brief/prompt，不动已有 draft）。
+
+配图来自 `company.skus.json`：与任务 `allowed_fact_ids` 有 `fact_refs` 交集的 SKU 图片进入 `allowed_images`（最多 6 张，本地 `assets/images/...` path）。图片不是 Fact，也不上传 OSS。
 
 ### 2. Agent 按 brief 写 Markdown
 
@@ -39,9 +41,10 @@ geo-cli article status --project {PROJECT}
 
 1. 先回答 brief 的核心问题，再展开选择/核验维度。
 2. 只使用 `allowed_facts`，不要补充来源不明的规模、销量、交期、排名或能力。
-3. 按 channel 调整表达，但不通过换标题制造近义稿件。
-4. 记录正文实际使用的 Fact IDs；未使用的事实不要虚报。
-5. research-only 必须出现“是否、需要确认、核验、未确认、不能据此推断”等边界表达。
+3. 若 `allowed_images` 非空，正文必须插入 1–3 张图，且只用 brief 给出的 `markdown_path`；禁止外链或改文件名。
+4. 按 channel 调整表达，但不通过换标题制造近义稿件。
+5. 记录正文实际使用的 Fact IDs；未使用的事实不要虚报。
+6. research-only 必须出现“是否、需要确认、核验、未确认、不能据此推断”等边界表达。
 
 ### 3. 通过 CLI ingest
 
@@ -54,12 +57,12 @@ geo-cli article ingest \
   --used-facts fact_x,fact_y
 ```
 
-成功后写入：
+可选 `--used-images assets/images/...`；默认从正文 Markdown 图片引用解析。成功后写入：
 
 - `articles/{channel}/{article_id}.md`；
 - `articles/{channel}/{article_id}.meta.json`。
 
-meta 固定记录 content plan/task/topic/FAQ/scenario/question/fact snapshot、正文 SHA-256、字符数、实际事实、风险和 `requires_human_review: true`。状态只能是 `draft`。
+meta 固定记录 content plan/task/topic/FAQ/scenario/question/fact snapshot、正文 SHA-256、字符数、实际事实、实际配图、风险和 `requires_human_review: true`。状态只能是 `draft`。
 
 ### 4. 修订而不是覆盖
 

@@ -44,7 +44,7 @@
 - SaaS 首期只同步展示本地产物；把清洗/诊断/场景/内容能力迁到 SaaS 属后续独立阶段，禁止提前维护两套生产逻辑。
 - ❌ 不要从 confirmed 场景直接写文章；✅ 先确认 `manifest.gates.content_plan`，下游只读取 approved 的 `ready | research_only` planned tasks。
 - 内容计划复核以 `strategy/content-plan-review.md` 的 Topic bundle 为用户入口，必须展示实际事实内容；不要让普通用户只看 Fact ID 或底层 JSON。
-- 文章生成必须先 `article prepare`，Agent 只读目标 brief 的 allowlist facts，再用 `article ingest` 落盘；❌ 不要直接从整个 knowledge 或场景库自由写文章。
+- 文章生成必须先 `article prepare`，Agent 只读目标 brief 的 allowlist facts 与 `allowed_images`，正文用本地 `assets/images/...` 相对路径插图，再用 `article ingest` 落盘；❌ 不要直接从整个 knowledge 或场景库自由写文章，也不要外链或上传 OSS。
 - `article ingest` 只产生 `draft + requires_human_review`；❌ 不要在生成阶段写 approved/queued/published，也不要创建发布回执。
 - 文章批准必须有五项 assessment 且绑定当前正文 SHA-256；revision 后必须重审。❌ 不要把 approved 解释为已经发布。
 
