@@ -1,11 +1,11 @@
 ---
-name: zichi-geo
+name: buda-skills
 description: >
-  紫驰 GEO 本地交付总路由：解析客户项目，并按企业事实清洗、基线诊断、客户问题与购买场景、内容规划、文章生成/审稿、发布、复测优化和 SaaS 同步展示分阶段执行。
+  布达 GEO 本地交付总路由：解析客户项目，并按企业事实清洗、基线诊断、客户问题与购买场景、内容规划、文章生成/审稿、发布、复测优化和 SaaS 同步展示分阶段执行。
   用户提到 GEO、知识库、信息收集表、clean、validate、geo-cli、诊断报告、关键词/场景词、画像、转化目标、内容计划、写文章、发布、复测、上云或任意客户项目时使用。
 ---
 
-# zichi-geo
+# buda-skills
 
 将本文件只作为**总路由**。每次确定当前阶段后，只加载该阶段 reference；不要一次读完所有文件，也不要跨过人工确认门。
 
@@ -23,12 +23,12 @@ description: >
 | 阶段 | 要解决的问题 | 必读 reference | 当前状态 | 完成标志 |
 |---|---|---|---|---|
 | 1 企业事实清洗 | 原始 Excel/Word/图片里有哪些可信企业事实 | `clean-enterprise.md` | 已实现 | confirmed `fact_snapshot_id` |
-| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已实现（人工录入适配器） | confirmed diagnosis run/report |
+| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已实现（API + 人工录入） | confirmed diagnosis run/report |
 | 3 需求场景库 | 谁为什么问、怎样问、企业凭什么回答 | `build-demand-scenarios.md` | 已实现 | confirmed scenario library version |
 | 4 内容规划 | 哪些场景变成 FAQ、选题、Prompt 和生产任务 | `plan-content.md` | 已实现 | confirmed content plan version |
 | 5 文章生成 | 如何依据任务与事实生成草稿 | `generate-articles.md` | 已实现 | article `draft` |
 | 6 人工审稿 | 草稿是否事实正确、合规、适合渠道 | `review-articles.md` | 已实现 | article `approved` |
-| 7 发布 | 已批准稿件发到哪里并如何留回执 | `publish-articles.md` | 占位 | idempotent publish receipt |
+| 7 发布 | 已批准稿件发到哪里并如何留回执 | `publish-articles.md` | 已实现（manual；adapter 契约预留） | idempotent publish receipt |
 | 8 复测迭代 | 发布后可见度怎样变化、下一轮补什么 | `measure-and-iterate.md` | 占位 | new diagnosis gaps / iteration plan |
 | 9 SaaS 同步展示 | 哪些本地结果同步到只读门户 | `sync-saas.md` | Part B 占位 | sync receipt |
 

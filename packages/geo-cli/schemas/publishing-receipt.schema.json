@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-publishing-receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "attempt_id", "receipt_id", "plan_id", "item_id", "article_id", "body_sha256", "destination_id", "idempotency_key", "ordinal", "mode", "status", "recorded_at", "recorded_by", "external_url", "external_id", "evidence_path", "error"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "attempt_id": { "type": "string", "pattern": "^publish_attempt_" },
+    "receipt_id": { "type": "string", "pattern": "^publish_receipt_" },
+    "plan_id": { "type": "string", "pattern": "^publish_plan_" },
+    "item_id": { "type": "string", "pattern": "^publish_item_" },
+    "article_id": { "type": "string", "pattern": "^article_" },
+    "body_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "destination_id": { "type": "string", "pattern": "^destination_" },
+    "idempotency_key": { "type": "string", "pattern": "^publish_key_" },
+    "ordinal": { "type": "integer", "minimum": 1 },
+    "mode": { "enum": ["manual", "adapter"] },
+    "status": { "enum": ["submitted", "published", "failed", "skipped"] },
+    "recorded_at": { "type": "string", "format": "date-time" },
+    "recorded_by": { "type": "string", "minLength": 1 },
+    "external_url": { "type": ["string", "null"], "format": "uri" },
+    "external_id": { "type": ["string", "null"] },
+    "evidence_path": { "type": ["string", "null"] },
+    "error": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["code", "message", "retryable"],
+      "properties": { "code": { "type": "string" }, "message": { "type": "string" }, "retryable": { "type": "boolean" } }
+    }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "const": "failed" } } }, "then": { "properties": { "error": { "type": "object" } } }, "else": { "properties": { "error": { "type": "null" } } } },
+    { "if": { "properties": { "status": { "const": "published" } } }, "then": { "properties": { "external_url": { "type": "string", "format": "uri" } } } }
+  ]
+}

@@ -1,6 +1,6 @@
 # diagnose-baseline — GEO 基线诊断
 
-> 状态：首期本地闭环已实现。当前提供受控人工录入适配器；API/浏览器适配器可后接同一 Probe 契约。不得把网页摸底或旧问题库冒充正式诊断。
+> 状态：本地闭环已实现。支持可配置的 OpenAI-compatible API 适配器与受控人工录入；浏览器辅助可后接同一 Probe 契约。不得把网页摸底或旧问题库冒充正式诊断。
 
 ## 目标
 
@@ -48,12 +48,26 @@ geo-cli diagnose seed-confirm --project {PROJECT}
 
 种子题只用于测当前 AI 认知，不是关键词库、正式需求场景、Prompt 或文章计划。已用版本需要修改时，运行 `seed-revise --seed-set {ID}` 创建新版本，不覆盖历史版本。
 
-### 3. 建立运行并录入探测证据
+### 3. 建立运行并获取探测证据
 
 ```bash
 geo-cli diagnose run-create --project {PROJECT} --seed-set {SEED_SET_ID} --platforms "平台A,平台B"
+geo-cli diagnose probe-run --project {PROJECT} --run {RUN_ID}
 geo-cli diagnose probe-ingest --project {PROJECT} --run {RUN_ID} --input {MANUAL_JSON}
 ```
+
+API 模式先在仓库根完成：
+
+```bash
+cp .env.example .env
+cp config/probe-platforms.example.json config/probe-platforms.json
+```
+
+在 `.env` 填写所选平台的 `BASE_URL`、`API_KEY`、`MODEL`。`run-create --platforms` 使用配置文件中的平台 `id`（例如 `deepseek,qwen,doubao`）。CLI 会逐题提交精确问题，保存原始回答、provider、模型、时间、失败状态和解析结果。密钥只从环境变量、根 `.env` 或项目 `.secrets.env` 读取，绝不写入 probe 文件。
+
+配置文件只声明环境变量名；新增平台时复制一个 `openai-compatible` 条目即可。同一 run 中已经存在的 `question_id + platform` 会跳过；失败重试建议创建新 run，避免历史证据被覆盖或重复计入分母。
+
+API 未配置、平台没有正式 API，或需要登录态人工操作时，使用受控人工录入：
 
 首期使用受控人工录入：在目标 AI 平台逐题提交**精确问题**，把平台、provider、模型、时间、状态和原始回答写进录入 JSON。CLI 会把原始回答单独冻结在 `diagnosis/runs/{run_id}/raw/`。
 

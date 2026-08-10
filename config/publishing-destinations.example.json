@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "app_id": "replace-with-project-app-id",
+  "updated_at": "2026-08-10T00:00:00Z",
+  "destinations": [
+    {
+      "destination_id": "destination_social_manual",
+      "name": "已评级自媒体账号",
+      "channel": "social",
+      "authority_tier": "official",
+      "mode": "manual",
+      "enabled": true,
+      "homepage_url": null,
+      "notes": "人工发布并用 geo-cli publish record 留回执",
+      "adapter": null
+    },
+    {
+      "destination_id": "destination_media_adapter",
+      "name": "权威媒体适配器预留",
+      "channel": "media",
+      "authority_tier": "authoritative",
+      "mode": "adapter",
+      "enabled": false,
+      "homepage_url": null,
+      "notes": "启用前必须实现并审核具体 adapter；这里不保存密钥",
+      "adapter": {
+        "adapter": "reserved-http-adapter",
+        "endpoint_env": "MEDIA_PUBLISH_ENDPOINT",
+        "token_env": "MEDIA_PUBLISH_TOKEN"
+      }
+    },
+    {
+      "destination_id": "destination_b2b_manual",
+      "name": "已评级 B2B 平台",
+      "channel": "b2b",
+      "authority_tier": "authoritative",
+      "mode": "manual",
+      "enabled": true,
+      "homepage_url": null,
+      "notes": "付费或人工投放后记录外部 URL/ID",
+      "adapter": null
+    },
+    {
+      "destination_id": "destination_site_official",
+      "name": "企业官网",
+      "channel": "site",
+      "authority_tier": "official",
+      "mode": "adapter",
+      "enabled": false,
+      "homepage_url": null,
+      "notes": "可选官网增强信源；接入前实现受控 adapter",
+      "adapter": {
+        "adapter": "reserved-http-adapter",
+        "endpoint_env": "SITE_PUBLISH_ENDPOINT",
+        "token_env": "SITE_PUBLISH_TOKEN"
+      }
+    }
+  ]
+}

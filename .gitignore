@@ -11,6 +11,7 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+config/probe-platforms.json
 **/.secrets.env
 **/*.pem
 **/credentials.json

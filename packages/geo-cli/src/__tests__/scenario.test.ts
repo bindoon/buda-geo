@@ -76,7 +76,7 @@ test("unsupported operator scenario creates a blocking evidence gap until explic
   await reviewEvidenceGap(root, gap.evidence_gap_id, "accept", "仅保留为研究问题，不用于事实内容"); const confirmed = await confirmScenarioLibrary(root); assert.equal(confirmed.library.lifecycle, "confirmed");
 });
 
-test("competitor research concepts map to Zichi fields without competitor exports or schema keys", async () => {
+test("competitor research concepts map to Buda fields without competitor exports or schema keys", async () => {
   const fixture = JSON.parse(await readFile(path.resolve(process.cwd(), "test-fixtures", "scenario-concept-coverage.json"), "utf-8")) as Array<{ research_concept: string; canonical_field: string }>;
   assert.deepEqual(fixture.map((item) => item.research_concept), ["产品词", "客户问题/关键词", "场景词", "画像设置", "转换目标"]);
   assert(fixture.every((item) => /^(representative_questions|scenario)\./.test(item.canonical_field)));

@@ -1,6 +1,6 @@
-# 紫驰「内容 Agent + GEO」详细解决方案
+# 布达「内容 Agent + GEO」详细解决方案
 
-> 依据：[`紫驰-工具开发任务拆分与报价方案.md`](./紫驰-工具开发任务拆分与报价方案.md)、`projects/` 五家客户原始包扫描、[`平台摸底/`](./各GEO平台资料/平台摸底/)（大泽 / 摘星 / 掌心荟信后台）、艾瑞白皮书与方法论文
+> 依据：[`布达-工具开发任务拆分与报价方案.md`](./布达-工具开发任务拆分与报价方案.md)、`projects/` 五家客户原始包扫描、[`平台摸底/`](./各GEO平台资料/平台摸底/)（大泽 / 摘星 / 掌心荟信后台）、艾瑞白皮书与方法论文
 > 仓库约定：**可执行代码 → `packages/geo-cli`**；**Agent 流程与规则 → `skills/`**；**客户资料 → `projects/{项目名}/`**
 > 执行策略：**分两部分推进**（Part A 本地闭环 → Part B 上云承接），中间用统一 Schema 与 `app_id` 衔接，避免推倒重来。
 > 配图：**先本地 `assets/`**；发文若平台要求 CDN 再 OSS。法人身份证用于**五大自媒体企业实名认证**，不进知识库/文章正文；工具清洗阶段不解析入库。
@@ -9,7 +9,7 @@
 
 ## 0. 一句话目标
 
-把对标平台的共性方法（信息收集表 → 知识库 → 诊断 → 场景 → 写文 → 三大权威信源投放）收成**紫驰自己的可复用本地流水线**：运营在 Cursor 里对一家客户跑通 `clean → diagnose → strategy → plan/write → publish`，结构化结果落盘；稳定后再同步 SaaS 给客户看。代码沉淀在 CLI，流程沉淀在 Skill，客户数据按项目隔离。
+把对标平台的共性方法（信息收集表 → 知识库 → 诊断 → 场景 → 写文 → 三大权威信源投放）收成**布达自己的可复用本地流水线**：运营在 Cursor 里对一家客户跑通 `clean → diagnose → strategy → plan/write → publish`，结构化结果落盘；稳定后再同步 SaaS 给客户看。代码沉淀在 CLI，流程沉淀在 Skill，客户数据按项目隔离。
 
 ---
 
@@ -44,17 +44,17 @@ AI 向客户推荐品牌时，引用的是它抓到的外部信息。因此年�
                                                                           └── b2b
 ```
 
-合同量级默认可对齐：**约 1500 篇/年** 覆盖上述三类（自媒体 / 官媒 / B2B 的篇数配比与紫驰合同约定，记入 `manifest.quota.targets`）；另约 **500 问诊断** 作可见度验收。自有 GEO 官网（`site`）为 Part B 增强信源，不替代上述三类投放。
+合同量级默认可对齐：**约 1500 篇/年** 覆盖上述三类（自媒体 / 官媒 / B2B 的篇数配比与布达合同约定，记入 `manifest.quota.targets`）；另约 **500 问诊断** 作可见度验收。自有 GEO 官网（`site`）为 Part B 增强信源，不替代上述三类投放。
 
 ---
 
 ## 1. 仓库落位（最终形态）
 
 ```
-geo/
+buda-geo/
 ├── packages/geo-cli/          # 可执行工具（诊断探测、发布 API、校验、批量脚本）
 ├── skills/
-│   └── zichi-geo/             # Agent 入口：路由 + references
+│   └── buda-skills/             # Agent 入口：路由 + references
 ├── projects/                  # 按客户/项目隔离（唯一工作区）
 │   └── {项目名}/
 │       ├── inputs/            # 原始文件（只读约定，不改客户原件）
@@ -70,13 +70,13 @@ geo/
 
 | 层 | 路径 | 职责 | 谁调用 |
 |----|------|------|--------|
-| Skill | `skills/zichi-geo/` | 触发词、路由、人工闸门、写什么文件 | Cursor Agent |
+| Skill | `skills/buda-skills/` | 触发词、路由、人工闸门、写什么文件 | Cursor Agent |
 | CLI | `packages/geo-cli` | 确定性 inventory / 表解析 / clean / validate / confirm-clean | Skill 明确写命令行；人也可直接跑 |
 | 项目数据 | `projects/{名}/` | 单客户全生命周期文件 | 两边共用，以 `app_id` 标识 |
 
 **原则**：Skill 不做 HTTP 细节；发布/诊断密钥不进 JSON；`inputs/` 保持原样，清洗产物只写 `knowledge/`、`assets/` 等下游目录。
 
-**最终运行交付边界**：对外实际运行只依赖 `packages/geo-cli`、`skills/zichi-geo` 和 `projects/{项目名}/` 目录契约。`docs/`、`openspec/`、竞品研究资料与演示账号属于研发仓库，不是客户运行时依赖，也不应出现在最终用户的流程或界面中。
+**最终运行交付边界**：对外实际运行只依赖 `packages/geo-cli`、`skills/buda-skills` 和 `projects/{项目名}/` 目录契约。`docs/`、`openspec/`、竞品研究资料与演示账号属于研发仓库，不是客户运行时依赖，也不应出现在最终用户的流程或界面中。
 
 ---
 
@@ -123,7 +123,7 @@ geo/
 
 地区向问题（「江苏南通…」「广东深圳…」「河北保定…」）进 **意图/地区定向**，不默认写进全国主词。
 
-> 这些列描述的是客户交来的原始词表，不等于 clean 的输出。clean 的职责止于建立可信企业事实；诊断完成后，再结合事实、诊断缺口和用户意图生成紫驰自己的需求场景/关键词。大泽、摘星、掌心/荟信只用于对标方法，不是导出或数据提交目标。
+> 这些列描述的是客户交来的原始词表，不等于 clean 的输出。clean 的职责止于建立可信企业事实；诊断完成后，再结合事实、诊断缺口和用户意图生成布达自己的需求场景/关键词。大泽、摘星、掌心/荟信只用于对标方法，不是导出或数据提交目标。
 
 ### 2.5 信息收集表字段（A 模块最小集）
 
@@ -181,9 +181,9 @@ geo/
 
 | # | 产物 | 位置 |
 |---|------|------|
-| A1 | 知识库 JSON Schema + 样例 | `skills/zichi-geo/references/schema-knowledge.md` + `projects/{标杆}/knowledge/` |
-| A2 | Skill 入口与路由 | `skills/zichi-geo/SKILL.md` |
-| A3 | 清洗 / 诊断 / 写文 / 发布 references | `skills/zichi-geo/references/*.md` |
+| A1 | 知识库 JSON Schema + 样例 | `skills/buda-skills/references/schema-knowledge.md` + `projects/{标杆}/knowledge/` |
+| A2 | Skill 入口与路由 | `skills/buda-skills/SKILL.md` |
+| A3 | 清洗 / 诊断 / 写文 / 发布 references | `skills/buda-skills/references/*.md` |
 | A4 | CLI：`validate` / `diagnose` / `publish` | `packages/geo-cli` |
 | A5 | 标杆项目跑通包 | 晶铭服饰 |
 | A6 | `manifest` 闸门与周报字段约定 | 各 `projects/*/manifest.json` |
@@ -340,7 +340,7 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 - 报告：机器可读 JSON 与客户可读 Markdown/HTML 同源。种子题是诊断输入，不是正式关键词库；报告确认前，缺口不能进入场景阶段。
 - 无 API 过渡：可以把题目×平台组合记录为 `unavailable` 并生成限制版报告；只有用户明确接受限制后才能确认闸门。此类报告只证明“当前无法探测”，不能解读为品牌提及率为 0；接入 API 或获得人工回答后必须新建真实运行。
 - 场景：用“目标客户 + 客户需求 + 代表问题 + 已确认依据/缺口 + 可选下一步行动”描述购买情境。一个场景可关联多个问题、FAQ 和未来选题，**不是要求一篇文章包含全部字段**。
-- 旧关键词：brand/search/qa/intent 等客户原分组只保留在 `strategy/legacy` 做来源审计；精确重复可自动合并，语义近似仅生成待审建议，不把竞品术语变成紫驰 Schema 或三平台导出。
+- 旧关键词：brand/search/qa/intent 等客户原分组只保留在 `strategy/legacy` 做来源审计；精确重复可自动合并，语义近似仅生成待审建议，不把竞品术语变成布达 Schema 或三平台导出。
 - 优先级：业务价值、有效诊断缺口、证据就绪度、客户原话与运营判断分项记录。`unavailable` 探测不能贡献品牌未提及/推荐缺口分；人工覆盖必须记录操作者与原因。
 - 场景闸门：未确认场景库不得进入 FAQ、选题或写作计划；high evidence gap 必须解决、延期或明确接受，禁止补造企业能力。
 - 内容计划：FAQ candidate 只记录问题和回答目标；Topic 是普通用户复核的单一业务目标；Prompt recipe 保存事实/结构/channel 约束；production task 才记录批次和数量。业务复核单必须列出实际可用事实内容，不要求用户先读 JSON。
@@ -379,7 +379,7 @@ geo-cli status        --project <path>       # 查看 manifest 与 clean gate
 | 1 | Schema + 晶铭服饰样例 JSON + `validate` | 样例过校验 | 2–3 天 |
 | 2 | `SKILL.md` 路由 + `clean-enterprise.md` | 晶铭 inputs → knowledge 可确认 | 3–5 天 |
 | 3 | `diagnose-baseline.md` + diagnose CLI | 小批量种子题、逐题证据与基线报告 | 2–4 天 |
-| 4 | `build-demand-scenarios.md` + 竞品案例覆盖测试 | 紫驰场景库确认，且不依赖竞品格式 | 3–5 天 |
+| 4 | `build-demand-scenarios.md` + 竞品案例覆盖测试 | 布达场景库确认，且不依赖竞品格式 | 3–5 天 |
 | 5 | 内容规划 + 生成 + 审稿 references | social/media/b2b 各出合规样稿 | 3–5 天 |
 | 6 | `publish-articles.md` + publish CLI | 至少 1 个自媒体真发通；媒体/B2B 回执格式统一 | 2–4 天 |
 | 7 | 多客户复跑（验证通用流程） | Part A 验收 | 2–3 天 |
@@ -413,7 +413,7 @@ Skill 增加 `sync` 分支与 `references/sync-saas.md`。演进边界如下：
 
 竞品平台只是研发对标资料，不参与这条同步链路。
 
-### 5.3 同步节奏（待与紫驰确认后写死）
+### 5.3 同步节奏（待与布达确认后写死）
 
 方案预留两种，Part B 开工前二选一：
 

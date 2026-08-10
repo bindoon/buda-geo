@@ -31,6 +31,7 @@ import {
   generateDiagnosisReport,
 } from "./lib/diagnosis-report.js";
 import { validateDiagnosis } from "./lib/diagnosis-validate.js";
+import { runConfiguredApiProbes } from "./lib/diagnosis-api.js";
 import { importLegacyDiagnosis } from "./lib/diagnosis-legacy.js";
 import type { ProbeAnalysis } from "./lib/diagnosis-model.js";
 import {
@@ -61,6 +62,8 @@ import { validateContentPlanning } from "./lib/content-plan-validate.js";
 import { articleStatus, ingestArticle, prepareArticles, reviseArticle } from "./lib/article-generation.js";
 import { validateArticles } from "./lib/article-validate.js";
 import { articleReviewStatus, decideArticleReview, prepareArticleReviews, validateArticleReviews } from "./lib/article-review.js";
+import { authorizePublishPlan, preparePublishPlan, publishingStatus, recordPublishResult, renderPublishingStatus } from "./lib/publishing.js";
+import { validatePublishing } from "./lib/publishing-validate.js";
 
 function resolveProject(p: string): string {
   return path.resolve(p);
@@ -161,6 +164,16 @@ addProjectOpt(diagnose.command("probe-ingest").description("ingest controlled ma
   .requiredOption("--input <file>", "manual probe JSON file")
   .action(async (opts: { project: string; run: string; input: string }) => {
     console.log(JSON.stringify(await ingestManualProbes(resolveProject(opts.project), opts.run, opts.input), null, 2));
+  });
+
+addProjectOpt(diagnose.command("probe-run").description("call configured OpenAI-compatible platform APIs for every approved seed question"))
+  .requiredOption("--run <id>", "diagnosis run ID")
+  .option("--config <file>", "probe platform config; defaults to BUDA_PROBE_CONFIG or config/probe-platforms.json")
+  .option("--concurrency <number>", "maximum parallel API requests", "2")
+  .action(async (opts: { project: string; run: string; config?: string; concurrency: string }) => {
+    const concurrency = Number(opts.concurrency);
+    if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 10) throw new Error("concurrency must be an integer between 1 and 10");
+    console.log(JSON.stringify(await runConfiguredApiProbes(resolveProject(opts.project), opts.run, opts.config, concurrency), null, 2));
   });
 
 addProjectOpt(diagnose.command("analysis-revise").description("append a corrected analysis without altering raw evidence"))
@@ -362,6 +375,58 @@ addProjectOpt(article.command("review-status").description("show article counts 
 
 addProjectOpt(article.command("review-validate").description("validate review history, current hashes, and approved gate conditions"))
   .action(async (opts: { project: string }) => { const result = await validateArticleReviews(resolveProject(opts.project)); console.log(result.ok ? "ARTICLE REVIEW VALIDATE OK" : "ARTICLE REVIEW VALIDATE FAIL"); for (const error of result.errors) console.log(`  ${error}`); console.log(`CHECKED: ${result.checked.length}`); process.exit(result.ok ? 0 : 1); });
+
+const publish = program.command("publish").description("prepare, authorize, record, and validate auditable publishing");
+
+addProjectOpt(publish.command("prepare").description("create a dry-run plan from currently approved article hashes"))
+  .option("--destinations <ids>", "optional comma-separated destination IDs; defaults to all enabled matching destinations")
+  .action(async (opts: { project: string; destinations?: string }) => {
+    const ids = opts.destinations?.split(",").map((item) => item.trim()).filter(Boolean) ?? [];
+    console.log(JSON.stringify(await preparePublishPlan(resolveProject(opts.project), ids), null, 2));
+  });
+
+addProjectOpt(publish.command("authorize").description("explicitly authorize one reviewed dry-run plan"))
+  .requiredOption("--plan <id>", "publish plan ID")
+  .requiredOption("--confirm <id>", "must exactly repeat the publish plan ID")
+  .requiredOption("--by <name>", "operator authorizing the plan")
+  .requiredOption("--reason <text>", "authorization reason")
+  .action(async (opts: { project: string; plan: string; confirm: string; by: string; reason: string }) => {
+    console.log(JSON.stringify(await authorizePublishPlan(resolveProject(opts.project), opts.plan, opts.confirm, opts.by, opts.reason), null, 2));
+  });
+
+addProjectOpt(publish.command("record").description("append one manual/adapter attempt and immutable receipt event"))
+  .requiredOption("--plan <id>", "publish plan ID")
+  .requiredOption("--item <id>", "publish item ID")
+  .requiredOption("--status <status>", "submitted | published | failed | skipped")
+  .requiredOption("--by <name>", "operator or adapter identity")
+  .option("--external-url <url>", "published/submitted external URL")
+  .option("--external-id <id>", "external platform record ID")
+  .option("--evidence <path-or-url>", "project-relative evidence path or public URL")
+  .option("--error-code <code>", "failure code")
+  .option("--error-message <text>", "failure message")
+  .option("--no-retryable", "mark a failure as non-retryable")
+  .action(async (opts: { project: string; plan: string; item: string; status: "submitted" | "published" | "failed" | "skipped"; by: string; externalUrl?: string; externalId?: string; evidence?: string; errorCode?: string; errorMessage?: string; retryable: boolean }) => {
+    if (!["submitted", "published", "failed", "skipped"].includes(opts.status)) throw new Error("status must be submitted, published, failed, or skipped");
+    const result = await recordPublishResult(resolveProject(opts.project), opts.plan, opts.item, { status: opts.status, recorded_by: opts.by, external_url: opts.externalUrl, external_id: opts.externalId, evidence_path: opts.evidence, error_code: opts.errorCode, error_message: opts.errorMessage, retryable: opts.retryable });
+    console.log(JSON.stringify({ attempt: result.attempt, receipt: result.receipt, plan_status: result.plan.status }, null, 2));
+  });
+
+addProjectOpt(publish.command("status").description("show publish lifecycle counts and write publish/status.md"))
+  .option("--plan <id>", "optional publish plan ID")
+  .action(async (opts: { project: string; plan?: string }) => {
+    const project = resolveProject(opts.project);
+    const report = await renderPublishingStatus(project, opts.plan);
+    console.log(JSON.stringify({ ...(await publishingStatus(project, opts.plan)), report }, null, 2));
+  });
+
+addProjectOpt(publish.command("validate").description("validate destinations, approvals, hashes, authorization, attempts, receipts, and evidence"))
+  .action(async (opts: { project: string }) => {
+    const result = await validatePublishing(resolveProject(opts.project));
+    console.log(result.ok ? "PUBLISH VALIDATE OK" : "PUBLISH VALIDATE FAIL");
+    for (const error of result.errors) console.log(`  ${error}`);
+    console.log(`CHECKED: ${result.checked.length}`);
+    process.exit(result.ok ? 0 : 1);
+  });
 
 addProjectOpt(program.command("parse-form").description("parse info form xlsx only"))
   .option("--app-id <id>", "override app_id")

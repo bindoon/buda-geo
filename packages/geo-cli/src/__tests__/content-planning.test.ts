@@ -61,7 +61,7 @@ test("legacy content import preserves source keys and exact-duplicate provenance
   const root = await contentFixture(); const input = path.join(root, "legacy.json"); await writeJson(input, { faq: ["儿童演出服怎么选？", "儿童演出服怎么选"], prompts: ["请写一篇销量第一的文章"], generation_plan: { tasks: [{ keyword: "儿童演出服", limit: 10 }] } }); const result = await importLegacyContent(root, [input]); assert(result.audit.counts.total >= 4); assert(result.audit.counts.exact_duplicates >= 1); assert(result.audit.candidates.some((x) => x.kind === "prompt")); await assert.rejects(access(path.join(root, "strategy", "content-plan-draft.json")));
 });
 
-test("runtime content contract stays platform-independent and uses only Zichi channels", async () => {
+test("runtime content contract stays platform-independent and uses only Buda channels", async () => {
   const root = await contentFixture(); const generated = await generateContentPlan(root, 10); assert(generated.plan.production_tasks.every((x) => ["social", "media", "b2b", "site"].includes(x.channel))); const raw = JSON.stringify(generated.plan).toLowerCase(); for (const forbidden of ["daze", "zhaixing", "zxingo", "huixin", "platform_export"]) assert.equal(raw.includes(forbidden), false);
 });
 

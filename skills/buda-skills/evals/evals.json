@@ -1,5 +1,5 @@
 {
-  "skill_name": "zichi-geo",
+  "skill_name": "buda-skills",
   "evals": [
     {
       "id": 1,
@@ -24,7 +24,7 @@
     {
       "id": 5,
       "prompt": "把诊断缺口整理成我们自己的通用场景词",
-      "expected_output": "走阶段 3 建立并确认紫驰自己的客户问题与购买场景库，使用内部通用字段并衔接内容规划"
+      "expected_output": "走阶段 3 建立并确认布达自己的客户问题与购买场景库，使用内部通用字段并衔接内容规划"
     },
     {
       "id": 6,

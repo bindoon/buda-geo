@@ -1,7 +1,7 @@
 {
   "name": "geo-cli",
   "version": "0.1.0",
-  "description": "GEO project clean / validate CLI for zichi local pipeline",
+  "description": "Local-first, evidence-backed GEO workflow CLI for Buda GEO",
   "type": "module",
   "bin": {
     "geo-cli": "./dist/cli.js"
@@ -10,6 +10,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "!dist/__tests__",
     "schemas"
   ],
   "scripts": {
@@ -22,17 +23,28 @@
     "node": ">=18"
   },
   "keywords": [
+    "buda-geo",
     "geo",
+    "generative-engine-optimization",
     "cli",
     "knowledge-base"
   ],
-  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bindoon/buda-geo.git",
+    "directory": "packages/geo-cli"
+  },
+  "homepage": "https://github.com/bindoon/buda-geo#readme",
+  "bugs": {
+    "url": "https://github.com/bindoon/buda-geo/issues"
+  },
+  "license": "MIT",
   "dependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "commander": "^12.1.0",
     "jszip": "^3.10.1",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

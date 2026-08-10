@@ -115,13 +115,17 @@ function brandTermsFromSnapshot(snapshot: Awaited<ReturnType<typeof loadConfirme
 }
 
 export async function ingestManualProbes(projectRoot: string, runId: string, inputPath: string): Promise<{ wrote: string[]; retryable: string[] }> {
+  const adapter = new ControlledManualAdapter();
+  const items = await adapter.normalize(JSON.parse(await readFile(path.resolve(inputPath), "utf-8")));
+  return ingestNormalizedProbes(projectRoot, runId, items, "manual");
+}
+
+export async function ingestNormalizedProbes(projectRoot: string, runId: string, items: ManualProbeInput[], adapterKind: "manual" | "api" | "browser_assisted"): Promise<{ wrote: string[]; retryable: string[] }> {
   const context = await loadConfirmedDiagnosisContext(projectRoot);
   const runPath = path.join(projectRoot, "diagnosis", "runs", runId, "run.json");
   const run = await readJson<DiagnosisRun>(runPath);
   const seedSet = await findSeedSet(projectRoot, run.seed_set_id);
   if (run.fact_snapshot_id !== context.snapshot.fact_snapshot_id) throw new Error("probe ingestion blocked: run fact snapshot is stale");
-  const adapter = new ControlledManualAdapter();
-  const items = await adapter.normalize(JSON.parse(await readFile(path.resolve(inputPath), "utf-8")));
   const brandTerms = brandTermsFromSnapshot(context.snapshot);
   const wrote: string[] = [];
   for (const item of items) {
@@ -136,7 +140,7 @@ export async function ingestManualProbes(projectRoot: string, runId: string, inp
     let rawSnapshotPath: string | null = null;
     let rawContentHash: string | null = null;
     if (item.status === "success") {
-      const header = `# Probe raw answer\n\n- question_id: ${item.question_id}\n- platform: ${item.platform}\n- provider: ${item.provider ?? "controlled_manual"}\n- model: ${item.model ?? "unknown"}\n- attempted_at: ${attemptedAt}\n\n## Exact question\n\n${question.text}\n\n## Raw answer\n\n`;
+      const header = `# Probe raw answer\n\n- question_id: ${item.question_id}\n- platform: ${item.platform}\n- provider: ${item.provider ?? (adapterKind === "manual" ? "controlled_manual" : "configured_api")}\n- adapter_kind: ${adapterKind}\n- model: ${item.model ?? "unknown"}\n- attempted_at: ${attemptedAt}\n\n## Exact question\n\n${question.text}\n\n## Raw answer\n\n`;
       const content = `${header}${item.answer!.trim()}\n`;
       await mkdir(path.dirname(rawPath), { recursive: true });
       if (!(await pathExists(rawPath))) await writeFile(rawPath, content, "utf-8");
@@ -153,8 +157,8 @@ export async function ingestManualProbes(projectRoot: string, runId: string, inp
       question_text: question.text,
       question_family: question.family,
       platform: item.platform,
-      provider: item.provider ?? "controlled_manual",
-      adapter_kind: "manual",
+      provider: item.provider ?? (adapterKind === "manual" ? "controlled_manual" : "configured_api"),
+      adapter_kind: adapterKind,
       model: item.model ?? null,
       attempted_at: attemptedAt,
       status: item.status,

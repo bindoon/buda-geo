@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "platforms": [
+    {
+      "id": "deepseek",
+      "provider": "DeepSeek",
+      "adapter": "openai-compatible",
+      "base_url_env": "DEEPSEEK_BASE_URL",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "model_env": "DEEPSEEK_MODEL",
+      "default_base_url": "https://api.deepseek.com/v1",
+      "default_model": "deepseek-chat",
+      "endpoint_path": "/chat/completions",
+      "timeout_ms": 60000
+    },
+    {
+      "id": "qwen",
+      "provider": "Alibaba Cloud Model Studio",
+      "adapter": "openai-compatible",
+      "base_url_env": "QWEN_BASE_URL",
+      "api_key_env": "QWEN_API_KEY",
+      "model_env": "QWEN_MODEL",
+      "endpoint_path": "/chat/completions",
+      "timeout_ms": 60000
+    },
+    {
+      "id": "doubao",
+      "provider": "Volcano Engine",
+      "adapter": "openai-compatible",
+      "base_url_env": "DOUBAO_BASE_URL",
+      "api_key_env": "DOUBAO_API_KEY",
+      "model_env": "DOUBAO_MODEL",
+      "endpoint_path": "/chat/completions",
+      "timeout_ms": 60000
+    },
+    {
+      "id": "custom",
+      "provider": "Custom OpenAI-compatible provider",
+      "adapter": "openai-compatible",
+      "base_url_env": "CUSTOM_PROBE_BASE_URL",
+      "api_key_env": "CUSTOM_PROBE_API_KEY",
+      "model_env": "CUSTOM_PROBE_MODEL",
+      "endpoint_path": "/chat/completions",
+      "timeout_ms": 60000
+    }
+  ]
+}

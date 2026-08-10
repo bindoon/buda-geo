@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-publishing-authorization",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "authorization_id", "plan_id", "app_id", "authorized_at", "authorized_by", "reason", "confirmed_plan_id", "item_idempotency_keys"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "authorization_id": { "type": "string", "pattern": "^publish_authorization_" },
+    "plan_id": { "type": "string", "pattern": "^publish_plan_" },
+    "app_id": { "type": "string", "minLength": 1 },
+    "authorized_at": { "type": "string", "format": "date-time" },
+    "authorized_by": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string", "minLength": 1 },
+    "confirmed_plan_id": { "type": "string", "pattern": "^publish_plan_" },
+    "item_idempotency_keys": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^publish_key_" } }
+  }
+}
