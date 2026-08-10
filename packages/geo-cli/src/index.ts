@@ -18,3 +18,5 @@ export { validateArticles } from "./lib/article-validate.js";
 export { prepareArticleReviews, decideArticleReview, approvedArticleInput, articleReviewStatus, renderArticleReviewReport, validateArticleReviews } from "./lib/article-review.js";
 export { loadDestinationRegistry, preparePublishPlan, authorizePublishPlan, recordPublishResult, publishingStatus, renderPublishPlanReview, renderPublishingStatus } from "./lib/publishing.js";
 export { validatePublishing } from "./lib/publishing-validate.js";
+export { fetchRemoteSkill, inspectSkill, resolveBundledSkillSource, syncSkill, validateSkillCandidate } from "./lib/skill-distribution.js";
+export type { RemoteSkillResult, SkillCandidate, SkillManifest, SkillStatus, SkillSyncOptions, SkillSyncResult } from "./lib/skill-distribution.js";

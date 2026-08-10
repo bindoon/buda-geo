@@ -76,6 +76,8 @@ npm --prefix packages/geo-cli run build
 npm --prefix packages/geo-cli link
 
 geo-cli --help
+geo-cli skills install
+geo-cli skills status
 ```
 
 不想全局 link 时，所有命令都可以改为：
@@ -83,6 +85,8 @@ geo-cli --help
 ```bash
 node packages/geo-cli/dist/cli.js <command>
 ```
+
+发布到 npm 后可以改用 `npm install -g @bindoon/geo-cli`，二进制名称仍是 `geo-cli`。`skills install` 会把 `buda-skills` 安装到 `~/.agents/skills`：GitHub 优先，首次离线时使用 npm 内置快照。
 
 ### 2. 配置本地环境
 
@@ -296,7 +300,7 @@ geo-cli publish validate --project projects/晶铭服饰
 | `skills/buda-skills` | 业务阶段路由、语义装填、人工复核入口、内容生成与风险边界 |
 | `projects/{项目名}` | 客户隔离的数据、事实、策略、文章和发布审计 |
 
-Cursor 入口：`.cursor/skills/buda-skills` → `skills/buda-skills/`。Skill 不包含客户名单；客户解析只读取 `projects/registry.json`。
+`skills/buda-skills` 是 GitHub 与 npm 内置快照的唯一源码。Codex 用户通过 `geo-cli skills install | update | status` 管理 `~/.agents/skills/buda-skills`；远端失败时保留当前健康版本，没有健康安装才使用 npm 快照。Cursor 开发入口仍为 `.cursor/skills/buda-skills` → `skills/buda-skills/`。Skill 不包含客户名单；客户解析只读取 `projects/registry.json`。
 
 ## 安全与隐私
 
@@ -321,7 +325,7 @@ npm --prefix packages/geo-cli test
 
 - [布达 GEO 详细解决方案](./docs/布达-GEO工具详细解决方案.md) — 整体方法、目录契约、验收与 Part A/B 边界
 - [工具开发任务拆分与报价方案](./docs/布达-工具开发任务拆分与报价方案.md) — 历史模块拆分与商业设计参考
-- [geo-cli 文档](./packages/geo-cli/README.md) — 完整命令面与 CLI 设计边界
+- [geo-cli 文档](./packages/geo-cli/README.md) — 完整命令面、npm 安装、Skill 分发与 CLI 设计边界
 - [buda-skills](./skills/buda-skills/SKILL.md) — Agent 总路由与分阶段 reference
 - [平台研究资料](./docs/各GEO平台资料/) — 仅用于研发对标，不是运行时依赖或客户数据提交目标
 - [方法论文章](./docs/方法论文章/) — 工厂 GEO、证据库、微场景与通用 SOP

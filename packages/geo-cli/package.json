@@ -1,5 +1,5 @@
 {
-  "name": "geo-cli",
+  "name": "@bindoon/geo-cli",
   "version": "0.1.0",
   "description": "Local-first, evidence-backed GEO workflow CLI for Buda GEO",
   "type": "module",
@@ -11,13 +11,21 @@
   "files": [
     "dist",
     "!dist/__tests__",
-    "schemas"
+    "schemas",
+    "bundled-skills"
   ],
   "scripts": {
     "build": "tsc",
     "test": "npm run build && node --test dist/__tests__/*.test.js",
     "dev": "tsx src/cli.ts",
+    "stage-skills": "node scripts/stage-skills.mjs stage",
+    "clean-staged-skills": "node scripts/stage-skills.mjs clean",
+    "prepack": "npm run build && npm run stage-skills",
+    "postpack": "npm run clean-staged-skills",
     "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=18"

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "name": "buda-skills",
+  "version": "0.1.0",
+  "source": "bindoon/buda-geo",
+  "requires_geo_cli": {
+    "min": "0.1.0",
+    "max_exclusive": "0.2.0"
+  }
+}

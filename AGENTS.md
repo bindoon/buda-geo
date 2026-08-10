@@ -32,6 +32,8 @@
 
 - 语义装填（docx 画像、SKU 归桶、人话缺失）走 **`skills/buda-skills`**（`.cursor/skills/buda-skills` 软链）。
 - 表解析、inventory、validate 走 **`packages/geo-cli`**（Node.js，`geo-cli`）。
+- ✅ `skills/buda-skills` 是唯一受版本控制源码；npm `prepack` 生成 `packages/geo-cli/bundled-skills/`。❌ 不要提交或手工维护第二份 bundled Skill。
+- ✅ `geo-cli skills` 更新失败时保留当前健康安装；只有没有健康安装才用 npm 内置快照。❌ 不要把“GitHub 拉不到”实现成用旧快照覆盖新 Skill。
 - **客户名单**在 `projects/registry.json`，用 `geo-cli projects list` / `resolve`；**不要**写进 Skill 正文。
 - Skill 应调用 `geo-cli`，不要在对话里手搓校验规则。
 

@@ -64,6 +64,7 @@ import { validateArticles } from "./lib/article-validate.js";
 import { articleReviewStatus, decideArticleReview, prepareArticleReviews, validateArticleReviews } from "./lib/article-review.js";
 import { authorizePublishPlan, preparePublishPlan, publishingStatus, recordPublishResult, renderPublishingStatus } from "./lib/publishing.js";
 import { validatePublishing } from "./lib/publishing-validate.js";
+import { inspectSkill, syncSkill } from "./lib/skill-distribution.js";
 
 function resolveProject(p: string): string {
   return path.resolve(p);
@@ -478,6 +479,35 @@ addProjectOpt(program.command("status").description("print manifest")).action(
     }
   },
 );
+
+const skills = program
+  .command("skills")
+  .description("install, update, or inspect the Codex buda-skills package");
+
+skills
+  .command("install")
+  .description("install buda-skills from GitHub, with the npm snapshot as an offline fallback")
+  .option("--offline", "skip GitHub and use the bundled snapshot when no healthy installation exists", false)
+  .option("--force", "preserve an unmanaged target as a backup and replace it", false)
+  .action(async (opts: { offline: boolean; force: boolean }) => {
+    console.log(JSON.stringify(await syncSkill("install", opts), null, 2));
+  });
+
+skills
+  .command("update")
+  .description("refresh buda-skills from GitHub without downgrading a healthy installation")
+  .option("--offline", "skip GitHub and keep a healthy installation or use the bundled snapshot", false)
+  .option("--force", "preserve an unmanaged target as a backup and replace it", false)
+  .action(async (opts: { offline: boolean; force: boolean }) => {
+    console.log(JSON.stringify(await syncSkill("update", opts), null, 2));
+  });
+
+skills
+  .command("status")
+  .description("report the installed buda-skills source, version, compatibility, and content integrity")
+  .action(async () => {
+    console.log(JSON.stringify(await inspectSkill(), null, 2));
+  });
 
 const projects = program
   .command("projects")

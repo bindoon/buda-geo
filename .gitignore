@@ -24,6 +24,7 @@ config/probe-platforms.json
 node_modules/
 dist/
 build/
+packages/geo-cli/bundled-skills/
 .coverage
 .pytest_cache/
 __pycache__/

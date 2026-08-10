@@ -16,8 +16,12 @@ npm link   # 可选：全局 geo-cli
 **发布后：**
 
 ```bash
-npm install -g geo-cli
+npm install -g @bindoon/geo-cli
+geo-cli skills install
+geo-cli skills status
 ```
+
+`skills install` 默认从开源仓库 `bindoon/buda-geo` 获取最新兼容的 `buda-skills`，安装到 `~/.agents/skills/buda-skills`。GitHub 不可用且本机尚无有效安装时，才使用 npm 包内置快照。
 
 ## 用法
 
@@ -26,6 +30,7 @@ npm install -g geo-cli
 ```bash
 geo-cli projects list
 geo-cli projects resolve "晶铭"
+geo-cli skills status
 geo-cli inventory --project projects/晶铭服饰
 geo-cli clean --project projects/晶铭服饰
 geo-cli validate --project projects/晶铭服饰
@@ -58,6 +63,9 @@ cd packages/geo-cli && npm run dev -- projects resolve "晶铭"
 
 | 命令 | 作用 |
 |------|------|
+| `skills install` | GitHub 优先安装 `buda-skills`；首次离线时使用 npm 内置快照 |
+| `skills update` | 获取 GitHub 新版；失败时保留当前健康安装，不用旧快照降级 |
+| `skills status` | 输出安装路径、来源、版本、CLI 兼容性和内容哈希健康状态 |
 | `projects list` | 列出 `registry.json` 中所有客户 |
 | `projects resolve <query>` | 简称/公司名/app_id → `path` |
 | `inventory` | 分类并逐文件哈希 `inputs/`（法人身份证 → ignored） |
@@ -116,6 +124,8 @@ cd packages/geo-cli && npm run dev -- projects resolve "晶铭"
 packages/geo-cli/
   package.json      # bin: geo-cli → dist/cli.js
   schemas/          # JSON Schema（随包发布）
+  scripts/          # npm 打包时生成/清理 Skill 快照
+  bundled-skills/   # prepack 临时产物，不提交 Git
   src/
     cli.ts
     lib/
@@ -140,6 +150,28 @@ packages/geo-cli/
 
 `publish` 的边界是“把当前批准正文安全地送到已评级目标并留证”。prepare 只生成 dry-run；authorize 必须由操作者显式确认；record 追加不可变 attempt/receipt。当前开源版本支持 manual 记录并预留 adapter 契约，不调用未知平台 API。`article_id + body_sha256 + destination_id` 是幂等键，published/skipped 终态不可覆盖。
 
+## Skill 安装与更新
+
+CLI 只管理一个 Skill：`buda-skills`，真实目标固定为 `~/.agents/skills/buda-skills`。默认命令：
+
+```bash
+geo-cli skills install
+geo-cli skills update
+geo-cli skills status
+```
+
+安装和更新会在隔离的临时 HOME 中通过固定主版本的标准 Skills CLI 获取 `bindoon/buda-geo`，先校验 `SKILL.md`、`skill.manifest.json`、普通文件类型、内容大小与当前 CLI 兼容范围，再原子替换真实目录。远端工具不会直接写真实 `~/.agents`。
+
+降级规则：
+
+- GitHub 成功且候选兼容：启用远端版本，来源为 `github`。
+- GitHub 失败或候选不兼容，但当前受管安装健康：保留当前版本，不降级。
+- 没有健康安装：使用 npm 发布时内置的 `bundled` 快照。
+- `--offline`：跳过 GitHub；健康安装保持不变，否则使用内置快照。
+- 已有同名目录但不是 `geo-cli` 管理：默认拒绝覆盖；`--force` 会先改名备份，并在 JSON 结果中返回 `backup_path`。
+
+每个受管安装包含 `.geo-cli-managed.json`，记录来源、Skill/CLI 版本、内容哈希和安装时间。Skill 自身的 `skill.manifest.json` 声明兼容范围；不要手工修改这些记录。GitHub 与 npm 都不可用时，现有健康安装仍可继续使用。
+
 ## 环境与平台配置
 
 从仓库根运行：
@@ -158,11 +190,14 @@ cd packages/geo-cli
 npm test
 ```
 
-测试覆盖稳定 ID、Schema/引用校验、敏感信息排除、语义 blocker、冲突解决、确认门、API 适配器、幂等 re-clean、发布授权与失败重试。
+测试覆盖稳定 ID、Schema/引用校验、敏感信息排除、语义 blocker、冲突解决、确认门、API 适配器、幂等 re-clean、发布授权与失败重试，以及 Skill 的远端/离线安装、兼容拒绝、完整性和冲突备份。
 
 ## 发布 npm（维护者）
 
 ```bash
-npm run build
-npm publish --access public   # 若包名未被占用
+npm test
+npm pack --dry-run --json
+npm publish
 ```
+
+包名为 `@bindoon/geo-cli`，`publishConfig.access` 已固定为 `public`。`prepack` 从仓库根 `skills/buda-skills` 生成发布快照，`postpack` 清理临时目录；发布前应确认 tarball 含 `bundled-skills/buda-skills/SKILL.md`、兼容清单和 references。
