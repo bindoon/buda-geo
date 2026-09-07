@@ -31,6 +31,7 @@ import {
   generateDiagnosisReport,
 } from "./lib/diagnosis-report.js";
 import { validateDiagnosis } from "./lib/diagnosis-validate.js";
+import { confirmSiteAuditReport, runSiteAudit } from "./lib/site-audit-report.js";
 import { runConfiguredApiProbes } from "./lib/diagnosis-api.js";
 import { importLegacyDiagnosis } from "./lib/diagnosis-legacy.js";
 import type { ProbeAnalysis } from "./lib/diagnosis-model.js";
@@ -206,6 +207,39 @@ addProjectOpt(diagnose.command("validate").description("validate diagnosis schem
     for (const error of result.errors) console.log(`  ${error}`);
     console.log(`CHECKED: ${result.checked.length}`);
     process.exit(result.ok ? 0 : 1);
+  });
+
+addProjectOpt(diagnose.command("site-audit").description("collect owned-website technical evidence and render a reviewable site-audit report"))
+  .option("--url <url>", "override owned website URL; marketplace shops are rejected")
+  .option("--sample-pages <number>", "sampled page count, 5-30", "12")
+  .action(async (opts: { project: string; url?: string; samplePages: string }) => {
+    const samplePages = Number(opts.samplePages);
+    if (!Number.isInteger(samplePages) || samplePages < 5 || samplePages > 30) throw new Error("sample-pages must be an integer between 5 and 30");
+    const result = await runSiteAudit(resolveProject(opts.project), {
+      url: opts.url,
+      samplePages,
+      progress: (percent, stage, message) => console.error(`[site-audit] ${percent}% ${stage} ${message}`),
+    });
+    console.log(JSON.stringify({
+      audit_id: result.audit.audit_id,
+      report_id: result.report.report_id,
+      target_url: result.report.target_url,
+      reliable: result.report.data_quality.reliable,
+      red_cards: result.report.red_cards_triggered,
+      gaps: result.report.gaps.length,
+      auditPath: result.auditPath,
+      jsonPath: result.jsonPath,
+      markdownPath: result.markdownPath,
+      htmlPath: result.htmlPath,
+      reviewPath: result.reviewPath,
+    }, null, 2));
+  });
+
+addProjectOpt(diagnose.command("site-audit-confirm").description("confirm a reviewed site-audit report and expose site gaps downstream"))
+  .requiredOption("--report <id>", "site-audit report ID")
+  .action(async (opts: { project: string; report: string }) => {
+    const result = await confirmSiteAuditReport(resolveProject(opts.project), opts.report);
+    console.log(JSON.stringify({ report_id: result.report_id, status: result.status, confirmed_at: result.confirmed_at, gaps: result.gaps.length }, null, 2));
   });
 
 addProjectOpt(diagnose.command("import-legacy").description("import old questions and web spot checks as unconfirmed legacy candidates"))

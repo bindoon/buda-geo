@@ -130,7 +130,7 @@ export interface DiagnosisMetrics {
 
 export interface DiagnosisGap {
   gap_id: string;
-  kind: "visibility" | "recommendation" | "negative_risk" | "evidence" | "probe_coverage";
+  kind: "visibility" | "recommendation" | "negative_risk" | "evidence" | "probe_coverage" | "site_access" | "site_render" | "site_structure" | "site_content" | "site_entity";
   severity: "high" | "medium" | "low";
   observed_issue: string;
   question_ids: string[];

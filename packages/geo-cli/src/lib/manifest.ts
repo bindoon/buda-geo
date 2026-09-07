@@ -4,6 +4,7 @@ import { readJson } from "./util.js";
 import type { BaseInfo } from "./parse.js";
 import type { FindingRecord } from "./fact-model.js";
 import type { SkuItem } from "./skus.js";
+import { classifyPublicPresence } from "./site-audit-url.js";
 import { utcNow } from "./util.js";
 
 export interface MissingItem {
@@ -62,6 +63,17 @@ export function buildMissing(
       severity: "block",
       message: "缺少官网或 1688 店铺链接。",
     });
+  } else {
+    const presence = classifyPublicPresence(baseinfo.website_or_shop_url, baseinfo.conversion?.shop_url);
+    if (!presence.audit_eligible) {
+      missing.push({
+        code: "owned_website",
+        severity: "optional",
+        message: presence.skip_reason
+          ? `${presence.skip_reason}。官网技术审计将跳过，不阻断清洗确认。`
+          : "没有可采集的自有官网；官网技术审计将跳过，不阻断清洗确认。",
+      });
+    }
   }
   const intro = profile.intro ?? "";
   if (intro.length < 100) {

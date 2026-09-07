@@ -21,6 +21,7 @@ const FIELD_LABELS: Record<string, string> = {
   contact_phone: "联系电话",
   address: "地址",
   website_or_shop_url: "官网或店铺",
+  owned_website: "自有官网",
   region: "地区",
   media_accounts: "媒体账号",
   conversion: "转化联系方式",

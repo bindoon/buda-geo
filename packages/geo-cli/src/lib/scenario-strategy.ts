@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { diagnosisGapInput } from "./diagnosis-report.js";
+import { siteAuditGapInput } from "./site-audit-report.js";
 import { loadConfirmedDiagnosisContext } from "./diagnosis-seeds.js";
 import { stableId } from "./fact-model.js";
 import type { FactRecord, SubjectRecord } from "./fact-model.js";
@@ -28,6 +29,10 @@ interface ConfirmedGapArtifact {
   status: "confirmed";
   confirmed_at: string;
   gaps: Array<{ gap_id: string; kind: string; severity: string; observed_issue: string }>;
+}
+
+interface ConfirmedSiteGapArtifact extends ConfirmedGapArtifact {
+  audit_id?: string;
 }
 
 interface OperatorInput {
@@ -152,7 +157,7 @@ export function semanticSuggestions(scenarios: CustomerScenario[]): SemanticMerg
   return suggestions;
 }
 
-async function loadContext(projectRoot: string): Promise<{ context: Awaited<ReturnType<typeof loadConfirmedDiagnosisContext>>; gapPath: string; gaps: ConfirmedGapArtifact }> {
+async function loadContext(projectRoot: string): Promise<{ context: Awaited<ReturnType<typeof loadConfirmedDiagnosisContext>>; gapPath: string; gaps: ConfirmedGapArtifact; siteGaps: ConfirmedSiteGapArtifact | null; siteGapPath: string | null }> {
   const context = await loadConfirmedDiagnosisContext(projectRoot);
   const gate = (context.manifest as Record<string, any>).gates?.diagnose;
   if (gate?.status !== "confirmed" || !gate.report_id) throw new Error("scenario generation blocked: baseline diagnosis is not confirmed");
@@ -160,7 +165,9 @@ async function loadContext(projectRoot: string): Promise<{ context: Awaited<Retu
   const gapPath = await diagnosisGapInput(projectRoot);
   const gaps = await readJson<ConfirmedGapArtifact>(path.join(projectRoot, gapPath));
   if (gaps.status !== "confirmed" || gaps.report_id !== gate.report_id) throw new Error("scenario generation blocked: confirmed diagnosis gap artifact mismatch");
-  return { context, gapPath, gaps };
+  const siteGapPath = await siteAuditGapInput(projectRoot);
+  const siteGaps = siteGapPath ? await readJson<ConfirmedSiteGapArtifact>(path.join(projectRoot, siteGapPath)) : null;
+  return { context, gapPath, gaps, siteGaps, siteGapPath };
 }
 
 function flattenLegacy(value: KeywordsJson): Array<{ bucket: string; text: string }> {
@@ -263,7 +270,7 @@ function evidenceForCandidate(text: string, facts: FactRecord[]): { facts: FactR
 }
 
 export async function generateScenarioDraft(projectRoot: string, operatorInputPath?: string): Promise<{ library: ScenarioLibrary; jsonPath: string; reviewPath: string }> {
-  const { context, gapPath, gaps } = await loadContext(projectRoot);
+  const { context, gapPath, gaps, siteGaps, siteGapPath } = await loadContext(projectRoot);
   const allFacts = context.snapshot.facts.facts.filter((fact) => fact.review_status === "confirmed" && fact.disclosure_level === "public");
   const subjects = context.snapshot.facts.subjects.filter((subject) => subject.review_status === "confirmed");
   const productSubject = subjects.find((subject) => subject.type === "product" || subject.type === "product_family");
@@ -280,7 +287,11 @@ export async function generateScenarioDraft(projectRoot: string, operatorInputPa
   const targets = extractTargets(profileFacts.flatMap((fact) => stringValues(fact.value)));
   const primaryTarget = targets[0] ?? "目标采购客户";
   const diagnosisUsable = !gaps.gaps.some((gap) => gap.kind === "probe_coverage" && gap.severity === "high");
-  const gapSources = gaps.gaps.map((gap) => sourceRef({ kind: "diagnosis_gap", ref_id: gap.gap_id, path: gapPath, original_bucket: null, text: gap.observed_issue, derivation: "derived" }));
+  const gapSources = [
+    ...gaps.gaps.map((gap) => sourceRef({ kind: "diagnosis_gap", ref_id: gap.gap_id, path: gapPath, original_bucket: null, text: gap.observed_issue, derivation: "derived" })),
+    ...(siteGaps?.gaps ?? []).map((gap) => sourceRef({ kind: "diagnosis_gap", ref_id: gap.gap_id, path: siteGapPath, original_bucket: "site_audit", text: gap.observed_issue, derivation: "derived" })),
+  ];
+  const siteAccessGap = siteGaps?.gaps.some((gap) => gap.kind === "site_access" && gap.severity === "high");
   const productCore = [...productFacts, ...findFacts(companyFacts, "products_services", "advantages", "pain_points")];
   const scenarios: CustomerScenario[] = [];
 
@@ -309,6 +320,31 @@ export async function generateScenarioDraft(projectRoot: string, operatorInputPa
     question({ text: `${brand}是做什么的？`, facts: [...findFacts(companyFacts, "company_name", "company_short_name", "intro"), ...findFacts(productFacts, "name", "category")], targetStage: "awareness", productIds: productSubject ? [productSubject.subject_id] : [], sources: gapSources }),
     question({ text: `${brand}靠谱吗？有哪些可核验依据？`, facts: [...findFacts(companyFacts, "company_name", "website_or_shop_url", "trust"), ...productFacts], targetStage: "supplier_selection", productIds: productSubject ? [productSubject.subject_id] : [], sources: gapSources }),
   ] }));
+
+  if (siteGaps?.gaps.length) {
+    const websiteFacts = [...findFacts(companyFacts, "company_name", "company_short_name", "website_or_shop_url", "trust", "intro")];
+    scenarios.push(makeScenario({
+      key: "owned_site_citation",
+      name: `${brand}官网能否被当作可核验来源`,
+      target: "需要核对官方来源的采购或研究用户",
+      need: `判断${brand}自有官网是否能被 AI 爬虫读取，并作为可核验信源`,
+      concerns: siteGaps.gaps.map((item) => item.observed_issue).slice(0, 6),
+      facts: websiteFacts,
+      actionUrl,
+      sources: gapSources,
+      priority: priority({
+        business: 3,
+        diagnosis: siteAccessGap ? 5 : 3,
+        evidence: websiteFacts.length ? 4 : 1,
+        customer: 2,
+        rationale: ["已确认官网技术审计缺口，用于解释为什么模型可能引用不到自有站", siteAccessGap ? "存在高优先级准入问题" : "官网结构或内容缺口可进入 site 通道规划"],
+      }),
+      questions: [
+        question({ text: `${brand}官网能查到哪些可核验信息？`, facts: websiteFacts, targetStage: "supplier_selection", sources: gapSources }),
+        question({ text: `为什么公开检索里很少出现${brand}官网？`, facts: websiteFacts, targetStage: "awareness", sources: gapSources }),
+      ],
+    }));
+  }
 
   const legacyPath = path.join(projectRoot, "strategy", "legacy", "keyword-audit.json");
   if (await pathExists(legacyPath)) {
@@ -367,6 +403,8 @@ export async function generateScenarioDraft(projectRoot: string, operatorInputPa
 
   const limitations: string[] = [];
   if (!diagnosisUsable) limitations.push("基线诊断仅有 provider/API 不可用记录；场景优先级未使用品牌提及、推荐、竞品或引用数据，只能使用“探测覆盖不足”这一诊断缺口。");
+  if (!siteGaps) limitations.push("未确认官网技术审计；场景不把店铺页或未采集官网当成“已被 AI 爬虫读到”。");
+  else if (siteAccessGap) limitations.push("官网技术审计存在高优先级准入缺口；site 通道任务应先解决爬虫可读，再扩 FAQ/栏目。");
   if (!customerQuestions.length) limitations.push("未提供可用询盘/客服问题，或现有记录无法安全提取；场景可继续确认，但客户原话支持分较低，后续补充时应创建新版本。");
   const createdAt = utcNow();
   const provisionalId = stableId("scenario_library_draft", context.snapshot.fact_snapshot_id, gaps.report_id, scenarios.map((item) => item.scenario_id), createdAt);

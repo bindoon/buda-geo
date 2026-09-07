@@ -6,6 +6,8 @@
 
 回答“当前各 AI 平台怎样理解、提及、推荐这家公司”，形成场景策略的诊断缺口，而不是直接生成正式关键词库。
 
+官网技术审计是**补充证据层**：只检查自有官网能不能被 AI 爬虫读到、读懂。它不替代种子题和多平台 probe，也不能把 1688/店铺页当成官网。
+
 ## 前置条件
 
 - `manifest.gates.clean.status = confirmed`
@@ -19,6 +21,7 @@
 | 已确认企业事实快照 | 小规模、可复核的 baseline seed set |
 | 已确认种子题 | 多平台 probe run 与原始回答快照 |
 | probe 结果 | 透明指标、客户可读报告、结构化 diagnosis gaps |
+| 已确认事实中的自有官网，或 `--url` 指定的官网 | 官网技术审计（robots / AI bot / 结构 / 内容 / 实体），独立报告与 site_* 缺口 |
 
 ## 操作流程
 
@@ -108,6 +111,31 @@ geo-cli diagnose validate --project {PROJECT}
 - 引用未观察到不等于平台没有使用来源。
 
 首期不计算不透明综合分。所有 rate 均显示 `numerator/denominator`。
+
+### 4.5 可选：官网技术审计
+
+仅当存在**自有官网**时执行。1688 / 淘宝 / 京东等店铺链接会跳过，不阻断 probe 诊断。
+
+```bash
+geo-cli diagnose site-audit --project {PROJECT}
+geo-cli diagnose site-audit --project {PROJECT} --url https://www.example.com --sample-pages 12
+```
+
+向用户展示 `diagnosis/site-audit-review.md`（同时有 JSON/HTML）。解释时遵守：
+
+- 只说“采样的 N 个页面中”，不要写成全站结论；
+- 红牌是缺口，不是综合分；本报告 `composite_score` 必须为 `null`；
+- 未做浏览器渲染时，CSR 只能写启发式或「未检测」；
+- `llms.txt` 只记录有无，不列为 P0；
+- 首页是验证码/WAF 时，不判断内容与结构化数据优劣。
+
+用户复核后才运行：
+
+```bash
+geo-cli diagnose site-audit-confirm --project {PROJECT} --report {SITE_AUDIT_REPORT_ID}
+```
+
+确认后的 `diagnosis/gaps/site_audit_report_*.json` 可被场景阶段消费；未确认不得当作品牌可见度结论，也不得直接生成文章。
 
 ### 5. 人工确认诊断
 

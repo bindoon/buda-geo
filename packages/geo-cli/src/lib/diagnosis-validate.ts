@@ -3,6 +3,7 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { DiagnosisReport, DiagnosisRun, ProbeResult, SeedSet } from "./diagnosis-model.js";
+import type { SiteAuditReport, SiteAuditResult } from "./site-audit-model.js";
 import { pathExists, readJson } from "./util.js";
 
 const require = createRequire(import.meta.url);
@@ -33,6 +34,8 @@ export async function validateDiagnosis(projectRoot: string): Promise<DiagnosisV
     probe: ajv.getSchema("geo-diagnosis-probe-result")!,
     revision: ajv.getSchema("geo-diagnosis-analysis-revision")!,
     report: ajv.compile(await schema("diagnosis-report.schema.json")),
+    siteAudit: ajv.compile(await schema("diagnosis-site-audit.schema.json")),
+    siteAuditReport: ajv.compile(await schema("diagnosis-site-audit-report.schema.json")),
   };
   const manifest = await readJson<Record<string, any>>(path.join(projectRoot, "manifest.json"));
   const diagnosisRoot = path.join(projectRoot, "diagnosis");
@@ -72,10 +75,38 @@ export async function validateDiagnosis(projectRoot: string): Promise<DiagnosisV
     }
   }
   const reportDir = path.join(diagnosisRoot, "reports");
-  if (await pathExists(reportDir)) for (const name of (await readdir(reportDir)).filter((name) => name.endsWith(".json"))) {
+  if (await pathExists(reportDir)) for (const name of (await readdir(reportDir)).filter((name) => name.endsWith(".json") && !name.startsWith("site_audit_report_"))) {
     const rel = `diagnosis/reports/${name}`; const report = await readJson<DiagnosisReport>(path.join(reportDir, name)); checked.push(rel);
     if (!validators.report(report)) errors.push(...ajvErrors(`${rel}:`, validators.report.errors));
     reports.set(report.report_id, report);
+  }
+  const siteAuditDir = path.join(diagnosisRoot, "site-audits");
+  const siteAudits = new Map<string, SiteAuditResult>();
+  if (await pathExists(siteAuditDir)) for (const name of (await readdir(siteAuditDir)).filter((name) => name.endsWith(".json"))) {
+    const rel = `diagnosis/site-audits/${name}`;
+    const audit = await readJson<SiteAuditResult>(path.join(siteAuditDir, name));
+    checked.push(rel);
+    if (!validators.siteAudit(audit)) errors.push(...ajvErrors(`${rel}:`, validators.siteAudit.errors));
+    if (audit.app_id !== manifest.app_id) errors.push(`${rel}: app_id mismatch`);
+    siteAudits.set(audit.audit_id, audit);
+  }
+  const siteReports = new Map<string, SiteAuditReport>();
+  if (await pathExists(reportDir)) for (const name of (await readdir(reportDir)).filter((name) => name.startsWith("site_audit_report_") && name.endsWith(".json"))) {
+    const rel = `diagnosis/reports/${name}`;
+    const report = await readJson<SiteAuditReport>(path.join(reportDir, name));
+    checked.push(rel);
+    if (!validators.siteAuditReport(report)) errors.push(...ajvErrors(`${rel}:`, validators.siteAuditReport.errors));
+    if (report.composite_score !== null) errors.push(`${rel}: site-audit report must not set a composite score`);
+    if (!siteAudits.has(report.audit_id)) errors.push(`${rel}: site-audit result ${report.audit_id} not found`);
+    siteReports.set(report.report_id, report);
+  }
+  const siteGate = manifest.gates?.site_audit;
+  if (siteGate?.status === "confirmed") {
+    const report = siteReports.get(siteGate.report_id);
+    if (!report || report.status !== "confirmed") errors.push("manifest site_audit gate references a missing or unconfirmed report");
+    if (siteGate.fact_snapshot_id !== manifest.gates?.clean?.fact_snapshot_id) errors.push("manifest site_audit gate references a stale fact snapshot");
+    const gapPath = path.join(diagnosisRoot, "gaps", `${siteGate.report_id}.json`);
+    if (!(await pathExists(gapPath))) errors.push("confirmed site-audit gaps artifact is missing");
   }
   const gate = manifest.gates?.diagnose;
   if (gate?.status === "confirmed") {

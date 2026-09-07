@@ -23,7 +23,7 @@ description: >
 | 阶段 | 要解决的问题 | 必读 reference | 当前状态 | 完成标志 |
 |---|---|---|---|---|
 | 1 企业事实清洗 | 原始 Excel/Word/图片里有哪些可信企业事实 | `clean-enterprise.md` | 已实现 | confirmed `fact_snapshot_id` |
-| 2 基线诊断 | AI 当前是否理解、提及、推荐企业 | `diagnose-baseline.md` | 已实现（API + 人工录入） | confirmed diagnosis run/report |
+| 2 基线诊断 | AI 当前是否理解、提及、推荐企业；可选检查自有官网是否可被爬虫读取 | `diagnose-baseline.md` | 已实现（API + 人工录入 + 官网技术审计） | confirmed diagnosis run/report；官网审计为可选补充闸门 |
 | 3 需求场景库 | 谁为什么问、怎样问、企业凭什么回答 | `build-demand-scenarios.md` | 已实现 | confirmed scenario library version |
 | 4 内容规划 | 哪些场景变成 FAQ、选题、Prompt 和生产任务 | `plan-content.md` | 已实现 | confirmed content plan version |
 | 5 文章生成 | 如何依据任务与事实生成草稿 | `generate-articles.md` | 已实现 | article `draft` |
@@ -36,6 +36,7 @@ description: >
 
 - 用户说“清洗、建知识库、validate、onboard” → 阶段 1。
 - 用户说“诊断、生成诊断报告、看 AI 是否推荐” → 先确认阶段 1 已完成，再进入阶段 2。
+- 用户说“官网诊断、站点审计、爬虫能不能读官网” → 阶段 2 的 site-audit；只有自有官网才采集，店铺页跳过。
 - 用户说“关键词、场景词、用户会怎么问、画像、转换/转化目标” → 先检查诊断 gate，再进入阶段 3。
 - 用户说“选题、FAQ、Prompt、写作计划、配额” → 阶段 4。
 - 用户说“写文章、今日发文” → 阶段 5；生成后进入阶段 6，不直接发布。

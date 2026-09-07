@@ -8,6 +8,9 @@ export { ControlledManualAdapter, createDiagnosisRun, ingestManualProbes, ingest
 export { loadProbePlatforms, runConfiguredApiProbes } from "./lib/diagnosis-api.js";
 export { calculateMetrics, generateDiagnosisReport, confirmDiagnosisReport, diagnosisGapInput } from "./lib/diagnosis-report.js";
 export { validateDiagnosis } from "./lib/diagnosis-validate.js";
+export { classifyPublicPresence, classifyPublicUrl, normalizeAndValidateWebsiteUrl } from "./lib/site-audit-url.js";
+export { collectSiteAudit } from "./lib/site-audit-collect.js";
+export { confirmSiteAuditReport, generateSiteAuditReport, runSiteAudit, siteAuditGapInput } from "./lib/site-audit-report.js";
 export { importLegacyDiagnosis } from "./lib/diagnosis-legacy.js";
 export { importLegacyKeywords, generateScenarioDraft, reviewScenario, approveReadyScenarios, reviewEvidenceGap, overrideScenarioPriority, reviewMergeSuggestion, confirmScenarioLibrary, reviseScenarioLibrary, scenarioLibraryInput, normalizeScenarioText, semanticSuggestions } from "./lib/scenario-strategy.js";
 export { validateScenarioStrategy } from "./lib/scenario-validate.js";

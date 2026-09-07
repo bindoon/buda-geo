@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-site-audit-report",
+  "type": "object",
+  "required": ["schema_version", "report_id", "app_id", "project_name", "fact_snapshot_id", "audit_id", "generated_at", "status", "confirmed_at", "target_url", "composite_score", "data_quality", "red_cards_triggered", "checklist", "gaps", "limitations", "result_path"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "report_id": { "type": "string", "pattern": "^site_audit_report_" },
+    "app_id": { "type": "string" },
+    "project_name": { "type": "string" },
+    "fact_snapshot_id": { "type": "string", "pattern": "^fact_snapshot_" },
+    "audit_id": { "type": "string", "pattern": "^site_audit_" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["review_required", "confirmed"] },
+    "confirmed_at": { "type": ["string", "null"], "format": "date-time" },
+    "target_url": { "type": "string" },
+    "composite_score": { "type": "null" },
+    "data_quality": { "type": "object" },
+    "red_cards_triggered": { "type": "array", "items": { "type": "string" } },
+    "checklist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "dimension", "label", "status", "observed"],
+        "properties": {
+          "id": { "type": "string" },
+          "dimension": { "enum": ["access", "render", "structure", "content", "entity"] },
+          "label": { "type": "string" },
+          "status": { "enum": ["pass", "warn", "fail", "undetected"] },
+          "observed": { "type": "string" }
+        }
+      }
+    },
+    "gaps": { "type": "array", "items": { "$ref": "geo-diagnosis-gap" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "result_path": { "type": "string", "pattern": "^diagnosis/site-audits/" }
+  },
+  "additionalProperties": false
+}

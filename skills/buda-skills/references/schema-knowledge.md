@@ -80,7 +80,9 @@ source / facts 是事实权威层；baseinfo / profile / skus 是便于人和下
 - `clean_ready`: 已由人确认且存在 `fact_snapshot_id`。
 - `missing[]`: `block` / `recommend` / `optional`。
 
-无客服记录为 recommend。只有 `confirm-clean` 可生成 snapshot 并将 clean 置为 confirmed。
+无客服记录为 recommend。只有店铺、没有自有官网时，`owned_website` 为 optional，不阻断清洗。只有 `confirm-clean` 可生成 snapshot 并将 clean 置为 confirmed。
+
+官网技术审计产物在 `diagnosis/site-audits/` 与 `diagnosis/reports/site_audit_report_*`；确认后的 site_* 缺口写入 `diagnosis/gaps/`。它不改企业事实，也不替代 probe 报告。
 
 ## 普通用户确认入口
 

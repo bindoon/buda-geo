@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "geo-diagnosis-site-audit",
+  "type": "object",
+  "required": ["schema_version", "audit_id", "app_id", "fact_snapshot_id", "collected_at", "collector_version", "method", "presence", "request", "meta", "data_quality", "red_card_facts", "summary", "access", "render", "structure", "content", "entity", "pages"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "audit_id": { "type": "string", "pattern": "^site_audit_" },
+    "app_id": { "type": "string" },
+    "fact_snapshot_id": { "type": "string", "pattern": "^fact_snapshot_" },
+    "collected_at": { "type": "string", "format": "date-time" },
+    "collector_version": { "const": "site-audit-v1" },
+    "method": { "type": "string" },
+    "presence": { "type": "object" },
+    "request": {
+      "type": "object",
+      "required": ["url", "brand", "sample_pages", "url_override"],
+      "properties": {
+        "url": { "type": "string" },
+        "brand": { "type": "string" },
+        "sample_pages": { "type": "integer", "minimum": 5, "maximum": 30 },
+        "url_override": { "type": "boolean" }
+      }
+    },
+    "meta": { "type": "object" },
+    "data_quality": {
+      "type": "object",
+      "required": ["reliable", "warnings", "homepage_challenge", "homepage_challenge_marker"],
+      "properties": {
+        "reliable": { "type": "boolean" },
+        "warnings": { "type": "array", "items": { "type": "string" } },
+        "homepage_challenge": { "type": "boolean" },
+        "homepage_challenge_marker": { "type": "string" }
+      }
+    },
+    "red_card_facts": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": ["red_cards_triggered", "scoring_note"],
+      "properties": {
+        "home_status": { "type": "integer" },
+        "home_internal_links": { "type": "integer" },
+        "sitemap_present": { "type": "boolean" },
+        "blocked_ai_bots": { "type": "array", "items": { "type": "string" } },
+        "schema_types": { "type": "array", "items": { "type": "string" } },
+        "csr_heuristic": { "type": "boolean" },
+        "llms_txt_present": { "type": "boolean" },
+        "red_cards_triggered": { "type": "array", "items": { "type": "string" } },
+        "scoring_note": { "type": "string" }
+      }
+    },
+    "access": { "type": "object" },
+    "render": {
+      "type": "object",
+      "required": ["available", "method", "reason", "csr_suspected_pages"],
+      "properties": {
+        "available": { "type": "boolean" },
+        "method": { "const": "html_heuristic_v1" },
+        "reason": { "type": "string" },
+        "csr_suspected_pages": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "structure": { "type": "object" },
+    "content": { "type": "object" },
+    "entity": { "type": "object" },
+    "pages": { "type": "array", "items": { "type": "object" } }
+  },
+  "additionalProperties": false
+}
