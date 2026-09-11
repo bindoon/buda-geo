@@ -50,6 +50,7 @@ projects/*
 !projects/registry.json
 !projects/知鱼/
 !projects/知鱼/**
+**/.DS_Store
 
 # Raw inputs, local assets, and generated articles stay out of git
 projects/*/inputs
