@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "attempt_id": "publish_attempt_f22fca18ebb4bc7b",
+  "plan_id": "publish_plan_4df77ec89f46c976",
+  "item_id": "publish_item_7844901663487770",
+  "idempotency_key": "publish_key_0b964c4d34a1131d",
+  "ordinal": 1,
+  "mode": "manual",
+  "status": "skipped",
+  "recorded_at": "2026-09-11T07:51:43Z",
+  "recorded_by": "operator",
+  "external_url": null,
+  "external_id": null,
+  "evidence_path": null,
+  "error": null,
+  "receipt_id": "publish_receipt_f49091e85c0daff0",
+  "article_id": "article_35bb9f5ebd5f0900",
+  "body_sha256": "da2c0ceba140feb3b344a550113040ab6989d3630cd9c5504e254c193969c09f",
+  "destination_id": "destination_social_manual"
+}

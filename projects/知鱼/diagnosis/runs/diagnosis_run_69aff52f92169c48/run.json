@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "app_id": "zhiyu_ai_hk",
+  "fact_snapshot_id": "fact_snapshot_7c19e04928e8cc09",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "created_at": "2026-08-07T13:00:06Z",
+  "status": "complete",
+  "requested_platforms": [
+    "WebSearch"
+  ],
+  "probe_ids": [
+    "probe_5c37c4b2ec893c63",
+    "probe_fd25c54b695435ea",
+    "probe_2ed0289591a9f505",
+    "probe_ce687cc97c6e44ac",
+    "probe_1feb278edc1a8585",
+    "probe_5578e66c7993dc56",
+    "probe_95bcf3d6f5111124",
+    "probe_f47251c19b134e4c",
+    "probe_979e8a2715fd9a79",
+    "probe_d2865e9173f9a666",
+    "probe_a93a0afc8c4e9a78",
+    "probe_cdc0431c2d866cad",
+    "probe_947e45175c6d642d",
+    "probe_9bfb33116564e0ce",
+    "probe_8d597a767231b8cf",
+    "probe_40a11794104d45d6",
+    "probe_ca7a9e32d1b675b3",
+    "probe_4abee8873c29f2ea",
+    "probe_dcd210605760eccd"
+  ]
+}

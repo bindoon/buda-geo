@@ -1,0 +1,99 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>知鱼 官网技术审计</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f5f7fb;margin:0}.wrap{max-width:1100px;margin:0 auto;padding:36px 22px}.hero,.card{background:#fff;border:1px solid #dfe5ef;border-radius:14px;padding:24px;margin-bottom:18px}.hero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.metric{background:#f8fafc;border-radius:10px;padding:16px}.metric b{display:block;font-size:1.35rem;color:#0f766e;margin-top:5px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid #e5e7eb;vertical-align:top}th{background:#f8fafc}@media(max-width:700px){.wrap{padding:16px 10px}.card{overflow:auto}}</style></head><body><main class="wrap"><section class="hero"><h1>知鱼 · 官网技术审计</h1><p>https://www.zhiyu.hk/ · 2026-09-07T01:49:20Z</p><p>只描述本次采样，不设综合分，不替代 AI 平台探测。</p></section><section class="card"><h2>红牌与质量</h2><div class="grid"><div class="metric">采集可靠<b>是</b></div><div class="metric">红牌<b>0</b></div><div class="metric">缺口<b>2</b></div></div></section><section class="card"><h2>检查清单</h2><table><thead><tr><th>维度</th><th>检查项</th><th>状态</th><th>观察</th></tr></thead><tbody><tr><td>access</td><td>HTTPS 可达</td><td>pass</td><td>首页最终地址 https://www.zhiyu.hk/</td></tr><tr><td>access</td><td>robots 未全站禁止</td><td>pass</td><td>未发现对 * 的整站禁止</td></tr><tr><td>access</td><td>主流 AI 爬虫可读取首页</td><td>pass</td><td>采样 UA 均拿到可读首页</td></tr><tr><td>access</td><td>sitemap 或足够首页链接</td><td>warn</td><td>sitemap=无，首页站内链接 11 条</td></tr><tr><td>render</td><td>原始 HTML 不是空壳</td><td>undetected</td><td>本地一期不做 Playwright 渲染；仅在原始 HTML 上做 CSR 启发式</td></tr><tr><td>structure</td><td>Organization 结构化数据</td><td>pass</td><td>采样的 11 个页面中 11 页含 Organization</td></tr><tr><td>structure</td><td>FAQPage（可选）</td><td>pass</td><td>采样的 11 个页面中 3 页含 FAQPage</td></tr><tr><td>content</td><td>采样页有 H1</td><td>warn</td><td>采样的 11 个页面中 10 页缺 H1</td></tr><tr><td>content</td><td>采样页正文可答</td><td>pass</td><td>正文中位数 1128 字</td></tr><tr><td>entity</td><td>品牌出现在 title/H1</td><td>pass</td><td>采样 title/H1 出现「知鱼」</td></tr><tr><td>access</td><td>llms.txt（只检查，不计分）</td><td>undetected</td><td>存在 https://www.zhiyu.hk/llms.txt</td></tr></tbody></table></section><section class="card"><h2>缺口</h2><h3>LOW · site_render</h3><p>未做浏览器渲染检测，不能证明页面渲染后一定可被爬虫看到。</p><p>建议调查：若官网是 SPA/模板站，应用无 JS 抓取核对正文；不要把未检测写成已通过。</p><h3>MEDIUM · site_content</h3><p>采样的 11 个页面中有 10 页缺少 H1。</p><p>建议调查：给采样页补唯一、可读的 H1，避免标题重复。</p></section><section class="card"><h2>限制</h2><ul><li>结论只覆盖本次采样的 11 个页面，不能写成全站结论。</li><li>未采到的数据写「未检测」，不得用行业均值补齐。</li><li>本报告不替代种子题 + 多平台 probe 的可见度诊断。</li><li>浏览器渲染未执行；CSR 红牌仅在原始 HTML 启发式成立时触发。</li><li>llms.txt 只检查，不计分，不列为优先投入。</li><li>首页正文可采样，内容与结构化结论可以使用。</li></ul><details><summary>机器可读 Markdown</summary><pre># 知鱼 · 官网技术审计报告
+
+&gt; 本报告只描述本次对自有官网的客观采样，不替代 AI 平台 probe 诊断，也不设综合分。
+
+- 报告时间：2026-09-07T01:49:20Z
+- 事实快照：`fact_snapshot_7c19e04928e8cc09`
+- 审计编号：`site_audit_a448e10561410e40`
+- 目标网址：https://www.zhiyu.hk/
+- 最终首页：https://www.zhiyu.hk/
+- 状态：confirmed
+- 综合分：未设置。红牌只作为缺口，不当总分。
+
+## 数据质量
+
+- 采集是否可靠：是
+- 采样页：11（成功 11）
+- 警告：发现的可采样 URL 不足：计划 12 页，实际 11 页
+- 警告：浏览器渲染未执行；CSR 仅按原始 HTML 启发式判断，不把未检测写成通过。
+- 警告：已检查 llms.txt，只记录有无，不计入红牌或优先整改。
+
+## 红牌事实
+
+本次采样未触发红牌。
+
+## 检查清单
+
+| 维度 | 检查项 | 状态 | 观察 |
+|---|---|---|---|
+| access | HTTPS 可达 | pass | 首页最终地址 https://www.zhiyu.hk/ |
+| access | robots 未全站禁止 | pass | 未发现对 * 的整站禁止 |
+| access | 主流 AI 爬虫可读取首页 | pass | 采样 UA 均拿到可读首页 |
+| access | sitemap 或足够首页链接 | warn | sitemap=无，首页站内链接 11 条 |
+| render | 原始 HTML 不是空壳 | undetected | 本地一期不做 Playwright 渲染；仅在原始 HTML 上做 CSR 启发式 |
+| structure | Organization 结构化数据 | pass | 采样的 11 个页面中 11 页含 Organization |
+| structure | FAQPage（可选） | pass | 采样的 11 个页面中 3 页含 FAQPage |
+| content | 采样页有 H1 | warn | 采样的 11 个页面中 10 页缺 H1 |
+| content | 采样页正文可答 | pass | 正文中位数 1128 字 |
+| entity | 品牌出现在 title/H1 | pass | 采样 title/H1 出现「知鱼」 |
+| access | llms.txt（只检查，不计分） | undetected | 存在 https://www.zhiyu.hk/llms.txt |
+
+## AI 爬虫实测
+
+| Bot | 页面 | 状态码 | 可见字数 | 是否被拦 |
+|---|---|---:|---:|---|
+| GPTBot | 首页 | 200 | 1751 | 否 |
+| GPTBot | 内页 | 200 | 1751 | 否 |
+| ChatGPT-User | 首页 | 200 | 1751 | 否 |
+| ChatGPT-User | 内页 | 200 | 1751 | 否 |
+| OAI-SearchBot | 首页 | 200 | 1751 | 否 |
+| OAI-SearchBot | 内页 | 200 | 1751 | 否 |
+| ClaudeBot | 首页 | 200 | 1751 | 否 |
+| ClaudeBot | 内页 | 200 | 1751 | 否 |
+| Claude-SearchBot | 首页 | 200 | 1751 | 否 |
+| Claude-SearchBot | 内页 | 200 | 1751 | 否 |
+| PerplexityBot | 首页 | 200 | 1751 | 否 |
+| PerplexityBot | 内页 | 200 | 1751 | 否 |
+| Bytespider | 首页 | 200 | 1751 | 否 |
+| Bytespider | 内页 | 200 | 1751 | 否 |
+| Google-Extended | 首页 | 200 | 1751 | 否 |
+| Google-Extended | 内页 | 200 | 1751 | 否 |
+
+## 结构化数据与内容
+
+- 采样的 11 个页面中见到的 Schema 类型：Answer、Blog、BlogPosting、BreadcrumbList、CollectionPage、DefinedTerm、DefinedTermSet、FAQPage、ImageObject、ItemList、ListItem、Organization、Person、Question、UseAction、WebApplication、WebPage、WebSite
+- Organization 页：11
+- FAQPage 页：3
+- 缺 H1 页：10
+- 正文中位数：1128 字
+
+## 结构化缺口
+
+### LOW · site_render
+
+未做浏览器渲染检测，不能证明页面渲染后一定可被爬虫看到。
+
+建议调查：若官网是 SPA/模板站，应用无 JS 抓取核对正文；不要把未检测写成已通过。
+
+### MEDIUM · site_content
+
+采样的 11 个页面中有 10 页缺少 H1。
+
+建议调查：给采样页补唯一、可读的 H1，避免标题重复。
+
+## 需人工核验
+
+- 页脚公司全称与工商主体是否一致
+- 各页 NAP 是否一致
+- 外部平台实体资料是否一致
+- 资质和案例是否可核验
+
+## 限制
+
+- 结论只覆盖本次采样的 11 个页面，不能写成全站结论。
+- 未采到的数据写「未检测」，不得用行业均值补齐。
+- 本报告不替代种子题 + 多平台 probe 的可见度诊断。
+- 浏览器渲染未执行；CSR 红牌仅在原始 HTML 启发式成立时触发。
+- llms.txt 只检查，不计分，不列为优先投入。
+- 首页正文可采样，内容与结构化结论可以使用。
+</pre></details></section></main></body></html>

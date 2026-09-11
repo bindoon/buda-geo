@@ -1,0 +1,378 @@
+{
+  "app_id": "zhiyu_ai_hk",
+  "generated_at": "2026-08-07T12:52:27Z",
+  "inputs_hash": "c0056b7840bfa9281918e9be039a0aa64df2769687ecc0a7626bffe3d9863e5a",
+  "facts_hash": "ce99bcda5ea7c0b2dd10d3db40b7937576d45e57e0cd34d5967ae21aa2ac18b6",
+  "subjects": [
+    {
+      "subject_id": "sub_company_06b33462452d1c42",
+      "type": "company",
+      "name": "知鱼（ZhiYu）",
+      "parent_subject_id": null,
+      "source_refs": [
+        "src_149757445589fc6c",
+        "src_ab1993bbd131126e"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_brand_e18a54bf67088ead",
+      "type": "brand",
+      "name": "知鱼",
+      "parent_subject_id": "sub_company_06b33462452d1c42",
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "review_status": "confirmed"
+    },
+    {
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "type": "product",
+      "name": "知鱼命理AI",
+      "parent_subject_id": "sub_company_06b33462452d1c42",
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "review_status": "confirmed"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact_0ab97039e8596770",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "company_name",
+      "value": "知鱼（ZhiYu）",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_da3d556f3b2d7832",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "company_short_name",
+      "value": "知鱼",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_da8f0c766e334866",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "website_or_shop_url",
+      "value": "https://zhiyu.hk",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "rejected",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_3659aa4946123eec",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "region",
+      "value": "地区",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "rejected",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d0a39bad1f3dae3a",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "conversion",
+      "value": {
+        "phone": "",
+        "shop_url": "https://zhiyu.hk"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "restricted"
+    },
+    {
+      "fact_id": "fact_354009bdaa29f8af",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "intro",
+      "value": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+      "unit": null,
+      "source_refs": [
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d2bb69e415440f50",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "products_services",
+      "value": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+      "unit": null,
+      "source_refs": [
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_94de6f7175d8f613",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "advantages",
+      "value": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+      "unit": null,
+      "source_refs": [
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_86b1751053d95a7c",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "trust",
+      "value": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+      "unit": null,
+      "source_refs": [
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_9cb815a23b7858dd",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "pain_points",
+      "value": [
+        "市面命理类 AI 常见排盘靠猜，结果难以核验",
+        "西方测评框架对中国用户不够贴合",
+        "焦虑上升需要自我认知工具，但不愿陷入迷信依赖",
+        "农历与真太阳时门槛高，普通人难以自行处理"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0280ffc428885bcd",
+      "subject_id": "sub_brand_e18a54bf67088ead",
+      "field": "name",
+      "value": "知鱼",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "extracted",
+      "confidence": 0.95,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_0245b72d7d499d87",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "name",
+      "value": "知鱼命理AI",
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.9,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_d3884a88aac534c1",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "category",
+      "value": "东方命理自我认知工具",
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_507fbf776ea8478a",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "selling_points",
+      "value": [
+        "先调用真实排盘工具再解读，避免排盘靠猜",
+        "思考与工具调用过程对用户可见",
+        "支持农历转阳历与真太阳时校正后排盘",
+        "八字与紫微可叠加印证，并具备对话记忆"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_461ab2a049b5735a",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "attributes",
+      "value": {
+        "product_type": "SaaS / AI Agent",
+        "core_modules": "六爻问事、知鱼AI顾问、八字原局、档案合盘",
+        "access_urls": "https://zhiyu.hk ; https://app.zhiyu.hk",
+        "membership_price": "月卡 ¥99；年卡 ¥599"
+      },
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.7,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_7242717f4786405c",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "capabilities",
+      "value": [
+        "六爻问事解读",
+        "八字原局与流年解读",
+        "命理图谱记忆与情绪陪伴对话",
+        "农历/真太阳时自动处理",
+        "合盘与档案连续对话"
+      ],
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "inferred",
+      "confidence": 0.72,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_6423b84f4446063d",
+      "subject_id": "sub_product_4f54dcb66ace3aa8",
+      "field": "is_main",
+      "value": true,
+      "unit": null,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "derivation": "operator",
+      "confidence": 0.9,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_b852f5a695ab809f",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "website_or_shop_url",
+      "value": "https://app.zhiyu.hk",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "operator",
+      "confidence": 0.8,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    },
+    {
+      "fact_id": "fact_97d33566b963d5a2",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "region",
+      "value": "中国香港 / 线上",
+      "unit": null,
+      "source_refs": [
+        "src_149757445589fc6c"
+      ],
+      "derivation": "operator",
+      "confidence": 0.8,
+      "review_status": "confirmed",
+      "disclosure_level": "public"
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "conflict_f3c9cbbb0048281f",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "website_or_shop_url",
+      "candidate_fact_ids": [
+        "fact_da8f0c766e334866",
+        "fact_b852f5a695ab809f"
+      ],
+      "severity": "block",
+      "status": "resolved",
+      "resolution": "产品应用入口；SEO 主站为 https://zhiyu.hk。支付中转域名不写入公开名片。"
+    },
+    {
+      "conflict_id": "conflict_5782f7c7dc17271b",
+      "subject_id": "sub_company_06b33462452d1c42",
+      "field": "region",
+      "candidate_fact_ids": [
+        "fact_3659aa4946123eec",
+        "fact_97d33566b963d5a2"
+      ],
+      "severity": "block",
+      "status": "resolved",
+      "resolution": "主站域名与产品定位为线上服务；线下地址未提供。"
+    }
+  ]
+}

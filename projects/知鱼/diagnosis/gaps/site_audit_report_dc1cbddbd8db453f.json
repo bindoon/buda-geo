@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "report_id": "site_audit_report_dc1cbddbd8db453f",
+  "audit_id": "site_audit_a448e10561410e40",
+  "status": "confirmed",
+  "confirmed_at": "2026-09-07T01:56:45Z",
+  "gaps": [
+    {
+      "gap_id": "gap_b05cc80643ca38a0",
+      "kind": "site_render",
+      "severity": "low",
+      "observed_issue": "未做浏览器渲染检测，不能证明页面渲染后一定可被爬虫看到。",
+      "question_ids": [],
+      "probe_ids": [],
+      "platforms": [],
+      "competitors": [],
+      "sources": [
+        "https://www.zhiyu.hk/"
+      ],
+      "fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_da3d556f3b2d7832",
+        "fact_da8f0c766e334866",
+        "fact_b852f5a695ab809f"
+      ],
+      "recommended_investigation": "若官网是 SPA/模板站，应用无 JS 抓取核对正文；不要把未检测写成已通过。"
+    },
+    {
+      "gap_id": "gap_f5ee2130abd2d2e0",
+      "kind": "site_content",
+      "severity": "medium",
+      "observed_issue": "采样的 11 个页面中有 10 页缺少 H1。",
+      "question_ids": [],
+      "probe_ids": [],
+      "platforms": [],
+      "competitors": [],
+      "sources": [
+        "https://www.zhiyu.hk/tools",
+        "https://www.zhiyu.hk/glossary",
+        "https://www.zhiyu.hk/jiazi",
+        "https://www.zhiyu.hk/blog",
+        "https://www.zhiyu.hk/tools/bazi",
+        "https://www.zhiyu.hk/tools/ziwei",
+        "https://www.zhiyu.hk/tools/liuyao",
+        "https://www.zhiyu.hk/blog/meaning-of-life-ten-year-search",
+        "https://www.zhiyu.hk/blog/zhiyu-launch",
+        "https://www.zhiyu.hk/blog/qiwulun-dream"
+      ],
+      "fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_da3d556f3b2d7832",
+        "fact_da8f0c766e334866",
+        "fact_b852f5a695ab809f"
+      ],
+      "recommended_investigation": "给采样页补唯一、可读的 H1，避免标题重复。"
+    }
+  ]
+}

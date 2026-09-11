@@ -45,10 +45,16 @@ venv/
 # docs/各GEO平台资料/平台摸底/*-raw/
 # docs/各GEO平台资料/平台摸底/*-raw-clean/
 
+# Client workspaces stay on disk; only 知鱼 is versioned
+projects/*
+!projects/registry.json
+!projects/知鱼/
+!projects/知鱼/**
+
+# Raw inputs, local assets, and generated articles stay out of git
 projects/*/inputs
 projects/*/assets
 projects/*/articles
-projects/知鱼
 
 openspec
 docs/**/*.pptx

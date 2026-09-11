@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "app_id": "zhiyu_ai_hk",
+  "updated_at": "2026-09-11T07:50:00Z",
+  "destinations": [
+    {
+      "destination_id": "destination_social_manual",
+      "name": "知鱼已评级自媒体（人工发布）",
+      "channel": "social",
+      "authority_tier": "official",
+      "mode": "manual",
+      "enabled": true,
+      "homepage_url": "https://zhiyu.hk",
+      "notes": "账号壳尚未录入；本目标只走人工投放 + publish record。密码不得写入本文件。",
+      "adapter": null
+    },
+    {
+      "destination_id": "destination_media_manual",
+      "name": "知鱼已评级媒体（人工/付费投放）",
+      "channel": "media",
+      "authority_tier": "authoritative",
+      "mode": "manual",
+      "enabled": true,
+      "homepage_url": "https://zhiyu.hk",
+      "notes": "无自动媒体 API key 时用人工回执；不预写 published。",
+      "adapter": null
+    },
+    {
+      "destination_id": "destination_b2b_manual",
+      "name": "知鱼已评级 B2B 平台（人工）",
+      "channel": "b2b",
+      "authority_tier": "authoritative",
+      "mode": "manual",
+      "enabled": false,
+      "homepage_url": null,
+      "notes": "本期链路不启用；有对应稿件与账号后再打开。",
+      "adapter": null
+    },
+    {
+      "destination_id": "destination_social_adapter",
+      "name": "自媒体适配器预留",
+      "channel": "social",
+      "authority_tier": "official",
+      "mode": "adapter",
+      "enabled": false,
+      "homepage_url": "https://zhiyu.hk",
+      "notes": "未实现/未审核具体 adapter，不得自动发布。只引用环境变量名。",
+      "adapter": {
+        "adapter": "reserved-http-adapter",
+        "endpoint_env": "SOCIAL_PUBLISH_ENDPOINT",
+        "token_env": "SOCIAL_PUBLISH_TOKEN"
+      }
+    },
+    {
+      "destination_id": "destination_media_adapter",
+      "name": "权威媒体适配器预留",
+      "channel": "media",
+      "authority_tier": "authoritative",
+      "mode": "adapter",
+      "enabled": false,
+      "homepage_url": null,
+      "notes": "未实现/未审核具体 adapter，不得自动发布。",
+      "adapter": {
+        "adapter": "reserved-http-adapter",
+        "endpoint_env": "MEDIA_PUBLISH_ENDPOINT",
+        "token_env": "MEDIA_PUBLISH_TOKEN"
+      }
+    },
+    {
+      "destination_id": "destination_site_adapter",
+      "name": "知鱼官网适配器预留",
+      "channel": "site",
+      "authority_tier": "official",
+      "mode": "adapter",
+      "enabled": false,
+      "homepage_url": "https://www.zhiyu.hk/",
+      "notes": "官网增强信源预留；接入前实现受控 adapter。",
+      "adapter": {
+        "adapter": "reserved-http-adapter",
+        "endpoint_env": "SITE_PUBLISH_ENDPOINT",
+        "token_env": "SITE_PUBLISH_TOKEN"
+      }
+    }
+  ]
+}

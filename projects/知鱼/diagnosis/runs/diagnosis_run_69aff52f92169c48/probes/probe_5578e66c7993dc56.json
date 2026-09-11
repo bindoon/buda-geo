@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_5578e66c7993dc56",
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "question_id": "question_13d499aed9db52a9",
+  "question_text": "知鱼主要服务哪些用户和使用场景？",
+  "question_family": "brand_recognition",
+  "platform": "WebSearch",
+  "provider": "cursor_web_search",
+  "adapter_kind": "manual",
+  "model": "web_search",
+  "attempted_at": "2026-08-07T13:01:24Z",
+  "status": "success",
+  "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_5578e66c7993dc56.md",
+  "raw_content_hash": "c9fafe548d6ee189f30275955270ae00b01d186b2fd2aa3c9dcafb4a258cd2fe",
+  "error": null,
+  "analysis": {
+    "schema_version": 1,
+    "target_mentioned": false,
+    "actively_recommended": false,
+    "top_n_rank": null,
+    "competitors": [
+      "知鱼智联"
+    ],
+    "citations": [],
+    "negative_risk_mentioned": false,
+    "sentiment": "unknown",
+    "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+  },
+  "latest_analysis_revision_id": "analysis_revision_e87b456d2f3295a4"
+}

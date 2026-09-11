@@ -1,0 +1,1221 @@
+{
+  "schema_version": 1,
+  "scenario_library_id": "scenario_library_a4f3ddb3c407ac41",
+  "app_id": "zhiyu_ai_hk",
+  "fact_snapshot_id": "fact_snapshot_7c19e04928e8cc09",
+  "diagnosis_report_id": "diagnosis_report_ec40caa8c9af4055",
+  "diagnosis_gap_path": "diagnosis/gaps/diagnosis_report_ec40caa8c9af4055.json",
+  "lifecycle": "confirmed",
+  "version": 1,
+  "based_on_scenario_library_id": null,
+  "created_at": "2026-08-07T13:05:04Z",
+  "confirmed_at": "2026-08-07T13:07:44Z",
+  "scenarios": [
+    {
+      "scenario_id": "scenario_4e179e74beeb029d",
+      "name": "澄清知鱼品牌定位与「不算命、帮用户看清自己」的产品主张",
+      "target_customer": "第一次听说「知鱼」的中文用户，常被同名品牌或算命软件干扰",
+      "customer_need": "澄清知鱼品牌定位与「不算命、帮用户看清自己」的产品主张",
+      "concerns": [
+        "与知鱼智联等同名主体混淆",
+        "是否宣传迷信或算命",
+        "公开可核验触点"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_cc76aba6e94a0b8e",
+          "text": "知鱼是做什么的？是算命软件还是自我认知工具？",
+          "normalized_text": "知鱼是做什么的是算命软件还是自我认知工具",
+          "facets": {
+            "wording_form": "comparison",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_0ab97039e8596770",
+            "fact_da3d556f3b2d7832",
+            "fact_354009bdaa29f8af",
+            "fact_d2bb69e415440f50",
+            "fact_94de6f7175d8f613",
+            "fact_b852f5a695ab809f"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_144736e923a4b29e",
+              "kind": "fact",
+              "ref_id": "fact_0ab97039e8596770",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼（ZhiYu）",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_531ee55894f68514",
+              "kind": "fact",
+              "ref_id": "fact_da3d556f3b2d7832",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_908e475839a0db7b",
+              "kind": "fact",
+              "ref_id": "fact_354009bdaa29f8af",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_24b5485b05ae7608",
+              "kind": "fact",
+              "ref_id": "fact_d2bb69e415440f50",
+              "path": null,
+              "original_bucket": null,
+              "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_3e09a276b1717a4e",
+              "kind": "fact",
+              "ref_id": "fact_94de6f7175d8f613",
+              "path": null,
+              "original_bucket": null,
+              "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+              "kind": "fact",
+              "ref_id": "fact_b852f5a695ab809f",
+              "path": null,
+              "original_bucket": null,
+              "text": "https://app.zhiyu.hk",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_94d938fa302da37b",
+              "kind": "operator",
+              "ref_id": "operator_input_ef15aeb6a5dc105f",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "知鱼是做什么的？是算命软件还是自我认知工具？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_da3d556f3b2d7832",
+        "fact_354009bdaa29f8af",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_b852f5a695ab809f"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_144736e923a4b29e",
+          "kind": "fact",
+          "ref_id": "fact_0ab97039e8596770",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼（ZhiYu）",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_531ee55894f68514",
+          "kind": "fact",
+          "ref_id": "fact_da3d556f3b2d7832",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_908e475839a0db7b",
+          "kind": "fact",
+          "ref_id": "fact_354009bdaa29f8af",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_24b5485b05ae7608",
+          "kind": "fact",
+          "ref_id": "fact_d2bb69e415440f50",
+          "path": null,
+          "original_bucket": null,
+          "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_3e09a276b1717a4e",
+          "kind": "fact",
+          "ref_id": "fact_94de6f7175d8f613",
+          "path": null,
+          "original_bucket": null,
+          "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+          "kind": "fact",
+          "ref_id": "fact_b852f5a695ab809f",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://app.zhiyu.hk",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_94d938fa302da37b",
+          "kind": "operator",
+          "ref_id": "operator_input_ef15aeb6a5dc105f",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "知鱼是做什么的？是算命软件还是自我认知工具？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "learn_more",
+        "label": "访问 https://zhiyu.hk / https://app.zhiyu.hk 了解产品",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 22,
+        "tier": "high",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": {
+          "score": 22,
+          "actor": "operator",
+          "reason": "诊断显示同名占位严重，品牌纠偏优先",
+          "at": "2026-08-07T13:05:08Z"
+        }
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    },
+    {
+      "scenario_id": "scenario_e956564fc9e0e131",
+      "name": "在品类比较中理解知鱼的适用场景与差异点",
+      "target_customer": "在比较命理AI/东方测评工具的个人用户",
+      "customer_need": "在品类比较中理解知鱼的适用场景与差异点",
+      "concerns": [
+        "排盘是否可核验",
+        "农历与真太阳时",
+        "是否制造迷信依赖",
+        "对话记忆与陪伴"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_930d917e66e1d85c",
+          "text": "有哪些靠谱的东方命理AI或自我认知工具？知鱼适合怎么比较？",
+          "normalized_text": "有哪些靠谱的东方命理ai或自我认知工具知鱼适合怎么比较",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_d2bb69e415440f50",
+            "fact_94de6f7175d8f613",
+            "fact_9cb815a23b7858dd",
+            "fact_0245b72d7d499d87",
+            "fact_d3884a88aac534c1",
+            "fact_507fbf776ea8478a",
+            "fact_7242717f4786405c"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_24b5485b05ae7608",
+              "kind": "fact",
+              "ref_id": "fact_d2bb69e415440f50",
+              "path": null,
+              "original_bucket": null,
+              "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_3e09a276b1717a4e",
+              "kind": "fact",
+              "ref_id": "fact_94de6f7175d8f613",
+              "path": null,
+              "original_bucket": null,
+              "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_74e802f7d1072830",
+              "kind": "fact",
+              "ref_id": "fact_9cb815a23b7858dd",
+              "path": null,
+              "original_bucket": null,
+              "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_79424857e5879e66",
+              "kind": "fact",
+              "ref_id": "fact_0245b72d7d499d87",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼命理AI",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_11dc82b3afe9a573",
+              "kind": "fact",
+              "ref_id": "fact_d3884a88aac534c1",
+              "path": null,
+              "original_bucket": null,
+              "text": "东方命理自我认知工具",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_7efd02078ade9807",
+              "kind": "fact",
+              "ref_id": "fact_507fbf776ea8478a",
+              "path": null,
+              "original_bucket": null,
+              "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_f9637fe3093c5e48",
+              "kind": "fact",
+              "ref_id": "fact_7242717f4786405c",
+              "path": null,
+              "original_bucket": null,
+              "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_585b6cc7cac62b3d",
+              "kind": "operator",
+              "ref_id": "operator_input_5117fd3222337a42",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "有哪些靠谱的东方命理AI或自我认知工具？知鱼适合怎么比较？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_9cb815a23b7858dd",
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_507fbf776ea8478a",
+        "fact_7242717f4786405c"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_24b5485b05ae7608",
+          "kind": "fact",
+          "ref_id": "fact_d2bb69e415440f50",
+          "path": null,
+          "original_bucket": null,
+          "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_3e09a276b1717a4e",
+          "kind": "fact",
+          "ref_id": "fact_94de6f7175d8f613",
+          "path": null,
+          "original_bucket": null,
+          "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_74e802f7d1072830",
+          "kind": "fact",
+          "ref_id": "fact_9cb815a23b7858dd",
+          "path": null,
+          "original_bucket": null,
+          "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_79424857e5879e66",
+          "kind": "fact",
+          "ref_id": "fact_0245b72d7d499d87",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼命理AI",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_11dc82b3afe9a573",
+          "kind": "fact",
+          "ref_id": "fact_d3884a88aac534c1",
+          "path": null,
+          "original_bucket": null,
+          "text": "东方命理自我认知工具",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_7efd02078ade9807",
+          "kind": "fact",
+          "ref_id": "fact_507fbf776ea8478a",
+          "path": null,
+          "original_bucket": null,
+          "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_f9637fe3093c5e48",
+          "kind": "fact",
+          "ref_id": "fact_7242717f4786405c",
+          "path": null,
+          "original_bucket": null,
+          "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_585b6cc7cac62b3d",
+          "kind": "operator",
+          "ref_id": "operator_input_5117fd3222337a42",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "有哪些靠谱的东方命理AI或自我认知工具？知鱼适合怎么比较？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "learn_more",
+        "label": "访问 https://zhiyu.hk / https://app.zhiyu.hk 了解产品",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 20,
+        "tier": "high",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": {
+          "score": 20,
+          "actor": "operator",
+          "reason": "品类题目前竞品占主导，需建立比较叙事",
+          "at": "2026-08-07T13:05:08Z"
+        }
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    },
+    {
+      "scenario_id": "scenario_59993d5e280bc76d",
+      "name": "弄清知鱼命理AI的核心模块与排盘/解读能力",
+      "target_customer": "已产生兴趣、想确认功能边界的试用意向用户",
+      "customer_need": "弄清知鱼命理AI的核心模块与排盘/解读能力",
+      "concerns": [
+        "六爻问事",
+        "八字原局与流年",
+        "农历转阳历与真太阳时",
+        "合盘与档案记忆",
+        "工具调用是否可见"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_42a010176b43fe41",
+          "text": "知鱼命理AI支持哪些核心功能？八字、六爻、合盘和真太阳时怎么处理？",
+          "normalized_text": "知鱼命理ai支持哪些核心功能八字六爻合盘和真太阳时怎么处理",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_d2bb69e415440f50",
+            "fact_0245b72d7d499d87",
+            "fact_507fbf776ea8478a",
+            "fact_461ab2a049b5735a",
+            "fact_7242717f4786405c",
+            "fact_6423b84f4446063d"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_24b5485b05ae7608",
+              "kind": "fact",
+              "ref_id": "fact_d2bb69e415440f50",
+              "path": null,
+              "original_bucket": null,
+              "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_79424857e5879e66",
+              "kind": "fact",
+              "ref_id": "fact_0245b72d7d499d87",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼命理AI",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_7efd02078ade9807",
+              "kind": "fact",
+              "ref_id": "fact_507fbf776ea8478a",
+              "path": null,
+              "original_bucket": null,
+              "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_41c83382fc4ff47b",
+              "kind": "fact",
+              "ref_id": "fact_461ab2a049b5735a",
+              "path": null,
+              "original_bucket": null,
+              "text": "SaaS / AI Agent；六爻问事、知鱼AI顾问、八字原局、档案合盘；https://zhiyu.hk ; https://app.zhiyu.hk；月卡 ¥99；年卡 ¥599",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_f9637fe3093c5e48",
+              "kind": "fact",
+              "ref_id": "fact_7242717f4786405c",
+              "path": null,
+              "original_bucket": null,
+              "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_5858170eeb5d58f6",
+              "kind": "fact",
+              "ref_id": "fact_6423b84f4446063d",
+              "path": null,
+              "original_bucket": null,
+              "text": "是",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_997f7509f52d51d6",
+              "kind": "operator",
+              "ref_id": "operator_input_85fef7a31e1a0f72",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "知鱼命理AI支持哪些核心功能？八字、六爻、合盘和真太阳时怎么处理？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_d2bb69e415440f50",
+        "fact_0245b72d7d499d87",
+        "fact_507fbf776ea8478a",
+        "fact_461ab2a049b5735a",
+        "fact_7242717f4786405c",
+        "fact_6423b84f4446063d"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_24b5485b05ae7608",
+          "kind": "fact",
+          "ref_id": "fact_d2bb69e415440f50",
+          "path": null,
+          "original_bucket": null,
+          "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_79424857e5879e66",
+          "kind": "fact",
+          "ref_id": "fact_0245b72d7d499d87",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼命理AI",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_7efd02078ade9807",
+          "kind": "fact",
+          "ref_id": "fact_507fbf776ea8478a",
+          "path": null,
+          "original_bucket": null,
+          "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_41c83382fc4ff47b",
+          "kind": "fact",
+          "ref_id": "fact_461ab2a049b5735a",
+          "path": null,
+          "original_bucket": null,
+          "text": "SaaS / AI Agent；六爻问事、知鱼AI顾问、八字原局、档案合盘；https://zhiyu.hk ; https://app.zhiyu.hk；月卡 ¥99；年卡 ¥599",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_f9637fe3093c5e48",
+          "kind": "fact",
+          "ref_id": "fact_7242717f4786405c",
+          "path": null,
+          "original_bucket": null,
+          "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_5858170eeb5d58f6",
+          "kind": "fact",
+          "ref_id": "fact_6423b84f4446063d",
+          "path": null,
+          "original_bucket": null,
+          "text": "是",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_997f7509f52d51d6",
+          "kind": "operator",
+          "ref_id": "operator_input_85fef7a31e1a0f72",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "知鱼命理AI支持哪些核心功能？八字、六爻、合盘和真太阳时怎么处理？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "learn_more",
+        "label": "访问 https://zhiyu.hk / https://app.zhiyu.hk 了解产品",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "medium",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    },
+    {
+      "scenario_id": "scenario_687877353b31ab6f",
+      "name": "核验知鱼是否可信任，以及公开可核对的依据",
+      "target_customer": "关注可信度与使用风险的谨慎用户",
+      "customer_need": "核验知鱼是否可信任，以及公开可核对的依据",
+      "concerns": [
+        "真实排盘 vs 排盘靠猜",
+        "用户反馈是否夸大",
+        "公开域名与产品入口",
+        "是否鼓励迷信依赖"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_a833c365b5a10d3e",
+          "text": "知鱼靠谱吗？相对其他命理AI有什么可核验依据？",
+          "normalized_text": "知鱼靠谱吗相对其他命理ai有什么可核验依据",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_0ab97039e8596770",
+            "fact_94de6f7175d8f613",
+            "fact_86b1751053d95a7c",
+            "fact_9cb815a23b7858dd",
+            "fact_507fbf776ea8478a",
+            "fact_b852f5a695ab809f"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_144736e923a4b29e",
+              "kind": "fact",
+              "ref_id": "fact_0ab97039e8596770",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼（ZhiYu）",
+              "derivation": "extracted"
+            },
+            {
+              "source_ref_id": "scenario_source_3e09a276b1717a4e",
+              "kind": "fact",
+              "ref_id": "fact_94de6f7175d8f613",
+              "path": null,
+              "original_bucket": null,
+              "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_4d0c8a12158de6fd",
+              "kind": "fact",
+              "ref_id": "fact_86b1751053d95a7c",
+              "path": null,
+              "original_bucket": null,
+              "text": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_74e802f7d1072830",
+              "kind": "fact",
+              "ref_id": "fact_9cb815a23b7858dd",
+              "path": null,
+              "original_bucket": null,
+              "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_7efd02078ade9807",
+              "kind": "fact",
+              "ref_id": "fact_507fbf776ea8478a",
+              "path": null,
+              "original_bucket": null,
+              "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+              "kind": "fact",
+              "ref_id": "fact_b852f5a695ab809f",
+              "path": null,
+              "original_bucket": null,
+              "text": "https://app.zhiyu.hk",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_65ce09698a144666",
+              "kind": "operator",
+              "ref_id": "operator_input_196dc82cd1f55f19",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "知鱼靠谱吗？相对其他命理AI有什么可核验依据？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_9cb815a23b7858dd",
+        "fact_507fbf776ea8478a",
+        "fact_b852f5a695ab809f"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_144736e923a4b29e",
+          "kind": "fact",
+          "ref_id": "fact_0ab97039e8596770",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼（ZhiYu）",
+          "derivation": "extracted"
+        },
+        {
+          "source_ref_id": "scenario_source_3e09a276b1717a4e",
+          "kind": "fact",
+          "ref_id": "fact_94de6f7175d8f613",
+          "path": null,
+          "original_bucket": null,
+          "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_4d0c8a12158de6fd",
+          "kind": "fact",
+          "ref_id": "fact_86b1751053d95a7c",
+          "path": null,
+          "original_bucket": null,
+          "text": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_74e802f7d1072830",
+          "kind": "fact",
+          "ref_id": "fact_9cb815a23b7858dd",
+          "path": null,
+          "original_bucket": null,
+          "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_7efd02078ade9807",
+          "kind": "fact",
+          "ref_id": "fact_507fbf776ea8478a",
+          "path": null,
+          "original_bucket": null,
+          "text": "先调用真实排盘工具再解读，避免排盘靠猜；思考与工具调用过程对用户可见；支持农历转阳历与真太阳时校正后排盘；八字与紫微可叠加印证，并具备对话记忆",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+          "kind": "fact",
+          "ref_id": "fact_b852f5a695ab809f",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://app.zhiyu.hk",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_65ce09698a144666",
+          "kind": "operator",
+          "ref_id": "operator_input_196dc82cd1f55f19",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "知鱼靠谱吗？相对其他命理AI有什么可核验依据？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "learn_more",
+        "label": "访问 https://zhiyu.hk / https://app.zhiyu.hk 了解产品",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "medium",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    },
+    {
+      "scenario_id": "scenario_bac0a61e31aa1848",
+      "name": "确认公开会员价格与权益后再决定开通",
+      "target_customer": "准备付费开通会员的用户",
+      "customer_need": "确认公开会员价格与权益后再决定开通",
+      "concerns": [
+        "月卡 ¥99",
+        "年卡 ¥599",
+        "鱼丸积分用途",
+        "入口域名 app.zhiyu.hk"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_e58b9792527bbf6c",
+          "text": "开通知鱼会员前要确认哪些权益和价格？月卡和年卡怎么选？",
+          "normalized_text": "开通知鱼会员前要确认哪些权益和价格月卡和年卡怎么选",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_d2bb69e415440f50",
+            "fact_461ab2a049b5735a",
+            "fact_7242717f4786405c",
+            "fact_b852f5a695ab809f"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_24b5485b05ae7608",
+              "kind": "fact",
+              "ref_id": "fact_d2bb69e415440f50",
+              "path": null,
+              "original_bucket": null,
+              "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_41c83382fc4ff47b",
+              "kind": "fact",
+              "ref_id": "fact_461ab2a049b5735a",
+              "path": null,
+              "original_bucket": null,
+              "text": "SaaS / AI Agent；六爻问事、知鱼AI顾问、八字原局、档案合盘；https://zhiyu.hk ; https://app.zhiyu.hk；月卡 ¥99；年卡 ¥599",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_f9637fe3093c5e48",
+              "kind": "fact",
+              "ref_id": "fact_7242717f4786405c",
+              "path": null,
+              "original_bucket": null,
+              "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+              "kind": "fact",
+              "ref_id": "fact_b852f5a695ab809f",
+              "path": null,
+              "original_bucket": null,
+              "text": "https://app.zhiyu.hk",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_8e6f49d0d56e6240",
+              "kind": "operator",
+              "ref_id": "operator_input_a97d867c8d9ce28c",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "开通知鱼会员前要确认哪些权益和价格？月卡和年卡怎么选？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_d2bb69e415440f50",
+        "fact_461ab2a049b5735a",
+        "fact_7242717f4786405c",
+        "fact_b852f5a695ab809f"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_24b5485b05ae7608",
+          "kind": "fact",
+          "ref_id": "fact_d2bb69e415440f50",
+          "path": null,
+          "original_bucket": null,
+          "text": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_41c83382fc4ff47b",
+          "kind": "fact",
+          "ref_id": "fact_461ab2a049b5735a",
+          "path": null,
+          "original_bucket": null,
+          "text": "SaaS / AI Agent；六爻问事、知鱼AI顾问、八字原局、档案合盘；https://zhiyu.hk ; https://app.zhiyu.hk；月卡 ¥99；年卡 ¥599",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_f9637fe3093c5e48",
+          "kind": "fact",
+          "ref_id": "fact_7242717f4786405c",
+          "path": null,
+          "original_bucket": null,
+          "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_9ab24f7c7671b6e6",
+          "kind": "fact",
+          "ref_id": "fact_b852f5a695ab809f",
+          "path": null,
+          "original_bucket": null,
+          "text": "https://app.zhiyu.hk",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_8e6f49d0d56e6240",
+          "kind": "operator",
+          "ref_id": "operator_input_a97d867c8d9ce28c",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "开通知鱼会员前要确认哪些权益和价格？月卡和年卡怎么选？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "visit_shop",
+        "label": "访问 https://app.zhiyu.hk 试用或了解会员",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "medium",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    },
+    {
+      "scenario_id": "scenario_4e2a75790f43bca7",
+      "name": "判断知鱼是否匹配自己的使用情境与文化框架",
+      "target_customer": "希望用东方命理做自我认知、情绪梳理或关系参考的个人用户",
+      "customer_need": "判断知鱼是否匹配自己的使用情境与文化框架",
+      "concerns": [
+        "自我认知而非预言",
+        "情绪陪伴与长期记忆",
+        "中国人时间观/关系观",
+        "避免迷信依赖"
+      ],
+      "representative_questions": [
+        {
+          "question_id": "scenario_question_7ac1646864d5c3b2",
+          "text": "知鱼命理AI适合哪些个人使用场景？和西方测评有什么不同？",
+          "normalized_text": "知鱼命理ai适合哪些个人使用场景和西方测评有什么不同",
+          "facets": {
+            "wording_form": "recommendation",
+            "regions": [],
+            "decision_stage": "consideration",
+            "direction": "neutral",
+            "product_subject_ids": [
+              "sub_product_4f54dcb66ace3aa8"
+            ],
+            "capability_terms": [],
+            "constraints": []
+          },
+          "fact_ids": [
+            "fact_354009bdaa29f8af",
+            "fact_94de6f7175d8f613",
+            "fact_86b1751053d95a7c",
+            "fact_9cb815a23b7858dd",
+            "fact_d3884a88aac534c1",
+            "fact_7242717f4786405c"
+          ],
+          "evidence_gap_ids": [],
+          "source_refs": [
+            {
+              "source_ref_id": "scenario_source_908e475839a0db7b",
+              "kind": "fact",
+              "ref_id": "fact_354009bdaa29f8af",
+              "path": null,
+              "original_bucket": null,
+              "text": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_3e09a276b1717a4e",
+              "kind": "fact",
+              "ref_id": "fact_94de6f7175d8f613",
+              "path": null,
+              "original_bucket": null,
+              "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_4d0c8a12158de6fd",
+              "kind": "fact",
+              "ref_id": "fact_86b1751053d95a7c",
+              "path": null,
+              "original_bucket": null,
+              "text": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_74e802f7d1072830",
+              "kind": "fact",
+              "ref_id": "fact_9cb815a23b7858dd",
+              "path": null,
+              "original_bucket": null,
+              "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+              "derivation": "operator"
+            },
+            {
+              "source_ref_id": "scenario_source_11dc82b3afe9a573",
+              "kind": "fact",
+              "ref_id": "fact_d3884a88aac534c1",
+              "path": null,
+              "original_bucket": null,
+              "text": "东方命理自我认知工具",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_f9637fe3093c5e48",
+              "kind": "fact",
+              "ref_id": "fact_7242717f4786405c",
+              "path": null,
+              "original_bucket": null,
+              "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+              "derivation": "derived"
+            },
+            {
+              "source_ref_id": "scenario_source_a312b9c82b4643c3",
+              "kind": "operator",
+              "ref_id": "operator_input_4d107ba82dd4da3f",
+              "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+              "original_bucket": null,
+              "text": "知鱼命理AI适合哪些个人使用场景？和西方测评有什么不同？",
+              "derivation": "operator"
+            }
+          ]
+        }
+      ],
+      "supporting_fact_ids": [
+        "fact_354009bdaa29f8af",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_9cb815a23b7858dd",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "evidence_gaps": [],
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_908e475839a0db7b",
+          "kind": "fact",
+          "ref_id": "fact_354009bdaa29f8af",
+          "path": null,
+          "original_bucket": null,
+          "text": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_3e09a276b1717a4e",
+          "kind": "fact",
+          "ref_id": "fact_94de6f7175d8f613",
+          "path": null,
+          "original_bucket": null,
+          "text": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_4d0c8a12158de6fd",
+          "kind": "fact",
+          "ref_id": "fact_86b1751053d95a7c",
+          "path": null,
+          "original_bucket": null,
+          "text": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_74e802f7d1072830",
+          "kind": "fact",
+          "ref_id": "fact_9cb815a23b7858dd",
+          "path": null,
+          "original_bucket": null,
+          "text": "市面命理类 AI 常见排盘靠猜，结果难以核验；西方测评框架对中国用户不够贴合；焦虑上升需要自我认知工具，但不愿陷入迷信依赖；农历与真太阳时门槛高，普通人难以自行处理",
+          "derivation": "operator"
+        },
+        {
+          "source_ref_id": "scenario_source_11dc82b3afe9a573",
+          "kind": "fact",
+          "ref_id": "fact_d3884a88aac534c1",
+          "path": null,
+          "original_bucket": null,
+          "text": "东方命理自我认知工具",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_f9637fe3093c5e48",
+          "kind": "fact",
+          "ref_id": "fact_7242717f4786405c",
+          "path": null,
+          "original_bucket": null,
+          "text": "六爻问事解读；八字原局与流年解读；命理图谱记忆与情绪陪伴对话；农历/真太阳时自动处理；合盘与档案连续对话",
+          "derivation": "derived"
+        },
+        {
+          "source_ref_id": "scenario_source_a312b9c82b4643c3",
+          "kind": "operator",
+          "ref_id": "operator_input_4d107ba82dd4da3f",
+          "path": "/Users/bouda/work/geo/projects/知鱼/strategy/operator-scenario-input.json",
+          "original_bucket": null,
+          "text": "知鱼命理AI适合哪些个人使用场景？和西方测评有什么不同？",
+          "derivation": "operator"
+        }
+      ],
+      "desired_next_action": {
+        "type": "learn_more",
+        "label": "访问 https://zhiyu.hk / https://app.zhiyu.hk 了解产品",
+        "url": "https://app.zhiyu.hk"
+      },
+      "priority": {
+        "components": {
+          "business_value": 4,
+          "diagnosis_gap": 0,
+          "evidence_readiness": 4,
+          "customer_language": 0,
+          "operator_judgment": 5
+        },
+        "calculated_total": 13,
+        "final_score": 13,
+        "tier": "medium",
+        "rationale": [
+          "运营显式输入",
+          "已关联确认事实"
+        ],
+        "override": null
+      },
+      "review_status": "approved",
+      "review_note": "按消费级 SaaS 场景复核并批准"
+    }
+  ],
+  "merge_suggestions": [],
+  "limitations": [
+    "未提供可用询盘/客服问题，或现有记录无法安全提取；场景可继续确认，但客户原话支持分较低，后续补充时应创建新版本。"
+  ]
+}

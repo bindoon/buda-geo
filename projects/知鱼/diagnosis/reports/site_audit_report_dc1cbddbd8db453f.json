@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "report_id": "site_audit_report_dc1cbddbd8db453f",
+  "app_id": "zhiyu_ai_hk",
+  "project_name": "知鱼",
+  "fact_snapshot_id": "fact_snapshot_7c19e04928e8cc09",
+  "audit_id": "site_audit_a448e10561410e40",
+  "generated_at": "2026-09-07T01:49:20Z",
+  "status": "confirmed",
+  "confirmed_at": "2026-09-07T01:56:45Z",
+  "target_url": "https://www.zhiyu.hk/",
+  "composite_score": null,
+  "data_quality": {
+    "reliable": true,
+    "warnings": [
+      "发现的可采样 URL 不足：计划 12 页，实际 11 页",
+      "浏览器渲染未执行；CSR 仅按原始 HTML 启发式判断，不把未检测写成通过。",
+      "已检查 llms.txt，只记录有无，不计入红牌或优先整改。"
+    ],
+    "homepage_challenge": false,
+    "homepage_challenge_marker": ""
+  },
+  "red_cards_triggered": [],
+  "checklist": [
+    {
+      "id": "https",
+      "dimension": "access",
+      "label": "HTTPS 可达",
+      "status": "pass",
+      "observed": "首页最终地址 https://www.zhiyu.hk/"
+    },
+    {
+      "id": "robots",
+      "dimension": "access",
+      "label": "robots 未全站禁止",
+      "status": "pass",
+      "observed": "未发现对 * 的整站禁止"
+    },
+    {
+      "id": "ai_bots",
+      "dimension": "access",
+      "label": "主流 AI 爬虫可读取首页",
+      "status": "pass",
+      "observed": "采样 UA 均拿到可读首页"
+    },
+    {
+      "id": "sitemap",
+      "dimension": "access",
+      "label": "sitemap 或足够首页链接",
+      "status": "warn",
+      "observed": "sitemap=无，首页站内链接 11 条"
+    },
+    {
+      "id": "csr",
+      "dimension": "render",
+      "label": "原始 HTML 不是空壳",
+      "status": "undetected",
+      "observed": "本地一期不做 Playwright 渲染；仅在原始 HTML 上做 CSR 启发式"
+    },
+    {
+      "id": "organization",
+      "dimension": "structure",
+      "label": "Organization 结构化数据",
+      "status": "pass",
+      "observed": "采样的 11 个页面中 11 页含 Organization"
+    },
+    {
+      "id": "faq",
+      "dimension": "structure",
+      "label": "FAQPage（可选）",
+      "status": "pass",
+      "observed": "采样的 11 个页面中 3 页含 FAQPage"
+    },
+    {
+      "id": "h1",
+      "dimension": "content",
+      "label": "采样页有 H1",
+      "status": "warn",
+      "observed": "采样的 11 个页面中 10 页缺 H1"
+    },
+    {
+      "id": "body",
+      "dimension": "content",
+      "label": "采样页正文可答",
+      "status": "pass",
+      "observed": "正文中位数 1128 字"
+    },
+    {
+      "id": "brand",
+      "dimension": "entity",
+      "label": "品牌出现在 title/H1",
+      "status": "pass",
+      "observed": "采样 title/H1 出现「知鱼」"
+    },
+    {
+      "id": "llms",
+      "dimension": "access",
+      "label": "llms.txt（只检查，不计分）",
+      "status": "undetected",
+      "observed": "存在 https://www.zhiyu.hk/llms.txt"
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "gap_b05cc80643ca38a0",
+      "kind": "site_render",
+      "severity": "low",
+      "observed_issue": "未做浏览器渲染检测，不能证明页面渲染后一定可被爬虫看到。",
+      "question_ids": [],
+      "probe_ids": [],
+      "platforms": [],
+      "competitors": [],
+      "sources": [
+        "https://www.zhiyu.hk/"
+      ],
+      "fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_da3d556f3b2d7832",
+        "fact_da8f0c766e334866",
+        "fact_b852f5a695ab809f"
+      ],
+      "recommended_investigation": "若官网是 SPA/模板站，应用无 JS 抓取核对正文；不要把未检测写成已通过。"
+    },
+    {
+      "gap_id": "gap_f5ee2130abd2d2e0",
+      "kind": "site_content",
+      "severity": "medium",
+      "observed_issue": "采样的 11 个页面中有 10 页缺少 H1。",
+      "question_ids": [],
+      "probe_ids": [],
+      "platforms": [],
+      "competitors": [],
+      "sources": [
+        "https://www.zhiyu.hk/tools",
+        "https://www.zhiyu.hk/glossary",
+        "https://www.zhiyu.hk/jiazi",
+        "https://www.zhiyu.hk/blog",
+        "https://www.zhiyu.hk/tools/bazi",
+        "https://www.zhiyu.hk/tools/ziwei",
+        "https://www.zhiyu.hk/tools/liuyao",
+        "https://www.zhiyu.hk/blog/meaning-of-life-ten-year-search",
+        "https://www.zhiyu.hk/blog/zhiyu-launch",
+        "https://www.zhiyu.hk/blog/qiwulun-dream"
+      ],
+      "fact_ids": [
+        "fact_0ab97039e8596770",
+        "fact_da3d556f3b2d7832",
+        "fact_da8f0c766e334866",
+        "fact_b852f5a695ab809f"
+      ],
+      "recommended_investigation": "给采样页补唯一、可读的 H1，避免标题重复。"
+    }
+  ],
+  "limitations": [
+    "结论只覆盖本次采样的 11 个页面，不能写成全站结论。",
+    "未采到的数据写「未检测」，不得用行业均值补齐。",
+    "本报告不替代种子题 + 多平台 probe 的可见度诊断。",
+    "浏览器渲染未执行；CSR 红牌仅在原始 HTML 启发式成立时触发。",
+    "llms.txt 只检查，不计分，不列为优先投入。",
+    "首页正文可采样，内容与结构化结论可以使用。"
+  ],
+  "result_path": "diagnosis/site-audits/site_audit_a448e10561410e40.json"
+}

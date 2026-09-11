@@ -1,0 +1,101 @@
+{
+  "app_id": "zhiyu_ai_hk",
+  "items": [
+    {
+      "sku_id": "sku_知鱼命理AI",
+      "name": "知鱼命理AI",
+      "category": "东方命理自我认知工具",
+      "selling_points": [
+        "先调用真实排盘工具再解读，避免排盘靠猜",
+        "思考与工具调用过程对用户可见",
+        "支持农历转阳历与真太阳时校正后排盘",
+        "八字与紫微可叠加印证，并具备对话记忆"
+      ],
+      "attributes": {
+        "product_type": "SaaS / AI Agent",
+        "core_modules": "六爻问事、知鱼AI顾问、八字原局、档案合盘",
+        "access_urls": "https://zhiyu.hk ; https://app.zhiyu.hk",
+        "membership_price": "月卡 ¥99；年卡 ¥599"
+      },
+      "capabilities": [
+        "六爻问事解读",
+        "八字原局与流年解读",
+        "命理图谱记忆与情绪陪伴对话",
+        "农历/真太阳时自动处理",
+        "合盘与档案连续对话"
+      ],
+      "is_main": true,
+      "source_refs": [
+        "src_7f05036a3e7755f3",
+        "src_6f9260e39c982d6a",
+        "src_a0fd71edc407560e",
+        "src_ab1993bbd131126e"
+      ],
+      "fact_refs": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_507fbf776ea8478a",
+        "fact_461ab2a049b5735a",
+        "fact_7242717f4786405c",
+        "fact_6423b84f4446063d"
+      ],
+      "copy_brief": "知鱼内容写作指令（易学科普）\n目标：让普通人看懂易学底层逻辑，并用工程师建模视角解释阴阳、数字、卦象。\n原则：不讲算命恐吓；讲编码系统与状态变化；气→数→象→形。\n适合渠道：zhiyu.hk 博客、公众号科普、GEO 信源图文。\n禁止：虚构资质与用户量；把内部合作分成当公开事实；泄露个人命盘案例。",
+      "images": [
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6020.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_77831e6da63adc0f"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6021.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_96efa43690f36076"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6032.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_dd5a95c114de5aa7"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6033.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_ec7db96455211cc0"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6034.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9fe94618b81f4b57"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/IMG_6035.PNG",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9b3766ce4d539c23"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/image-6.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_9922b43e13bea9b9"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/image-7.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_676249117c39dc96"
+        },
+        {
+          "path": "assets/images/知鱼命理AI/image-9.png",
+          "role": "detail",
+          "url": null,
+          "source_ref": "src_b0b16d571776b3fe"
+        }
+      ]
+    }
+  ]
+}

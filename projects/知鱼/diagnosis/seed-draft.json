@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "app_id": "zhiyu_ai_hk",
+  "fact_snapshot_id": "fact_snapshot_7c19e04928e8cc09",
+  "purpose": "baseline_diagnosis_only",
+  "status": "confirmed",
+  "version": 1,
+  "based_on_seed_set_id": null,
+  "created_at": "2026-08-07T12:53:39Z",
+  "confirmed_at": "2026-08-07T12:58:56Z",
+  "target_size": 19,
+  "questions": [
+    {
+      "question_id": "question_79a997a929c199a2",
+      "text": "知鱼是做什么的？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能正确识别企业/品牌主体。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_669c1c54380f070b",
+      "text": "东方命理自我认知工具怎么选？",
+      "family": "product_consideration",
+      "rationale": "检查通用品类选购回答中是否出现目标企业。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_0765518e4dc6b044",
+      "text": "能生产知鱼命理AI的源头厂家有哪些？",
+      "family": "supplier_capability",
+      "rationale": "检查供应商能力型问法中的目标企业推荐情况。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_c3df10fc6e9f99e0",
+      "text": "知鱼的知鱼命理AI有哪些质量或售后风险？",
+      "family": "negative_risk",
+      "rationale": "经人工批准后检查 AI 是否传播与目标产品有关的负面风险。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_d1fd20309457c4a5",
+      "text": "知鱼有哪些主要产品？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能把品牌与已确认主产品关联。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_0245b72d7d499d87"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_a7728b0a35725fa3",
+      "text": "知鱼命理AI有哪些靠谱厂家或品牌？",
+      "family": "product_consideration",
+      "rationale": "检查目标产品的推荐可见度与竞品占位。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_9c9747b0cd40d199",
+      "text": "哪些知鱼命理AI厂家支持六爻问事解读？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_b36e3b3f59a52727",
+      "text": "知鱼是生产厂家还是贸易商？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 对企业经营角色的理解是否准确。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_80315a46e2ae0f79",
+      "text": "采购知鱼命理AI要重点比较哪些参数和服务？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对采购决策要素的覆盖。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_17244b2ab890c930",
+      "text": "哪些知鱼命理AI厂家支持八字原局与流年解读？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_ebfc9ececdafbcb9",
+      "text": "知鱼靠谱吗？有哪些可核验依据？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能给出有来源的品牌信任说明。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "approved",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_e2677021a7719841",
+      "text": "知鱼命理AI适合哪些使用和采购场景？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对产品适用场景与采购对象的理解。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_9cb815a23b7858dd"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_153c5d94d404fb63",
+      "text": "哪些知鱼命理AI厂家支持命理图谱记忆与情绪陪伴对话？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_72c91212a33b2ba1",
+      "text": "知鱼主要服务哪些客户和采购场景？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否理解企业服务对象，而不只认识品牌名称。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_9cb815a23b7858dd"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_3cedfae0ed2ce106",
+      "text": "知鱼命理AI的材质、规格和做工应该怎么比较？",
+      "family": "product_consideration",
+      "rationale": "检查产品细节型选购回答及目标品牌可见度。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_461ab2a049b5735a",
+        "fact_507fbf776ea8478a"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_76f541235561bc97",
+      "text": "哪些知鱼命理AI厂家支持农历/真太阳时自动处理？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_7a2b2408ceb1193d",
+      "text": "知鱼有哪些生产、供应或定制能力？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能把品牌与已确认企业能力关联。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_4842c421796a1cd0",
+      "text": "小批量采购知鱼命理AI应该怎样评估供应商？",
+      "family": "supplier_capability",
+      "rationale": "检查小批量采购决策中的供应商比较与目标企业露出。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_5b9cf5adc4849cb5",
+      "text": "定制知鱼命理AI要向厂家确认哪些条件？",
+      "family": "supplier_capability",
+      "rationale": "检查定制能力型问题中的目标企业与竞品推荐。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "fact_template",
+      "review_status": "replaced",
+      "replacement_for_question_id": null,
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_9807a27af99d4fa9",
+      "text": "知鱼是算命软件还是自我认知工具？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 对企业经营角色的理解是否准确。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_b36e3b3f59a52727",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_13d499aed9db52a9",
+      "text": "知鱼主要服务哪些用户和使用场景？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否理解企业服务对象，而不只认识品牌名称。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_9cb815a23b7858dd"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_72c91212a33b2ba1",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_68b90d4bd59f46f0",
+      "text": "知鱼有哪些核心功能和服务能力？",
+      "family": "brand_recognition",
+      "rationale": "检查 AI 是否能把品牌与已确认企业能力关联。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_7a2b2408ceb1193d",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_b11d2a4924413287",
+      "text": "有哪些靠谱的东方命理AI工具或品牌？",
+      "family": "product_consideration",
+      "rationale": "检查目标产品的推荐可见度与竞品占位。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_a7728b0a35725fa3",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_ca1fe8cdf589dddd",
+      "text": "选择知鱼命理AI要重点比较哪些功能和服务？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对采购决策要素的覆盖。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_80315a46e2ae0f79",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_18c9f70b818f947e",
+      "text": "知鱼命理AI适合哪些使用场景？",
+      "family": "product_consideration",
+      "rationale": "检查 AI 对产品适用场景与采购对象的理解。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_9cb815a23b7858dd"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_e2677021a7719841",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_2d38be936ed2c903",
+      "text": "知鱼命理AI的排盘方式和解读能力应该怎么比较？",
+      "family": "product_consideration",
+      "rationale": "检查产品细节型选购回答及目标品牌可见度。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_461ab2a049b5735a",
+        "fact_507fbf776ea8478a"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_3cedfae0ed2ce106",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_b4cd420aca413399",
+      "text": "有哪些可以做六爻或八字解读的命理AI？",
+      "family": "supplier_capability",
+      "rationale": "检查供应商能力型问法中的目标企业推荐情况。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_0765518e4dc6b044",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_e6c3ef40700c5257",
+      "text": "哪些命理AI支持六爻问事解读？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_9c9747b0cd40d199",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_54b9a1f0a9257210",
+      "text": "哪些命理AI支持八字原局与流年解读？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_17244b2ab890c930",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_ce2311bb7092f58e",
+      "text": "哪些命理AI支持长期记忆与情绪陪伴对话？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_153c5d94d404fb63",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_491645ffaef5b809",
+      "text": "哪些命理AI支持农历和真太阳时自动处理？",
+      "family": "supplier_capability",
+      "rationale": "检查已确认生产/服务能力能否被 AI 找到。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_76f541235561bc97",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_32bd4e77253e386e",
+      "text": "评估一个命理AI是否靠谱应该看哪些点？",
+      "family": "supplier_capability",
+      "rationale": "检查小批量采购决策中的供应商比较与目标企业露出。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_4842c421796a1cd0",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_67c6899993caf3bb",
+      "text": "开通知鱼会员前要确认哪些权益和价格？",
+      "family": "supplier_capability",
+      "rationale": "检查定制能力型问题中的目标企业与竞品推荐。",
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_5b9cf5adc4849cb5",
+      "negative_risk_approved": false
+    },
+    {
+      "question_id": "question_d022d10880ff576a",
+      "text": "知鱼命理AI有哪些使用或信任风险？",
+      "family": "negative_risk",
+      "rationale": "经人工批准后检查 AI 是否传播与目标产品有关的负面风险。",
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1"
+      ],
+      "derivation": "operator",
+      "review_status": "approved",
+      "replacement_for_question_id": "question_c3df10fc6e9f99e0",
+      "negative_risk_approved": true
+    }
+  ]
+}

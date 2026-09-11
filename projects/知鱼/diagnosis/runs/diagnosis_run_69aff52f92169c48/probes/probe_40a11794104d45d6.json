@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_40a11794104d45d6",
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "question_id": "question_491645ffaef5b809",
+  "question_text": "哪些命理AI支持农历和真太阳时自动处理？",
+  "question_family": "supplier_capability",
+  "platform": "WebSearch",
+  "provider": "cursor_web_search",
+  "adapter_kind": "manual",
+  "model": "web_search",
+  "attempted_at": "2026-08-07T13:01:24Z",
+  "status": "success",
+  "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_40a11794104d45d6.md",
+  "raw_content_hash": "c8e42abf37a3944df4e0d24e370600f049bbbcbfc2c126073de9e4475971ee00",
+  "error": null,
+  "analysis": {
+    "schema_version": 1,
+    "target_mentioned": false,
+    "actively_recommended": false,
+    "top_n_rank": null,
+    "competitors": [
+      "AuraMate灵伴",
+      "FateTell",
+      "DeepOracle",
+      "知命",
+      "天机爻",
+      "Arcana",
+      "爻知",
+      "问天机"
+    ],
+    "citations": [],
+    "negative_risk_mentioned": false,
+    "sentiment": "unknown",
+    "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+  },
+  "latest_analysis_revision_id": "analysis_revision_59e0903e50a044f4"
+}

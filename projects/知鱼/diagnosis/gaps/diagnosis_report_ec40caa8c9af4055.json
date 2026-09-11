@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "report_id": "diagnosis_report_ec40caa8c9af4055",
+  "status": "confirmed",
+  "confirmed_at": "2026-08-07T13:03:22Z",
+  "gaps": [
+    {
+      "gap_id": "gap_034c5d8ed637e40e",
+      "kind": "visibility",
+      "severity": "high",
+      "observed_issue": "目标品牌在 14/18 条有效正向问题中未被提及。",
+      "question_ids": [
+        "question_491645ffaef5b809",
+        "question_67c6899993caf3bb",
+        "question_13d499aed9db52a9",
+        "question_ce2311bb7092f58e",
+        "question_e6c3ef40700c5257",
+        "question_68b90d4bd59f46f0",
+        "question_ca1fe8cdf589dddd",
+        "question_54b9a1f0a9257210",
+        "question_2d38be936ed2c903",
+        "question_32bd4e77253e386e",
+        "question_b4cd420aca413399",
+        "question_18c9f70b818f947e",
+        "question_b11d2a4924413287",
+        "question_669c1c54380f070b"
+      ],
+      "probe_ids": [
+        "probe_40a11794104d45d6",
+        "probe_4abee8873c29f2ea",
+        "probe_5578e66c7993dc56",
+        "probe_8d597a767231b8cf",
+        "probe_947e45175c6d642d",
+        "probe_95bcf3d6f5111124",
+        "probe_979e8a2715fd9a79",
+        "probe_9bfb33116564e0ce",
+        "probe_a93a0afc8c4e9a78",
+        "probe_ca7a9e32d1b675b3",
+        "probe_cdc0431c2d866cad",
+        "probe_d2865e9173f9a666",
+        "probe_f47251c19b134e4c",
+        "probe_fd25c54b695435ea"
+      ],
+      "platforms": [
+        "WebSearch"
+      ],
+      "competitors": [
+        "AuraMate灵伴",
+        "FateTell",
+        "DeepOracle",
+        "知命",
+        "天机爻",
+        "Arcana",
+        "爻知",
+        "问天机",
+        "知鱼智联"
+      ],
+      "sources": [],
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c",
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_9cb815a23b7858dd",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_461ab2a049b5735a",
+        "fact_507fbf776ea8478a"
+      ],
+      "recommended_investigation": "在后续场景阶段研究 AI 已采用的竞品与来源证据，并核对企业对应事实是否缺少公开可信信源。"
+    },
+    {
+      "gap_id": "gap_99e37d95fa568e33",
+      "kind": "recommendation",
+      "severity": "medium",
+      "observed_issue": "目标品牌在 4 条回答中仅被提及但未被主动推荐。",
+      "question_ids": [
+        "question_9807a27af99d4fa9",
+        "question_d1fd20309457c4a5",
+        "question_79a997a929c199a2",
+        "question_ebfc9ececdafbcb9"
+      ],
+      "probe_ids": [
+        "probe_1feb278edc1a8585",
+        "probe_2ed0289591a9f505",
+        "probe_5c37c4b2ec893c63",
+        "probe_ce687cc97c6e44ac"
+      ],
+      "platforms": [
+        "WebSearch"
+      ],
+      "competitors": [
+        "知鱼智联"
+      ],
+      "sources": [],
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_0245b72d7d499d87"
+      ],
+      "recommended_investigation": "研究推荐集合采用的比较维度和证据来源，不把“出现”误当作“推荐”。"
+    }
+  ]
+}

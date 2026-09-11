@@ -1,0 +1,34 @@
+{
+  "app_id": "zhiyu_ai_hk",
+  "company_name": "知鱼（ZhiYu）",
+  "company_short_name": "知鱼",
+  "contact_name": "",
+  "contact_phone": "",
+  "address": "",
+  "website_or_shop_url": "https://app.zhiyu.hk",
+  "region": "中国香港 / 线上",
+  "media_accounts": [],
+  "conversion": {
+    "phone": "",
+    "shop_url": "https://zhiyu.hk"
+  },
+  "credentials": [],
+  "source": "xlsx:知鱼GEO信息收集表.xlsx",
+  "fact_refs": {
+    "company_name": [
+      "fact_0ab97039e8596770"
+    ],
+    "company_short_name": [
+      "fact_da3d556f3b2d7832"
+    ],
+    "website_or_shop_url": [
+      "fact_b852f5a695ab809f"
+    ],
+    "region": [
+      "fact_97d33566b963d5a2"
+    ],
+    "conversion": [
+      "fact_d0a39bad1f3dae3a"
+    ]
+  }
+}

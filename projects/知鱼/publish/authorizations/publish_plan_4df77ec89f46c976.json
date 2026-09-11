@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "authorization_id": "publish_authorization_912b59484c286b22",
+  "plan_id": "publish_plan_4df77ec89f46c976",
+  "app_id": "zhiyu_ai_hk",
+  "authorized_at": "2026-09-11T07:51:43Z",
+  "authorized_by": "operator",
+  "reason": "用户要求走通知鱼发布闭环；仅授权 dry-run/manual 回执，无平台密钥故不执行外部写入、不记 published",
+  "confirmed_plan_id": "publish_plan_4df77ec89f46c976",
+  "item_idempotency_keys": [
+    "publish_key_0b964c4d34a1131d",
+    "publish_key_f480014753c47763"
+  ]
+}

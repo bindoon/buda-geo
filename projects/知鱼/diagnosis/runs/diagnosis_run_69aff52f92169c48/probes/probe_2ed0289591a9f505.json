@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_2ed0289591a9f505",
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "question_id": "question_d1fd20309457c4a5",
+  "question_text": "知鱼有哪些主要产品？",
+  "question_family": "brand_recognition",
+  "platform": "WebSearch",
+  "provider": "cursor_web_search",
+  "adapter_kind": "manual",
+  "model": "web_search",
+  "attempted_at": "2026-08-07T13:01:24Z",
+  "status": "success",
+  "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_2ed0289591a9f505.md",
+  "raw_content_hash": "e8bc024d2419faf63d4bc8a11c4157bcee07b4eac86f827bb34bf0de4076cf34",
+  "error": null,
+  "analysis": {
+    "schema_version": 1,
+    "target_mentioned": true,
+    "actively_recommended": false,
+    "top_n_rank": null,
+    "competitors": [
+      "知鱼智联"
+    ],
+    "citations": [],
+    "negative_risk_mentioned": false,
+    "sentiment": "neutral",
+    "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+  },
+  "latest_analysis_revision_id": "analysis_revision_9de1d39be42246b4"
+}

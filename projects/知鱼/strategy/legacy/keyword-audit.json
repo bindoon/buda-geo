@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "app_id": "zhiyu_ai_hk",
+  "generated_at": "2026-08-07T13:04:03Z",
+  "source_path": "inputs/知鱼关键词.xlsx",
+  "candidates": [
+    {
+      "candidate_id": "legacy_candidate_af3101d4e6f2c8df",
+      "text": "知鱼",
+      "normalized_text": "知鱼",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_dac2660114dcf3fb",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_af3101d4e6f2c8df",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "知鱼",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_8646d16a5a8c5c08",
+      "text": "命理AI",
+      "normalized_text": "命理ai",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d79a46eaf472b59d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_8646d16a5a8c5c08",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "命理AI",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_4d5028efe2ce287d",
+      "text": "六爻问事",
+      "normalized_text": "六爻问事",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_9326da2ddc30d9af",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_4d5028efe2ce287d",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "六爻问事",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_47b558414cad0663",
+      "text": "八字原局",
+      "normalized_text": "八字原局",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_4640f4e0dab6edbd",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_47b558414cad0663",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "八字原局",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_6c534f5e7ac4accf",
+      "text": "自我认知",
+      "normalized_text": "自我认知",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_090338ff9b91aa88",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_6c534f5e7ac4accf",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "自我认知",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_78907f2f42021ece",
+      "text": "鱼丸",
+      "normalized_text": "鱼丸",
+      "original_bucket": "search.terms",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_ff988e8236ab878a",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_78907f2f42021ece",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.terms",
+          "text": "鱼丸",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_bcfb56c05729285b",
+      "text": "ZhiYu,知鱼AI",
+      "normalized_text": "zhiyu知鱼ai",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_569fb67111a1e4f6",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_bcfb56c05729285b",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "ZhiYu,知鱼AI",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_898a40e85e9eecff",
+      "text": "八字AI,紫微AI,东方命理工具",
+      "normalized_text": "八字ai紫微ai东方命理工具",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_d35393715b98f326",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_898a40e85e9eecff",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "八字AI,紫微AI,东方命理工具",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_1d8cd48ba0192bb3",
+      "text": "六爻占卜,六爻解读",
+      "normalized_text": "六爻占卜六爻解读",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a3215160c13eca5f",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_1d8cd48ba0192bb3",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "六爻占卜,六爻解读",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_63bdc5f990d67d98",
+      "text": "生辰八字分析,真太阳时排盘",
+      "normalized_text": "生辰八字分析真太阳时排盘",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_8f4cd6b649859c55",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_63bdc5f990d67d98",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "生辰八字分析,真太阳时排盘",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f3d06774869adcbb",
+      "text": "读懂自己,情绪陪伴",
+      "normalized_text": "读懂自己情绪陪伴",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_35a1d96a9aaea482",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f3d06774869adcbb",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "读懂自己,情绪陪伴",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_06a008ca431aa1d1",
+      "text": "知鱼积分,会员",
+      "normalized_text": "知鱼积分会员",
+      "original_bucket": "search.expanded",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_1a6b9381e6f98c6e",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_06a008ca431aa1d1",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "search.expanded",
+          "text": "知鱼积分,会员",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_f1396707aac2db49",
+      "text": "知鱼是什么",
+      "normalized_text": "知鱼是什么",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_87be84d8e55e4b6c",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_f1396707aac2db49",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "知鱼是什么",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_9ec79849fd11e153",
+      "text": "六爻问事怎么用",
+      "normalized_text": "六爻问事怎么用",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_7208e98a2dfe0c98",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_9ec79849fd11e153",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "六爻问事怎么用",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_35beb3af1933b23f",
+      "text": "八字原局报告能看什么",
+      "normalized_text": "八字原局报告能看什么",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_a65c588308f1faff",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_35beb3af1933b23f",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "八字原局报告能看什么",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_36533bd737c96f44",
+      "text": "怎么用东方命理认识自己",
+      "normalized_text": "怎么用东方命理认识自己",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_cae9e2aec50e1b3d",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_36533bd737c96f44",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "怎么用东方命理认识自己",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_4b0ce99101a82e43",
+      "text": "知鱼会员怎么收费",
+      "normalized_text": "知鱼会员怎么收费",
+      "original_bucket": "qa.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_2dc134435c7e1440",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_4b0ce99101a82e43",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "qa.questions",
+          "text": "知鱼会员怎么收费",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    },
+    {
+      "candidate_id": "legacy_candidate_3ab129a5d8660ea0",
+      "text": "有没有靠谱的命理AI",
+      "normalized_text": "有没有靠谱的命理ai",
+      "original_bucket": "intent.questions",
+      "source_path": "inputs/知鱼关键词.xlsx",
+      "source_refs": [
+        {
+          "source_ref_id": "scenario_source_188f48615859c5ee",
+          "kind": "legacy_keyword",
+          "ref_id": "legacy_candidate_3ab129a5d8660ea0",
+          "path": "inputs/知鱼关键词.xlsx",
+          "original_bucket": "intent.questions",
+          "text": "有没有靠谱的命理AI",
+          "derivation": "legacy"
+        }
+      ],
+      "duplicate_of_candidate_id": null,
+      "cross_bucket_with": [],
+      "evidence_status": "unreviewed"
+    }
+  ],
+  "counts": {
+    "total": 18,
+    "unique": 18,
+    "exact_duplicates": 0,
+    "cross_bucket": 0,
+    "unsupported": 12
+  }
+}

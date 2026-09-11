@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "report_id": "diagnosis_report_ec40caa8c9af4055",
+  "app_id": "zhiyu_ai_hk",
+  "project_name": "知鱼",
+  "fact_snapshot_id": "fact_snapshot_7c19e04928e8cc09",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "generated_at": "2026-08-07T13:01:56Z",
+  "status": "confirmed",
+  "confirmed_at": "2026-08-07T13:03:22Z",
+  "limitations_accepted": true,
+  "metrics": {
+    "formula_version": "transparent-rates-v1",
+    "composite_score": null,
+    "attempted_probes": 19,
+    "valid_probes": 19,
+    "failed_probes": 0,
+    "valid_coverage": {
+      "numerator": 19,
+      "denominator": 19,
+      "rate": 1,
+      "unavailable_reason": null
+    },
+    "brand_mention_rate": {
+      "numerator": 4,
+      "denominator": 19,
+      "rate": 0.21052631578947367,
+      "unavailable_reason": null
+    },
+    "active_recommendation_rate": {
+      "numerator": 0,
+      "denominator": 19,
+      "rate": 0,
+      "unavailable_reason": null
+    },
+    "top_n": {
+      "n": 3,
+      "metric": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "unavailable_reason": "recommendation position was not observable"
+      }
+    },
+    "negative_risk_mention_rate": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0,
+      "unavailable_reason": null
+    },
+    "citation_observation_rate": {
+      "numerator": 0,
+      "denominator": 19,
+      "rate": 0,
+      "unavailable_reason": null
+    },
+    "competitor_distribution": [
+      {
+        "name": "Arcana",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "AuraMate灵伴",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "DeepOracle",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "FateTell",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "天机爻",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "爻知",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "知命",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "问天机",
+        "count": 11,
+        "denominator": 19,
+        "rate": 0.5789473684210527
+      },
+      {
+        "name": "知鱼智联",
+        "count": 6,
+        "denominator": 19,
+        "rate": 0.3157894736842105
+      }
+    ],
+    "source_distribution": [],
+    "by_platform": {
+      "WebSearch": {
+        "formula_version": "transparent-rates-v1",
+        "composite_score": null,
+        "attempted_probes": 19,
+        "valid_probes": 19,
+        "failed_probes": 0,
+        "valid_coverage": {
+          "numerator": 19,
+          "denominator": 19,
+          "rate": 1,
+          "unavailable_reason": null
+        },
+        "brand_mention_rate": {
+          "numerator": 4,
+          "denominator": 19,
+          "rate": 0.21052631578947367,
+          "unavailable_reason": null
+        },
+        "active_recommendation_rate": {
+          "numerator": 0,
+          "denominator": 19,
+          "rate": 0,
+          "unavailable_reason": null
+        },
+        "top_n": {
+          "n": 3,
+          "metric": {
+            "numerator": 0,
+            "denominator": 0,
+            "rate": null,
+            "unavailable_reason": "recommendation position was not observable"
+          }
+        },
+        "negative_risk_mention_rate": {
+          "numerator": 0,
+          "denominator": 1,
+          "rate": 0,
+          "unavailable_reason": null
+        },
+        "citation_observation_rate": {
+          "numerator": 0,
+          "denominator": 19,
+          "rate": 0,
+          "unavailable_reason": null
+        },
+        "competitor_distribution": [
+          {
+            "name": "Arcana",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "AuraMate灵伴",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "DeepOracle",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "FateTell",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "天机爻",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "爻知",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "知命",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "问天机",
+            "count": 11,
+            "denominator": 19,
+            "rate": 0.5789473684210527
+          },
+          {
+            "name": "知鱼智联",
+            "count": 6,
+            "denominator": 19,
+            "rate": 0.3157894736842105
+          }
+        ],
+        "source_distribution": []
+      }
+    }
+  },
+  "probes": [
+    {
+      "schema_version": 1,
+      "probe_id": "probe_1feb278edc1a8585",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_9807a27af99d4fa9",
+      "question_text": "知鱼是算命软件还是自我认知工具？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_1feb278edc1a8585.md",
+      "raw_content_hash": "32dc9471510aa7f2d5b5902fe1531ff404247c961a39a8036f56c1fdcc1f4eb6",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": true,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "neutral",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_16fb7e3a07357ce4"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_2ed0289591a9f505",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_d1fd20309457c4a5",
+      "question_text": "知鱼有哪些主要产品？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_2ed0289591a9f505.md",
+      "raw_content_hash": "e8bc024d2419faf63d4bc8a11c4157bcee07b4eac86f827bb34bf0de4076cf34",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": true,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "neutral",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_9de1d39be42246b4"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_40a11794104d45d6",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_491645ffaef5b809",
+      "question_text": "哪些命理AI支持农历和真太阳时自动处理？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_40a11794104d45d6.md",
+      "raw_content_hash": "c8e42abf37a3944df4e0d24e370600f049bbbcbfc2c126073de9e4475971ee00",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_59e0903e50a044f4"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_4abee8873c29f2ea",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_67c6899993caf3bb",
+      "question_text": "开通知鱼会员前要确认哪些权益和价格？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_4abee8873c29f2ea.md",
+      "raw_content_hash": "47978b706e30f57911664a41cc404fe85d81e2e83669d188b37191ac8311a15b",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_4147e188ed37f284"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_5578e66c7993dc56",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_13d499aed9db52a9",
+      "question_text": "知鱼主要服务哪些用户和使用场景？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_5578e66c7993dc56.md",
+      "raw_content_hash": "c9fafe548d6ee189f30275955270ae00b01d186b2fd2aa3c9dcafb4a258cd2fe",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_e87b456d2f3295a4"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_5c37c4b2ec893c63",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_79a997a929c199a2",
+      "question_text": "知鱼是做什么的？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_5c37c4b2ec893c63.md",
+      "raw_content_hash": "708294cd0f971dc5fc6d03af2e17fa51d224ceab9f7b463bcce36eea6ce090aa",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": true,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "neutral",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_fdf2bf995fbb1725"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_8d597a767231b8cf",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_ce2311bb7092f58e",
+      "question_text": "哪些命理AI支持长期记忆与情绪陪伴对话？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_8d597a767231b8cf.md",
+      "raw_content_hash": "8623277e326eea580f3d27cb7043780216e3e1cac56979afd5c977354df5a8cb",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_a21a0da0dd4c8ac8"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_947e45175c6d642d",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_e6c3ef40700c5257",
+      "question_text": "哪些命理AI支持六爻问事解读？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_947e45175c6d642d.md",
+      "raw_content_hash": "65254c84a91bee354771261bebf024a68edb184fee67d34abc0380bfbf2f2eb1",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_0d160c4d098b5f6c"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_95bcf3d6f5111124",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_68b90d4bd59f46f0",
+      "question_text": "知鱼有哪些核心功能和服务能力？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_95bcf3d6f5111124.md",
+      "raw_content_hash": "4e68ac9b2b89e74be0da660af2ff2b76495a22f24e2d5e319ce65f337461a210",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_b045e0c46a7f754e"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_979e8a2715fd9a79",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_ca1fe8cdf589dddd",
+      "question_text": "选择知鱼命理AI要重点比较哪些功能和服务？",
+      "question_family": "product_consideration",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_979e8a2715fd9a79.md",
+      "raw_content_hash": "296706fd6fe90a865f8699b0e6cfe738944530679e14622ee23744b7b8cba7ef",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_711a8f7107c6e1d2"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_9bfb33116564e0ce",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_54b9a1f0a9257210",
+      "question_text": "哪些命理AI支持八字原局与流年解读？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_9bfb33116564e0ce.md",
+      "raw_content_hash": "b4037dc936fd144469ba564ffaec451189fc1a21bae86b57caa2ed15207dc785",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_583a9b2376b4a08a"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_a93a0afc8c4e9a78",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_2d38be936ed2c903",
+      "question_text": "知鱼命理AI的排盘方式和解读能力应该怎么比较？",
+      "question_family": "product_consideration",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_a93a0afc8c4e9a78.md",
+      "raw_content_hash": "51252078f03edd12f698a31392baca935bc1759bfeb913586deffa77c27b68a7",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_3927c28d7db4e370"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_ca7a9e32d1b675b3",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_32bd4e77253e386e",
+      "question_text": "评估一个命理AI是否靠谱应该看哪些点？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_ca7a9e32d1b675b3.md",
+      "raw_content_hash": "b11fd9c88eb6ef9ea24f07e5bc9889b4343880ca8bf96c3b5af84f108511cc2f",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_e86f2419fda963bc"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_cdc0431c2d866cad",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_b4cd420aca413399",
+      "question_text": "有哪些可以做六爻或八字解读的命理AI？",
+      "question_family": "supplier_capability",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_cdc0431c2d866cad.md",
+      "raw_content_hash": "e3f8cec36429a2a8404c5ded5e2c8637f3311a4433402d0d3aab3d363f11cda6",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_49e8c479789fec03"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_ce687cc97c6e44ac",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_ebfc9ececdafbcb9",
+      "question_text": "知鱼靠谱吗？有哪些可核验依据？",
+      "question_family": "brand_recognition",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_ce687cc97c6e44ac.md",
+      "raw_content_hash": "4e44033d79c53532247ccd63868385620067698639abc8721c0d30128800f851",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": true,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "neutral",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_e07f37e5deba5fcd"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_d2865e9173f9a666",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_18c9f70b818f947e",
+      "question_text": "知鱼命理AI适合哪些使用场景？",
+      "question_family": "product_consideration",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_d2865e9173f9a666.md",
+      "raw_content_hash": "39138d7c809cd60020b7d4c66bebf98c2406577fd6fb73a88809314aad029e6b",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机",
+          "知鱼智联"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_c77d3f1db5adc343"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_dcd210605760eccd",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_d022d10880ff576a",
+      "question_text": "知鱼命理AI有哪些使用或信任风险？",
+      "question_family": "negative_risk",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_dcd210605760eccd.md",
+      "raw_content_hash": "2e1d5320a79a6de19516d39aae6fa6c7585883bada8ac780078c8b27674f6432",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_176e2409f6b35205"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_f47251c19b134e4c",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_b11d2a4924413287",
+      "question_text": "有哪些靠谱的东方命理AI工具或品牌？",
+      "question_family": "product_consideration",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_f47251c19b134e4c.md",
+      "raw_content_hash": "df79bc618213edf567793f15517f3fe56dc951a77dba8a44fafd52306912b925",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_e912c5d25b62daf7"
+    },
+    {
+      "schema_version": 1,
+      "probe_id": "probe_fd25c54b695435ea",
+      "run_id": "diagnosis_run_69aff52f92169c48",
+      "seed_set_id": "seed_set_d9eff79fae08a16d",
+      "question_id": "question_669c1c54380f070b",
+      "question_text": "东方命理自我认知工具怎么选？",
+      "question_family": "product_consideration",
+      "platform": "WebSearch",
+      "provider": "cursor_web_search",
+      "adapter_kind": "manual",
+      "model": "web_search",
+      "attempted_at": "2026-08-07T13:01:24Z",
+      "status": "success",
+      "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_fd25c54b695435ea.md",
+      "raw_content_hash": "822997d19053c920ae79ecfd75f1ec563fe8a3515cebfa0be8abdfa00833b452",
+      "error": null,
+      "analysis": {
+        "schema_version": 1,
+        "target_mentioned": false,
+        "actively_recommended": false,
+        "top_n_rank": null,
+        "competitors": [
+          "AuraMate灵伴",
+          "FateTell",
+          "DeepOracle",
+          "知命",
+          "天机爻",
+          "Arcana",
+          "爻知",
+          "问天机"
+        ],
+        "citations": [],
+        "negative_risk_mentioned": false,
+        "sentiment": "unknown",
+        "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+      },
+      "latest_analysis_revision_id": "analysis_revision_281955bb288d8507"
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "gap_034c5d8ed637e40e",
+      "kind": "visibility",
+      "severity": "high",
+      "observed_issue": "目标品牌在 14/18 条有效正向问题中未被提及。",
+      "question_ids": [
+        "question_491645ffaef5b809",
+        "question_67c6899993caf3bb",
+        "question_13d499aed9db52a9",
+        "question_ce2311bb7092f58e",
+        "question_e6c3ef40700c5257",
+        "question_68b90d4bd59f46f0",
+        "question_ca1fe8cdf589dddd",
+        "question_54b9a1f0a9257210",
+        "question_2d38be936ed2c903",
+        "question_32bd4e77253e386e",
+        "question_b4cd420aca413399",
+        "question_18c9f70b818f947e",
+        "question_b11d2a4924413287",
+        "question_669c1c54380f070b"
+      ],
+      "probe_ids": [
+        "probe_40a11794104d45d6",
+        "probe_4abee8873c29f2ea",
+        "probe_5578e66c7993dc56",
+        "probe_8d597a767231b8cf",
+        "probe_947e45175c6d642d",
+        "probe_95bcf3d6f5111124",
+        "probe_979e8a2715fd9a79",
+        "probe_9bfb33116564e0ce",
+        "probe_a93a0afc8c4e9a78",
+        "probe_ca7a9e32d1b675b3",
+        "probe_cdc0431c2d866cad",
+        "probe_d2865e9173f9a666",
+        "probe_f47251c19b134e4c",
+        "probe_fd25c54b695435ea"
+      ],
+      "platforms": [
+        "WebSearch"
+      ],
+      "competitors": [
+        "AuraMate灵伴",
+        "FateTell",
+        "DeepOracle",
+        "知命",
+        "天机爻",
+        "Arcana",
+        "爻知",
+        "问天机",
+        "知鱼智联"
+      ],
+      "sources": [],
+      "fact_ids": [
+        "fact_0245b72d7d499d87",
+        "fact_d3884a88aac534c1",
+        "fact_7242717f4786405c",
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_9cb815a23b7858dd",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_461ab2a049b5735a",
+        "fact_507fbf776ea8478a"
+      ],
+      "recommended_investigation": "在后续场景阶段研究 AI 已采用的竞品与来源证据，并核对企业对应事实是否缺少公开可信信源。"
+    },
+    {
+      "gap_id": "gap_99e37d95fa568e33",
+      "kind": "recommendation",
+      "severity": "medium",
+      "observed_issue": "目标品牌在 4 条回答中仅被提及但未被主动推荐。",
+      "question_ids": [
+        "question_9807a27af99d4fa9",
+        "question_d1fd20309457c4a5",
+        "question_79a997a929c199a2",
+        "question_ebfc9ececdafbcb9"
+      ],
+      "probe_ids": [
+        "probe_1feb278edc1a8585",
+        "probe_2ed0289591a9f505",
+        "probe_5c37c4b2ec893c63",
+        "probe_ce687cc97c6e44ac"
+      ],
+      "platforms": [
+        "WebSearch"
+      ],
+      "competitors": [
+        "知鱼智联"
+      ],
+      "sources": [],
+      "fact_ids": [
+        "fact_da3d556f3b2d7832",
+        "fact_0280ffc428885bcd",
+        "fact_0ab97039e8596770",
+        "fact_d2bb69e415440f50",
+        "fact_94de6f7175d8f613",
+        "fact_86b1751053d95a7c",
+        "fact_0245b72d7d499d87"
+      ],
+      "recommended_investigation": "研究推荐集合采用的比较维度和证据来源，不把“出现”误当作“推荐”。"
+    }
+  ],
+  "limitations": [
+    "计划 19 次题目×平台探测，当前记录 19 次；未记录的组合不计入任何命中率。",
+    "AI 回答具有时间、平台和模型依赖性；本报告只代表保存时间点。",
+    "平台未显示引用时，引用指标只能记为未观察到，不能证明回答没有使用来源。",
+    "种子题只用于基线诊断，不是正式关键词/场景库。"
+  ]
+}

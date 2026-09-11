@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "probe_id": "probe_979e8a2715fd9a79",
+  "run_id": "diagnosis_run_69aff52f92169c48",
+  "seed_set_id": "seed_set_d9eff79fae08a16d",
+  "question_id": "question_ca1fe8cdf589dddd",
+  "question_text": "选择知鱼命理AI要重点比较哪些功能和服务？",
+  "question_family": "product_consideration",
+  "platform": "WebSearch",
+  "provider": "cursor_web_search",
+  "adapter_kind": "manual",
+  "model": "web_search",
+  "attempted_at": "2026-08-07T13:01:24Z",
+  "status": "success",
+  "raw_snapshot_path": "diagnosis/runs/diagnosis_run_69aff52f92169c48/raw/probe_979e8a2715fd9a79.md",
+  "raw_content_hash": "296706fd6fe90a865f8699b0e6cfe738944530679e14622ee23744b7b8cba7ef",
+  "error": null,
+  "analysis": {
+    "schema_version": 1,
+    "target_mentioned": false,
+    "actively_recommended": false,
+    "top_n_rank": null,
+    "competitors": [
+      "AuraMate灵伴",
+      "FateTell",
+      "DeepOracle",
+      "知命",
+      "天机爻",
+      "Arcana",
+      "爻知",
+      "问天机"
+    ],
+    "citations": [],
+    "negative_risk_mentioned": false,
+    "sentiment": "unknown",
+    "notes": "人工修订：裸搜「知鱼」多为知鱼智联同名干扰；仅当出现 zhiyu.hk/易学工具·知鱼 记为目标品牌提及。WebSearch 不是 AI 对话平台。"
+  },
+  "latest_analysis_revision_id": "analysis_revision_711a8f7107c6e1d2"
+}

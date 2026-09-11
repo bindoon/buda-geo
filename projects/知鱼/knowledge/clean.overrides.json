@@ -1,0 +1,132 @@
+{
+  "app_id": "zhiyu_ai_hk",
+  "assets": [
+    {
+      "source_path": "品牌资产/logo_color_nobg.png",
+      "action": "company",
+      "reason": "知鱼品牌 logo，作为企业识别素材；不派生产品性能事实。"
+    },
+    {
+      "source_path": "品牌资产/favicon.png",
+      "action": "company",
+      "reason": "站点 favicon，作为品牌资产。"
+    },
+    {
+      "source_path": "产品截图/知鱼命理AI/**",
+      "action": "product",
+      "product_name": "知鱼命理AI",
+      "reason": "产品界面与功能截图，归入主产品知鱼命理AI；截图不自动证明用户量或准确率。"
+    },
+    {
+      "source_path": "易学科普/images/**",
+      "action": "ignore",
+      "reason": "易学科普插图是内容创作素材，不是企业产品图或工厂图；保留在 inputs，不进入 SKU 资产桶。"
+    }
+  ],
+  "products": [
+    {
+      "name": "知鱼命理AI",
+      "category": "东方命理自我认知工具",
+      "is_main": true,
+      "fact_source_paths": [
+        "知鱼GEO知识库.docx",
+        "产品说明/zhiyu-product-description.md",
+        "产品说明/知鱼定价策略-内部参考.md",
+        "发布稿/知鱼上线了——一个真的会先排盘再开口的命理 Agent.md"
+      ],
+      "source_paths": ["产品截图/知鱼命理AI/**"],
+      "selling_points": [
+        "先调用真实排盘工具再解读，避免排盘靠猜",
+        "思考与工具调用过程对用户可见",
+        "支持农历转阳历与真太阳时校正后排盘",
+        "八字与紫微可叠加印证，并具备对话记忆"
+      ],
+      "attributes": {
+        "product_type": "SaaS / AI Agent",
+        "core_modules": "六爻问事、知鱼AI顾问、八字原局、档案合盘",
+        "access_urls": "https://zhiyu.hk ; https://app.zhiyu.hk",
+        "membership_price": "月卡 ¥99；年卡 ¥599"
+      },
+      "capabilities": [
+        "六爻问事解读",
+        "八字原局与流年解读",
+        "命理图谱记忆与情绪陪伴对话",
+        "农历/真太阳时自动处理",
+        "合盘与档案连续对话"
+      ],
+      "reason": "将知鱼定位为单一主产品平台；公开价表按运营确认采用人民币月卡¥99、年卡¥599；不把支付中转域名写入公开事实。"
+    }
+  ],
+  "profile": {
+    "source_path": "知鱼GEO知识库.docx",
+    "intro": "知鱼（ZhiYu）是一款融合东方命理智慧与现代 AI 技术的自我认知工具。名字取自《庄子·秋水》“子非鱼，安知鱼之乐”。知鱼不算命，而是帮用户看清自己：以传统命理模型为底层框架，结合 AI 语义理解与专属记忆，提供可核验计算过程的认知镜像。",
+    "products_services": "提供六爻问事、知鱼 AI 私人顾问、八字原局与流年解读、档案合盘与连续对话记忆。支持农历输入自动转阳历，并按出生地经纬度计算真太阳时后再排盘；紫微与八字可叠加印证。鱼丸为通用积分，可用于解读与深度对话。公开会员标价为月卡 ¥99、年卡 ¥599。访问入口只记在企业名片，不写入介绍正文。",
+    "advantages": "核心差异是真实排盘工具补足与可见的工具调用过程，避免“排盘靠猜”。相对西方测评框架，更贴合中国人的时间观、阴阳观与关系观；强调 AI 深度记忆、工具而非预言，赋能自知与决策，而非制造迷信依赖。",
+    "trust": "公开用户反馈提到：能读懂性格矛盾而非泛泛而谈；六爻问事帮助把模糊担忧说清楚；AI 记得过往对话。早期用户已在使用并持续迭代。用户量、营收、合作分成等内部数字不作为公开事实。",
+    "pain_points": [
+      "市面命理类 AI 常见排盘靠猜，结果难以核验",
+      "西方测评框架对中国用户不够贴合",
+      "焦虑上升需要自我认知工具，但不愿陷入迷信依赖",
+      "农历与真太阳时门槛高，普通人难以自行处理"
+    ],
+    "reason": "按运营确认更新：公开价表统一为 ¥99/¥599；移除支付中转域名叙述；介绍正文不含链接。"
+  },
+  "fact_resolutions": [
+    {
+      "subject": "company",
+      "field": "company_name",
+      "value": "知鱼（ZhiYu）",
+      "reason": "公开产品名与品牌名；法定公司全称尚未提供，暂以品牌主体登记，待补营业主体信息。"
+    },
+    {
+      "subject": "company",
+      "field": "company_short_name",
+      "value": "知鱼",
+      "reason": "品牌简称。"
+    },
+    {
+      "subject": "company",
+      "field": "website_or_shop_url",
+      "value": "https://app.zhiyu.hk",
+      "reason": "产品应用入口；SEO 主站为 https://zhiyu.hk。支付中转域名不写入公开名片。"
+    },
+    {
+      "subject": "company",
+      "field": "region",
+      "value": "中国香港 / 线上",
+      "reason": "主站域名与产品定位为线上服务；线下地址未提供。"
+    }
+  ],
+  "review_notes": [
+    {
+      "code": "legal_entity_name_missing",
+      "severity": "recommend",
+      "message": "目前只有品牌名「知鱼（ZhiYu）」，缺少可公开的法定公司全称、地址与联系人；不影响先做内容，但发布/实名信源前需要补齐。"
+    },
+    {
+      "code": "pricing_operator_confirmed",
+      "severity": "optional",
+      "message": "运营已确认公开会员价为月卡 ¥99、年卡 ¥599；旧稿中的 HK$68/680 等口径不再作为对外事实。"
+    },
+    {
+      "code": "payment_domain_excluded",
+      "severity": "optional",
+      "message": "zhiyuai.me 仅作支付相关用途，不写入企业名片、产品属性或对外介绍。"
+    },
+    {
+      "code": "media_accounts_empty",
+      "severity": "optional",
+      "message": "五大自媒体账号尚未录入；若走 social 信源投放，需后续补账号壳信息（密码只进 secrets）。"
+    },
+    {
+      "code": "educational_content_not_facts",
+      "severity": "optional",
+      "message": "易学科普文章与写作框架已放入 inputs 作为后续内容素材，不会自动变成企业能力事实。"
+    },
+    {
+      "code": "internal_docs_excluded",
+      "severity": "optional",
+      "message": "已排除合作分成、签约清单、个人八字案例、支付密钥等内部/敏感材料，不进入知识库。"
+    }
+  ]
+}
