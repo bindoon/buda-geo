@@ -11,6 +11,8 @@
 
 **Local-first · Evidence-first · Human-gated · MIT**
 
+[中文](./README.md) · [English](./README.en.md)
+
 [快速开始](#快速开始) · [工作流](#工作流) · [贡献](#参与贡献) · [文档](#文档索引)
 
 </div>
@@ -284,6 +286,7 @@ npm --prefix packages/geo-cli test
 
 ## 文档索引
 
+- [English README](./README.en.md) — English project introduction
 - [geo-cli 命令手册](./packages/geo-cli/README.md) — 完整命令面、Skill 分发与设计边界
 - [buda-skills](./skills/buda-skills/SKILL.md) — Agent 总路由与分阶段 reference
 - [详细解决方案](./docs/布达-GEO工具详细解决方案.md) — 目录契约、验收与本地/云端边界
