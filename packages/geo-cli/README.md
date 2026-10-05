@@ -1,6 +1,8 @@
 # geo-cli
 
-Buda GEO 的 Node.js CLI：企业事实清洗、可配置平台探测、客户问题与购买场景、内容规划、文章生成/审稿，以及显式授权的发布回执。
+[Buda GEO](../../README.md) 的开源 Node.js CLI：企业事实清洗、可配置平台探测、客户问题与购买场景、内容规划、文章生成/审稿，以及显式授权的发布回执。
+
+面向本地自用与社区扩展：确定性校验进 CLI，语义装填进 Skill，客户数据按 `projects/{名}/` 隔离。项目介绍见仓库根 [README（中文）](../../README.md) / [README（English）](../../README.en.md)。
 
 ## 安装
 
@@ -25,30 +27,29 @@ geo-cli skills status
 
 ## 用法
 
-从仓库根目录：
+从仓库根目录。克隆后可用样板 `projects/知鱼` 查看已确认产物；新建客户请放到 `projects/你的项目` 并登记 `projects/registry.json`。
 
 ```bash
 geo-cli projects list
-geo-cli projects resolve "晶铭"
+geo-cli projects resolve "知鱼"
 geo-cli skills status
-geo-cli inventory --project projects/晶铭服饰
-geo-cli clean --project projects/晶铭服饰
-geo-cli validate --project projects/晶铭服饰
-geo-cli review-clean --project projects/晶铭服饰
-geo-cli confirm-clean --project projects/晶铭服饰
-geo-cli diagnose seed-draft --project projects/晶铭服饰 --size 25
-geo-cli diagnose probe-run --project projects/晶铭服饰 --run RUN_ID
-geo-cli diagnose validate --project projects/晶铭服饰
-geo-cli strategy import-legacy --project projects/晶铭服饰 --input projects/晶铭服饰/inputs/晶铭服饰关键词.xlsx
-geo-cli strategy generate --project projects/晶铭服饰
-geo-cli strategy validate --project projects/晶铭服饰
-geo-cli plan generate --project projects/晶铭服饰 --quota 30
-geo-cli plan validate --project projects/晶铭服饰
-geo-cli article prepare --project projects/晶铭服饰 --limit 3
-geo-cli article prepare --project projects/晶铭服饰 --force
-geo-cli article validate --project projects/晶铭服饰
-geo-cli publish prepare --project projects/晶铭服饰
-geo-cli publish validate --project projects/晶铭服饰
+geo-cli status --project projects/知鱼
+geo-cli diagnose validate --project projects/知鱼
+geo-cli strategy validate --project projects/知鱼
+geo-cli plan validate --project projects/知鱼
+
+# 新项目从清洗开始（示例路径）
+geo-cli inventory --project projects/你的项目
+geo-cli clean --project projects/你的项目
+geo-cli validate --project projects/你的项目
+geo-cli review-clean --project projects/你的项目
+geo-cli confirm-clean --project projects/你的项目
+geo-cli diagnose seed-draft --project projects/你的项目 --size 25
+geo-cli diagnose probe-run --project projects/你的项目 --run RUN_ID
+geo-cli strategy generate --project projects/你的项目
+geo-cli plan generate --project projects/你的项目 --quota 30
+geo-cli article prepare --project projects/你的项目 --limit 3
+geo-cli publish prepare --project projects/你的项目
 ```
 
 客户映射在 `projects/registry.json`（非 Skill 正文）。`resolve` 输出 `path` 后用于 `--project`。
@@ -56,9 +57,8 @@ geo-cli publish validate --project projects/晶铭服饰
 开发未 link 时：
 
 ```bash
-cd packages/geo-cli && npm run dev -- projects resolve "晶铭"
+cd packages/geo-cli && npm run dev -- projects resolve "知鱼"
 ```
-
 ## 命令
 
 | 命令 | 作用 |
