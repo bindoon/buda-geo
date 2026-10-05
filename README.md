@@ -115,6 +115,7 @@ geo-cli plan validate --project projects/知鱼
 ```
 
 样板已走到内容计划确认；文章正文与完整发布回执可按下方端到端命令在自有项目中继续跑通。
+
 ### 新建自己的项目
 
 ```text

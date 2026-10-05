@@ -2,7 +2,7 @@
 
 [Buda GEO](../../README.md) 的开源 Node.js CLI：企业事实清洗、可配置平台探测、客户问题与购买场景、内容规划、文章生成/审稿，以及显式授权的发布回执。
 
-面向本地自用与社区扩展：确定性校验进 CLI，语义装填进 Skill，客户数据按 `projects/{名}/` 隔离。完整项目介绍见仓库根 [README](../../README.md)。
+面向本地自用与社区扩展：确定性校验进 CLI，语义装填进 Skill，客户数据按 `projects/{名}/` 隔离。项目介绍见仓库根 [README（中文）](../../README.md) / [README（English）](../../README.en.md)。
 
 ## 安装
 
